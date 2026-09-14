@@ -1,0 +1,19 @@
+From: "Harborline Supplies" <billing@harborline-supplies.com>
+To: accounts.payable@northwind-logistics.com
+Subject: Invoice HS-4471 attached
+Date: Mon, 08 Sep 2026 14:30:00 +0000
+Message-ID: <4471@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass smtp.mailfrom=harborline-supplies.com; dkim=pass header.d=harborline-supplies.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 4aB2; Mon, 08 Sep 2026 09:14:02 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Hello,
+
+Please find invoice HS-4471 for GBP 1,840.00 covering September pallet supply.
+
+Payment is due within 30 days to our usual account. Let us know if you need a
+copy of the purchase order.
+
+Thanks,
+Harborline Supplies Billing

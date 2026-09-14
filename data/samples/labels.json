@@ -1,0 +1,70 @@
+{
+  "bec_01_ceo_wire_urgent.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud"
+  },
+  "bec_02_vendor_bank_change.eml": {
+    "label": "MALICIOUS",
+    "family": "vendor_invoice"
+  },
+  "bec_03_gift_card.eml": {
+    "label": "MALICIOUS",
+    "family": "gift_card"
+  },
+  "bec_04_payroll_diversion.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_diversion"
+  },
+  "bec_05_credential_phish.eml": {
+    "label": "MALICIOUS",
+    "family": "credential_harvest"
+  },
+  "bec_06_lawyer_pressure.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud"
+  },
+  "bec_07_supplier_followup.eml": {
+    "label": "MALICIOUS",
+    "family": "vendor_invoice"
+  },
+  "susp_01_external_invoice.eml": {
+    "label": "SUSPICIOUS",
+    "family": "external_finance"
+  },
+  "susp_02_urgent_legit.eml": {
+    "label": "SUSPICIOUS",
+    "family": "internal_urgent"
+  },
+  "ben_01_internal_meeting.eml": {
+    "label": "BENIGN",
+    "family": "internal_routine"
+  },
+  "ben_02_it_maintenance.eml": {
+    "label": "BENIGN",
+    "family": "internal_routine"
+  },
+  "ben_03_vendor_normal.eml": {
+    "label": "BENIGN",
+    "family": "external_routine"
+  },
+  "ben_04_hr_policy.eml": {
+    "label": "BENIGN",
+    "family": "internal_routine"
+  },
+  "ben_05_customer_query.eml": {
+    "label": "BENIGN",
+    "family": "external_routine"
+  },
+  "ben_06_newsletter.eml": {
+    "label": "BENIGN",
+    "family": "external_routine"
+  },
+  "ben_07_internal_finance.eml": {
+    "label": "BENIGN",
+    "family": "internal_finance"
+  },
+  "ben_08_delivery_notice.eml": {
+    "label": "BENIGN",
+    "family": "external_routine"
+  }
+}

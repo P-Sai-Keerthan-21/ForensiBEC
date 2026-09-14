@@ -1,0 +1,23 @@
+From: "Daniel Osei" <d.osei@northwind-logistlcs.com>
+To: hr.payroll@northwind-logistics.com
+Subject: Change of account for salary payment
+Date: Thu, 11 Sep 2026 22:18:33 +0000
+Message-ID: <7bd90@northwind-logistlcs.com>
+Authentication-Results: mx.northwind-logistics.com; spf=fail smtp.mailfrom=mail-secure-pay.info; dkim=none; dmarc=fail
+Received: from unknown (vps-4471.hostwind.ru [203.0.113.88]) by mx.northwind-logistics.com with ESMTP id 9zQ1; Mon, 08 Sep 2026 03:22:41 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Hello Payroll,
+
+I have changed banks and would like my salary paid into a different account
+starting with this month's run.
+
+New account details:
+  Sort code: 20-45-11
+  Account number: 81440273
+
+Please update your records before the payroll cut-off. Let me know once done.
+
+Kind regards,
+Daniel Osei

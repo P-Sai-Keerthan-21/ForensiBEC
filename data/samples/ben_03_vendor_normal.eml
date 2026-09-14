@@ -1,0 +1,20 @@
+From: "Delaney Freight Accounts" <accounts@delaney-freight.co>
+To: accounts.payable@northwind-logistics.com
+Subject: Statement for August
+Date: Tue, 09 Sep 2026 13:20:00 +0000
+Message-ID: <stmt08@delaney-freight.co>
+Authentication-Results: mx.northwind-logistics.com; spf=pass smtp.mailfrom=delaney-freight.co; dkim=pass header.d=delaney-freight.co; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 4aB2; Mon, 08 Sep 2026 09:14:02 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Good afternoon,
+
+Please find our statement for August. All invoices are settled and there is no
+outstanding balance.
+
+Our bank details are unchanged.
+
+Best regards,
+Marta Kalina
+Delaney Freight Solutions

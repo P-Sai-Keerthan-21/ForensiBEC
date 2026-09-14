@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BEC Detector</title>
+<style>
+  :root { --bg:#f8fafc; --panel:#fff; --ink:#0f172a; --muted:#64748b;
+          --line:#e2e8f0; --accent:#1d4ed8; }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:40px 24px; background:var(--bg); color:var(--ink);
+         font:15px/1.6 "Segoe UI", system-ui, -apple-system, sans-serif; }
+  .wrap { max-width:760px; margin:0 auto; }
+  h1 { font-size:26px; margin:0 0 6px; }
+  .sub { color:var(--muted); margin:0 0 28px; }
+  .panel { background:var(--panel); border:1px solid var(--line); border-radius:12px;
+           padding:26px; }
+  label { display:block; font-weight:600; font-size:13px; margin:18px 0 6px;
+          text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  input[type=text], input[type=file] { width:100%; padding:10px 12px;
+          border:1px solid var(--line); border-radius:8px; font-size:14px;
+          background:#fff; font-family:inherit; }
+  .drop { border:2px dashed #cbd5e1; border-radius:10px; padding:26px;
+          text-align:center; color:var(--muted); background:#f8fafc; }
+  button { margin-top:24px; width:100%; padding:13px; background:var(--accent);
+           color:#fff; border:0; border-radius:8px; font-size:15px; font-weight:600;
+           cursor:pointer; font-family:inherit; }
+  button:hover { background:#1e40af; }
+  .stages { display:flex; gap:8px; flex-wrap:wrap; margin:0 0 24px; }
+  .stage { flex:1; min-width:120px; background:var(--panel); border:1px solid var(--line);
+           border-radius:8px; padding:10px 12px; font-size:12px; }
+  .stage b { display:block; font-size:13px; }
+  .stage span { color:var(--muted); }
+  footer { margin-top:26px; color:var(--muted); font-size:12.5px; }
+  .ok { color:#166534; } .bad { color:#b91c1c; }
+  .note { background:#fefce8; border:1px solid #fde68a; border-radius:8px;
+          padding:10px 13px; font-size:13px; margin-top:18px; color:#713f12; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Business Email Compromise Detector</h1>
+  <p class="sub">Upload one or more <code>.eml</code> files for forensic analysis.</p>
+
+  <div class="stages">
+    <div class="stage"><b>1. Acquisition</b><span>Hash &amp; parse</span></div>
+    <div class="stage"><b>2. Analysis</b><span>Sender, behaviour, NLP</span></div>
+    <div class="stage"><b>3. Validation</b><span>Anomaly &amp; fusion</span></div>
+    <div class="stage"><b>4. Report</b><span>Explained verdict</span></div>
+  </div>
+
+  <div class="panel">
+    <form action="/analyse" method="post" enctype="multipart/form-data">
+      <label for="case">Case name</label>
+      <input type="text" id="case" name="case" value="Web submission">
+
+      <label for="examiner">Examiner (recorded in chain of custody)</label>
+      <input type="text" id="examiner" name="examiner" placeholder="your name">
+
+      <label for="files">Evidence files</label>
+      <div class="drop">
+        <input type="file" id="files" name="files" accept=".eml,.txt" multiple required>
+        <p style="margin:10px 0 0">
+          Upload several messages together &mdash; behavioural baselining
+          compares each message against the rest of the set.
+        </p>
+      </div>
+
+      <button type="submit">Analyse evidence</button>
+    </form>
+
+    <div class="note">
+      Analysis runs entirely on this machine. Nothing is transmitted to any
+      external service, and uploads are held in memory only for the duration of
+      the request.
+    </div>
+  </div>
+
+  <footer>
+    BEC-Detector v{{ version }} &middot; NLP backends:
+    {% for name, ok in nlp.items() %}
+      <span class="{{ 'ok' if ok else 'bad' }}">{{ name }}:
+      {{ 'available' if ok else 'unavailable' }}</span>{% if not loop.last %} &middot; {% endif %}
+    {% endfor %}
+    <br>JSON API: <code>POST /api/analyse</code> &middot;
+    health check: <code>GET /api/health</code>
+  </footer>
+</div>
+</body>
+</html>

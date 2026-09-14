@@ -1,0 +1,18 @@
+# BEC Detector - Cyber Forensics Capstone
+# Python 3.14 verified
+
+# NLP
+spacy>=3.8.16
+nltk>=3.9.1
+
+# Web / API layer
+fastapi>=0.115
+uvicorn>=0.30
+jinja2>=3.1
+python-multipart>=0.0.9
+
+# Numerics (statistical anomaly detection)
+numpy>=2.0
+
+# Testing
+pytest>=8.0

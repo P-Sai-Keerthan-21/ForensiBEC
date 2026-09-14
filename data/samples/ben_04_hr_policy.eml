@@ -1,0 +1,19 @@
+From: "HR Team" <hr@northwind-logistics.com>
+To: all.staff@northwind-logistics.com
+Subject: Updated remote working policy
+Date: Wed, 10 Sep 2026 11:45:00 +0000
+Message-ID: <hr991@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass smtp.mailfrom=northwind-logistics.com; dkim=pass header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 4aB2; Mon, 08 Sep 2026 09:14:02 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Hi everyone,
+
+The updated remote working policy is now on the intranet. The main change is
+that core hours are now 10:00 to 15:00.
+
+Please read it when you get a chance and direct any questions to your line
+manager.
+
+HR Team

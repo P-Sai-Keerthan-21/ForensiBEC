@@ -1,0 +1,19 @@
+From: "Northwind IT" <it@northwind-logistics.com>
+To: all.staff@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Tue, 09 Sep 2026 09:00:00 +0000
+Message-ID: <maint22@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass smtp.mailfrom=northwind-logistics.com; dkim=pass header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 4aB2; Mon, 08 Sep 2026 09:14:02 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Hello all,
+
+We will be carrying out planned maintenance on the file server this Saturday
+between 08:00 and 12:00. Shared drives may be briefly unavailable.
+
+No action is needed from you. If you have questions, raise a ticket through the
+service desk as usual.
+
+Northwind IT
