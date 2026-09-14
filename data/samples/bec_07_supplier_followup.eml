@@ -1,12 +1,17 @@
-From: "Delaney Freight Accounts" <accounts@delaney-freíght.co>
+From:
+ "Delaney Freight Accounts" <accounts@=?utf-8?q?delaney-fre=C3=ADght?=.co>
 To: accounts.payable@northwind-logistics.com
 Subject: Re: outstanding remittance
-Date: Sat, 13 Sep 2026 02:12:00 +0000
+Date: Sun, 13 Sep 2026 02:12:00 +0000
 Message-ID: <dd71b@delaney-freight.co>
-Authentication-Results: mx.northwind-logistics.com; spf=fail smtp.mailfrom=mail-secure-pay.info; dkim=none; dmarc=fail
-Received: from unknown (vps-4471.hostwind.ru [203.0.113.88]) by mx.northwind-logistics.com with ESMTP id 9zQ1; Mon, 08 Sep 2026 03:22:41 +0000
-MIME-Version: 1.0
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=mail-secure-pay.info; dkim=none; dmarc=fail
+Received: from unknown (vps-4471.hostwind.ru [203.0.113.88]) by
+ mx.northwind-logistics.com with ESMTP id 9zQ1; Mon, 08 Sep 2026 03:22:41
+ +0000
 Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
 
 Hello,
 

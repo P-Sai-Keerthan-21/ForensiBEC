@@ -1,16 +1,22 @@
 From: "Tomas Berg" <t.berg@bergindustrial.se>
 To: sales@northwind-logistics.com
 Subject: Question about pallet dimensions
-Date: Wed, 10 Sep 2026 15:10:00 +0000
+Date: Thu, 10 Sep 2026 15:10:00 +0000
 Message-ID: <q4410@bergindustrial.se>
-Authentication-Results: mx.northwind-logistics.com; spf=pass smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se; dmarc=pass
-Received: from mail.northwind-logistics.com (mail.northwind-logistics.com [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 4aB2; Mon, 08 Sep 2026 09:14:02 +0000
-MIME-Version: 1.0
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se;
+ dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 4aB2; Mon, 08
+ Sep 2026 09:14:02 +0000
 Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
 
 Hello,
 
-Could you confirm the maximum pallet dimensions you can accept at the Rotterdam
+Could you confirm the maximum pallet dimensions you can accept at the Rotterd=
+am
 depot? We are planning a shipment for next month.
 
 Thanks in advance,

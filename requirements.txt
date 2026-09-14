@@ -14,5 +14,9 @@ python-multipart>=0.0.9
 # Numerics (statistical anomaly detection)
 numpy>=2.0
 
+# Communication graph (optional - the graph degrades to a builtin
+# implementation if this is absent)
+networkx>=3.0
+
 # Testing
 pytest>=8.0

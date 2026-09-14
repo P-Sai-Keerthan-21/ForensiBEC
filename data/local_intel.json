@@ -1,0 +1,34 @@
+{
+  "_comment": [
+    "LOCAL intelligence only. This file is maintained by the operator of this",
+    "installation. No external threat-intelligence service is consulted by this",
+    "application, and nothing here was retrieved from one.",
+    "",
+    "Every indicator below is FICTIONAL and exists solely to demonstrate the",
+    "adapter against the synthetic corpus in data/samples/. None of these",
+    "domains, addresses or hashes refers to real infrastructure.",
+    "",
+    "Format: { \"<ioc kind>\": { \"<value>\": \"<why it is listed>\" } }",
+    "Recognised kinds: domains, email_addresses, urls, ipv4, attachment_sha256"
+  ],
+
+  "domains": {
+    "northwind-l0gistics.com": "fictional lookalike domain used in CASE-001 (synthetic)",
+    "northwind-logistlcs.com": "fictional lookalike domain used in CASE-001 (synthetic)",
+    "mail-secure-pay.info": "fictional bounce infrastructure seen in CASE-001 (synthetic)",
+    "northwind-secure-portal.com": "fictional credential-harvest host (synthetic)",
+    "northwind-logistics.support": "fictional payroll-phish host (synthetic)"
+  },
+
+  "email_addresses": {
+    "ravi.menon.exec@gmail.com": "fictional reply-collection mailbox (synthetic)"
+  },
+
+  "urls": {},
+
+  "ipv4": {
+    "203.0.113.45": "fictional credential-harvest host, TEST-NET-3 range (synthetic)"
+  },
+
+  "attachment_sha256": {}
+}

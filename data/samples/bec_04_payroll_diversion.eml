@@ -1,12 +1,16 @@
 From: "Daniel Osei" <d.osei@northwind-logistlcs.com>
 To: hr.payroll@northwind-logistics.com
 Subject: Change of account for salary payment
-Date: Thu, 11 Sep 2026 22:18:33 +0000
+Date: Fri, 11 Sep 2026 22:18:33 +0000
 Message-ID: <7bd90@northwind-logistlcs.com>
-Authentication-Results: mx.northwind-logistics.com; spf=fail smtp.mailfrom=mail-secure-pay.info; dkim=none; dmarc=fail
-Received: from unknown (vps-4471.hostwind.ru [203.0.113.88]) by mx.northwind-logistics.com with ESMTP id 9zQ1; Mon, 08 Sep 2026 03:22:41 +0000
-MIME-Version: 1.0
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=mail-secure-pay.info; dkim=none; dmarc=fail
+Received: from unknown (vps-4471.hostwind.ru [203.0.113.88]) by
+ mx.northwind-logistics.com with ESMTP id 9zQ1; Mon, 08 Sep 2026 03:22:41
+ +0000
 Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
 
 Hello Payroll,
 

@@ -1,0 +1,26 @@
+From: "Sandra Whitlock" <sandra.whitlock@northwind-logistics.com>
+To: accounts.payable@northwind-logistics.com
+Subject: URGENT: Harborline invoice must be paid before close of business
+Date: Fri, 04 Sep 2026 10:22:00 +0000
+Message-ID: <urg551@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 4aB2; Mon, 08
+ Sep 2026 09:14:02 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Team,
+
+The Harborline invoice HS-4471 for GBP 1,840.00 needs to be paid before close
+of business today or we lose the early settlement discount.
+
+Details are unchanged and already on file - this is the same account we have
+always used. Please process it through the normal approval workflow.
+
+Sandra Whitlock
+Chief Financial Officer
+Northwind Logistics

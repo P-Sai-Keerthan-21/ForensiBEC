@@ -6,3 +6,5 @@ __pycache__/
 output/*.html
 output/*.json
 .env
+output/audit.jsonl
+output/ioc_store.json

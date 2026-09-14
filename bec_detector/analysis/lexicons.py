@@ -41,7 +41,9 @@ PAYMENT_TERMS: set[str] = {
     "transfer funds", "remit", "remittance", "payment", "invoice", "outstanding balance",
     "make a payment", "process the payment", "release the payment", "settle the invoice",
     "purchase order", "swift", "iban", "sort code", "routing number",
-    "account number", "beneficiary", "bank details", "payable",
+    "account number", "beneficiary", "bank details",
+    # NOTE: bare "payable" is deliberately absent - it matches the department
+    # name "accounts payable" and produced false positives on routine mail.
 }
 
 # The single highest-signal BEC phrase family: changing where money goes.

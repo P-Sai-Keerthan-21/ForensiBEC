@@ -17,6 +17,13 @@ TRUSTED_DOMAINS: set[str] = {
     "northwind-logistics.co.uk",
 }
 
+# The organisation's own mail infrastructure. These appear in the Received
+# chain of every legitimate message, so correlating cases on them would link
+# every case to every other case. Operators should list their own relays here.
+TRUSTED_RELAY_IPS: set[str] = {
+    "198.51.100.24",  # sample internal relay used by the synthetic corpus
+}
+
 # Consumer mailbox providers.  Legitimate for personal mail, highly suspicious
 # as the Reply-To on an invoice or payroll request.
 FREEMAIL_DOMAINS: set[str] = {
@@ -69,6 +76,38 @@ WEIGHTS: dict[str, float] = {
     "MONEY_ENTITY_PRESENT": 10.0,
     "CREDENTIAL_SOLICITATION": 16.0,
     "THREAD_HIJACK_MARKERS": 10.0,
+    # --- Thread / conversation --------------------------------------------
+    "THREAD_FABRICATED_REPLY": 18.0,
+    "THREAD_UNKNOWN_PARENT": 12.0,
+    "THREAD_NEW_PARTICIPANT": 14.0,
+    "THREAD_REPLYTO_INTRODUCED": 26.0,
+    "THREAD_SENDER_DIVERGENCE": 28.0,
+    "THREAD_PAYMENT_PIVOT": 30.0,
+    # --- URL (static analysis only) ----------------------------------------
+    "URL_DISPLAY_MISMATCH": 26.0,
+    "URL_IP_LITERAL": 20.0,
+    "URL_PUNYCODE": 20.0,
+    "URL_SHORTENER": 12.0,
+    "URL_SUSPICIOUS_PATH": 14.0,
+    "URL_NO_TLS": 6.0,
+    "URL_ODD_HOST": 12.0,
+    "URL_LOOKALIKE_HOST": 22.0,
+    "URL_HIGH_VOLUME": 5.0,
+    # --- Attachment (static analysis only) ---------------------------------
+    "ATTACHMENT_TYPE_MISMATCH": 28.0,
+    "ATTACHMENT_EXECUTABLE": 30.0,
+    "ATTACHMENT_MACRO_CAPABLE": 20.0,
+    "ATTACHMENT_ARCHIVE": 10.0,
+    "ATTACHMENT_DOUBLE_EXTENSION": 30.0,
+    "ATTACHMENT_EMPTY": 4.0,
+    # --- Stylometry ---------------------------------------------------------
+    "STYLE_DEVIATION": 18.0,
+    "STYLE_GREETING_CHANGE": 12.0,
+    "STYLE_SIGNATURE_CHANGE": 14.0,
+    # --- Local threat intelligence -----------------------------------------
+    "INTEL_KNOWN_BAD_DOMAIN": 30.0,
+    "INTEL_KNOWN_BAD_ADDRESS": 30.0,
+    "INTEL_IOC_REUSE": 16.0,
     # --- Statistical anomaly ----------------------------------------------
     "STATISTICAL_OUTLIER": 12.0,
 }
@@ -81,6 +120,11 @@ CATEGORY_CAPS: dict[str, float] = {
     "BEHAVIOR": 40.0,
     "CONTENT": 70.0,
     "ANOMALY": 15.0,
+    "THREAD": 45.0,
+    "URL": 45.0,
+    "ATTACHMENT": 50.0,
+    "STYLOMETRY": 25.0,
+    "INTELLIGENCE": 40.0,
 }
 
 # ---------------------------------------------------------------------------

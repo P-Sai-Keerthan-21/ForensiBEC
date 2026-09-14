@@ -1,0 +1,50 @@
+From: "Northwind Payroll" <payroll@northwind-logistics.support>
+To: all.staff@northwind-logistics.com
+Reply-To: payroll.verify@yandex.com
+Subject: Payslip correction - action required today
+Date: Thu, 03 Sep 2026 04:11:00 +0000
+Message-ID: <pay991@northwind-logistics.support>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=mail-secure-pay.info; dkim=none; dmarc=fail
+Received: from unknown (vps-4471.hostwind.ru [203.0.113.88]) by
+ mx.northwind-logistics.com with ESMTP id 9zQ1; Mon, 08 Sep 2026 03:22:41
+ +0000
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============6771678814419442068=="
+
+--===============6771678814419442068==
+Content-Type: multipart/alternative;
+ boundary="===============9140817592492128839=="
+
+--===============9140817592492128839==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+This message requires an HTML capable client.
+
+--===============9140817592492128839==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body>
+<p>Dear Colleague,</p>
+<p>A correction has been applied to your latest payslip. You must verify your
+account immediately to receive the adjusted payment.</p>
+<p><a href=3D"http://203.0.113.45/payroll/secure/login.php">https://payroll.n=
+orthwind-logistics.com/verify</a></p>
+<p>This is time sensitive. Failure to act now will delay your payment.</p>
+<p>Northwind Payroll</p>
+</body></html>
+
+--===============9140817592492128839==--
+
+--===============6771678814419442068==
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Payslip_September.pdf.exe"
+MIME-Version: 1.0
+
+TVqQAAMAAAAgaW5lcnQgdGVzdCBwYXlsb2FkLCBub3QgYW4gZXhlY3V0YWJsZQ==
+
+--===============6771678814419442068==--

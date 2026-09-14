@@ -17,6 +17,7 @@ Fusion proceeds in four steps:
 from __future__ import annotations
 
 from ..config import BAND_THRESHOLDS, CATEGORY_CAPS, SCORE_NORMALISER
+from ..recommendations import recommendation_for
 from ..models import Assessment, Category, EmailArtifact, Indicator, RiskBand, Severity
 
 SEVERITY_ORDER = {
@@ -43,16 +44,54 @@ def deduplicate(indicators: list[Indicator]) -> list[Indicator]:
     return list(best.values())
 
 
-def _corroboration_bonus(indicators: list[Indicator]) -> tuple[float, list[str]]:
+def _identity_is_verified(email: EmailArtifact, codes: set[str]) -> bool:
+    """True when nothing casts doubt on who sent this message.
+
+    An internal sender whose SPF, DKIM and DMARC all pass, with no Reply-To
+    or Return-Path divergence and no spoofing indicator, has established
+    identity. Urgency from such a sender is a deadline, not an attack -- this
+    is what keeps a genuine 'pay this today' message out of the BEC bands.
+    """
+    from ..config import TRUSTED_DOMAINS
+
+    if email.from_domain not in TRUSTED_DOMAINS:
+        return False
+
+    disqualifying = {
+        "SPF_FAIL", "DKIM_FAIL", "DMARC_FAIL", "NO_AUTH_RESULTS",
+        "REPLY_TO_MISMATCH", "REPLY_TO_FREEMAIL", "RETURN_PATH_MISMATCH",
+        "DISPLAY_NAME_IMPERSONATION", "LOOKALIKE_DOMAIN",
+        "DISPLAY_NAME_EMBEDS_OTHER_ADDRESS", "FREEMAIL_EXEC_CLAIM",
+        "NEW_DOMAIN_FOR_KNOWN_NAME", "DISPLAY_NAME_CHANGED",
+        "THREAD_SENDER_DIVERGENCE", "THREAD_REPLYTO_INTRODUCED",
+        "THREAD_FABRICATED_REPLY", "INTEL_KNOWN_BAD_DOMAIN",
+        "INTEL_KNOWN_BAD_ADDRESS",
+    }
+    if codes & disqualifying:
+        return False
+
+    # Require positive authentication, not merely the absence of failure.
+    verdicts = email.auth_results.lower()
+    return "spf=pass" in verdicts and "dmarc=pass" in verdicts
+
+
+def _corroboration_bonus(indicators: list[Indicator],
+                         email: EmailArtifact | None = None) -> tuple[float, list[str]]:
     """Reward combinations that are far more damning together than apart.
 
     A payment instruction is ordinary. An unverified sender is ordinary. A
     payment instruction *from* an unverified sender under time pressure is the
     BEC pattern itself, and the score should reflect that interaction.
+
+    The converse also matters: when identity is positively verified, pressure
+    language is not evidence of compromise and earns no bonus.
     """
     codes = {i.code for i in indicators}
     bonus = 0.0
     reasons: list[str] = []
+
+    if email is not None and _identity_is_verified(email, codes):
+        return 0.0, []
 
     identity_compromised = bool(codes & {
         "DISPLAY_NAME_IMPERSONATION", "LOOKALIKE_DOMAIN",
@@ -160,6 +199,12 @@ def fuse(email: EmailArtifact, indicators: list[Indicator]) -> Assessment:
     """Combine indicators into a scored, banded, explained assessment."""
     unique = deduplicate(indicators)
 
+    # Backfill investigator guidance for analysers that do not supply their own,
+    # so every finding in the report answers "what should I do about this?".
+    for indicator in unique:
+        if not indicator.recommendation:
+            indicator.recommendation = recommendation_for(indicator.code)
+
     # Step 2 - accumulate per category.
     raw_by_category: dict[str, float] = {c.value: 0.0 for c in Category}
     for indicator in unique:
@@ -174,7 +219,7 @@ def fuse(email: EmailArtifact, indicators: list[Indicator]) -> Assessment:
     subtotal = sum(capped.values())
 
     # Step 4 - corroboration, normalise, band.
-    bonus, bonus_reasons = _corroboration_bonus(unique)
+    bonus, bonus_reasons = _corroboration_bonus(unique, email)
     total = subtotal + bonus
 
     score = round(min(100.0, (total / SCORE_NORMALISER) * 100.0), 1)

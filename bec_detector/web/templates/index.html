@@ -3,88 +3,152 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BEC Detector</title>
+<title>FORENSIBEC</title>
 <style>
-  :root { --bg:#f8fafc; --panel:#fff; --ink:#0f172a; --muted:#64748b;
-          --line:#e2e8f0; --accent:#1d4ed8; }
-  * { box-sizing: border-box; }
-  body { margin:0; padding:40px 24px; background:var(--bg); color:var(--ink);
+  :root { --bg:#0f172a; --panel:#fff; --ink:#0f172a; --muted:#64748b;
+          --line:#e2e8f0; --accent:#1d4ed8; --page:#f1f5f9; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--page); color:var(--ink);
          font:15px/1.6 "Segoe UI", system-ui, -apple-system, sans-serif; }
-  .wrap { max-width:760px; margin:0 auto; }
-  h1 { font-size:26px; margin:0 0 6px; }
-  .sub { color:var(--muted); margin:0 0 28px; }
-  .panel { background:var(--panel); border:1px solid var(--line); border-radius:12px;
-           padding:26px; }
-  label { display:block; font-weight:600; font-size:13px; margin:18px 0 6px;
-          text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
+  header { background:var(--bg); color:#fff; padding:26px 24px; }
+  header .inner { max-width:940px; margin:0 auto; }
+  h1 { font-size:27px; margin:0; letter-spacing:.06em; font-weight:700; }
+  header p { margin:4px 0 0; color:#94a3b8; font-size:13.5px;
+             text-transform:uppercase; letter-spacing:.09em; }
+  .wrap { max-width:940px; margin:0 auto; padding:28px 24px 56px; }
+  .panel { background:var(--panel); border:1px solid var(--line);
+           border-radius:10px; padding:24px; margin-bottom:18px; }
+  h2 { font-size:15px; margin:0 0 16px; text-transform:uppercase;
+       letter-spacing:.06em; color:var(--muted);
+       border-bottom:1px solid var(--line); padding-bottom:8px; }
+  label { display:block; font-weight:600; font-size:12px; margin:14px 0 5px;
+          text-transform:uppercase; letter-spacing:.05em; color:var(--muted); }
   input[type=text], input[type=file] { width:100%; padding:10px 12px;
-          border:1px solid var(--line); border-radius:8px; font-size:14px;
-          background:#fff; font-family:inherit; }
-  .drop { border:2px dashed #cbd5e1; border-radius:10px; padding:26px;
-          text-align:center; color:var(--muted); background:#f8fafc; }
-  button { margin-top:24px; width:100%; padding:13px; background:var(--accent);
-           color:#fff; border:0; border-radius:8px; font-size:15px; font-weight:600;
-           cursor:pointer; font-family:inherit; }
+          border:1px solid #cbd5e1; border-radius:7px; font-size:14px;
+          font-family:inherit; background:#fff; }
+  .row { display:flex; gap:16px; flex-wrap:wrap; }
+  .row > div { flex:1; min-width:210px; }
+  .drop { border:2px dashed #cbd5e1; border-radius:9px; padding:20px;
+          background:#f8fafc; margin-top:5px; }
+  .drop p { margin:10px 0 0; color:var(--muted); font-size:13px; }
+  button { margin-top:22px; width:100%; padding:13px; background:var(--accent);
+           color:#fff; border:0; border-radius:7px; font-size:15px;
+           font-weight:600; cursor:pointer; font-family:inherit; }
   button:hover { background:#1e40af; }
-  .stages { display:flex; gap:8px; flex-wrap:wrap; margin:0 0 24px; }
-  .stage { flex:1; min-width:120px; background:var(--panel); border:1px solid var(--line);
-           border-radius:8px; padding:10px 12px; font-size:12px; }
+  .stages { display:flex; gap:9px; flex-wrap:wrap; margin-bottom:18px; }
+  .stage { flex:1; min-width:110px; background:#fff; border:1px solid var(--line);
+           border-left:3px solid var(--accent); border-radius:7px;
+           padding:10px 12px; font-size:12px; }
   .stage b { display:block; font-size:13px; }
   .stage span { color:var(--muted); }
-  footer { margin-top:26px; color:var(--muted); font-size:12.5px; }
-  .ok { color:#166534; } .bad { color:#b91c1c; }
-  .note { background:#fefce8; border:1px solid #fde68a; border-radius:8px;
-          padding:10px 13px; font-size:13px; margin-top:18px; color:#713f12; }
+  .cols { columns:2; column-gap:26px; font-size:13.5px; }
+  .cols li { margin-bottom:5px; break-inside:avoid; }
+  ul { margin:0; padding-left:19px; }
+  .note { background:#fefce8; border:1px solid #fde68a; border-radius:7px;
+          padding:11px 14px; font-size:13px; color:#713f12; margin-top:16px; }
+  .sec { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:7px;
+         padding:11px 14px; font-size:13px; color:#14532d; margin-top:12px; }
+  footer { color:var(--muted); font-size:12.5px; margin-top:22px; }
+  .ok { color:#166534; font-weight:600; } .bad { color:#b91c1c; font-weight:600; }
+  code { font-family:Consolas, monospace; font-size:12.5px; }
 </style>
 </head>
 <body>
+
+<header>
+  <div class="inner">
+    <h1>FORENSIBEC</h1>
+    <p>Business Email Compromise &mdash; Detection &amp; Digital Investigation</p>
+  </div>
+</header>
+
 <div class="wrap">
-  <h1>Business Email Compromise Detector</h1>
-  <p class="sub">Upload one or more <code>.eml</code> files for forensic analysis.</p>
 
   <div class="stages">
-    <div class="stage"><b>1. Acquisition</b><span>Hash &amp; parse</span></div>
-    <div class="stage"><b>2. Analysis</b><span>Sender, behaviour, NLP</span></div>
+    <div class="stage"><b>1. Acquisition</b><span>Hash &amp; preserve</span></div>
+    <div class="stage"><b>2. Analysis</b><span>Identity, NLP, thread</span></div>
     <div class="stage"><b>3. Validation</b><span>Anomaly &amp; fusion</span></div>
     <div class="stage"><b>4. Report</b><span>Explained verdict</span></div>
   </div>
 
   <div class="panel">
+    <h2>Upload Evidence &amp; Case Information</h2>
     <form action="/analyse" method="post" enctype="multipart/form-data">
-      <label for="case">Case name</label>
-      <input type="text" id="case" name="case" value="Web submission">
-
-      <label for="examiner">Examiner (recorded in chain of custody)</label>
-      <input type="text" id="examiner" name="examiner" placeholder="your name">
+      <div class="row">
+        <div>
+          <label for="case">Case reference</label>
+          <input type="text" id="case" name="case" value="{{ suggested_case }}">
+        </div>
+        <div>
+          <label for="examiner">Examiner (recorded in chain of custody)</label>
+          <input type="text" id="examiner" name="examiner" placeholder="your name">
+        </div>
+      </div>
 
       <label for="files">Evidence files</label>
       <div class="drop">
-        <input type="file" id="files" name="files" accept=".eml,.txt" multiple required>
-        <p style="margin:10px 0 0">
-          Upload several messages together &mdash; behavioural baselining
-          compares each message against the rest of the set.
+        <input type="file" id="files" name="files" accept=".eml,.txt,.mbox" multiple required>
+        <p>
+          Accepted: <code>.eml</code>, <code>.mbox</code>, <code>.txt</code>
+          &mdash; 10&nbsp;MB per file, 100 files per submission.
+          Upload a whole conversation together: thread, behavioural and
+          stylometric analysis compare each message against the rest of the set.
         </p>
       </div>
 
       <button type="submit">Analyse evidence</button>
     </form>
 
+    <div class="sec">
+      <strong>Handling.</strong> Analysis runs entirely on this machine.
+      Uploads are held in memory only, are never written to disk and are never
+      executed. URLs found in evidence are analysed statically and are never
+      contacted.
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Report Sections Produced</h2>
+    <ul class="cols">
+      <li>BEC risk score &amp; band</li>
+      <li>Identity &amp; display-name spoofing</li>
+      <li>Header authentication (SPF/DKIM/DMARC)</li>
+      <li>Behavioural deviation</li>
+      <li>NLP: urgency, authority, secrecy</li>
+      <li>Financial intent</li>
+      <li>Thread / conversation analysis</li>
+      <li>Look-alike domain analysis</li>
+      <li>URL static analysis</li>
+      <li>Attachment static analysis</li>
+      <li>Stylometry</li>
+      <li>Extracted IOCs</li>
+      <li>Investigation timeline</li>
+      <li>Communication graph</li>
+      <li>Cross-case IOC correlation</li>
+      <li>Potential ATT&amp;CK mapping</li>
+      <li>Evidence integrity (SHA-256)</li>
+      <li>Chain of custody</li>
+      <li>Tamper-evident audit log</li>
+    </ul>
+
     <div class="note">
-      Analysis runs entirely on this machine. Nothing is transmitted to any
-      external service, and uploads are held in memory only for the duration of
-      the request.
+      Findings separate <strong>observed evidence</strong> from
+      <strong>inference</strong> and <strong>recommendation</strong>. The tool
+      reports technical indicators only; it does not determine that a criminal
+      offence occurred.
     </div>
   </div>
 
   <footer>
-    BEC-Detector v{{ version }} &middot; NLP backends:
+    FORENSIBEC v{{ version }} &middot; NLP backends:
     {% for name, ok in nlp.items() %}
       <span class="{{ 'ok' if ok else 'bad' }}">{{ name }}:
       {{ 'available' if ok else 'unavailable' }}</span>{% if not loop.last %} &middot; {% endif %}
     {% endfor %}
-    <br>JSON API: <code>POST /api/analyse</code> &middot;
-    health check: <code>GET /api/health</code>
+    <br>JSON API <code>POST /api/analyse</code> &middot;
+    health <code>GET /api/health</code>
   </footer>
+
 </div>
 </body>
 </html>

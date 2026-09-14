@@ -66,5 +66,25 @@
   "ben_08_delivery_notice.eml": {
     "label": "BENIGN",
     "family": "external_routine"
+  },
+  "thread_01_genuine_opening.eml": {
+    "label": "BENIGN",
+    "family": "thread_genuine"
+  },
+  "thread_02_genuine_reply.eml": {
+    "label": "BENIGN",
+    "family": "thread_genuine"
+  },
+  "thread_03_hijack.eml": {
+    "label": "MALICIOUS",
+    "family": "thread_hijack"
+  },
+  "bec_08_link_and_attachment.eml": {
+    "label": "MALICIOUS",
+    "family": "credential_harvest"
+  },
+  "susp_03_legit_urgent_payment.eml": {
+    "label": "BENIGN",
+    "family": "internal_urgent"
   }
 }

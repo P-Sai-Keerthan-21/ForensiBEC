@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import email
 import mailbox
+import re
 from datetime import datetime, timezone
 from email.header import decode_header, make_header
 from email.message import EmailMessage
@@ -16,7 +17,7 @@ from email.policy import default as default_policy
 from email.utils import getaddresses, parsedate_to_datetime
 from pathlib import Path
 
-from ..models import CustodyRecord, EmailArtifact
+from ..models import Attachment, CustodyRecord, EmailArtifact
 from .custody import build_custody_record
 
 # Header fields preserved verbatim so indicators can quote them as evidence.
@@ -84,15 +85,49 @@ def _extract_body(msg: EmailMessage) -> str:
     return str(msg.get_payload() or "")
 
 
-def _attachments(msg: EmailMessage) -> list[str]:
-    names: list[str] = []
+def _raw_html(msg: EmailMessage) -> str:
+    """Return the raw HTML part, if the message has one.
+
+    URL analysis must run against the HTML source rather than the rendered
+    text: the anchor href and its visible text only differ in the markup, and
+    a plain-text alternative often omits the links entirely.
+    """
     try:
-        for part in msg.iter_attachments():
-            name = part.get_filename()
-            names.append(_decode(name) if name else f"<unnamed {part.get_content_type()}>")
+        part = msg.get_body(preferencelist=("html",))
+        if part is not None:
+            return part.get_content()
     except Exception:
         pass
-    return names
+    return ""
+
+
+def _attachments(msg: EmailMessage) -> list[Attachment]:
+    """Describe each attachment without ever executing or writing it to disk.
+
+    The payload is decoded in memory only long enough to hash it and sniff its
+    real type from the leading magic bytes.
+    """
+    from ..analysis.attachments import describe_attachment
+
+    found: list[Attachment] = []
+    try:
+        parts = list(msg.iter_attachments())
+    except Exception:
+        return found
+
+    for part in parts:
+        raw_name = part.get_filename()
+        name = _decode(raw_name) if raw_name else ""
+        try:
+            payload = part.get_payload(decode=True) or b""
+        except Exception:
+            payload = b""
+        found.append(describe_attachment(
+            filename=name,
+            declared_mime=part.get_content_type(),
+            payload=payload,
+        ))
+    return found
 
 
 def _parse_date(msg: EmailMessage) -> datetime | None:
@@ -112,6 +147,8 @@ def _parse_date(msg: EmailMessage) -> datetime | None:
 
 
 def _to_artifact(msg: EmailMessage, custody: CustodyRecord) -> EmailArtifact:
+    from ..analysis.urls import extract_urls
+
     from_display, from_address = _split_address(msg.get("from", ""))
     _, reply_to_address = _split_address(msg.get("reply-to", ""))
     _, return_path = _split_address(msg.get("return-path", ""))
@@ -122,6 +159,12 @@ def _to_artifact(msg: EmailMessage, custody: CustodyRecord) -> EmailArtifact:
         if value:
             headers[key] = _decode(value)
 
+    references_raw = msg.get("references") or ""
+    references = re.findall(r"<[^>]+>", references_raw) if references_raw else []
+
+    body = _extract_body(msg)
+    html_source = _raw_html(msg)
+
     return EmailArtifact(
         message_id=(msg.get("message-id") or "").strip(),
         from_display=from_display,
@@ -131,13 +174,16 @@ def _to_artifact(msg: EmailMessage, custody: CustodyRecord) -> EmailArtifact:
         to_addresses=_all_addresses(msg.get("to", "")),
         cc_addresses=_all_addresses(msg.get("cc", "")),
         subject=_decode(msg.get("subject", "")),
-        body_text=_extract_body(msg),
+        body_text=body,
         date_utc=_parse_date(msg),
         headers=headers,
         received_chain=[_decode(v) for v in msg.get_all("received", [])],
         auth_results=_decode(msg.get("authentication-results", "")),
         attachments=_attachments(msg),
         custody=custody,
+        in_reply_to=(msg.get("in-reply-to") or "").strip(),
+        references=references,
+        urls=extract_urls(html_source or body, bool(html_source)),
     )
 
 

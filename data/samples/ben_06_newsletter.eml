@@ -1,12 +1,17 @@
 From: "Logistics Weekly" <news@logisticsweekly.example>
 To: priya.sharma@northwind-logistics.com
 Subject: This week in freight: capacity tightens
-Date: Thu, 11 Sep 2026 07:30:00 +0000
+Date: Fri, 11 Sep 2026 07:30:00 +0000
 Message-ID: <nl2209@logisticsweekly.example>
-Authentication-Results: mx.northwind-logistics.com; spf=pass smtp.mailfrom=logisticsweekly.example; dkim=pass header.d=logisticsweekly.example; dmarc=pass
-Received: from mail.northwind-logistics.com (mail.northwind-logistics.com [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 4aB2; Mon, 08 Sep 2026 09:14:02 +0000
-MIME-Version: 1.0
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=logisticsweekly.example; dkim=pass
+ header.d=logisticsweekly.example; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 4aB2; Mon, 08
+ Sep 2026 09:14:02 +0000
 Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
 
 Logistics Weekly
 

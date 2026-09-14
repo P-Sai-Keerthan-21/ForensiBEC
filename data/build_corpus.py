@@ -19,10 +19,12 @@ from pathlib import Path
 SAMPLES: list[dict] = []
 
 
-def sample(name: str, label: str, family: str, headers: dict[str, str], body: str) -> None:
+def sample(name: str, label: str, family: str, headers: dict[str, str], body: str,
+           attachments: list[dict] | None = None, html: bool = False) -> None:
     SAMPLES.append({
         "name": name, "label": label, "family": family,
         "headers": headers, "body": body,
+        "attachments": attachments or [], "html": html,
     })
 
 
@@ -473,20 +475,204 @@ Depot Scheduling
 )
 
 
+
+# ---------------------------------------------------------------------------
+# CASE 4 - fabricated / hijacked conversation (three-message thread)
+#
+# The first two messages are the genuine exchange. The third is the attacker
+# grafting onto it: same subject, a new Reply-To, and the conversation turns
+# financial for the first time.
+# ---------------------------------------------------------------------------
+
+sample(
+    "thread_01_genuine_opening", "BENIGN", "thread_genuine",
+    {
+        "From": '"Marta Kalina" <m.kalina@delaney-freight.co>',
+        "To": "j.okafor@northwind-logistics.com",
+        "Cc": "accounts.payable@northwind-logistics.com",
+        "Subject": "Pallet contract renewal - Q4 schedule",
+        "Date": "Mon, 01 Sep 2026 09:12:00 +0000",
+        "Message-ID": "<thread-aaa-001@delaney-freight.co>",
+        "Authentication-Results": "mx.northwind-logistics.com; spf=pass smtp.mailfrom=delaney-freight.co; dkim=pass header.d=delaney-freight.co; dmarc=pass",
+        "Received": RECV_NORMAL,
+    },
+    """Good morning,
+
+Ahead of the Q4 schedule I wanted to confirm the pallet volumes we discussed at
+the depot review. Our proposed figures are on the contract portal as usual.
+
+Could you confirm the delivery windows suit your side?
+
+Best regards,
+Marta Kalina
+Delaney Freight Solutions
+""",
+)
+
+sample(
+    "thread_02_genuine_reply", "BENIGN", "thread_genuine",
+    {
+        "From": '"Joseph Okafor" <j.okafor@northwind-logistics.com>',
+        "To": "m.kalina@delaney-freight.co",
+        "Cc": "accounts.payable@northwind-logistics.com",
+        "Subject": "Re: Pallet contract renewal - Q4 schedule",
+        "Date": "Mon, 01 Sep 2026 14:40:00 +0000",
+        "Message-ID": "<thread-aaa-002@northwind-logistics.com>",
+        "In-Reply-To": "<thread-aaa-001@delaney-freight.co>",
+        "References": "<thread-aaa-001@delaney-freight.co>",
+        "Authentication-Results": AUTH_PASS,
+        "Received": RECV_NORMAL,
+    },
+    """Hi Marta,
+
+Thanks - the volumes look right to me. The Tuesday and Thursday windows work
+best for our depot team.
+
+I have copied accounts payable so they are aware of the renewal.
+
+Joseph Okafor
+Northwind Logistics
+""",
+)
+
+sample(
+    "thread_03_hijack", "MALICIOUS", "thread_hijack",
+    {
+        "From": '"Marta Kalina" <m.kalina@delaney-freight.co>',
+        "To": "accounts.payable@northwind-logistics.com",
+        "Reply-To": "m.kalina.delaney@mail.com",
+        "Subject": "Re: Pallet contract renewal - Q4 schedule",
+        "Date": "Tue, 02 Sep 2026 23:58:00 +0000",
+        "Message-ID": "<thread-aaa-003@delaney-freight.co>",
+        "In-Reply-To": "<thread-aaa-002@northwind-logistics.com>",
+        "References": "<thread-aaa-001@delaney-freight.co> <thread-aaa-002@northwind-logistics.com>",
+        "Authentication-Results": AUTH_SOFT,
+        "Received": RECV_EXTERNAL,
+    },
+    """Hello,
+
+Further to our conversation on the renewal, please note our banking details
+have changed ahead of the Q4 invoices.
+
+Kindly update your records and remit the outstanding balance of GBP 18,450.00
+to the new account today - our auditors close the period this evening.
+
+  Beneficiary: Delaney Freight Solutions
+  IBAN: LT601010012345678901
+
+Please keep this between us until the contract is countersigned.
+
+Marta
+""",
+)
+
+# ---------------------------------------------------------------------------
+# CASE 3 (extended) - look-alike domain carrying a deceptive link and a
+# double-extension executable attachment.
+# ---------------------------------------------------------------------------
+
+sample(
+    "bec_08_link_and_attachment", "MALICIOUS", "credential_harvest",
+    {
+        "From": '"Northwind Payroll" <payroll@northwind-logistics.support>',
+        "To": "all.staff@northwind-logistics.com",
+        "Reply-To": "payroll.verify@yandex.com",
+        "Subject": "Payslip correction - action required today",
+        "Date": "Wed, 03 Sep 2026 04:11:00 +0000",
+        "Message-ID": "<pay991@northwind-logistics.support>",
+        "Authentication-Results": AUTH_FAIL,
+        "Received": RECV_EXTERNAL,
+    },
+    """<html><body>
+<p>Dear Colleague,</p>
+<p>A correction has been applied to your latest payslip. You must verify your
+account immediately to receive the adjusted payment.</p>
+<p><a href="http://203.0.113.45/payroll/secure/login.php">https://payroll.northwind-logistics.com/verify</a></p>
+<p>This is time sensitive. Failure to act now will delay your payment.</p>
+<p>Northwind Payroll</p>
+</body></html>
+""",
+    attachments=[{
+        "filename": "Payslip_September.pdf.exe",
+        "mime": "application/pdf",
+        # Fake PE header. Inert test bytes - not a real executable.
+        "content": b"MZ\x90\x00\x03\x00\x00\x00 inert test payload, not an executable",
+    }],
+    html=True,
+)
+
+# ---------------------------------------------------------------------------
+# CASE 5 (reinforced) - legitimate urgent email WITH a financial reference.
+#
+# The critical control case: urgency + a real sum + a real deadline, but a
+# verified internal sender referring to an account already on file. It must
+# NOT be flagged, demonstrating that urgency alone is not BEC.
+# ---------------------------------------------------------------------------
+
+sample(
+    "susp_03_legit_urgent_payment", "BENIGN", "internal_urgent",
+    {
+        "From": '"Sandra Whitlock" <sandra.whitlock@northwind-logistics.com>',
+        "To": "accounts.payable@northwind-logistics.com",
+        "Subject": "URGENT: Harborline invoice must be paid before close of business",
+        "Date": "Thu, 04 Sep 2026 10:22:00 +0000",
+        "Message-ID": "<urg551@northwind-logistics.com>",
+        "Authentication-Results": AUTH_PASS,
+        "Received": RECV_NORMAL,
+    },
+    """Team,
+
+The Harborline invoice HS-4471 for GBP 1,840.00 needs to be paid before close
+of business today or we lose the early settlement discount.
+
+Details are unchanged and already on file - this is the same account we have
+always used. Please process it through the normal approval workflow.
+
+Sandra Whitlock
+Chief Financial Officer
+Northwind Logistics
+""",
+)
+
+
+def _build_message(item: dict) -> bytes:
+    """Serialise one sample to RFC 5322 bytes, with MIME parts where needed."""
+    import email.message
+
+    msg = email.message.EmailMessage()
+    for key, value in item["headers"].items():
+        msg[key] = value
+
+    body = item["body"]
+    if item.get("html"):
+        msg.set_content("This message requires an HTML capable client.")
+        msg.add_alternative(body, subtype="html")
+    else:
+        msg.set_content(body)
+
+    for attachment in item.get("attachments", []):
+        maintype, _, subtype = attachment["mime"].partition("/")
+        msg.add_attachment(
+            attachment["content"],
+            maintype=maintype or "application",
+            subtype=subtype or "octet-stream",
+            filename=attachment["filename"],
+        )
+
+    return msg.as_bytes()
+
+
 def write_corpus(target: Path) -> None:
     target.mkdir(parents=True, exist_ok=True)
 
     labels: dict[str, dict[str, str]] = {}
     for item in SAMPLES:
-        lines = [f"{key}: {value}" for key, value in item["headers"].items()]
-        lines.append("MIME-Version: 1.0")
-        lines.append('Content-Type: text/plain; charset="utf-8"')
-        raw = "\r\n".join(lines) + "\r\n\r\n" + item["body"].replace("\n", "\r\n")
+        raw = _build_message(item)
 
         filename = f"{item['name']}.eml"
         # Write bytes, not text: on Windows write_text() would translate the
         # "\r\n" line endings again into "\r\r\n" and corrupt the header block.
-        (target / filename).write_bytes(raw.encode("utf-8"))
+        (target / filename).write_bytes(raw)
         labels[filename] = {"label": item["label"], "family": item["family"]}
 
     (target / "labels.json").write_text(
