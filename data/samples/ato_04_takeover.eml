@@ -1,0 +1,27 @@
+From: "Elena Fischer" <e.fischer@northwind-logistics.com>
+To: accounts.payable@northwind-logistics.com
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 4aB2; Mon, 08
+ Sep 2026 09:14:02 +0000
+Subject: payment needed
+Date: Sun, 23 Aug 2026 02:47:00 +0000
+Message-ID: <ato-base-004@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hey!
+
+Need you to do a wire transfer now! Amount is USD 34,500. It is urgent!
+
+New bank details below. Update your records please!
+
+IBAN: LT991010098765432101
+
+Do it today! Do not discuss with anyone! I am busy!
+
+Thanks!
+E

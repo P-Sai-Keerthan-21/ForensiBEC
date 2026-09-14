@@ -1,0 +1,28 @@
+From: "Elena Fischer" <e.fischer@northwind-logistics.com>
+To: accounts.payable@northwind-logistics.com
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 4aB2; Mon, 08
+ Sep 2026 09:14:02 +0000
+Subject: Depot expenditure summary for July
+Date: Sat, 22 Aug 2026 14:05:00 +0000
+Message-ID: <ato-base-003@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Good morning,
+
+Please find below the expenditure summary for the depot operations during Jul=
+y,
+which I have reconciled against the approved budget allocation for the period.
+
+Expenditure remains within the agreed tolerance, and I do not anticipate any
+variance that would require escalation to the finance committee at this stage.
+
+Kind regards,
+Elena Fischer
+Financial Controller
+Northwind Logistics

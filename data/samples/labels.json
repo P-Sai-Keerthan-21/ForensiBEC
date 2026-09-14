@@ -86,5 +86,21 @@
   "susp_03_legit_urgent_payment.eml": {
     "label": "BENIGN",
     "family": "internal_urgent"
+  },
+  "ato_01_baseline.eml": {
+    "label": "BENIGN",
+    "family": "ato_baseline"
+  },
+  "ato_02_baseline.eml": {
+    "label": "BENIGN",
+    "family": "ato_baseline"
+  },
+  "ato_03_baseline.eml": {
+    "label": "BENIGN",
+    "family": "ato_baseline"
+  },
+  "ato_04_takeover.eml": {
+    "label": "MALICIOUS",
+    "family": "account_takeover"
   }
 }

@@ -10,19 +10,19 @@ Received: from unknown (vps-4471.hostwind.ru [203.0.113.88]) by
  mx.northwind-logistics.com with ESMTP id 9zQ1; Mon, 08 Sep 2026 03:22:41
  +0000
 MIME-Version: 1.0
-Content-Type: multipart/mixed; boundary="===============6771678814419442068=="
+Content-Type: multipart/mixed; boundary="===============3716853800549960808=="
 
---===============6771678814419442068==
+--===============3716853800549960808==
 Content-Type: multipart/alternative;
- boundary="===============9140817592492128839=="
+ boundary="===============5367115454002333537=="
 
---===============9140817592492128839==
+--===============5367115454002333537==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: 7bit
 
 This message requires an HTML capable client.
 
---===============9140817592492128839==
+--===============5367115454002333537==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 MIME-Version: 1.0
@@ -37,9 +37,9 @@ orthwind-logistics.com/verify</a></p>
 <p>Northwind Payroll</p>
 </body></html>
 
---===============9140817592492128839==--
+--===============5367115454002333537==--
 
---===============6771678814419442068==
+--===============3716853800549960808==
 Content-Type: application/pdf
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="Payslip_September.pdf.exe"
@@ -47,4 +47,4 @@ MIME-Version: 1.0
 
 TVqQAAMAAAAgaW5lcnQgdGVzdCBwYXlsb2FkLCBub3QgYW4gZXhlY3V0YWJsZQ==
 
---===============6771678814419442068==--
+--===============3716853800549960808==--

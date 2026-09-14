@@ -66,6 +66,10 @@ def _identity_is_verified(email: EmailArtifact, codes: set[str]) -> bool:
         "THREAD_SENDER_DIVERGENCE", "THREAD_REPLYTO_INTRODUCED",
         "THREAD_FABRICATED_REPLY", "INTEL_KNOWN_BAD_DOMAIN",
         "INTEL_KNOWN_BAD_ADDRESS",
+        # An account writing unlike itself is not a verified identity. This is
+        # the account-takeover case: the address is genuine and authentication
+        # passes, but the person at the keyboard has changed.
+        "STYLE_DEVIATION", "STYLE_SIGNATURE_CHANGE",
     }
     if codes & disqualifying:
         return False

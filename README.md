@@ -55,6 +55,43 @@ venv\Scripts\python.exe -m pytest tests/ -q
 
 ---
 
+## Pipeline
+
+See [`docs/pipeline.md`](docs/pipeline.md) for the full annotated flow.
+
+```
+Evidence Upload
+      v
+SHA-256 / Chain of Custody          <- taken BEFORE parsing
+      v
+Header parsing
+      v
+[ PASS 1 ] observe whole corpus     <- baselines: behaviour, thread, style, anomaly
+      v
+[ PASS 2 ] per message:
+   Identity . Auth . Behaviour . NLP(+financial) . Thread . Stylometry
+                        v
+              URL (static) . Attachment (static)
+                        v
+              IOC extraction -> local intel + cross-case correlation
+                        v
+              Statistical anomaly
+                        v
+              EVIDENCE FUSION
+                        v
+                 BEC RISK SCORE
+                        v
+      Explainable investigation     <- observed / inference / recommendation
+                        v
+   Timeline . Comms graph . IOCs . ATT&CK . Evidence integrity
+                        v
+                FORENSIC REPORT
+```
+
+The two-pass structure is load-bearing: behaviour, thread, stylometry and
+anomaly all describe deviation from normal, and "normal" does not exist until
+the corpus has been observed.
+
 ## Architecture
 
 ```
@@ -208,14 +245,14 @@ The tool is deliberately conservative about what it will assert:
 `tests/test_validation.py` against `data/samples/labels.json`:
 
 ```
-TP=9  FP=0  TN=11  FN=0
+TP=10  FP=0  TN=14  FN=0
 precision=1.000  recall=1.000  F1=1.000
 ```
 
-Score separation: lowest malicious **100.0**, highest benign **29.6**.
+Score separation: lowest malicious **78.4**, highest benign **29.6**.
 
 > **These are development-corpus validation results, not real-world accuracy.**
-> They are measured on a 22-message synthetic corpus written specifically for
+> They are measured on a 26-message synthetic corpus written specifically for
 > this project. Perfect scores on self-authored data demonstrate that the
 > pipeline works end to end and that the rules fire as designed — they say
 > nothing about generalisation. Validation against an independent corpus
@@ -231,15 +268,25 @@ Score separation: lowest malicious **100.0**, highest benign **29.6**.
 | 3 | `bec_08_link_and_attachment.eml` | Lookalike domain + deceptive link + double-extension executable |
 | 4 | `thread_01/02/03_*.eml` | Genuine two-message thread, then a hijack of it |
 | 5 | `susp_03_legit_urgent_payment.eml` | **Legitimate urgent payment request — not flagged** |
+| 6 | `ato_01/02/03_baseline.eml`, `ato_04_takeover.eml` | Account takeover caught **only** by stylometry |
 
 Case 5 is the critical control: urgency, a real sum and a real deadline, but a
 verified internal sender. It scores **29.6 (BENIGN/SUSPICIOUS boundary)** rather
 than a BEC band, demonstrating that **urgency alone ≠ BEC** and that the verdict
 comes from indicator *combination*.
 
+Case 6 is its mirror image: a genuine internal address with **passing SPF, DKIM
+and DMARC**, where identity and authentication checks all succeed. Three prior
+messages establish the sender's writing baseline; the fourth — sent from the
+same mailbox by someone else — is caught at **78.4 CONFIRMED_BEC** purely by
+how it writes (mean sentence length 3.6 vs a baseline of 19.4, z = -21.1;
+greeting `'hey!'` against an established `'good morning,'`). A style deviation
+also revokes the verified-identity suppression, because an account writing
+unlike itself is not a verified identity.
+
 ### Sample data
 
-All 22 messages in `data/samples/` are fabricated. The organisation
+All 26 messages in `data/samples/` are fabricated. The organisation
 (`northwind-logistics.com`), its staff, its vendors and all attacker
 infrastructure are invented. No real mailbox, person or domain is represented.
 `data/local_intel.json` contains fictional indicators only.
@@ -288,6 +335,7 @@ shared network.
 
 | Document | Contents |
 |---|---|
+| [`docs/pipeline.md`](docs/pipeline.md) | Annotated processing pipeline, stage-to-module map, rule-code distribution |
 | [`docs/research_mapping.md`](docs/research_mapping.md) | Every component mapped to a paper section; claims the paper may and may not make |
 | [`docs/security.md`](docs/security.md) | Application threat model, security review, residual risks |
 
@@ -305,7 +353,7 @@ static attachment analysis · statistical anomaly detection · weighted
 explainable fusion · IOC extraction · cross-case correlation · threat-intel
 adapter · ATT&CK mapping · timeline · communication graph · hash-chained audit
 log with verification · JSON + HTML reports · CLI · investigator dashboard ·
-22-message labelled corpus · 92 tests
+26-message labelled corpus · 95 tests
 
 **Deferred to Phase 2**
 

@@ -1,0 +1,31 @@
+From: "Elena Fischer" <e.fischer@northwind-logistics.com>
+To: accounts.payable@northwind-logistics.com
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 4aB2; Mon, 08
+ Sep 2026 09:14:02 +0000
+Subject: Quarterly supplier reconciliation schedule
+Date: Tue, 18 Aug 2026 09:30:00 +0000
+Message-ID: <ato-base-001@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+I have completed the reconciliation schedule for the coming quarter, and I
+would be grateful if you could review the supplier groupings before we
+circulate them to the wider finance function.
+
+The principal change this quarter concerns the consolidation of the smaller
+haulage accounts, which should reduce the administrative overhead considerably
+without affecting our payment terms.
+
+Please let me know if anything requires adjustment.
+
+Kind regards,
+Elena Fischer
+Financial Controller
+Northwind Logistics

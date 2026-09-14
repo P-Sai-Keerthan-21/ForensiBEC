@@ -1,0 +1,28 @@
+From: "Elena Fischer" <e.fischer@northwind-logistics.com>
+To: accounts.payable@northwind-logistics.com
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 4aB2; Mon, 08
+ Sep 2026 09:14:02 +0000
+Subject: Notes on the August ledger review
+Date: Thu, 20 Aug 2026 11:15:00 +0000
+Message-ID: <ato-base-002@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Following the ledger review yesterday, I have summarised the three outstanding
+queries that remain open, together with the supporting documentation that will
+be required in order to close them.
+
+None of these are urgent, and I would suggest we address them alongside the
+month-end process rather than interrupting the current workload.
+
+Kind regards,
+Elena Fischer
+Financial Controller
+Northwind Logistics

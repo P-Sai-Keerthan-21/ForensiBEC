@@ -635,6 +635,118 @@ Northwind Logistics
 )
 
 
+
+# ---------------------------------------------------------------------------
+# CASE 6 - account takeover, demonstrating stylometry
+#
+# Four messages from the same internal address. The first three establish this
+# sender's writing baseline (long measured sentences, "Good morning," opening,
+# full name + title sign-off). The fourth comes from the same mailbox but is
+# written by someone else: short clipped sentences, exclamation marks, a
+# different greeting and a truncated sign-off.
+#
+# Identity checks alone cannot catch this - the address is real, internal and
+# fully authenticated. Only comparison against the sender's OWN prior writing
+# raises it.
+# ---------------------------------------------------------------------------
+
+_ATO_HEADERS = {
+    "From": '"Elena Fischer" <e.fischer@northwind-logistics.com>',
+    "To": "accounts.payable@northwind-logistics.com",
+    "Authentication-Results": AUTH_PASS,
+    "Received": RECV_NORMAL,
+}
+
+sample(
+    "ato_01_baseline", "BENIGN", "ato_baseline",
+    {**_ATO_HEADERS,
+     "Subject": "Quarterly supplier reconciliation schedule",
+     "Date": "Mon, 18 Aug 2026 09:30:00 +0000",
+     "Message-ID": "<ato-base-001@northwind-logistics.com>"},
+    """Good morning,
+
+I have completed the reconciliation schedule for the coming quarter, and I
+would be grateful if you could review the supplier groupings before we
+circulate them to the wider finance function.
+
+The principal change this quarter concerns the consolidation of the smaller
+haulage accounts, which should reduce the administrative overhead considerably
+without affecting our payment terms.
+
+Please let me know if anything requires adjustment.
+
+Kind regards,
+Elena Fischer
+Financial Controller
+Northwind Logistics
+""",
+)
+
+sample(
+    "ato_02_baseline", "BENIGN", "ato_baseline",
+    {**_ATO_HEADERS,
+     "Subject": "Notes on the August ledger review",
+     "Date": "Wed, 20 Aug 2026 11:15:00 +0000",
+     "Message-ID": "<ato-base-002@northwind-logistics.com>"},
+    """Good morning,
+
+Following the ledger review yesterday, I have summarised the three outstanding
+queries that remain open, together with the supporting documentation that will
+be required in order to close them.
+
+None of these are urgent, and I would suggest we address them alongside the
+month-end process rather than interrupting the current workload.
+
+Kind regards,
+Elena Fischer
+Financial Controller
+Northwind Logistics
+""",
+)
+
+sample(
+    "ato_03_baseline", "BENIGN", "ato_baseline",
+    {**_ATO_HEADERS,
+     "Subject": "Depot expenditure summary for July",
+     "Date": "Fri, 22 Aug 2026 14:05:00 +0000",
+     "Message-ID": "<ato-base-003@northwind-logistics.com>"},
+    """Good morning,
+
+Please find below the expenditure summary for the depot operations during July,
+which I have reconciled against the approved budget allocation for the period.
+
+Expenditure remains within the agreed tolerance, and I do not anticipate any
+variance that would require escalation to the finance committee at this stage.
+
+Kind regards,
+Elena Fischer
+Financial Controller
+Northwind Logistics
+""",
+)
+
+sample(
+    "ato_04_takeover", "MALICIOUS", "account_takeover",
+    {**_ATO_HEADERS,
+     "Subject": "payment needed",
+     "Date": "Sat, 23 Aug 2026 02:47:00 +0000",
+     "Message-ID": "<ato-base-004@northwind-logistics.com>"},
+    """Hey!
+
+Need you to do a wire transfer now! Amount is USD 34,500. It is urgent!
+
+New bank details below. Update your records please!
+
+IBAN: LT991010098765432101
+
+Do it today! Do not discuss with anyone! I am busy!
+
+Thanks!
+E
+""",
+)
+
+
 def _build_message(item: dict) -> bytes:
     """Serialise one sample to RFC 5322 bytes, with MIME parts where needed."""
     import email.message

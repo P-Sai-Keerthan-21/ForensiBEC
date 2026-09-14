@@ -22,7 +22,7 @@ from bec_detector.forensics import (
     extract_iocs,
     map_indicators,
 )
-from bec_detector.models import Confidence, RiskBand
+from bec_detector.models import Category, Confidence, RiskBand
 from bec_detector.pipeline import BECPipeline
 
 SAMPLES = Path(__file__).resolve().parent.parent / "data" / "samples"
@@ -431,3 +431,51 @@ def test_flagged_messages_carry_a_recommendation(case):
         critical = [i for i in assessment.indicators
                     if i.severity.value in {"CRITICAL", "HIGH"} and i.recommendation]
         assert critical, f"{assessment.artifact.evidence_id} has no actionable recommendation"
+
+
+# ---------------------------------------------------------------------------
+# Account takeover - the case only stylometry can catch
+# ---------------------------------------------------------------------------
+
+def test_account_takeover_caught_by_stylometry(case):
+    """An internal, fully-authenticated address writing unlike itself.
+
+    Identity and authentication checks all pass here: the address is genuine,
+    internal, and SPF/DKIM/DMARC succeed. Only comparison against the sender's
+    own prior writing raises it, so this locks in that the stylometry stage
+    actually contributes to a verdict rather than merely existing.
+    """
+    _, assessments = case
+    assessment = _by_name(assessments, "ato_04_takeover.eml")
+
+    style = [i for i in assessment.indicators if i.category is Category.STYLOMETRY]
+    assert style, "stylometry raised nothing on the takeover message"
+    assert {i.code for i in style} >= {"STYLE_DEVIATION"}
+
+    # Every stylometric claim is an inference, never presented as fact.
+    assert all(i.basis is Confidence.INFERRED for i in style)
+
+    # Authentication genuinely passes - this is not caught by header checks.
+    codes = {i.code for i in assessment.indicators}
+    assert not (codes & {"SPF_FAIL", "DKIM_FAIL", "DMARC_FAIL"})
+
+    assert assessment.band in {RiskBand.LIKELY_BEC, RiskBand.CONFIRMED_BEC}
+
+
+def test_takeover_baseline_messages_stay_benign(case):
+    """The three messages establishing the baseline must not be flagged."""
+    _, assessments = case
+    for name in ("ato_01_baseline.eml", "ato_02_baseline.eml", "ato_03_baseline.eml"):
+        assessment = _by_name(assessments, name)
+        assert assessment.band is RiskBand.BENIGN, f"{name} scored {assessment.score}"
+        assert not [i for i in assessment.indicators
+                    if i.category is Category.STYLOMETRY]
+
+
+def test_stylometry_quotes_measured_features(case):
+    """A style finding must quote the numbers behind it, not just assert."""
+    _, assessments = case
+    assessment = _by_name(assessments, "ato_04_takeover.eml")
+    deviation = next(i for i in assessment.indicators if i.code == "STYLE_DEVIATION")
+    assert "baseline of" in deviation.evidence
+    assert "z=" in deviation.evidence
