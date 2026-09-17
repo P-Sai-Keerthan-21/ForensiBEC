@@ -1,0 +1,20 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: c.reid@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Wed, 07 Jan 2026 21:45:00 +0000
+Message-ID: <9474937570@delaney-freight.co>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=delaney-freight.co; dkim=pass header.d=delaney-freight.co;
+ dmarc=pass
+Received: from unknown (vps-8224.hostwind.example [203.0.113.72]) by
+ mx.northwind-logistics.com with ESMTP id bb7edd; Wed, 07 Jan 2026 21:45:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Callum,
+
+Could you confirm the pallet dimensions for the Rotterdam depot?
+
+Thanks,

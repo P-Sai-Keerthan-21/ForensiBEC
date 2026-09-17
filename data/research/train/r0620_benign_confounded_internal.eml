@@ -1,0 +1,24 @@
+From: "Daniel Osei (Operations Director)" <d.osei@northwind-logistics.com>
+To: hr.payroll@northwind-logistics.com
+Subject: Weekly operations summary
+Date: Mon, 26 Jan 2026 13:05:00 +0000
+Message-ID: <5581104746@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id efd7ed; Mon, 26
+ Jan 2026 13:05:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Ravi,
+
+This is critical and cannot wait until tomorrow.
+Please process USD 7,994.00 against the existing purchase order when convenie=
+nt.
+  Beneficiary account (unchanged): IBAN LT179925300796620
+This follows on from our earlier discussion.
+
+Thanks,

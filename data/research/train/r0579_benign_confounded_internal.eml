@@ -1,0 +1,24 @@
+From: "Sandra Whitlock (CEO)" <sandra.whitlock@northwind-logistics.com>
+To: d.osei@northwind-logistics.com
+Subject: Invoice INV-78058 attached
+Date: Fri, 05 Jun 2026 13:40:00 +0000
+Message-ID: <9253813727@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id c496e4; Fri, 05
+ Jun 2026 13:40:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Daniel,
+
+Please treat this as time sensitive - it must clear before close of business.
+Accounts payable have the invoice for USD 27,572.00 - no action needed from y=
+ou.
+Details are unchanged and already on file.
+Do check the attached schedule when you get a moment.
+
+Best regards,

@@ -1,0 +1,24 @@
+From: "Joseph Okafor" <j.okafor@northwind-logistics.com>
+To: d.osei@northwind-logistics.com
+Subject: Re: Invoice INV-70257 - updated bank details
+Date: Sat, 21 Feb 2026 07:05:00 +0000
+Message-ID: <4298787833@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 901f9a; Sat, 21
+ Feb 2026 07:05:00 +0000
+Return-Path: <j.okafor@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Daniel,
+
+Please action this right away - the deadline is this afternoon.
+The outstanding balance of USD 37,502.00 needs to be remitted today.
+  IBAN: LT503761288112106
+Let me know if you need anything else.
+
+Thanks,

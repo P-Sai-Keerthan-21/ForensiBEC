@@ -1,0 +1,23 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: t.nowak@northwind-logistics.com
+Subject: Re: pallet contract renewal
+Date: Mon, 05 Jan 2026 09:38:00 +0000
+Message-ID: <4467006536@castellan-pack.eu>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=castellan-pack.eu; dkim=pass header.d=castellan-pack.eu;
+ dmarc=pass
+Received: from unknown (vps-3075.hostwind.example [203.0.113.125]) by
+ mx.northwind-logistics.com with ESMTP id d8e8e6; Mon, 05 Jan 2026 09:38:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+This is urgent - I need the stocktake figures before close of business.
+Accounts payable have the invoice for EUR 18,441.00 - no action needed from y=
+ou.
+Details are here: https://northwind-logistics.com/depot-schedule
+
+Regards,

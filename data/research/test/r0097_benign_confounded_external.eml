@@ -1,0 +1,23 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: r.menon@northwind-logistics.com
+Subject: Q3 budget review scheduled
+Date: Mon, 27 Jul 2026 04:54:00 +0000
+Message-ID: <5345534955@bergindustrial.se>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se;
+ dmarc=pass
+Received: from unknown (vps-6114.hostwind.example [203.0.113.60]) by
+ mx.northwind-logistics.com with ESMTP id 24a7b2; Mon, 27 Jul 2026 04:54:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+Please process EUR 16,057.00 against the existing purchase order when conveni=
+ent.
+  Beneficiary account (unchanged): IBAN CY526242476844911
+This follows on from our earlier discussion.
+
+Best regards,

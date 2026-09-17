@@ -1,0 +1,23 @@
+From: "Ravi Menon" <r.menon@northwind-logistics.com>
+To: c.reid@northwind-logistics.com
+Subject: Important: account update needed
+Date: Tue, 16 Jun 2026 09:58:00 +0000
+Message-ID: <7462456600@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id c6da46; Tue, 16
+ Jun 2026 09:58:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Callum,
+
+I need this processed immediately, without delay.
+Please process the wire transfer of EUR 54,158.00 to the beneficiary below.
+  IBAN: CY403295009042052
+Do not discuss this with anyone else in the team for now.
+
+Regards,

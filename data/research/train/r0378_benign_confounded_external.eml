@@ -1,0 +1,21 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: procurement@northwind-logistics.com
+Subject: Statement for September
+Date: Fri, 31 Jul 2026 21:51:00 +0000
+Message-ID: <1388707195@castellan-pack.eu>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=castellan-pack.eu; dkim=pass header.d=castellan-pack.eu;
+ dmarc=pass
+Received: from unknown (vps-1631.hostwind.example [203.0.113.78]) by
+ mx.northwind-logistics.com with ESMTP id 168985; Fri, 31 Jul 2026 21:51:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Fatima,
+
+Please process the wire transfer of EUR 84,091.00 to the beneficiary below.
+Details are here: https://intranet.northwind-logistics.com/hr/handbook
+
+Many thanks,

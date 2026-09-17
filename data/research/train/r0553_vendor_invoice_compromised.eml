@@ -1,0 +1,26 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: m.lin@northwind-logistics.com
+Subject: Important: account update needed
+Date: Wed, 04 Mar 2026 16:34:00 +0000
+Message-ID: <8628387933@delaney-freight.co>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=delaney-freight.co; dkim=pass header.d=delaney-freight.co;
+ dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 898f21; Wed, 04
+ Mar 2026 16:34:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Kindly update your records - we have moved to a new account.
+The outstanding balance of GBP 71,745.00 needs to be remitted today.
+  IBAN: GB629509559342331
+Please handle this discreetly and do not cc anyone.
+I am travelling and unable to talk right now, so please just reply here.
+Verify here: http://198.51.100.77/secure/login.php
+Let me know if you need anything else.
+
+Best,

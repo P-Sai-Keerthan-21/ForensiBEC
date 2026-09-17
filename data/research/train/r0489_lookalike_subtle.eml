@@ -1,0 +1,22 @@
+From: "Ravi Menon (CEO)" <r.menon@northwind-logistics.support>
+To: j.okafor@northwind-logistics.com
+Subject: Urgent - confidential transfer required today
+Date: Mon, 13 Jul 2026 15:58:00 +0000
+Message-ID: <4979794529@northwind-logistics.support>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=northwind-logistics.support; dkim=none; dmarc=fail
+Received: from unknown (vps-1394.hostwind.example [203.0.113.183]) by
+ mx.northwind-logistics.com with ESMTP id 12f9a0; Mon, 13 Jul 2026 15:58:00
+ +0000
+Reply-To: ravi.72@mail.com
+Return-Path: <bounce@northwind-l0gistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Joseph,
+
+The delivery window is confirmed for Friday afternoon.
+Verify here: http://198.51.100.77/secure/login.php
+
+Thanks,

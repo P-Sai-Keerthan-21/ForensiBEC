@@ -1,0 +1,25 @@
+From: "Ravi Menon" <r.menon@northwind-logistics.com>
+To: priya.sharma@northwind-logistics.com
+Subject: Action required: mailbox verification
+Date: Mon, 16 Mar 2026 19:04:00 +0000
+Message-ID: <9350266974@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 2c12bb; Mon, 16
+ Mar 2026 19:04:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Priya,
+
+I need this processed immediately, without delay.
+Kindly release the payment of EUR 73,553.00 against the invoice attached.
+  IBAN: DE558464344013214
+Do not discuss this with anyone else in the team for now.
+I am travelling and unable to talk right now, so please just reply here.
+Happy to discuss if that helps.
+
+Best,

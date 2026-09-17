@@ -1,0 +1,22 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: scheduling@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Mon, 11 May 2026 11:33:00 +0000
+Message-ID: <6053847765@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from unknown (vps-7255.hostwind.example [203.0.113.106]) by
+ mx.northwind-logistics.com with ESMTP id fcb4cf; Mon, 11 May 2026 11:33:00
+ +0000
+Return-Path: <finance@orrinmarine.co.uk>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Callum,
+
+The updated policy is now on the intranet for everyone to read.
+Do check the attached schedule when you get a moment.
+
+Thanks,

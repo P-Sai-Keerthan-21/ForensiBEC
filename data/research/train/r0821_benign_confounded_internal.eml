@@ -1,0 +1,22 @@
+From: "Daniel Osei" <d.osei@northwind-logistics.com>
+To: r.menon@northwind-logistics.com
+Subject: Weekly operations summary
+Date: Tue, 27 Jan 2026 07:21:00 +0000
+Message-ID: <7201554648@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 54b2f0; Tue, 27
+ Jan 2026 07:21:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Dear Ravi,
+
+The EUR 22,453.00 payment was approved at the last review; details are unchan=
+ged.
+Do not discuss this with anyone else in the team for now.
+
+Thanks,

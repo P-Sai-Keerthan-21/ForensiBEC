@@ -1,0 +1,21 @@
+From: "Aisha Bello" <a.bello@northwind-logistics.com>
+To: sales@northwind-logistics.com
+Subject: Question about pallet dimensions
+Date: Wed, 27 May 2026 14:23:00 +0000
+Message-ID: <9103505702@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id dca279; Wed, 27
+ May 2026 14:23:00 +0000
+Return-Path: <a.bello@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Mei,
+
+The delivery window is confirmed for Friday afternoon.
+
+Kind regards,

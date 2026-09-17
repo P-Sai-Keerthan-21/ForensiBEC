@@ -1,0 +1,22 @@
+From: "Sandra Whitlock" <sandra.whitlock@northwind-logistics.com>
+To: d.osei@northwind-logistics.com
+Subject: Payment instruction - INV-45855
+Date: Tue, 07 Apr 2026 05:59:00 +0000
+Message-ID: <6153501934@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 5dd59f; Tue, 07
+ Apr 2026 05:59:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+The outstanding balance of EUR 64,198.00 needs to be remitted today.
+  IBAN: GB177665777504898
+I need you to deal with this on my behalf.
+
+Thanks,

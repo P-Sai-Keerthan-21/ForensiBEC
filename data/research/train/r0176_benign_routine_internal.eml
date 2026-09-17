@@ -1,0 +1,21 @@
+From: "Joseph Okafor - Finance Director" <j.okafor@northwind-logistics.com>
+To: accounts.payable@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Fri, 20 Mar 2026 02:07:00 +0000
+Message-ID: <9227786176@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 20bda4; Fri, 20
+ Mar 2026 02:07:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Sandra,
+
+The updated policy is now on the intranet for everyone to read.
+Please treat this as routine unless you hear otherwise.
+
+Kind regards,

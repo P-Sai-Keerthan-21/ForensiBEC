@@ -1,0 +1,24 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: procurement@northwind-logistics.com
+Subject: Purchase order INV-59125 confirmation
+Date: Tue, 07 Apr 2026 06:13:00 +0000
+Message-ID: <6083536406@delaney-freight.co>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=delaney-freight.co; dkim=pass header.d=delaney-freight.co;
+ dmarc=pass
+Received: from unknown (vps-4044.hostwind.example [203.0.113.118]) by
+ mx.northwind-logistics.com with ESMTP id 6580f9; Tue, 07 Apr 2026 06:13:00
+ +0000
+Reply-To: warehouse.leads@delaney-freight.co
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+Apologies for the rush, but the report deadline is end of day.
+The invoice for EUR 15,647.00 is due at the end of the month through the usua=
+l process.
+  Beneficiary account (unchanged): IBAN MT765538401775210
+
+Regards,

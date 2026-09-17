@@ -1,0 +1,25 @@
+From: "Mei Lin (Operations Director)" <m.lin@northwind-logistics.com>
+To: accounts.payable@northwind-logistics.com
+Subject: Invoice INV-36451 attached
+Date: Thu, 07 May 2026 04:18:00 +0000
+Message-ID: <3214533516@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 6c30d3; Thu, 07
+ May 2026 04:18:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi all,
+
+Apologies for the rush, but the report deadline is end of day.
+Please process USD 41,525.00 against the existing purchase order when conveni=
+ent.
+Details are unchanged and already on file.
+  Beneficiary account (unchanged): IBAN CY159475894976363
+Details are here: https://intranet.northwind-logistics.com/hr/handbook
+
+Best regards,

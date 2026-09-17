@@ -1,0 +1,24 @@
+From: "Sandra Whitlock (CFO)" <sandra.whitlock@northwind-logistics.support>
+To: m.lin@northwind-logistics.com
+Subject: Fw: Completion funds - handle personally
+Date: Wed, 06 May 2026 04:53:00 +0000
+Message-ID: <6994488147@northwind-logistics.support>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=northwind-logistics.support; dkim=none; dmarc=fail
+Received: from unknown (vps-6469.hostwind.example [203.0.113.177]) by
+ mx.northwind-logistics.com with ESMTP id 9bb7f2; Wed, 06 May 2026 04:53:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Kindly release the payment of EUR 25,429.00 against the invoice attached.
+  IBAN: CY941358337729877
+Please handle this discreetly and do not cc anyone.
+I am counting on you to handle this personally.
+Verify here: http://203.0.113.180/secure/login.php
+Let me know if you need anything else.
+
+Best regards,

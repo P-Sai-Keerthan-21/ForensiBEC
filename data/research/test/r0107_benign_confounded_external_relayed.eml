@@ -1,0 +1,21 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: d.osei@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Thu, 08 Jan 2026 09:37:00 +0000
+Message-ID: <2075626883@orrinmarine.co.uk>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-3672.hostwind.example [203.0.113.207]) by
+ mx.northwind-logistics.com with ESMTP id 847537; Thu, 08 Jan 2026 09:37:00
+ +0000
+Return-Path: <finance@orrinmarine.co.uk>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Please process the wire transfer of USD 11,646.00 to the beneficiary below.
+Details are here: https://portal.northwind-logistics.com/invoices/view
+
+Regards,

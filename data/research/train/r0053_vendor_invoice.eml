@@ -1,0 +1,26 @@
+From: "Berg Industrial AB Accounts" <t.berg@delaney-freigth.co>
+To: j.okafor@northwind-logistics.com
+Subject: Payment instruction - INV-63006
+Date: Thu, 16 Apr 2026 11:25:00 +0000
+Message-ID: <7277918011@delaney-freigth.co>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=delaney-freigth.co; dkim=none; dmarc=fail
+Received: from unknown (vps-6329.hostwind.example [203.0.113.161]) by
+ mx.northwind-logistics.com with ESMTP id dfbccb; Thu, 16 Apr 2026 11:25:00
+ +0000
+Reply-To: berg.90@mail.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Good morning,
+
+Our remittance details are now different; please amend the bank details on fi=
+le.
+Kindly release the payment of EUR 18,482.00 against the invoice attached.
+  IBAN: MT566944293192723
+Do not discuss this with anyone else in the team for now.
+I need you to deal with this on my behalf.
+I have copied the relevant team.
+
+Regards,

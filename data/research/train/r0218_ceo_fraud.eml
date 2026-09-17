@@ -1,0 +1,24 @@
+From: "Ravi Menon (CEO)" <r.menon@n0rthwind-logistics.com>
+To: a.bello@northwind-logistics.com
+Subject: Payment instruction - INV-15481
+Date: Mon, 23 Mar 2026 14:29:00 +0000
+Message-ID: <3616784297@n0rthwind-logistics.com>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-3920.hostwind.example [203.0.113.140]) by
+ mx.northwind-logistics.com with ESMTP id 99e6c1; Mon, 23 Mar 2026 14:29:00
+ +0000
+Reply-To: ravi.87@outlook.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Aisha,
+
+This is urgent and must be completed today.
+Please settle GBP 53,919.00 to the account details provided.
+  IBAN: LT768940814530396
+Do not discuss this with anyone else in the team for now.
+I am currently in meetings and cannot take a call.
+
+Kind regards,

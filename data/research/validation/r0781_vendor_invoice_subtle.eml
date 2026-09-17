@@ -1,0 +1,21 @@
+From: "Orrin Marine Ltd Accounts" <finance@castellan-pack.com>
+To: t.nowak@northwind-logistics.com
+Subject: Re: INV-59382 - revised remittance details
+Date: Tue, 31 Mar 2026 05:33:00 +0000
+Message-ID: <2700280863@castellan-pack.com>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=castellan-pack.com; dkim=none; dmarc=fail
+Received: from unknown (vps-8824.hostwind.example [203.0.113.168]) by
+ mx.northwind-logistics.com with ESMTP id c2c221; Tue, 31 Mar 2026 05:33:00
+ +0000
+Return-Path: <finance@castellan-pack.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Tomasz,
+
+We have changed banks, so please use the new beneficiary account below.
+Let me know if you need anything else.
+
+Regards,

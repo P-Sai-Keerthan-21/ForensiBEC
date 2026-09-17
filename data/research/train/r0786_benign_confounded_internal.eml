@@ -1,0 +1,23 @@
+From: "Mei Lin" <m.lin@northwind-logistics.com>
+To: it@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Sat, 10 Jan 2026 14:48:00 +0000
+Message-ID: <3176194679@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 4b8b7c; Sat, 10
+ Jan 2026 14:48:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Callum,
+
+Please treat this as a priority; the depot review is this afternoon.
+The outstanding balance of EUR 24,411.00 needs to be remitted today.
+  Beneficiary account (unchanged): IBAN GB288795225238629
+I need you to deal with this on my behalf.
+
+Many thanks,

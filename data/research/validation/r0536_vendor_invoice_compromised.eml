@@ -1,0 +1,23 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: d.osei@northwind-logistics.com
+Subject: Urgent - confidential transfer required today
+Date: Fri, 20 Feb 2026 11:52:00 +0000
+Message-ID: <6604817668@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 7dc17d; Fri, 20
+ Feb 2026 11:52:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+We have changed banks, so please use the new beneficiary account below.
+Please settle GBP 32,519.00 to the account details provided.
+  IBAN: MT256296646435319
+Verify here: http://198.51.100.77/secure/login.php
+
+Many thanks,

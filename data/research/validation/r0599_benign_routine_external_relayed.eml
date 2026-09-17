@@ -1,0 +1,20 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: accounts.payable@northwind-logistics.com
+Subject: Invoice INV-40223 attached
+Date: Thu, 02 Jul 2026 07:49:00 +0000
+Message-ID: <5924864859@orrinmarine.co.uk>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-5850.hostwind.example [203.0.113.78]) by
+ mx.northwind-logistics.com with ESMTP id c6dd62; Thu, 02 Jul 2026 07:49:00
+ +0000
+Return-Path: <finance@orrinmarine.co.uk>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Sandra,
+
+Notes from the depot review are attached for your records.
+
+Kind regards,

@@ -1,0 +1,21 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: f.haddad@northwind-logistics.com
+Subject: Statement for August
+Date: Sat, 28 Mar 2026 06:05:00 +0000
+Message-ID: <3058627772@harborline-supplies.com>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-2159.hostwind.example [203.0.113.188]) by
+ mx.northwind-logistics.com with ESMTP id 7dba36; Sat, 28 Mar 2026 06:05:00
+ +0000
+Return-Path: <billing@harborline-supplies.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Could you confirm the pallet dimensions for the Rotterdam depot?
+Details are here: https://delaney-freight.co/contract-portal
+
+Best regards,

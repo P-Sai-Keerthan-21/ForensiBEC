@@ -1,0 +1,44 @@
+{
+  "name": "ForensiBEC synthetic research corpus",
+  "provenance": "SYNTHETIC - generated from parameterised templates by data/build_research_corpus.py. No real mailbox, person, organisation or financial detail is represented.",
+  "generator": "data/build_research_corpus.py",
+  "seed": 20260918,
+  "size": 900,
+  "corpus_sha256": "b6bf8c1cea483eea363e91f8df608cfc029bd85c57326130ff03e524072c64df",
+  "generated_utc": "2026-09-17T18:47:15+00:00",
+  "split_strategy": "stratified 60/20/20 by label, deterministic under seed",
+  "counts": {
+    "train": {
+      "MALICIOUS": 224,
+      "BENIGN": 315
+    },
+    "validation": {
+      "MALICIOUS": 74,
+      "BENIGN": 105
+    },
+    "test": {
+      "BENIGN": 106,
+      "MALICIOUS": 76
+    }
+  },
+  "interpretation": {
+    "valid_use": "Measuring whether engineered features are learnable and which evidence families carry separable signal (ablation).",
+    "invalid_use": "Estimating real-world detection accuracy. Template-generated data has learnable generative structure, so results are an OPTIMISTIC UPPER BOUND, not a performance estimate."
+  },
+  "difficulty_controls": [
+    "~40% of benign messages carry legitimate urgency and/or payment language (confounded benigns)",
+    "~30% of malicious messages omit urgency and explicit amounts, relying on identity evidence only (subtle malicious)",
+    "~28% of malicious messages are sent from a COMPROMISED but genuine mailbox: real domain, SPF/DKIM/DMARC all pass, no lookalike. Only behavioural, stylometric and financial evidence can reach these",
+    "~30% of external benign messages are relayed or forwarded and SOFTFAIL SPF, so authentication failure does not imply malicious",
+    "greetings, sign-offs and filler are drawn from pools shared by both classes",
+    "the URGENCY, PAYMENT, SECRECY and AUTHORITY sentence pools are SHARED between classes: a legitimate finance request and a fraudulent one are worded alike, so the text channel alone cannot decide the label",
+    "benign mail carries the LEGITIMATE form of properties that would otherwise be artifacts: IBANs on invoices, links to portals and intranets, Return-Path headers, executive titles in display names, and occasional consumer-mail contractors"
+  ],
+  "deliberately_discriminative": [
+    "BANKING_CHANGE_REQUEST - unsolicited bank-detail changes are the BEC payload and are genuinely rare in benign mail",
+    "GIFT_CARD_REQUEST - no legitimate business equivalent",
+    "CREDENTIAL_SOLICITATION - not routine business correspondence",
+    "LOOKALIKE_DOMAIN - a confusable domain has no benign explanation"
+  ],
+  "why_these_controls": "An earlier generation separated the classes perfectly on the authentication header alone, so every model and every ablation configuration scored 1.000 and the experiment could not distinguish evidence families. The compromised-account and relayed-benign controls model real phenomena that break that shortcut. A later generation additionally SHARED the urgency and payment sentence pools between classes, because drawing the two classes from disjoint vocabularies let a TF-IDF model recover the label from wording alone."
+}

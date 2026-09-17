@@ -1,0 +1,25 @@
+From: "Sandra Whitlock" <sandra.whitlock@northwind-logistics.com>
+To: c.reid@northwind-logistics.com
+Subject: Re: INV-67498 - revised remittance details
+Date: Sat, 16 May 2026 00:48:00 +0000
+Message-ID: <7619582847@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 6bdae7; Sat, 16
+ May 2026 00:48:00 +0000
+Return-Path: <sandra.whitlock@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+Please treat this as time sensitive - it must clear before close of business.
+The outstanding balance of EUR 81,372.00 needs to be remitted today.
+  IBAN: GB897734913205018
+I am currently in meetings and cannot take a call.
+This follows on from our earlier discussion.
+
+Thanks,

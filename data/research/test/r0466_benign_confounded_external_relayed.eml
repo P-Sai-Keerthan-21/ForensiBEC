@@ -1,0 +1,23 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Question about pallet dimensions
+Date: Tue, 07 Apr 2026 23:37:00 +0000
+Message-ID: <9275117715@orrinmarine.co.uk>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-5331.hostwind.example [203.0.113.48]) by
+ mx.northwind-logistics.com with ESMTP id 78a4ac; Tue, 07 Apr 2026 23:37:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Sandra,
+
+Time sensitive: the auditors arrive tomorrow and I need the schedule today.
+Please process the wire transfer of GBP 62,502.00 to the beneficiary below.
+  Beneficiary account (unchanged): IBAN GB127952655410348
+Please handle this discreetly and do not cc anyone.
+Happy to discuss if that helps.
+
+Kind regards,

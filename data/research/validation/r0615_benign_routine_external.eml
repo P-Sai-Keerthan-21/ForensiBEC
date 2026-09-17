@@ -1,0 +1,20 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: it@northwind-logistics.com
+Subject: Updated remote working policy
+Date: Thu, 12 Mar 2026 08:44:00 +0000
+Message-ID: <4537852928@delaney-freight.co>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=delaney-freight.co; dkim=pass header.d=delaney-freight.co;
+ dmarc=pass
+Received: from unknown (vps-2236.hostwind.example [203.0.113.28]) by
+ mx.northwind-logistics.com with ESMTP id e3a9e9; Thu, 12 Mar 2026 08:44:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Fatima,
+
+The Q3 budget review has been scheduled for the 24th.
+
+Kind regards,

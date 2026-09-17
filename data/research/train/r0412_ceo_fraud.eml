@@ -1,0 +1,24 @@
+From: "Priya Sharma" <priya.sharma@n0rthwind-logistics.com>
+To: c.reid@northwind-logistics.com
+Subject: Urgent - confidential transfer required today
+Date: Sun, 23 Aug 2026 23:29:00 +0000
+Message-ID: <6099369506@n0rthwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=n0rthwind-logistics.com; dkim=none; dmarc=fail
+Received: from unknown (vps-4025.hostwind.example [203.0.113.164]) by
+ mx.northwind-logistics.com with ESMTP id 50b0a6; Sun, 23 Aug 2026 23:29:00
+ +0000
+Reply-To: priya.33@mail.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Callum,
+
+Please treat this as time sensitive - it must clear before close of business.
+Please process the wire transfer of GBP 39,605.00 to the beneficiary below.
+  IBAN: GB656262678052985
+Please keep this strictly between us until the announcement.
+I am counting on you to handle this personally.
+
+Kind regards,

@@ -1,0 +1,23 @@
+From: "Daniel Osei (CEO)" <d.osei@northwind-logistics.com>
+To: accounts.payable@northwind-logistics.com
+Subject: Q3 budget review scheduled
+Date: Wed, 29 Jul 2026 23:25:00 +0000
+Message-ID: <1993726522@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 500439; Wed, 29
+ Jul 2026 23:25:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Ravi,
+
+Please treat this as a priority; the depot review is this afternoon.
+Kindly release the payment of USD 77,960.00 against the invoice attached.
+Details are unchanged and already on file.
+I need you to deal with this on my behalf.
+
+Best regards,

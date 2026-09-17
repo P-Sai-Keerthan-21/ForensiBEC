@@ -1,0 +1,24 @@
+From: "Ravi Menon" <r.menon@northwind-logistics.com>
+To: f.haddad@northwind-logistics.com
+Subject: Action required: mailbox verification
+Date: Sun, 16 Aug 2026 04:49:00 +0000
+Message-ID: <1544004431@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 2f18f2; Sun, 16
+ Aug 2026 04:49:00 +0000
+Reply-To: ravi@aol.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Fatima,
+
+Please settle GBP 3,514.00 to the account details provided.
+  IBAN: GB777883405127181
+This is confidential and should not be copied to the wider group.
+I need you to deal with this on my behalf.
+
+Many thanks,

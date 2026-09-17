@@ -1,0 +1,21 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: all.staff@northwind-logistics.com
+Subject: Statement for August
+Date: Wed, 11 Mar 2026 19:08:00 +0000
+Message-ID: <3255530414@harborline-supplies.com>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-9529.hostwind.example [203.0.113.167]) by
+ mx.northwind-logistics.com with ESMTP id 220754; Wed, 11 Mar 2026 19:08:00
+ +0000
+Return-Path: <billing@harborline-supplies.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Good morning,
+
+Please process GBP 7,061.00 against the existing purchase order when convenie=
+nt.
+
+Kind regards,

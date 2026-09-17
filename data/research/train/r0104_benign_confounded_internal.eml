@@ -1,0 +1,22 @@
+From: "Fatima Haddad (CFO)" <f.haddad@northwind-logistics.com>
+To: d.osei@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Tue, 12 May 2026 15:48:00 +0000
+Message-ID: <6567606841@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 8d38f0; Tue, 12
+ May 2026 15:48:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Dear Daniel,
+
+Accounts payable have the invoice for GBP 83,537.00 - no action needed from y=
+ou.
+Details are unchanged and already on file.
+
+Best,

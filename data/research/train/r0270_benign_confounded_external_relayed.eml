@@ -1,0 +1,23 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: scheduling@northwind-logistics.com
+Subject: Purchase order INV-34774 confirmation
+Date: Fri, 23 Jan 2026 08:00:00 +0000
+Message-ID: <2140187786@bergindustrial.se>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-5155.hostwind.example [203.0.113.167]) by
+ mx.northwind-logistics.com with ESMTP id 3d3ae0; Fri, 23 Jan 2026 08:00:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi all,
+
+This is critical and cannot wait until tomorrow.
+The invoice for EUR 17,959.00 is due at the end of the month through the usua=
+l process.
+  Beneficiary account (unchanged): IBAN GB968194443169019
+Please treat this as routine unless you hear otherwise.
+
+Thanks,

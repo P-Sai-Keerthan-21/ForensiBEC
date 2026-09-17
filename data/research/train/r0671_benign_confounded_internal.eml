@@ -1,0 +1,23 @@
+From: "Aisha Bello (Operations Director)" <a.bello@northwind-logistics.com>
+To: priya.sharma@northwind-logistics.com
+Subject: Notes from the depot review
+Date: Wed, 07 Jan 2026 14:06:00 +0000
+Message-ID: <2115209250@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id f053f9; Wed, 07
+ Jan 2026 14:06:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Priya,
+
+The outstanding balance of EUR 80,418.00 needs to be remitted today.
+  Beneficiary account (unchanged): IBAN CY497019378630486
+Details are here: https://portal.northwind-logistics.com/invoices/view
+I have copied the relevant team.
+
+Kind regards,

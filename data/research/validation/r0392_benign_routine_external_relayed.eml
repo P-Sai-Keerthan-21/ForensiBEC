@@ -1,0 +1,22 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: a.bello@northwind-logistics.com
+Subject: Updated remote working policy
+Date: Wed, 22 Apr 2026 15:42:00 +0000
+Message-ID: <7527269916@delaney-freight.co>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-9354.hostwind.example [203.0.113.112]) by
+ mx.northwind-logistics.com with ESMTP id 1ad376; Wed, 22 Apr 2026 15:42:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+The delivery window is confirmed for Friday afternoon.
+Notes from the depot review are attached for your records.
+Details are here: https://intranet.northwind-logistics.com/hr/handbook
+Happy to discuss if that helps.
+
+Best regards,

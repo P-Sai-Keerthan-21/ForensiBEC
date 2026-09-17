@@ -1,0 +1,23 @@
+From: "Daniel Osei (CFO)" <d.osei@northwind-l0gistics.com>
+To: priya.sharma@northwind-logistics.com
+Subject: Payment instruction - INV-80404
+Date: Mon, 30 Mar 2026 09:02:00 +0000
+Message-ID: <9943486951@northwind-l0gistics.com>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-7798.hostwind.example [203.0.113.246]) by
+ mx.northwind-logistics.com with ESMTP id 1abf8c; Mon, 30 Mar 2026 09:02:00
+ +0000
+Reply-To: daniel.82@gmail.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+This is urgent and must be completed today.
+Please settle USD 60,918.00 to the account details provided.
+  IBAN: CY412705972424848
+I need you to deal with this on my behalf.
+
+Thanks,

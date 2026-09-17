@@ -1,0 +1,26 @@
+From: "Priya Sharma (CFO)" <priya.sharma@n0rthwind-logistics.com>
+To: t.nowak@northwind-logistics.com
+Subject: Action required: mailbox verification
+Date: Wed, 11 Feb 2026 16:47:00 +0000
+Message-ID: <6163879232@n0rthwind-logistics.com>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-3183.hostwind.example [203.0.113.34]) by
+ mx.northwind-logistics.com with ESMTP id b8468d; Wed, 11 Feb 2026 16:47:00
+ +0000
+Reply-To: priya.26@gmail.com
+Return-Path: <priya.sharma@n0rthwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Tomasz,
+
+I need this processed immediately, without delay.
+Please settle EUR 78,434.00 to the account details provided.
+  IBAN: CY726673319896553
+Please handle this discreetly and do not cc anyone.
+Verify here: http://203.0.113.180/secure/login.php
+Let me know if you need anything else.
+
+Kind regards,

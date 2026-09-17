@@ -1,0 +1,22 @@
+From: "Ravi Menon - Finance Director" <r.menon@northwind-logistic.com>
+To: d.osei@northwind-logistics.com
+Subject: Change of account for salary payment
+Date: Sat, 07 Feb 2026 09:19:00 +0000
+Message-ID: <7856777626@northwind-logistic.com>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=northwind-logistic.com; dkim=none; dmarc=fail
+Received: from unknown (vps-7394.hostwind.example [203.0.113.145]) by
+ mx.northwind-logistics.com with ESMTP id 317bd5; Sat, 07 Feb 2026 09:19:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Daniel,
+
+The outstanding balance of GBP 36,808.00 needs to be remitted today.
+  IBAN: CY433666750577746
+Do not discuss this with anyone else in the team for now.
+I need you to deal with this on my behalf.
+
+Best regards,

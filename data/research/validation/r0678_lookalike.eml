@@ -1,0 +1,24 @@
+From: "Priya Sharma (CEO)" <priya.sharma@northwlnd-logistics.com>
+To: j.okafor@northwind-logistics.com
+Subject: Payment instruction - INV-20596
+Date: Sun, 16 Aug 2026 20:17:00 +0000
+Message-ID: <4910229199@northwlnd-logistics.com>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-7349.hostwind.example [203.0.113.166]) by
+ mx.northwind-logistics.com with ESMTP id 80f698; Sun, 16 Aug 2026 20:17:00
+ +0000
+Reply-To: priya.27@outlook.com
+Return-Path: <priya.sharma@northwlnd-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Joseph,
+
+Kindly release the payment of GBP 93,241.00 against the invoice attached.
+  IBAN: MT945285039661878
+Do not discuss this with anyone else in the team for now.
+Apologies for the short notice.
+
+Many thanks,

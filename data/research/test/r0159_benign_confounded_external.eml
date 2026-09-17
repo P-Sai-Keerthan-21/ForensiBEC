@@ -1,0 +1,25 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: procurement@northwind-logistics.com
+Subject: Purchase order INV-80200 confirmation
+Date: Wed, 21 Jan 2026 22:46:00 +0000
+Message-ID: <3127142576@castellan-pack.eu>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=castellan-pack.eu; dkim=pass header.d=castellan-pack.eu;
+ dmarc=pass
+Received: from unknown (vps-5599.hostwind.example [203.0.113.8]) by
+ mx.northwind-logistics.com with ESMTP id 4a423b; Wed, 21 Jan 2026 22:46:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Fatima,
+
+Please settle USD 45,295.00 to the account details provided.
+  Beneficiary account (unchanged): IBAN CY865882808479122
+This is confidential and should not be copied to the wider group.
+I am currently in meetings and cannot take a call.
+Details are here: https://delaney-freight.co/contract-portal
+I have copied the relevant team.
+
+Thanks,

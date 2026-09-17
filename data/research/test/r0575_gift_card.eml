@@ -1,0 +1,22 @@
+From: "Ravi Menon (CEO)" <r.menon.2@northwind-logistics.com.secure-mx.net>
+To: f.haddad@northwind-logistics.com
+Subject: Action required: mailbox verification
+Date: Tue, 01 Sep 2026 10:29:00 +0000
+Message-ID: <6185764105@northwind-logistics.com.secure-mx.net>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=northwind-logistics.com.secure-mx.net; dkim=none; dmarc=fail
+Received: from unknown (vps-9126.hostwind.example [203.0.113.41]) by
+ mx.northwind-logistics.com with ESMTP id 325abf; Tue, 01 Sep 2026 10:29:00
+ +0000
+Return-Path: <r.menon.2@northwind-logistics.com.secure-mx.net>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+This is critical and cannot wait until tomorrow.
+I need 18 gift cards bought today - just reply with the card codes.
+Please keep this strictly between us until the announcement.
+
+Many thanks,

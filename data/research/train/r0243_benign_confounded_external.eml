@@ -1,0 +1,24 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: warehouse.leads@northwind-logistics.com
+Subject: Updated remote working policy
+Date: Wed, 24 Jun 2026 16:01:00 +0000
+Message-ID: <8873964988@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from unknown (vps-7841.hostwind.example [203.0.113.244]) by
+ mx.northwind-logistics.com with ESMTP id 689687; Wed, 24 Jun 2026 16:01:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+Kindly release the payment of USD 61,217.00 against the invoice attached.
+Details are unchanged and already on file.
+  Beneficiary account (unchanged): IBAN CY244870503241174
+This is confidential and should not be copied to the wider group.
+Please treat this as routine unless you hear otherwise.
+
+Best regards,

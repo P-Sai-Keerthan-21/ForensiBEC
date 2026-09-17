@@ -1,0 +1,21 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: hr.payroll@northwind-logistics.com
+Subject: Q3 budget review scheduled
+Date: Sun, 16 Aug 2026 10:53:00 +0000
+Message-ID: <8463268634@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from unknown (vps-2177.hostwind.example [203.0.113.129]) by
+ mx.northwind-logistics.com with ESMTP id ab9849; Sun, 16 Aug 2026 10:53:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Tomasz,
+
+Kindly release the payment of GBP 41,378.00 against the invoice attached.
+Happy to discuss if that helps.
+
+Regards,

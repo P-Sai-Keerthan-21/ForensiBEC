@@ -1,0 +1,21 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: r.menon@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Thu, 20 Aug 2026 22:05:00 +0000
+Message-ID: <1290582470@bergindustrial.se>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se;
+ dmarc=pass
+Received: from unknown (vps-4605.hostwind.example [203.0.113.199]) by
+ mx.northwind-logistics.com with ESMTP id f2fa22; Thu, 20 Aug 2026 22:05:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+Notes from the depot review are attached for your records.
+Let me know if you need anything else.
+
+Thanks,

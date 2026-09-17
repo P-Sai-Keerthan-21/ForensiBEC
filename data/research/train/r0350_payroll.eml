@@ -1,0 +1,22 @@
+From: "Daniel Osei" <d.osei@northwind-logistics.com.secure-mx.net>
+To: f.haddad@northwind-logistics.com
+Subject: Re: outstanding remittance
+Date: Sun, 30 Aug 2026 19:51:00 +0000
+Message-ID: <6130048403@northwind-logistics.com.secure-mx.net>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=northwind-logistics.com.secure-mx.net; dkim=none; dmarc=fail
+Received: from unknown (vps-8148.hostwind.example [203.0.113.237]) by
+ mx.northwind-logistics.com with ESMTP id 172d91; Sun, 30 Aug 2026 19:51:00
+ +0000
+Reply-To: daniel.60@yandex.com
+Return-Path: <d.osei@northwind-logistics.com.secure-mx.net>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+The outstanding balance of EUR 46,878.00 needs to be remitted today.
+  IBAN: GB771005534054575
+
+Best regards,

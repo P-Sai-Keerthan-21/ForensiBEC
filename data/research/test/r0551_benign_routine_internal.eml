@@ -1,0 +1,21 @@
+From: "Daniel Osei - Finance Director" <d.osei@northwind-logistics.com>
+To: accounts.payable@northwind-logistics.com
+Subject: Q3 budget review scheduled
+Date: Sat, 31 Jan 2026 01:23:00 +0000
+Message-ID: <1625394702@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 9398d3; Sat, 31
+ Jan 2026 01:23:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+The Q3 budget review has been scheduled for the 24th.
+Apologies for the short notice.
+
+Regards,

@@ -1,0 +1,26 @@
+From: "Ravi Menon" <r.menon@northwind-logistics.com>
+To: scheduling@northwind-logistics.com
+Subject: Invoice INV-49394 attached
+Date: Tue, 28 Jul 2026 07:07:00 +0000
+Message-ID: <4357497898@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 14a754; Tue, 28
+ Jul 2026 07:07:00 +0000
+Return-Path: <r.menon@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Good morning,
+
+Please action this right away - the deadline is this afternoon.
+Accounts payable have the invoice for USD 39,520.00 - no action needed from y=
+ou.
+  Beneficiary account (unchanged): IBAN GB369468089916788
+Details are here: https://intranet.northwind-logistics.com/hr/handbook
+Happy to discuss if that helps.
+
+Regards,

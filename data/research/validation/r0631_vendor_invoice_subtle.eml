@@ -1,0 +1,21 @@
+From: "Harborline Supplies Accounts" <billing@delaney-freigth.co>
+To: d.osei@northwind-logistics.com
+Subject: Re: INV-13293 - revised remittance details
+Date: Thu, 19 Mar 2026 12:18:00 +0000
+Message-ID: <2937188807@delaney-freigth.co>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-9152.hostwind.example [203.0.113.32]) by
+ mx.northwind-logistics.com with ESMTP id 18032d; Thu, 19 Mar 2026 12:18:00
+ +0000
+Reply-To: harborline.43@outlook.com
+Return-Path: <bounce@northwind-logistic.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Please note our banking details have changed following a treasury restructure.
+
+Best,

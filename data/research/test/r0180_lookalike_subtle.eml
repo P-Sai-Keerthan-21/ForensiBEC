@@ -1,0 +1,21 @@
+From: "Daniel Osei (CFO)" <d.osei@northwind-logistics.com.secure-mx.net>
+To: m.lin@northwind-logistics.com
+Subject: Action required: mailbox verification
+Date: Fri, 13 Feb 2026 11:18:00 +0000
+Message-ID: <2834872087@northwind-logistics.com.secure-mx.net>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-6301.hostwind.example [203.0.113.24]) by
+ mx.northwind-logistics.com with ESMTP id 3e966c; Fri, 13 Feb 2026 11:18:00
+ +0000
+Return-Path: <bounce@northwlnd-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Mei,
+
+Could you let me know when you are free to action a transfer?
+This follows on from our earlier discussion.
+
+Thanks,

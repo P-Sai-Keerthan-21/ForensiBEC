@@ -1,0 +1,25 @@
+From: "Joseph Okafor (CEO)" <j.okafor@northwind-logistlcs.com>
+To: m.lin@northwind-logistics.com
+Subject: Payment instruction - INV-11523
+Date: Tue, 24 Feb 2026 04:21:00 +0000
+Message-ID: <7873656321@northwind-logistlcs.com>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-9717.hostwind.example [203.0.113.138]) by
+ mx.northwind-logistics.com with ESMTP id c03422; Tue, 24 Feb 2026 04:21:00
+ +0000
+Reply-To: joseph.89@outlook.com
+Return-Path: <j.okafor@northwind-logistlcs.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Mei,
+
+Please process the wire transfer of GBP 39,760.00 to the beneficiary below.
+  IBAN: CY328086785700024
+Do not discuss this with anyone else in the team for now.
+I am currently in meetings and cannot take a call.
+I have copied the relevant team.
+
+Thanks,

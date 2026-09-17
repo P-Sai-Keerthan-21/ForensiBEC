@@ -1,0 +1,25 @@
+From: "Joseph Okafor (CFO)" <j.okafor@northwind-logistlcs.com>
+To: d.osei@northwind-logistics.com
+Subject: Action required: mailbox verification
+Date: Fri, 08 May 2026 01:22:00 +0000
+Message-ID: <9046585464@northwind-logistlcs.com>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-3881.hostwind.example [203.0.113.158]) by
+ mx.northwind-logistics.com with ESMTP id 851517; Fri, 08 May 2026 01:22:00
+ +0000
+Reply-To: joseph.33@protonmail.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Daniel,
+
+This is critical and cannot wait until tomorrow.
+Kindly release the payment of EUR 22,568.00 against the invoice attached.
+  IBAN: MT957202328920161
+Please keep this strictly between us until the announcement.
+I am currently in meetings and cannot take a call.
+Happy to discuss if that helps.
+
+Best regards,

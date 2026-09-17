@@ -1,0 +1,23 @@
+From: "Priya Sharma (CEO)" <priya.sharma@northwlnd-logistics.com>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Action required: mailbox verification
+Date: Sun, 09 Aug 2026 22:06:00 +0000
+Message-ID: <5309622294@northwlnd-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=northwlnd-logistics.com; dkim=none; dmarc=fail
+Received: from unknown (vps-4774.hostwind.example [203.0.113.230]) by
+ mx.northwind-logistics.com with ESMTP id 6338dc; Sun, 09 Aug 2026 22:06:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Please action this right away - the deadline is this afternoon.
+Please settle EUR 26,077.00 to the account details provided.
+  IBAN: DE355066630230199
+I am travelling and unable to talk right now, so please just reply here.
+Verify here: http://198.51.100.77/secure/login.php
+
+Best,

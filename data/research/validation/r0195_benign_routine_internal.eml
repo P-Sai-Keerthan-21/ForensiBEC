@@ -1,0 +1,22 @@
+From: "Aisha Bello" <a.bello@northwind-logistics.com>
+To: t.nowak@northwind-logistics.com
+Subject: Invoice INV-84359 attached
+Date: Tue, 13 Jan 2026 21:33:00 +0000
+Message-ID: <6607666110@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 450b7b; Tue, 13
+ Jan 2026 21:33:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Tomasz,
+
+The updated policy is now on the intranet for everyone to read.
+The maintenance window is confirmed for Saturday morning.
+This follows on from our earlier discussion.
+
+Regards,

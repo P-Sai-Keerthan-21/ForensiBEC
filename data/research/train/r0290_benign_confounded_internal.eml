@@ -1,0 +1,26 @@
+From: "Ravi Menon" <r.menon@northwind-logistics.com>
+To: sales@northwind-logistics.com
+Subject: Updated remote working policy
+Date: Tue, 26 May 2026 09:03:00 +0000
+Message-ID: <5083528380@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 7fbe82; Tue, 26
+ May 2026 09:03:00 +0000
+Return-Path: <r.menon@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Dear Daniel,
+
+The EUR 91,602.00 payment was approved at the last review; details are unchan=
+ged.
+  Beneficiary account (unchanged): IBAN DE711302436934425
+Do not discuss this with anyone else in the team for now.
+I need you to deal with this on my behalf.
+Please treat this as routine unless you hear otherwise.
+
+Many thanks,

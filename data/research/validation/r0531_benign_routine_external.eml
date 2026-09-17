@@ -1,0 +1,25 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: sales@northwind-logistics.com
+Subject: Q3 budget review scheduled
+Date: Tue, 21 Jul 2026 07:54:00 +0000
+Message-ID: <9161530804@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from unknown (vps-5529.hostwind.example [203.0.113.183]) by
+ mx.northwind-logistics.com with ESMTP id 6508c4; Tue, 21 Jul 2026 07:54:00
+ +0000
+Reply-To: all.staff@orrinmarine.co.uk
+Return-Path: <finance@orrinmarine.co.uk>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Daniel,
+
+The updated policy is now on the intranet for everyone to read.
+The maintenance window is confirmed for Saturday morning.
+Details are here: https://delaney-freight.co/contract-portal
+I have copied the relevant team.
+
+Many thanks,

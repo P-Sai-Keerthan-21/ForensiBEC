@@ -1,0 +1,20 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: priya.sharma@northwind-logistics.com
+Subject: Important: account update needed
+Date: Sun, 09 Aug 2026 01:29:00 +0000
+Message-ID: <4931388103@bergindustrial.se>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=bergindustrial.se; dkim=none; dmarc=fail
+Received: from unknown (vps-5139.hostwind.example [203.0.113.62]) by
+ mx.northwind-logistics.com with ESMTP id ec9e10; Sun, 09 Aug 2026 01:29:00
+ +0000
+Return-Path: <t.berg@bergindustrial.se>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Priya,
+
+We have changed banks, so please use the new beneficiary account below.
+
+Thanks,

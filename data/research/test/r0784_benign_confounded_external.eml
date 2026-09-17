@@ -1,0 +1,25 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: r.menon@northwind-logistics.com
+Subject: Weekly operations summary
+Date: Fri, 06 Feb 2026 11:09:00 +0000
+Message-ID: <1473420108@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from unknown (vps-4873.hostwind.example [203.0.113.130]) by
+ mx.northwind-logistics.com with ESMTP id 77ad15; Fri, 06 Feb 2026 11:09:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi all,
+
+Please treat this as a priority; the depot review is this afternoon.
+Please process GBP 16,020.00 against the existing purchase order when conveni=
+ent.
+  Beneficiary account (unchanged): IBAN MT773581036789036
+Details are here: https://northwind-logistics.com/depot-schedule
+This follows on from our earlier discussion.
+
+Best regards,

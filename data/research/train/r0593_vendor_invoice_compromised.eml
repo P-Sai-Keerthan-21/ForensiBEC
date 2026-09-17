@@ -1,0 +1,27 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: priya.sharma@northwind-logistics.com
+Subject: Payment instruction - INV-99198
+Date: Thu, 29 Jan 2026 13:54:00 +0000
+Message-ID: <3064119488@bergindustrial.se>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se;
+ dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id a65475; Thu, 29
+ Jan 2026 13:54:00 +0000
+Reply-To: berg@yandex.com
+Return-Path: <t.berg@bergindustrial.se>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Dear Priya,
+
+Our remittance details are now different; please amend the bank details on fi=
+le.
+Please process the wire transfer of EUR 81,984.00 to the beneficiary below.
+  IBAN: MT814976688896278
+Please keep this strictly between us until the announcement.
+This follows on from our earlier discussion.
+
+Thanks,

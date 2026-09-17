@@ -1,0 +1,21 @@
+From: "Joseph Okafor (CEO)" <j.okafor@northwind-logistics.support>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Important: account update needed
+Date: Mon, 30 Mar 2026 12:32:00 +0000
+Message-ID: <7600073959@northwind-logistics.support>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=northwind-logistics.support; dkim=none; dmarc=fail
+Received: from unknown (vps-8859.hostwind.example [203.0.113.161]) by
+ mx.northwind-logistics.com with ESMTP id 859371; Mon, 30 Mar 2026 12:32:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Sandra,
+
+Please process the wire transfer of GBP 6,859.00 to the beneficiary below.
+  IBAN: LT822301676054645
+Please keep this strictly between us until the announcement.
+
+Best regards,

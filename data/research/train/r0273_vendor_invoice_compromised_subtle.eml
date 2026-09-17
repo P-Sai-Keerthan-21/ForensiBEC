@@ -1,0 +1,22 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: c.reid@northwind-logistics.com
+Subject: Urgent - confidential transfer required today
+Date: Mon, 20 Apr 2026 01:39:00 +0000
+Message-ID: <6009223050@castellan-pack.eu>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=castellan-pack.eu; dkim=pass header.d=castellan-pack.eu;
+ dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id e3c424; Mon, 20
+ Apr 2026 01:39:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+Our remittance details are now different; please amend the bank details on fi=
+le.
+Verify here: http://198.51.100.77/secure/login.php
+
+Thanks,

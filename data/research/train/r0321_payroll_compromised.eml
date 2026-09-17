@@ -1,0 +1,24 @@
+From: "Callum Reid" <c.reid@northwind-logistics.com>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Re: INV-75268 - revised remittance details
+Date: Sun, 19 Apr 2026 03:42:00 +0000
+Message-ID: <3955110604@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id d416d7; Sun, 19
+ Apr 2026 03:42:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+Please action this right away - the deadline is this afternoon.
+Kindly release the payment of GBP 67,042.00 against the invoice attached.
+  IBAN: DE269497287204151
+Do not discuss this with anyone else in the team for now.
+I am counting on you to handle this personally.
+
+Kind regards,

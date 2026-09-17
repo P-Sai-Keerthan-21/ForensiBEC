@@ -1,0 +1,23 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: d.osei@northwind-logistics.com
+Subject: Notes from the depot review
+Date: Fri, 22 May 2026 05:31:00 +0000
+Message-ID: <3232047847@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-7038.hostwind.example [203.0.113.170]) by
+ mx.northwind-logistics.com with ESMTP id 21ee99; Fri, 22 May 2026 05:31:00
+ +0000
+Return-Path: <billing@harborline-supplies.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Daniel,
+
+This is critical and cannot wait until tomorrow.
+Please process the wire transfer of USD 19,310.00 to the beneficiary below.
+Details are here: https://intranet.northwind-logistics.com/hr/handbook
+
+Regards,

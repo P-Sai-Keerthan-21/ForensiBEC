@@ -1,0 +1,23 @@
+From: "Castellan Packaging Accounts" <accounts@delaney-freigth.co>
+To: a.bello@northwind-logistics.com
+Subject: Re: INV-84134 - revised remittance details
+Date: Tue, 14 Jul 2026 23:01:00 +0000
+Message-ID: <8926353984@delaney-freigth.co>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-7893.hostwind.example [203.0.113.232]) by
+ mx.northwind-logistics.com with ESMTP id b7eb1d; Tue, 14 Jul 2026 23:01:00
+ +0000
+Reply-To: castellan.63@mail.com
+Return-Path: <bounce@northwind-logistics.support>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+Our remittance details are now different; please amend the bank details on fi=
+le.
+Verify here: http://203.0.113.45/secure/login.php
+
+Thanks,

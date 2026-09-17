@@ -1,0 +1,21 @@
+From: "Aisha Bello - Finance Director" <a.bello@northwind-logistics.com>
+To: procurement@northwind-logistics.com
+Subject: Weekly operations summary
+Date: Tue, 13 Jan 2026 20:24:00 +0000
+Message-ID: <6824170904@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 99142d; Tue, 13
+ Jan 2026 20:24:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+The delivery window is confirmed for Friday afternoon.
+This follows on from our earlier discussion.
+
+Best,

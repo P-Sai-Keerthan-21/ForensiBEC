@@ -1,0 +1,20 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: accounts.payable@northwind-logistics.com
+Subject: Purchase order INV-63177 confirmation
+Date: Tue, 04 Aug 2026 20:47:00 +0000
+Message-ID: <1548883199@bergindustrial.se>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-2097.hostwind.example [203.0.113.162]) by
+ mx.northwind-logistics.com with ESMTP id c5d95d; Tue, 04 Aug 2026 20:47:00
+ +0000
+Return-Path: <t.berg@bergindustrial.se>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+The updated policy is now on the intranet for everyone to read.
+
+Best regards,

@@ -1,0 +1,22 @@
+From: "Mei Lin (Contractor)" <m.lin.contract@outlook.com>
+To: c.reid@northwind-logistics.com
+Subject: Updated remote working policy
+Date: Sat, 24 Jan 2026 04:44:00 +0000
+Message-ID: <7305287852@outlook.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=outlook.com; dkim=pass header.d=outlook.com; dmarc=pass
+Received: from unknown (vps-3991.hostwind.example [203.0.113.159]) by
+ mx.northwind-logistics.com with ESMTP id 8893c6; Sat, 24 Jan 2026 04:44:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Callum,
+
+Could you confirm the pallet dimensions for the Rotterdam depot?
+The maintenance window is confirmed for Saturday morning.
+Details are here: https://portal.northwind-logistics.com/invoices/view
+Let me know if you need anything else.
+
+Many thanks,

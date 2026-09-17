@@ -1,0 +1,23 @@
+From: "Priya Sharma" <priya.sharma@northwind-logistics.com>
+To: it@northwind-logistics.com
+Subject: Stocktake figures needed before close of business
+Date: Mon, 10 Aug 2026 11:18:00 +0000
+Message-ID: <6258836399@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 65dcc7; Mon, 10
+ Aug 2026 11:18:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Callum,
+
+This is critical and cannot wait until tomorrow.
+The outstanding balance of EUR 47,515.00 needs to be remitted today.
+  Beneficiary account (unchanged): IBAN DE502779060550888
+Apologies for the short notice.
+
+Many thanks,

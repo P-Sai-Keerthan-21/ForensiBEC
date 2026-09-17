@@ -1,0 +1,26 @@
+From: "Daniel Osei" <d.osei@northwind-logistics.com>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Action required: mailbox verification
+Date: Wed, 29 Apr 2026 19:36:00 +0000
+Message-ID: <8359391259@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 94bfe3; Wed, 29
+ Apr 2026 19:36:00 +0000
+Return-Path: <d.osei@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Sandra,
+
+I need this processed immediately, without delay.
+Kindly release the payment of USD 88,880.00 against the invoice attached.
+  IBAN: MT438817354724732
+Please keep this strictly between us until the announcement.
+I am currently in meetings and cannot take a call.
+Do check the attached schedule when you get a moment.
+
+Many thanks,

@@ -1,0 +1,21 @@
+From: "Joseph Okafor" <j.okafor@northwind-logistics.com>
+To: a.bello@northwind-logistics.com
+Subject: Invoice INV-59716 attached
+Date: Thu, 30 Apr 2026 15:27:00 +0000
+Message-ID: <2861479010@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 92a633; Thu, 30
+ Apr 2026 15:27:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Aisha,
+
+The updated policy is now on the intranet for everyone to read.
+Do check the attached schedule when you get a moment.
+
+Regards,

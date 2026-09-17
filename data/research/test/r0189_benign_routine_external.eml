@@ -1,0 +1,23 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: f.haddad@northwind-logistics.com
+Subject: Notes from the depot review
+Date: Tue, 07 Apr 2026 06:42:00 +0000
+Message-ID: <7206976037@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-1990.hostwind.example [203.0.113.174]) by
+ mx.northwind-logistics.com with ESMTP id 5ab39b; Tue, 07 Apr 2026 06:42:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+The Q3 budget review has been scheduled for the 24th.
+The Q3 budget review has been scheduled for the 24th.
+Details are here: https://intranet.northwind-logistics.com/hr/handbook
+Do check the attached schedule when you get a moment.
+
+Regards,

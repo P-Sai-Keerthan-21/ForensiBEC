@@ -1,0 +1,22 @@
+From: "Tomasz Nowak (CEO)" <t.nowak@northwind-logistics.com>
+To: d.osei@northwind-logistics.com
+Subject: Weekly operations summary
+Date: Fri, 13 Mar 2026 09:53:00 +0000
+Message-ID: <4471953297@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 6c5616; Fri, 13
+ Mar 2026 09:53:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Daniel,
+
+Please process GBP 49,962.00 against the existing purchase order when conveni=
+ent.
+I am counting on you to handle this personally.
+
+Regards,

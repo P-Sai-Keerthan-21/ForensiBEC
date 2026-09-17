@@ -1,0 +1,23 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: m.lin@northwind-logistics.com
+Subject: Updated remote working policy
+Date: Sun, 26 Jul 2026 12:27:00 +0000
+Message-ID: <5881049775@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-9898.hostwind.example [203.0.113.32]) by
+ mx.northwind-logistics.com with ESMTP id 2eaf96; Sun, 26 Jul 2026 12:27:00
+ +0000
+Return-Path: <billing@harborline-supplies.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Notes from the depot review are attached for your records.
+The updated policy is now on the intranet for everyone to read.
+Details are here: https://intranet.northwind-logistics.com/hr/handbook
+
+Thanks,

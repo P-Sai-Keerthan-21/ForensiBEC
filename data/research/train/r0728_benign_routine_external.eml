@@ -1,0 +1,23 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: t.nowak@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Thu, 16 Apr 2026 13:55:00 +0000
+Message-ID: <9719914931@bergindustrial.se>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se;
+ dmarc=pass
+Received: from unknown (vps-7454.hostwind.example [203.0.113.207]) by
+ mx.northwind-logistics.com with ESMTP id b9cf5b; Thu, 16 Apr 2026 13:55:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Tomasz,
+
+Could you confirm the pallet dimensions for the Rotterdam depot?
+Details are here: https://intranet.northwind-logistics.com/policies/remote-wo=
+rking
+Do check the attached schedule when you get a moment.
+
+Kind regards,

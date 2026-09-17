@@ -1,0 +1,21 @@
+From: "Priya Sharma (CEO)" <priya.sharma@northwind-l0gistics.com>
+To: d.osei@northwind-logistics.com
+Subject: Action required: mailbox verification
+Date: Mon, 10 Aug 2026 16:29:00 +0000
+Message-ID: <2369971306@northwind-l0gistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=northwind-l0gistics.com; dkim=none; dmarc=fail
+Received: from unknown (vps-8250.hostwind.example [203.0.113.133]) by
+ mx.northwind-logistics.com with ESMTP id 5044ca; Mon, 10 Aug 2026 16:29:00
+ +0000
+Reply-To: priya.18@protonmail.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Daniel,
+
+Could you let me know when you are free to action a transfer?
+Happy to discuss if that helps.
+
+Thanks,

@@ -1,0 +1,21 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: t.nowak@northwind-logistics.com
+Subject: Quick favour - are you at your desk?
+Date: Tue, 24 Feb 2026 17:51:00 +0000
+Message-ID: <7904035656@bergindustrial.se>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se;
+ dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id a02315; Tue, 24
+ Feb 2026 17:51:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Tomasz,
+
+Please note our banking details have changed following a treasury restructure.
+I have copied the relevant team.
+
+Best,

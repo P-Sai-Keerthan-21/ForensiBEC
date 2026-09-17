@@ -1,0 +1,730 @@
+{
+  "r0004_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "r0006_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0008_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "r0011_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0017_gift_card_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "gift_card_subtle"
+  },
+  "r0018_payroll_compromised_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_compromised_subtle"
+  },
+  "r0022_gift_card.eml": {
+    "label": "MALICIOUS",
+    "family": "gift_card"
+  },
+  "r0023_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0033_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0034_ceo_fraud_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_subtle"
+  },
+  "r0035_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "r0041_benign_routine_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external_relayed"
+  },
+  "r0046_ceo_fraud.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud"
+  },
+  "r0047_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0050_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "r0063_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0077_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0079_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0086_payroll_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_compromised"
+  },
+  "r0090_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0091_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0092_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0097_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "r0103_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "r0107_benign_confounded_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external_relayed"
+  },
+  "r0109_vendor_invoice_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "vendor_invoice_compromised"
+  },
+  "r0119_vendor_invoice_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "vendor_invoice_compromised"
+  },
+  "r0132_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0140_payroll.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll"
+  },
+  "r0143_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0153_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "r0157_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0158_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0159_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "r0160_payroll_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_subtle"
+  },
+  "r0166_ceo_fraud_compromised_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_compromised_subtle"
+  },
+  "r0168_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0175_benign_routine_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external_relayed"
+  },
+  "r0180_lookalike_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "lookalike_subtle"
+  },
+  "r0183_ceo_fraud_compromised_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_compromised_subtle"
+  },
+  "r0185_vendor_invoice_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "vendor_invoice_compromised"
+  },
+  "r0188_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0189_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "r0191_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "r0193_ceo_fraud.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud"
+  },
+  "r0194_ceo_fraud_compromised_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_compromised_subtle"
+  },
+  "r0197_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0220_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0223_benign_confounded_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external_relayed"
+  },
+  "r0232_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0236_gift_card_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "gift_card_subtle"
+  },
+  "r0238_payroll_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_compromised"
+  },
+  "r0244_benign_confounded_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external_relayed"
+  },
+  "r0251_payroll_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_subtle"
+  },
+  "r0259_credential.eml": {
+    "label": "MALICIOUS",
+    "family": "credential"
+  },
+  "r0265_ceo_fraud_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_compromised"
+  },
+  "r0271_payroll_compromised_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_compromised_subtle"
+  },
+  "r0276_payroll.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll"
+  },
+  "r0278_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0282_ceo_fraud_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_compromised"
+  },
+  "r0286_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0292_credential_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "credential_subtle"
+  },
+  "r0296_payroll.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll"
+  },
+  "r0323_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0336_credential_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "credential_subtle"
+  },
+  "r0340_vendor_invoice_compromised_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "vendor_invoice_compromised_subtle"
+  },
+  "r0357_ceo_fraud.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud"
+  },
+  "r0359_lookalike.eml": {
+    "label": "MALICIOUS",
+    "family": "lookalike"
+  },
+  "r0366_ceo_fraud_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_compromised"
+  },
+  "r0370_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0373_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "r0374_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0381_payroll_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_subtle"
+  },
+  "r0383_lookalike.eml": {
+    "label": "MALICIOUS",
+    "family": "lookalike"
+  },
+  "r0388_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0391_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0393_ceo_fraud_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_compromised"
+  },
+  "r0395_payroll_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_compromised"
+  },
+  "r0397_credential_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "credential_subtle"
+  },
+  "r0411_ceo_fraud_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_subtle"
+  },
+  "r0414_ceo_fraud.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud"
+  },
+  "r0415_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0418_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "r0430_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0435_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0436_ceo_fraud_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_compromised"
+  },
+  "r0443_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0448_gift_card_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "gift_card_subtle"
+  },
+  "r0453_ceo_fraud_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_subtle"
+  },
+  "r0465_credential_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "credential_subtle"
+  },
+  "r0466_benign_confounded_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external_relayed"
+  },
+  "r0468_credential_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "credential_subtle"
+  },
+  "r0470_benign_routine_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external_relayed"
+  },
+  "r0481_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "r0485_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0486_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "r0496_ceo_fraud_compromised_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_compromised_subtle"
+  },
+  "r0497_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0502_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0504_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0523_gift_card.eml": {
+    "label": "MALICIOUS",
+    "family": "gift_card"
+  },
+  "r0527_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0532_payroll_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_compromised"
+  },
+  "r0541_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0542_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "r0545_vendor_invoice_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "vendor_invoice_compromised"
+  },
+  "r0546_ceo_fraud_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_compromised"
+  },
+  "r0549_gift_card_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "gift_card_subtle"
+  },
+  "r0551_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0560_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0567_vendor_invoice_compromised_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "vendor_invoice_compromised_subtle"
+  },
+  "r0568_gift_card.eml": {
+    "label": "MALICIOUS",
+    "family": "gift_card"
+  },
+  "r0569_ceo_fraud_compromised_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_compromised_subtle"
+  },
+  "r0571_payroll_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_compromised"
+  },
+  "r0575_gift_card.eml": {
+    "label": "MALICIOUS",
+    "family": "gift_card"
+  },
+  "r0590_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0602_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "r0603_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0606_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0607_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "r0610_payroll_compromised_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_compromised_subtle"
+  },
+  "r0613_lookalike_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "lookalike_subtle"
+  },
+  "r0621_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0623_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0625_credential.eml": {
+    "label": "MALICIOUS",
+    "family": "credential"
+  },
+  "r0627_payroll_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_compromised"
+  },
+  "r0630_payroll.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll"
+  },
+  "r0640_vendor_invoice_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "vendor_invoice_compromised"
+  },
+  "r0646_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0649_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0652_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "r0656_ceo_fraud_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_compromised"
+  },
+  "r0658_vendor_invoice.eml": {
+    "label": "MALICIOUS",
+    "family": "vendor_invoice"
+  },
+  "r0665_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0666_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0669_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0674_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "r0675_gift_card.eml": {
+    "label": "MALICIOUS",
+    "family": "gift_card"
+  },
+  "r0677_benign_routine_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external_relayed"
+  },
+  "r0679_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "r0687_lookalike.eml": {
+    "label": "MALICIOUS",
+    "family": "lookalike"
+  },
+  "r0698_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0701_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0708_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0722_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0726_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "r0730_lookalike_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "lookalike_subtle"
+  },
+  "r0735_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0743_benign_confounded_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external_relayed"
+  },
+  "r0749_vendor_invoice_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "vendor_invoice_compromised"
+  },
+  "r0750_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0751_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0757_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0762_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "r0769_benign_confounded_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external_relayed"
+  },
+  "r0771_benign_confounded_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external_relayed"
+  },
+  "r0776_credential.eml": {
+    "label": "MALICIOUS",
+    "family": "credential"
+  },
+  "r0779_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0784_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "r0793_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0801_vendor_invoice_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "vendor_invoice_compromised"
+  },
+  "r0816_credential.eml": {
+    "label": "MALICIOUS",
+    "family": "credential"
+  },
+  "r0819_ceo_fraud_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_compromised"
+  },
+  "r0823_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0824_credential_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "credential_subtle"
+  },
+  "r0827_vendor_invoice_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "vendor_invoice_compromised"
+  },
+  "r0834_ceo_fraud.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud"
+  },
+  "r0839_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0844_ceo_fraud_compromised.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_compromised"
+  },
+  "r0847_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0853_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0854_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0860_gift_card_subtle.eml": {
+    "label": "MALICIOUS",
+    "family": "gift_card_subtle"
+  },
+  "r0871_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0875_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "r0881_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0885_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0889_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "r0891_lookalike.eml": {
+    "label": "MALICIOUS",
+    "family": "lookalike"
+  },
+  "r0895_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "r0898_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "r0899_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  }
+}

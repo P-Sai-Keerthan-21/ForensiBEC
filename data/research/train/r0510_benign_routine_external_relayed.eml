@@ -1,0 +1,22 @@
+From: "Daniel Osei (Contractor)" <d.osei.contract@yandex.com>
+To: it@northwind-logistics.com
+Subject: Notes from the depot review
+Date: Tue, 04 Aug 2026 00:47:00 +0000
+Message-ID: <1158031595@yandex.com>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-5992.hostwind.example [203.0.113.187]) by
+ mx.northwind-logistics.com with ESMTP id 73047a; Tue, 04 Aug 2026 00:47:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+Notes from the depot review are attached for your records.
+Could you confirm the pallet dimensions for the Rotterdam depot?
+Details are here: https://harborline-supplies.com/terms
+Do check the attached schedule when you get a moment.
+
+Best,

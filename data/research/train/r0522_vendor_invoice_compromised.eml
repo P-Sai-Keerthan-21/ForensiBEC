@@ -1,0 +1,25 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: m.lin@northwind-logistics.com
+Subject: Action required: mailbox verification
+Date: Tue, 02 Jun 2026 00:02:00 +0000
+Message-ID: <9719374122@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 559713; Tue, 02
+ Jun 2026 00:02:00 +0000
+Return-Path: <billing@harborline-supplies.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Please action this right away - the deadline is this afternoon.
+Please note our banking details have changed following a treasury restructure.
+Kindly release the payment of EUR 37,546.00 against the invoice attached.
+  IBAN: LT863682633231222
+Do not discuss this with anyone else in the team for now.
+
+Thanks,

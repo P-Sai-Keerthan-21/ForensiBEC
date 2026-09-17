@@ -1,0 +1,27 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: priya.sharma@northwind-logistics.com
+Subject: Stocktake figures needed before close of business
+Date: Sat, 07 Mar 2026 19:51:00 +0000
+Message-ID: <6112389914@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-8905.hostwind.example [203.0.113.102]) by
+ mx.northwind-logistics.com with ESMTP id f1fcf2; Sat, 07 Mar 2026 19:51:00
+ +0000
+Return-Path: <billing@harborline-supplies.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Priya,
+
+Apologies for the rush, but the report deadline is end of day.
+Accounts payable have the invoice for GBP 11,997.00 - no action needed from y=
+ou.
+Details are unchanged and already on file.
+  Beneficiary account (unchanged): IBAN CY729729501873093
+Details are here: https://harborline-supplies.com/terms
+Please treat this as routine unless you hear otherwise.
+
+Many thanks,

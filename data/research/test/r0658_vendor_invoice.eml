@@ -1,0 +1,26 @@
+From: "Orrin Marine Ltd Accounts" <finance@delaney-freigth.co>
+To: d.osei@northwind-logistics.com
+Subject: Payment instruction - INV-38425
+Date: Fri, 01 May 2026 06:44:00 +0000
+Message-ID: <2128261239@delaney-freigth.co>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=delaney-freigth.co; dkim=none; dmarc=fail
+Received: from unknown (vps-1606.hostwind.example [203.0.113.65]) by
+ mx.northwind-logistics.com with ESMTP id cf0524; Fri, 01 May 2026 06:44:00
+ +0000
+Reply-To: orrin.76@outlook.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Daniel,
+
+Please treat this as time sensitive - it must clear before close of business.
+We have changed banks, so please use the new beneficiary account below.
+Please process the wire transfer of USD 19,103.00 to the beneficiary below.
+  IBAN: GB987491722475520
+Do not discuss this with anyone else in the team for now.
+I am counting on you to handle this personally.
+Apologies for the short notice.
+
+Many thanks,

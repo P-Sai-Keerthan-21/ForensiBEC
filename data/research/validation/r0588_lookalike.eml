@@ -1,0 +1,24 @@
+From: "Sandra Whitlock (CEO)" <sandra.whitlock@northwind-logistics.support>
+To: f.haddad@northwind-logistics.com
+Subject: Action required: mailbox verification
+Date: Mon, 02 Feb 2026 16:14:00 +0000
+Message-ID: <6825791111@northwind-logistics.support>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-3873.hostwind.example [203.0.113.61]) by
+ mx.northwind-logistics.com with ESMTP id 7730e5; Mon, 02 Feb 2026 16:14:00
+ +0000
+Reply-To: sandra.45@yandex.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Please action this right away - the deadline is this afternoon.
+Please process the wire transfer of USD 43,597.00 to the beneficiary below.
+  IBAN: MT735334300897188
+Please keep this strictly between us until the announcement.
+I am counting on you to handle this personally.
+
+Many thanks,

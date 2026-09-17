@@ -1,0 +1,22 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: sales@northwind-logistics.com
+Subject: Updated remote working policy
+Date: Wed, 20 May 2026 18:40:00 +0000
+Message-ID: <8894296247@castellan-pack.eu>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=castellan-pack.eu; dkim=pass header.d=castellan-pack.eu;
+ dmarc=pass
+Received: from unknown (vps-4915.hostwind.example [203.0.113.219]) by
+ mx.northwind-logistics.com with ESMTP id f5411f; Wed, 20 May 2026 18:40:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Daniel,
+
+Could you confirm the pallet dimensions for the Rotterdam depot?
+The Q3 budget review has been scheduled for the 24th.
+Happy to discuss if that helps.
+
+Best regards,

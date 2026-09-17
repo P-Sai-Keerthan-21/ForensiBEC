@@ -1,0 +1,22 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: m.lin@northwind-logistics.com
+Subject: Statement for September
+Date: Sun, 03 May 2026 06:59:00 +0000
+Message-ID: <6218125995@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-7727.hostwind.example [203.0.113.185]) by
+ mx.northwind-logistics.com with ESMTP id d0d2f7; Sun, 03 May 2026 06:59:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+The updated policy is now on the intranet for everyone to read.
+Details are here: https://harborline-supplies.com/terms
+Happy to discuss if that helps.
+
+Many thanks,

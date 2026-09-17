@@ -1,0 +1,23 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: r.menon@northwind-logistics.com
+Subject: Q3 budget review scheduled
+Date: Wed, 11 Mar 2026 06:01:00 +0000
+Message-ID: <5279719436@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from unknown (vps-3192.hostwind.example [203.0.113.147]) by
+ mx.northwind-logistics.com with ESMTP id f87725; Wed, 11 Mar 2026 06:01:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Time sensitive: the auditors arrive tomorrow and I need the schedule today.
+Please process the wire transfer of USD 86,644.00 to the beneficiary below.
+  Beneficiary account (unchanged): IBAN LT842051292158582
+Let me know if you need anything else.
+
+Best,

@@ -1,0 +1,21 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: c.reid@northwind-logistics.com
+Subject: Invoice INV-52152 attached
+Date: Thu, 04 Jun 2026 23:50:00 +0000
+Message-ID: <9713934433@castellan-pack.eu>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=castellan-pack.eu; dkim=pass header.d=castellan-pack.eu;
+ dmarc=pass
+Received: from unknown (vps-5137.hostwind.example [203.0.113.180]) by
+ mx.northwind-logistics.com with ESMTP id 69e199; Thu, 04 Jun 2026 23:50:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+The Q3 budget review has been scheduled for the 24th.
+Details are here: https://intranet.northwind-logistics.com/hr/handbook
+
+Regards,

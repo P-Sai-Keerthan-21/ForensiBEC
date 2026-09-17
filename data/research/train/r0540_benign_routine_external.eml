@@ -1,0 +1,21 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: f.haddad@northwind-logistics.com
+Subject: Invoice INV-61285 attached
+Date: Fri, 21 Aug 2026 03:36:00 +0000
+Message-ID: <2381136170@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-8890.hostwind.example [203.0.113.223]) by
+ mx.northwind-logistics.com with ESMTP id 206979; Fri, 21 Aug 2026 03:36:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Fatima,
+
+The Q3 budget review has been scheduled for the 24th.
+Please treat this as routine unless you hear otherwise.
+
+Best,

@@ -1,0 +1,23 @@
+From: "Priya Sharma - Finance Director" <priya.sharma@n0rthwind-logistics.com>
+To: priya.sharma@northwind-logistics.com
+Subject: Payment instruction - INV-14480
+Date: Sun, 30 Aug 2026 15:18:00 +0000
+Message-ID: <8475779546@n0rthwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=n0rthwind-logistics.com; dkim=none; dmarc=fail
+Received: from unknown (vps-1365.hostwind.example [203.0.113.238]) by
+ mx.northwind-logistics.com with ESMTP id bfa7ec; Sun, 30 Aug 2026 15:18:00
+ +0000
+Return-Path: <bounce@northwind-logistics.com.secure-mx.net>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Priya,
+
+The outstanding balance of GBP 20,907.00 needs to be remitted today.
+  IBAN: GB561975043978964
+Please keep this strictly between us until the announcement.
+I am counting on you to handle this personally.
+
+Best regards,

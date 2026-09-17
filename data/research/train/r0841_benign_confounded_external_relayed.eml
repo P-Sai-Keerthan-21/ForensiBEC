@@ -1,0 +1,24 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: warehouse.leads@northwind-logistics.com
+Subject: Weekly operations summary
+Date: Sun, 05 Jul 2026 04:53:00 +0000
+Message-ID: <4243357153@delaney-freight.co>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-3848.hostwind.example [203.0.113.145]) by
+ mx.northwind-logistics.com with ESMTP id 657588; Sun, 05 Jul 2026 04:53:00
+ +0000
+Reply-To: procurement@delaney-freight.co
+Return-Path: <m.kalina@delaney-freight.co>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Tomasz,
+
+This is urgent - I need the stocktake figures before close of business.
+Kindly release the payment of USD 86,673.00 against the invoice attached.
+  Beneficiary account (unchanged): IBAN LT802834081520423
+I am currently in meetings and cannot take a call.
+
+Kind regards,

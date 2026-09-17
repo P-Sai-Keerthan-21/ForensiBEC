@@ -1,0 +1,21 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: procurement@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Wed, 21 Jan 2026 01:05:00 +0000
+Message-ID: <9070144817@bergindustrial.se>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-7426.hostwind.example [203.0.113.92]) by
+ mx.northwind-logistics.com with ESMTP id 68c364; Wed, 21 Jan 2026 01:05:00
+ +0000
+Return-Path: <t.berg@bergindustrial.se>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+The maintenance window is confirmed for Saturday morning.
+Details are here: https://northwind-logistics.com/depot-schedule
+
+Best,

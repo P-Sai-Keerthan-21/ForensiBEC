@@ -1,0 +1,23 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: j.okafor@northwind-logistics.com
+Subject: Re: Invoice INV-44617 - updated bank details
+Date: Sun, 23 Aug 2026 01:31:00 +0000
+Message-ID: <2870476843@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 4cf181; Sun, 23
+ Aug 2026 01:31:00 +0000
+Reply-To: harborline@protonmail.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+We have changed banks, so please use the new beneficiary account below.
+The outstanding balance of USD 26,604.00 needs to be remitted today.
+  IBAN: GB204810582299651
+
+Regards,

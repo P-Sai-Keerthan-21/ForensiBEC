@@ -1,0 +1,23 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: t.nowak@northwind-logistics.com
+Subject: Re: INV-64523 - revised remittance details
+Date: Fri, 15 May 2026 18:14:00 +0000
+Message-ID: <1815346588@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 7e851d; Fri, 15
+ May 2026 18:14:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Please treat this as time sensitive - it must clear before close of business.
+We have changed banks, so please use the new beneficiary account below.
+Kindly release the payment of GBP 58,710.00 against the invoice attached.
+  IBAN: MT132522481892861
+
+Kind regards,

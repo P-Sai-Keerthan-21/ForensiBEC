@@ -1,0 +1,22 @@
+From: "Priya Sharma (CEO)" <priya.sharma@northwind-logistlcs.com>
+To: t.nowak@northwind-logistics.com
+Subject: Re: INV-23270 - revised remittance details
+Date: Fri, 30 Jan 2026 18:18:00 +0000
+Message-ID: <2482312707@northwind-logistlcs.com>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=northwind-logistlcs.com; dkim=none; dmarc=fail
+Received: from unknown (vps-4602.hostwind.example [203.0.113.171]) by
+ mx.northwind-logistics.com with ESMTP id 7eef13; Fri, 30 Jan 2026 18:18:00
+ +0000
+Reply-To: priya.15@mail.com
+Return-Path: <bounce@northwind-logistlcs.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Tomasz,
+
+Please process the wire transfer of GBP 80,276.00 to the beneficiary below.
+  IBAN: LT176510820230001
+
+Best regards,

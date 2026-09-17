@@ -1,0 +1,23 @@
+From: "Fatima Haddad" <f.haddad@northwind-logistics.com>
+To: all.staff@northwind-logistics.com
+Subject: Invoice INV-28990 attached
+Date: Wed, 22 Apr 2026 01:57:00 +0000
+Message-ID: <3516273057@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id f8c9d1; Wed, 22
+ Apr 2026 01:57:00 +0000
+Return-Path: <f.haddad@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Callum,
+
+The outstanding balance of USD 42,722.00 needs to be remitted today.
+Details are here: https://intranet.northwind-logistics.com/policies/remote-wo=
+rking
+
+Many thanks,

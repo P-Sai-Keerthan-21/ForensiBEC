@@ -1,0 +1,26 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: r.menon@northwind-logistics.com
+Subject: Quick favour - are you at your desk?
+Date: Wed, 15 Apr 2026 09:42:00 +0000
+Message-ID: <4000724313@bergindustrial.se>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se;
+ dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 83aed8; Wed, 15
+ Apr 2026 09:42:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Please action this right away - the deadline is this afternoon.
+We have changed banks, so please use the new beneficiary account below.
+The outstanding balance of USD 15,451.00 needs to be remitted today.
+  IBAN: GB835977183961554
+Please handle this discreetly and do not cc anyone.
+Verify here: http://203.0.113.180/secure/login.php
+Apologies for the short notice.
+
+Many thanks,

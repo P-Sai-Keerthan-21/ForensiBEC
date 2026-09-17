@@ -1,0 +1,23 @@
+From: "Callum Reid (CEO)" <c.reid@northwind-logistics.com>
+To: d.osei@northwind-logistics.com
+Subject: Invoice INV-82125 attached
+Date: Mon, 23 Feb 2026 03:48:00 +0000
+Message-ID: <6479905268@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 2c0dda; Mon, 23
+ Feb 2026 03:48:00 +0000
+Return-Path: <c.reid@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+I need this processed immediately, without delay.
+The outstanding balance of EUR 58,011.00 needs to be remitted today.
+  Beneficiary account (unchanged): IBAN LT987150926192903
+
+Thanks,

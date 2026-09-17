@@ -1,0 +1,25 @@
+From: "Tomasz Nowak (CEO)" <t.nowak@northwind-logistics.com>
+To: accounts.payable@northwind-logistics.com
+Subject: Notes from the depot review
+Date: Tue, 24 Mar 2026 10:27:00 +0000
+Message-ID: <7511569441@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 1f604d; Tue, 24
+ Mar 2026 10:27:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Sandra,
+
+Time sensitive: the auditors arrive tomorrow and I need the schedule today.
+Please process USD 71,636.00 against the existing purchase order when conveni=
+ent.
+Details are unchanged and already on file.
+  Beneficiary account (unchanged): IBAN CY872803953277345
+I need you to deal with this on my behalf.
+
+Best,

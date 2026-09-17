@@ -1,0 +1,23 @@
+From: "Sandra Whitlock - Finance Director"
+ <sandra.whitlock@northwind-l0gistics.com>
+To: r.menon@northwind-logistics.com
+Subject: Change of account for salary payment
+Date: Fri, 23 Jan 2026 01:30:00 +0000
+Message-ID: <8021970012@northwind-l0gistics.com>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-4469.hostwind.example [203.0.113.237]) by
+ mx.northwind-logistics.com with ESMTP id 165920; Fri, 23 Jan 2026 01:30:00
+ +0000
+Reply-To: sandra.1@yandex.com
+Return-Path: <sandra.whitlock@northwind-l0gistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Ravi,
+
+The Q3 budget review has been scheduled for the 24th.
+Verify here: http://203.0.113.45/secure/login.php
+
+Kind regards,

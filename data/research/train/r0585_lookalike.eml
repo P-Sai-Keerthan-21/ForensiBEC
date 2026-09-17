@@ -1,0 +1,24 @@
+From: "Sandra Whitlock (CFO)" <sandra.whitlock@northwind-logistlcs.com>
+To: c.reid@northwind-logistics.com
+Subject: Quick favour - are you at your desk?
+Date: Sun, 19 Jul 2026 16:22:00 +0000
+Message-ID: <4631875316@northwind-logistlcs.com>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-6569.hostwind.example [203.0.113.149]) by
+ mx.northwind-logistics.com with ESMTP id 19685f; Sun, 19 Jul 2026 16:22:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Please treat this as time sensitive - it must clear before close of business.
+The outstanding balance of EUR 20,199.00 needs to be remitted today.
+  IBAN: MT683815604418677
+Do not discuss this with anyone else in the team for now.
+I am currently in meetings and cannot take a call.
+Do check the attached schedule when you get a moment.
+
+Best regards,

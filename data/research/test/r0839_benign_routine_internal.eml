@@ -1,0 +1,21 @@
+From: "Callum Reid (CFO)" <c.reid@northwind-logistics.com>
+To: m.lin@northwind-logistics.com
+Subject: Updated remote working policy
+Date: Tue, 28 Jul 2026 09:48:00 +0000
+Message-ID: <3620591048@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id ea0d65; Tue, 28
+ Jul 2026 09:48:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+The maintenance window is confirmed for Saturday morning.
+Details are here: https://harborline-supplies.com/terms
+
+Thanks,

@@ -1,0 +1,22 @@
+From: "Ravi Menon" <r.menon@northwind-logistics.com>
+To: c.reid@northwind-logistics.com
+Subject: Q3 budget review scheduled
+Date: Thu, 11 Jun 2026 01:03:00 +0000
+Message-ID: <1660200294@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 744ed3; Thu, 11
+ Jun 2026 01:03:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Could you confirm the pallet dimensions for the Rotterdam depot?
+Notes from the depot review are attached for your records.
+Do check the attached schedule when you get a moment.
+
+Regards,

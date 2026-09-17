@@ -1,0 +1,19 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: c.reid@northwind-logistics.com
+Subject: Weekly operations summary
+Date: Sun, 12 Jul 2026 16:49:00 +0000
+Message-ID: <2744214229@delaney-freight.co>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-9216.hostwind.example [203.0.113.113]) by
+ mx.northwind-logistics.com with ESMTP id a61195; Sun, 12 Jul 2026 16:49:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+The Q3 budget review has been scheduled for the 24th.
+
+Many thanks,

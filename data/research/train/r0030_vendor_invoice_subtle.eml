@@ -1,0 +1,22 @@
+From: "Berg Industrial AB Accounts" <t.berg@orrin-marine.co.uk>
+To: r.menon@northwind-logistics.com
+Subject: Re: INV-80132 - revised remittance details
+Date: Tue, 20 Jan 2026 22:29:00 +0000
+Message-ID: <4477163065@orrin-marine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=orrin-marine.co.uk; dkim=none; dmarc=fail
+Received: from unknown (vps-5349.hostwind.example [203.0.113.240]) by
+ mx.northwind-logistics.com with ESMTP id 590adb; Tue, 20 Jan 2026 22:29:00
+ +0000
+Reply-To: berg.19@mail.com
+Return-Path: <t.berg@orrin-marine.co.uk>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Good morning,
+
+Our remittance details are now different; please amend the bank details on fi=
+le.
+
+Best regards,

@@ -1,0 +1,27 @@
+From: "Daniel Osei (CEO)" <d.osei@northwind-l0gistics.com>
+To: d.osei@northwind-logistics.com
+Subject: Action required: mailbox verification
+Date: Sat, 17 Jan 2026 22:01:00 +0000
+Message-ID: <2635785942@northwind-l0gistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=northwind-l0gistics.com; dkim=none; dmarc=fail
+Received: from unknown (vps-2156.hostwind.example [203.0.113.82]) by
+ mx.northwind-logistics.com with ESMTP id 5b936f; Sat, 17 Jan 2026 22:01:00
+ +0000
+Reply-To: daniel.74@aol.com
+Return-Path: <d.osei@northwind-l0gistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Please treat this as time sensitive - it must clear before close of business.
+Please settle USD 41,730.00 to the account details provided.
+  IBAN: MT693322414974629
+Do not discuss this with anyone else in the team for now.
+I am travelling and unable to talk right now, so please just reply here.
+Verify here: http://198.51.100.77/secure/login.php
+Do check the attached schedule when you get a moment.
+
+Many thanks,

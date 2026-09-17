@@ -1,0 +1,23 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: t.nowak@northwind-logistics.com
+Subject: Stocktake figures needed before close of business
+Date: Sat, 21 Mar 2026 01:39:00 +0000
+Message-ID: <5020239813@delaney-freight.co>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=delaney-freight.co; dkim=pass header.d=delaney-freight.co;
+ dmarc=pass
+Received: from unknown (vps-3333.hostwind.example [203.0.113.127]) by
+ mx.northwind-logistics.com with ESMTP id 2ac54a; Sat, 21 Mar 2026 01:39:00
+ +0000
+Reply-To: procurement@delaney-freight.co
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+This is urgent and must be completed today.
+Please process the wire transfer of USD 27,599.00 to the beneficiary below.
+Details are here: https://harborline-supplies.com/terms
+
+Best,

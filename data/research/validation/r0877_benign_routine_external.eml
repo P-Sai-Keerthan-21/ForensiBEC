@@ -1,0 +1,22 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: it@northwind-logistics.com
+Subject: Updated remote working policy
+Date: Sun, 24 May 2026 01:43:00 +0000
+Message-ID: <8911022439@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-7531.hostwind.example [203.0.113.230]) by
+ mx.northwind-logistics.com with ESMTP id d734b1; Sun, 24 May 2026 01:43:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+The maintenance window is confirmed for Saturday morning.
+The maintenance window is confirmed for Saturday morning.
+Apologies for the short notice.
+
+Kind regards,

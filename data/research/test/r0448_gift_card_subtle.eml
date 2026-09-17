@@ -1,0 +1,21 @@
+From: "Sandra Whitlock" <sandra.whitlock.2@yandex.com>
+To: c.reid@northwind-logistics.com
+Subject: Action required: mailbox verification
+Date: Tue, 06 Jan 2026 19:22:00 +0000
+Message-ID: <8464805653@yandex.com>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=yandex.com; dkim=none; dmarc=fail
+Received: from unknown (vps-3223.hostwind.example [203.0.113.245]) by
+ mx.northwind-logistics.com with ESMTP id 12f0c3; Tue, 06 Jan 2026 19:22:00
+ +0000
+Reply-To: sandra.14@protonmail.com
+Return-Path: <sandra.whitlock.2@yandex.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Could you purchase 19 gift cards and send me the redeem codes from the back?
+
+Kind regards,

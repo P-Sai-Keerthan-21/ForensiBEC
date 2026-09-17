@@ -1,0 +1,24 @@
+From: "Callum Reid (Operations Director)" <c.reid@northwind-logistics.com>
+To: all.staff@northwind-logistics.com
+Subject: Purchase order INV-52302 confirmation
+Date: Sun, 29 Mar 2026 10:20:00 +0000
+Message-ID: <8069843572@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 71c046; Sun, 29
+ Mar 2026 10:20:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Dear Callum,
+
+The EUR 46,385.00 payment was approved at the last review; details are unchan=
+ged.
+Do not discuss this with anyone else in the team for now.
+I am currently in meetings and cannot take a call.
+Happy to discuss if that helps.
+
+Best regards,

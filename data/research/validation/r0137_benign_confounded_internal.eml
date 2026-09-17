@@ -1,0 +1,24 @@
+From: "Aisha Bello (CFO)" <a.bello@northwind-logistics.com>
+To: accounts.payable@northwind-logistics.com
+Subject: Notes from the depot review
+Date: Sun, 28 Jun 2026 11:04:00 +0000
+Message-ID: <7556029320@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 202755; Sun, 28
+ Jun 2026 11:04:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Apologies for the rush, but the report deadline is end of day.
+Kindly release the payment of USD 16,402.00 against the invoice attached.
+Details are unchanged and already on file.
+  Beneficiary account (unchanged): IBAN DE516026454848789
+Apologies for the short notice.
+
+Thanks,

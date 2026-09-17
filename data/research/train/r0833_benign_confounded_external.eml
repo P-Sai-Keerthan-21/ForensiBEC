@@ -1,0 +1,23 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: scheduling@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Mon, 06 Jul 2026 12:48:00 +0000
+Message-ID: <4062259541@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from unknown (vps-5296.hostwind.example [203.0.113.149]) by
+ mx.northwind-logistics.com with ESMTP id c6ea10; Mon, 06 Jul 2026 12:48:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+Kindly release the payment of EUR 44,054.00 against the invoice attached.
+  Beneficiary account (unchanged): IBAN CY648686041870000
+Please keep this strictly between us until the announcement.
+Let me know if you need anything else.
+
+Best,

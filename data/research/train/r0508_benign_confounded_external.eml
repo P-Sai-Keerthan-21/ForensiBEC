@@ -1,0 +1,23 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: j.okafor@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Mon, 22 Jun 2026 17:25:00 +0000
+Message-ID: <5392864300@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-9428.hostwind.example [203.0.113.100]) by
+ mx.northwind-logistics.com with ESMTP id 7a70ce; Mon, 22 Jun 2026 17:25:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+Apologies for the rush, but the report deadline is end of day.
+The outstanding balance of GBP 34,366.00 needs to be remitted today.
+Details are unchanged and already on file.
+  Beneficiary account (unchanged): IBAN GB534991968282447
+
+Thanks,

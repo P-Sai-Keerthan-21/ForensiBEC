@@ -1,0 +1,24 @@
+From: "Castellan Packaging Accounts" <accounts@orrin-marine.co.uk>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Action required: mailbox verification
+Date: Sun, 30 Aug 2026 18:10:00 +0000
+Message-ID: <7657451506@orrin-marine.co.uk>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-5127.hostwind.example [203.0.113.60]) by
+ mx.northwind-logistics.com with ESMTP id 4ea425; Sun, 30 Aug 2026 18:10:00
+ +0000
+Reply-To: castellan.46@aol.com
+Return-Path: <accounts@orrin-marine.co.uk>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Sandra,
+
+Please note our banking details have changed following a treasury restructure.
+Please settle EUR 18,715.00 to the account details provided.
+  IBAN: GB246455157911962
+Please keep this strictly between us until the announcement.
+
+Regards,

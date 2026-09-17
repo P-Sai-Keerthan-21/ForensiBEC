@@ -1,0 +1,24 @@
+From: "Aisha Bello (CFO)" <a.bello@northwind-logistics.com>
+To: j.okafor@northwind-logistics.com
+Subject: Updated remote working policy
+Date: Sat, 04 Jul 2026 06:34:00 +0000
+Message-ID: <1434134037@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id bab9cf; Sat, 04
+ Jul 2026 06:34:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+This is urgent and must be completed today.
+Please process the wire transfer of GBP 31,888.00 to the beneficiary below.
+  Beneficiary account (unchanged): IBAN DE112834920456608
+Details are here: https://intranet.northwind-logistics.com/hr/handbook
+Do check the attached schedule when you get a moment.
+
+Thanks,

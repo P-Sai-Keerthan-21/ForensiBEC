@@ -1,0 +1,23 @@
+From: "Callum Reid" <c.reid@northwind-logistics.com>
+To: accounts.payable@northwind-logistics.com
+Subject: Invoice INV-50585 attached
+Date: Tue, 28 Jul 2026 12:36:00 +0000
+Message-ID: <5548700512@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 580224; Tue, 28
+ Jul 2026 12:36:00 +0000
+Reply-To: hr.payroll@northwind-logistics.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Fatima,
+
+Please treat this as time sensitive - it must clear before close of business.
+Please process USD 80,311.00 against the existing purchase order when conveni=
+ent.
+
+Kind regards,

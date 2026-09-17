@@ -1,0 +1,23 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: accounts.payable@northwind-logistics.com
+Subject: Stocktake figures needed before close of business
+Date: Sun, 22 Feb 2026 14:51:00 +0000
+Message-ID: <1479870495@delaney-freight.co>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=delaney-freight.co; dkim=pass header.d=delaney-freight.co;
+ dmarc=pass
+Received: from unknown (vps-8010.hostwind.example [203.0.113.185]) by
+ mx.northwind-logistics.com with ESMTP id 5f1bc3; Sun, 22 Feb 2026 14:51:00
+ +0000
+Return-Path: <m.kalina@delaney-freight.co>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Sandra,
+
+The maintenance window is confirmed for Saturday morning.
+Details are here: https://portal.northwind-logistics.com/invoices/view
+Happy to discuss if that helps.
+
+Thanks,

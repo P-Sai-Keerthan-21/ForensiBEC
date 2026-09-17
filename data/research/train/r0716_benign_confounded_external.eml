@@ -1,0 +1,24 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: warehouse.leads@northwind-logistics.com
+Subject: Notes from the depot review
+Date: Wed, 14 Jan 2026 23:59:00 +0000
+Message-ID: <2870106410@castellan-pack.eu>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=castellan-pack.eu; dkim=pass header.d=castellan-pack.eu;
+ dmarc=pass
+Received: from unknown (vps-3342.hostwind.example [203.0.113.56]) by
+ mx.northwind-logistics.com with ESMTP id 3612d0; Wed, 14 Jan 2026 23:59:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+Apologies for the rush, but the report deadline is end of day.
+The GBP 57,891.00 payment was approved at the last review; details are unchan=
+ged.
+I am currently in meetings and cannot take a call.
+Details are here: https://northwind-logistics.com/depot-schedule
+
+Many thanks,

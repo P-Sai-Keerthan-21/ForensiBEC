@@ -1,0 +1,23 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: f.haddad@northwind-logistics.com
+Subject: Question about pallet dimensions
+Date: Tue, 03 Mar 2026 09:14:00 +0000
+Message-ID: <7789013274@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-7061.hostwind.example [203.0.113.29]) by
+ mx.northwind-logistics.com with ESMTP id 60baab; Tue, 03 Mar 2026 09:14:00
+ +0000
+Return-Path: <billing@harborline-supplies.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Fatima,
+
+The updated policy is now on the intranet for everyone to read.
+The maintenance window is confirmed for Saturday morning.
+Happy to discuss if that helps.
+
+Kind regards,

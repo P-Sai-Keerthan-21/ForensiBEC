@@ -1,0 +1,24 @@
+From: "Ravi Menon - Finance Director" <r.menon@n0rthwind-logistics.com>
+To: c.reid@northwind-logistics.com
+Subject: Payment instruction - INV-27375
+Date: Thu, 22 Jan 2026 04:39:00 +0000
+Message-ID: <3781638164@n0rthwind-logistics.com>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-2186.hostwind.example [203.0.113.134]) by
+ mx.northwind-logistics.com with ESMTP id ef4770; Thu, 22 Jan 2026 04:39:00
+ +0000
+Return-Path: <r.menon@n0rthwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Please action this right away - the deadline is this afternoon.
+The outstanding balance of USD 70,266.00 needs to be remitted today.
+  IBAN: DE832515286152533
+Please keep this strictly between us until the announcement.
+This follows on from our earlier discussion.
+
+Best regards,

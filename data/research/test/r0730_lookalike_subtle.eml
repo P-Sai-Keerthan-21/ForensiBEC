@@ -1,0 +1,21 @@
+From: "Sandra Whitlock" <sandra.whitlock@northwind-logistics.support>
+To: c.reid@northwind-logistics.com
+Subject: Payment instruction - INV-79951
+Date: Wed, 17 Jun 2026 01:47:00 +0000
+Message-ID: <9324344082@northwind-logistics.support>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=northwind-logistics.support; dkim=none; dmarc=fail
+Received: from unknown (vps-2403.hostwind.example [203.0.113.166]) by
+ mx.northwind-logistics.com with ESMTP id 1c18ca; Wed, 17 Jun 2026 01:47:00
+ +0000
+Return-Path: <bounce@northwind-logistics.support>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+The updated policy is now on the intranet for everyone to read.
+Please treat this as routine unless you hear otherwise.
+
+Regards,

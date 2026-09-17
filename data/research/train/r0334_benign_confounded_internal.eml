@@ -1,0 +1,24 @@
+From: "Joseph Okafor (CFO)" <j.okafor@northwind-logistics.com>
+To: all.staff@northwind-logistics.com
+Subject: Invoice INV-57854 attached
+Date: Thu, 20 Aug 2026 16:15:00 +0000
+Message-ID: <3089012600@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 4ee8b2; Thu, 20
+ Aug 2026 16:15:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi all,
+
+Please process EUR 50,354.00 against the existing purchase order when conveni=
+ent.
+Details are unchanged and already on file.
+  Beneficiary account (unchanged): IBAN LT571305161857186
+Details are here: https://portal.northwind-logistics.com/invoices/view
+
+Kind regards,

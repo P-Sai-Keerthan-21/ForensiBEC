@@ -1,0 +1,22 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Thu, 19 Mar 2026 13:15:00 +0000
+Message-ID: <6940375765@castellan-pack.eu>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=castellan-pack.eu; dkim=pass header.d=castellan-pack.eu;
+ dmarc=pass
+Received: from unknown (vps-4186.hostwind.example [203.0.113.203]) by
+ mx.northwind-logistics.com with ESMTP id 22e6ae; Thu, 19 Mar 2026 13:15:00
+ +0000
+Return-Path: <accounts@castellan-pack.eu>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Sandra,
+
+The delivery window is confirmed for Friday afternoon.
+Please treat this as routine unless you hear otherwise.
+
+Regards,

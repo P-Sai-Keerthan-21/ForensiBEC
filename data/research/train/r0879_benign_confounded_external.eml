@@ -1,0 +1,24 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: r.menon@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Fri, 08 May 2026 11:33:00 +0000
+Message-ID: <3016473290@delaney-freight.co>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=delaney-freight.co; dkim=pass header.d=delaney-freight.co;
+ dmarc=pass
+Received: from unknown (vps-6028.hostwind.example [203.0.113.84]) by
+ mx.northwind-logistics.com with ESMTP id 5d801a; Fri, 08 May 2026 11:33:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Good morning,
+
+This is urgent and must be completed today.
+Please process GBP 68,668.00 against the existing purchase order when conveni=
+ent.
+Details are here: https://intranet.northwind-logistics.com/hr/handbook
+Please treat this as routine unless you hear otherwise.
+
+Best,

@@ -1,0 +1,21 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: r.menon@northwind-logistics.com
+Subject: Notes from the depot review
+Date: Thu, 06 Aug 2026 04:59:00 +0000
+Message-ID: <3778513154@harborline-supplies.com>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-3832.hostwind.example [203.0.113.105]) by
+ mx.northwind-logistics.com with ESMTP id 5cd0a9; Thu, 06 Aug 2026 04:59:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Dear Ravi,
+
+The maintenance window is confirmed for Saturday morning.
+Details are here: https://intranet.northwind-logistics.com/policies/remote-wo=
+rking
+
+Thanks,

@@ -1,0 +1,23 @@
+From: "Tomasz Nowak - Finance Director" <t.nowak@northwind-logistics.com>
+To: accounts.payable@northwind-logistics.com
+Subject: Statement for November
+Date: Sun, 15 Mar 2026 14:01:00 +0000
+Message-ID: <8852614246@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id ecd388; Sun, 15
+ Mar 2026 14:01:00 +0000
+Return-Path: <t.nowak@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+The updated policy is now on the intranet for everyone to read.
+Details are here: https://portal.northwind-logistics.com/invoices/view
+Apologies for the short notice.
+
+Regards,

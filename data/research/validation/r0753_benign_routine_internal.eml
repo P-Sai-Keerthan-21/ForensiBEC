@@ -1,0 +1,23 @@
+From: "Daniel Osei (Operations Director)" <d.osei@northwind-logistics.com>
+To: a.bello@northwind-logistics.com
+Subject: Invoice INV-98986 attached
+Date: Thu, 09 Apr 2026 00:56:00 +0000
+Message-ID: <8258723703@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 710d45; Thu, 09
+ Apr 2026 00:56:00 +0000
+Return-Path: <d.osei@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Aisha,
+
+The delivery window is confirmed for Friday afternoon.
+Could you confirm the pallet dimensions for the Rotterdam depot?
+Details are here: https://intranet.northwind-logistics.com/hr/handbook
+
+Thanks,

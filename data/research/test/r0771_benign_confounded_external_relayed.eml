@@ -1,0 +1,24 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: d.osei@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Sun, 22 Mar 2026 21:51:00 +0000
+Message-ID: <7405049073@castellan-pack.eu>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-7035.hostwind.example [203.0.113.232]) by
+ mx.northwind-logistics.com with ESMTP id 54b797; Sun, 22 Mar 2026 21:51:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Good morning,
+
+This is critical and cannot wait until tomorrow.
+Please process the wire transfer of GBP 33,909.00 to the beneficiary below.
+Details are unchanged and already on file.
+  Beneficiary account (unchanged): IBAN LT422609792839954
+Details are here: https://intranet.northwind-logistics.com/policies/remote-wo=
+rking
+
+Regards,

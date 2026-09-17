@@ -1,0 +1,20 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: sales@northwind-logistics.com
+Subject: Updated remote working policy
+Date: Sun, 21 Jun 2026 18:07:00 +0000
+Message-ID: <6412195385@bergindustrial.se>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-1275.hostwind.example [203.0.113.225]) by
+ mx.northwind-logistics.com with ESMTP id aebb1c; Sun, 21 Jun 2026 18:07:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+Notes from the depot review are attached for your records.
+Details are here: https://delaney-freight.co/contract-portal
+
+Many thanks,

@@ -1,0 +1,21 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: a.bello@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Fri, 23 Jan 2026 00:25:00 +0000
+Message-ID: <5191834561@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-3243.hostwind.example [203.0.113.126]) by
+ mx.northwind-logistics.com with ESMTP id a22b9d; Fri, 23 Jan 2026 00:25:00
+ +0000
+Return-Path: <billing@harborline-supplies.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Aisha,
+
+Could you confirm the pallet dimensions for the Rotterdam depot?
+
+Thanks,

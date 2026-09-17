@@ -1,0 +1,26 @@
+From: "Sandra Whitlock" <sandra.whitlock@northwind-logistics.com>
+To: warehouse.leads@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Sat, 09 May 2026 08:04:00 +0000
+Message-ID: <3368024666@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 8c6cbe; Sat, 09
+ May 2026 08:04:00 +0000
+Reply-To: all.staff@northwind-logistics.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+This is urgent - I need the stocktake figures before close of business.
+The outstanding balance of EUR 15,924.00 needs to be remitted today.
+Details are unchanged and already on file.
+  Beneficiary account (unchanged): IBAN MT715615323554148
+This is confidential and should not be copied to the wider group.
+Details are here: https://intranet.northwind-logistics.com/hr/handbook
+
+Kind regards,

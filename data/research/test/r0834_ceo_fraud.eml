@@ -1,0 +1,24 @@
+From: "Ravi Menon (CEO)" <r.menon@northwind-logistic.com>
+To: priya.sharma@northwind-logistics.com
+Subject: Important: account update needed
+Date: Fri, 13 Feb 2026 18:54:00 +0000
+Message-ID: <5428540065@northwind-logistic.com>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-8247.hostwind.example [203.0.113.193]) by
+ mx.northwind-logistics.com with ESMTP id cf9927; Fri, 13 Feb 2026 18:54:00
+ +0000
+Reply-To: ravi.18@mail.com
+Return-Path: <bounce@northwind-logistics.support>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Priya,
+
+Kindly release the payment of EUR 64,564.00 against the invoice attached.
+  IBAN: GB108521129179647
+Please handle this discreetly and do not cc anyone.
+Please treat this as routine unless you hear otherwise.
+
+Best regards,

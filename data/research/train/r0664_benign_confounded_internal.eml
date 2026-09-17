@@ -1,0 +1,25 @@
+From: "Priya Sharma" <priya.sharma@northwind-logistics.com>
+To: sales@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Sun, 08 Mar 2026 15:14:00 +0000
+Message-ID: <4736713832@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 4b6c32; Sun, 08
+ Mar 2026 15:14:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Fatima,
+
+This is urgent - I need the stocktake figures before close of business.
+Please settle GBP 9,927.00 to the account details provided.
+Details are unchanged and already on file.
+  Beneficiary account (unchanged): IBAN LT948816371311647
+Please keep this strictly between us until the announcement.
+I need you to deal with this on my behalf.
+
+Best,

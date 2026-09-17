@@ -1,0 +1,21 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: procurement@northwind-logistics.com
+Subject: Statement for September
+Date: Wed, 14 Jan 2026 14:50:00 +0000
+Message-ID: <4190852690@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from unknown (vps-2850.hostwind.example [203.0.113.206]) by
+ mx.northwind-logistics.com with ESMTP id 6ff3c8; Wed, 14 Jan 2026 14:50:00
+ +0000
+Return-Path: <finance@orrinmarine.co.uk>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+The Q3 budget review has been scheduled for the 24th.
+
+Many thanks,

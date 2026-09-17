@@ -1,0 +1,26 @@
+From: "Sandra Whitlock" <sandra.whitlock@northwlnd-logistics.com>
+To: t.nowak@northwind-logistics.com
+Subject: Action required: mailbox verification
+Date: Fri, 17 Apr 2026 09:52:00 +0000
+Message-ID: <4271796200@northwlnd-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=northwlnd-logistics.com; dkim=none; dmarc=fail
+Received: from unknown (vps-2303.hostwind.example [203.0.113.195]) by
+ mx.northwind-logistics.com with ESMTP id 57b6bc; Fri, 17 Apr 2026 09:52:00
+ +0000
+Reply-To: sandra.53@protonmail.com
+Return-Path: <sandra.whitlock@northwlnd-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Tomasz,
+
+Please action this right away - the deadline is this afternoon.
+The outstanding balance of EUR 59,297.00 needs to be remitted today.
+  IBAN: LT554117279289387
+I am currently in meetings and cannot take a call.
+Verify here: http://198.51.100.77/secure/login.php
+I have copied the relevant team.
+
+Regards,

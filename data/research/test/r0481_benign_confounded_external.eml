@@ -1,0 +1,24 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: priya.sharma@northwind-logistics.com
+Subject: Updated remote working policy
+Date: Fri, 16 Jan 2026 15:23:00 +0000
+Message-ID: <6879145975@bergindustrial.se>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se;
+ dmarc=pass
+Received: from unknown (vps-9083.hostwind.example [203.0.113.167]) by
+ mx.northwind-logistics.com with ESMTP id 2ec5e2; Fri, 16 Jan 2026 15:23:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Priya,
+
+This is critical and cannot wait until tomorrow.
+The EUR 23,801.00 payment was approved at the last review; details are unchan=
+ged.
+Details are here: https://portal.northwind-logistics.com/invoices/view
+Happy to discuss if that helps.
+
+Many thanks,

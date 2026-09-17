@@ -1,0 +1,22 @@
+From:
+ "Priya Sharma (Operations Director)" <priya.sharma@northwind-logistics.com>
+To: sales@northwind-logistics.com
+Subject: Weekly operations summary
+Date: Mon, 19 Jan 2026 07:35:00 +0000
+Message-ID: <3619365996@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id a8cae5; Mon, 19
+ Jan 2026 07:35:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+The updated policy is now on the intranet for everyone to read.
+The delivery window is confirmed for Friday afternoon.
+
+Regards,

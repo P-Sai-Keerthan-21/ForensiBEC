@@ -1,0 +1,20 @@
+From: "Tomasz Nowak" <t.nowak@northwind-logistics.com>
+To: sales@northwind-logistics.com
+Subject: Re: pallet contract renewal
+Date: Mon, 25 May 2026 00:03:00 +0000
+Message-ID: <9096534833@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 7a9f86; Mon, 25
+ May 2026 00:03:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Daniel,
+
+Notes from the depot review are attached for your records.
+
+Best regards,

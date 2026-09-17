@@ -1,0 +1,27 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: r.menon@northwind-logistics.com
+Subject: Payment instruction - INV-56811
+Date: Mon, 30 Mar 2026 13:16:00 +0000
+Message-ID: <2965683003@delaney-freight.co>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=delaney-freight.co; dkim=pass header.d=delaney-freight.co;
+ dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id e7fd2f; Mon, 30
+ Mar 2026 13:16:00 +0000
+Return-Path: <m.kalina@delaney-freight.co>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Please treat this as time sensitive - it must clear before close of business.
+Kindly update your records - we have moved to a new account.
+Please process the wire transfer of USD 12,894.00 to the beneficiary below.
+  IBAN: GB839305107921605
+Please handle this discreetly and do not cc anyone.
+I need you to deal with this on my behalf.
+Let me know if you need anything else.
+
+Best regards,

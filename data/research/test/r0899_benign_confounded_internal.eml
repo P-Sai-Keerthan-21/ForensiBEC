@@ -1,0 +1,23 @@
+From: "Callum Reid (CFO)" <c.reid@northwind-logistics.com>
+To: r.menon@northwind-logistics.com
+Subject: Q3 budget review scheduled
+Date: Wed, 24 Jun 2026 01:41:00 +0000
+Message-ID: <5501277632@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id cfe58a; Wed, 24
+ Jun 2026 01:41:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Dear Ravi,
+
+Time sensitive: the auditors arrive tomorrow and I need the schedule today.
+Please process USD 27,501.00 against the existing purchase order when conveni=
+ent.
+Apologies for the short notice.
+
+Many thanks,

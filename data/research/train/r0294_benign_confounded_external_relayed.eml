@@ -1,0 +1,21 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: accounts.payable@northwind-logistics.com
+Subject: Stocktake figures needed before close of business
+Date: Wed, 18 Mar 2026 21:36:00 +0000
+Message-ID: <9148446117@orrinmarine.co.uk>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-7031.hostwind.example [203.0.113.233]) by
+ mx.northwind-logistics.com with ESMTP id 2eba88; Wed, 18 Mar 2026 21:36:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Tomasz,
+
+Kindly release the payment of EUR 64,910.00 against the invoice attached.
+Please handle this discreetly and do not cc anyone.
+This follows on from our earlier discussion.
+
+Kind regards,

@@ -1,0 +1,21 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: c.reid@northwind-logistics.com
+Subject: Updated remote working policy
+Date: Thu, 13 Aug 2026 15:29:00 +0000
+Message-ID: <2541147241@bergindustrial.se>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-3925.hostwind.example [203.0.113.203]) by
+ mx.northwind-logistics.com with ESMTP id 63b538; Thu, 13 Aug 2026 15:29:00
+ +0000
+Return-Path: <t.berg@bergindustrial.se>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+The maintenance window is confirmed for Saturday morning.
+Please treat this as routine unless you hear otherwise.
+
+Kind regards,

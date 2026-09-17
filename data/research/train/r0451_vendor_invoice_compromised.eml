@@ -1,0 +1,25 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: c.reid@northwind-logistics.com
+Subject: Change of account for salary payment
+Date: Wed, 29 Jul 2026 03:04:00 +0000
+Message-ID: <8888382388@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 87854b; Wed, 29
+ Jul 2026 03:04:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Callum,
+
+This is critical and cannot wait until tomorrow.
+We have changed banks, so please use the new beneficiary account below.
+The outstanding balance of EUR 90,308.00 needs to be remitted today.
+  IBAN: DE478205641187850
+Please keep this strictly between us until the announcement.
+I am counting on you to handle this personally.
+
+Kind regards,

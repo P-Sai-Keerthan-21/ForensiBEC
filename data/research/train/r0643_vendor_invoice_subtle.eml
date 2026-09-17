@@ -1,0 +1,22 @@
+From:
+ "Harborline Supplies Accounts" <billing@delaney-freight.co.inv-portal.net>
+To: c.reid@northwind-logistics.com
+Subject: Fw: Completion funds - handle personally
+Date: Wed, 04 Mar 2026 01:20:00 +0000
+Message-ID: <1972830537@delaney-freight.co.inv-portal.net>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=delaney-freight.co.inv-portal.net; dkim=none; dmarc=fail
+Received: from unknown (vps-6614.hostwind.example [203.0.113.164]) by
+ mx.northwind-logistics.com with ESMTP id 97931f; Wed, 04 Mar 2026 01:20:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+Please note our banking details have changed following a treasury restructure.
+Verify here: http://198.51.100.77/secure/login.php
+This follows on from our earlier discussion.
+
+Best,

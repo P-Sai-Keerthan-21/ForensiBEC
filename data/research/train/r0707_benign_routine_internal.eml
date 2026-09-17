@@ -1,0 +1,23 @@
+From: "Sandra Whitlock (Operations Director)"
+ <sandra.whitlock@northwind-logistics.com>
+To: priya.sharma@northwind-logistics.com
+Subject: Q3 budget review scheduled
+Date: Fri, 29 May 2026 06:08:00 +0000
+Message-ID: <1335519864@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 111ae3; Fri, 29
+ May 2026 06:08:00 +0000
+Return-Path: <sandra.whitlock@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Priya,
+
+The updated policy is now on the intranet for everyone to read.
+I have copied the relevant team.
+
+Best regards,

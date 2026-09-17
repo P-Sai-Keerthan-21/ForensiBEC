@@ -1,0 +1,23 @@
+From: "Aisha Bello - Finance Director" <a.bello@northwind-logistics.com>
+To: all.staff@northwind-logistics.com
+Subject: Purchase order INV-70071 confirmation
+Date: Wed, 25 Feb 2026 15:29:00 +0000
+Message-ID: <3882230213@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 295446; Wed, 25
+ Feb 2026 15:29:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Good morning,
+
+The Q3 budget review has been scheduled for the 24th.
+The maintenance window is confirmed for Saturday morning.
+Details are here: https://intranet.northwind-logistics.com/policies/remote-wo=
+rking
+
+Regards,

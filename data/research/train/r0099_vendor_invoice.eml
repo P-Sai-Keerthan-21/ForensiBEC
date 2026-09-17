@@ -1,0 +1,25 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: m.lin@northwind-logistics.com
+Subject: Re: Invoice INV-60020 - updated bank details
+Date: Thu, 15 Jan 2026 18:58:00 +0000
+Message-ID: <3554564384@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=orrinmarine.co.uk; dkim=none; dmarc=fail
+Received: from unknown (vps-6494.hostwind.example [203.0.113.232]) by
+ mx.northwind-logistics.com with ESMTP id cfc625; Thu, 15 Jan 2026 18:58:00
+ +0000
+Return-Path: <bounce@northwind-logistlcs.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Mei,
+
+We have changed banks, so please use the new beneficiary account below.
+Kindly release the payment of USD 90,666.00 against the invoice attached.
+  IBAN: GB139745751166946
+Do not discuss this with anyone else in the team for now.
+Verify here: http://203.0.113.45/secure/login.php
+Happy to discuss if that helps.
+
+Best regards,

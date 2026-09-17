@@ -1,0 +1,23 @@
+From: "Mei Lin (CEO)" <m.lin@northwind-logistics.com>
+To: hr.payroll@northwind-logistics.com
+Subject: Statement for October
+Date: Sat, 08 Aug 2026 01:38:00 +0000
+Message-ID: <4710330710@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id f82be9; Sat, 08
+ Aug 2026 01:38:00 +0000
+Reply-To: it@northwind-logistics.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+This is urgent and must be completed today.
+Please process GBP 27,461.00 against the existing purchase order when conveni=
+ent.
+
+Regards,

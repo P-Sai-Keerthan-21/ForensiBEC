@@ -1,0 +1,21 @@
+From: "Daniel Osei (CEO)" <d.osei@northwind-logistics.com>
+To: warehouse.leads@northwind-logistics.com
+Subject: Invoice INV-93620 attached
+Date: Thu, 08 Jan 2026 23:55:00 +0000
+Message-ID: <5841974710@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id f0154b; Thu, 08
+ Jan 2026 23:55:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Please treat this as time sensitive - it must clear before close of business.
+Please process the wire transfer of GBP 43,494.00 to the beneficiary below.
+
+Regards,

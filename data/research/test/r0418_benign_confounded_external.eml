@@ -1,0 +1,24 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: sales@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Sun, 15 Feb 2026 09:14:00 +0000
+Message-ID: <5595177604@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-9710.hostwind.example [203.0.113.168]) by
+ mx.northwind-logistics.com with ESMTP id 489361; Sun, 15 Feb 2026 09:14:00
+ +0000
+Return-Path: <billing@harborline-supplies.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi all,
+
+Please treat this as a priority; the depot review is this afternoon.
+The USD 88,295.00 payment was approved at the last review; details are unchan=
+ged.
+I am travelling and unable to talk right now, so please just reply here.
+
+Regards,

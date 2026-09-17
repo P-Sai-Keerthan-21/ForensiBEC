@@ -1,0 +1,24 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: t.nowak@northwind-logistics.com
+Subject: Weekly operations summary
+Date: Fri, 16 Jan 2026 11:59:00 +0000
+Message-ID: <2778088392@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from unknown (vps-3543.hostwind.example [203.0.113.183]) by
+ mx.northwind-logistics.com with ESMTP id d4ff3b; Fri, 16 Jan 2026 11:59:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Tomasz,
+
+Please treat this as a priority; the depot review is this afternoon.
+Accounts payable have the invoice for USD 31,419.00 - no action needed from y=
+ou.
+Details are here: https://intranet.northwind-logistics.com/policies/remote-wo=
+rking
+
+Thanks,

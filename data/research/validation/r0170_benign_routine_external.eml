@@ -1,0 +1,20 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: d.osei@northwind-logistics.com
+Subject: Notes from the depot review
+Date: Mon, 22 Jun 2026 08:05:00 +0000
+Message-ID: <1171762131@castellan-pack.eu>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=castellan-pack.eu; dkim=pass header.d=castellan-pack.eu;
+ dmarc=pass
+Received: from unknown (vps-4187.hostwind.example [203.0.113.242]) by
+ mx.northwind-logistics.com with ESMTP id 7a3ad7; Mon, 22 Jun 2026 08:05:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Daniel,
+
+Could you confirm the pallet dimensions for the Rotterdam depot?
+
+Best regards,

@@ -1,0 +1,21 @@
+From: "Joseph Okafor - Finance Director" <j.okafor@northwind-l0gistics.com>
+To: d.osei@northwind-logistics.com
+Subject: Payment instruction - INV-72532
+Date: Sat, 01 Aug 2026 19:18:00 +0000
+Message-ID: <9862235496@northwind-l0gistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=northwind-l0gistics.com; dkim=none; dmarc=fail
+Received: from unknown (vps-3824.hostwind.example [203.0.113.124]) by
+ mx.northwind-logistics.com with ESMTP id 13ec1c; Sat, 01 Aug 2026 19:18:00
+ +0000
+Reply-To: joseph.44@outlook.com
+Return-Path: <j.okafor@northwind-l0gistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Daniel,
+
+Could you confirm the pallet dimensions for the Rotterdam depot?
+
+Best regards,

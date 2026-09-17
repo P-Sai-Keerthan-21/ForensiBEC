@@ -1,0 +1,24 @@
+From: "Sandra Whitlock" <sandra.whitlock@northwind-logistics.com>
+To: procurement@northwind-logistics.com
+Subject: Weekly operations summary
+Date: Thu, 18 Jun 2026 18:28:00 +0000
+Message-ID: <9852825841@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 50df89; Thu, 18
+ Jun 2026 18:28:00 +0000
+Reply-To: procurement@northwind-logistics.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Fatima,
+
+The updated policy is now on the intranet for everyone to read.
+The Q3 budget review has been scheduled for the 24th.
+Details are here: https://intranet.northwind-logistics.com/policies/remote-wo=
+rking
+
+Many thanks,

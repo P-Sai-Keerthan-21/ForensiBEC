@@ -1,0 +1,25 @@
+From: "Ravi Menon (Operations Director)" <r.menon@northwind-logistics.com>
+To: c.reid@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Sun, 07 Jun 2026 09:18:00 +0000
+Message-ID: <9731565503@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id e55d9f; Sun, 07
+ Jun 2026 09:18:00 +0000
+Reply-To: sales@northwind-logistics.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+The delivery window is confirmed for Friday afternoon.
+The Q3 budget review has been scheduled for the 24th.
+Details are here: https://intranet.northwind-logistics.com/policies/remote-wo=
+rking
+Happy to discuss if that helps.
+
+Many thanks,

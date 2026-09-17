@@ -1,0 +1,25 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: it@northwind-logistics.com
+Subject: Notes from the depot review
+Date: Sat, 01 Aug 2026 04:17:00 +0000
+Message-ID: <8084323932@castellan-pack.eu>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=castellan-pack.eu; dkim=pass header.d=castellan-pack.eu;
+ dmarc=pass
+Received: from unknown (vps-7124.hostwind.example [203.0.113.111]) by
+ mx.northwind-logistics.com with ESMTP id 57c250; Sat, 01 Aug 2026 04:17:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+Please treat this as time sensitive - it must clear before close of business.
+Kindly release the payment of GBP 46,175.00 against the invoice attached.
+  Beneficiary account (unchanged): IBAN GB199094588986206
+This is confidential and should not be copied to the wider group.
+Details are here: https://harborline-supplies.com/terms
+Happy to discuss if that helps.
+
+Best,

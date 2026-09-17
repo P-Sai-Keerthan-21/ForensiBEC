@@ -1,0 +1,22 @@
+From: "Tomasz Nowak - Finance Director" <t.nowak@northwind-logistics.com>
+To: f.haddad@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Sat, 16 May 2026 10:15:00 +0000
+Message-ID: <2635077245@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 7df1b0; Sat, 16
+ May 2026 10:15:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Good morning,
+
+Time sensitive: the auditors arrive tomorrow and I need the schedule today.
+Accounts payable have the invoice for GBP 71,014.00 - no action needed from y=
+ou.
+
+Regards,

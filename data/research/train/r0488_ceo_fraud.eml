@@ -1,0 +1,25 @@
+From: "Sandra Whitlock" <sandra.whitlock@n0rthwind-logistics.com>
+To: priya.sharma@northwind-logistics.com
+Subject: Important: account update needed
+Date: Sun, 12 Apr 2026 17:35:00 +0000
+Message-ID: <2270691965@n0rthwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=n0rthwind-logistics.com; dkim=none; dmarc=fail
+Received: from unknown (vps-5338.hostwind.example [203.0.113.161]) by
+ mx.northwind-logistics.com with ESMTP id 1bc2db; Sun, 12 Apr 2026 17:35:00
+ +0000
+Reply-To: sandra.74@mail.com
+Return-Path: <bounce@northwind-logistic.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Please treat this as time sensitive - it must clear before close of business.
+Kindly release the payment of EUR 26,229.00 against the invoice attached.
+  IBAN: MT566898551829755
+I am counting on you to handle this personally.
+Verify here: http://203.0.113.180/secure/login.php
+
+Best regards,

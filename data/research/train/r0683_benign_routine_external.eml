@@ -1,0 +1,24 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: a.bello@northwind-logistics.com
+Subject: Purchase order INV-31681 confirmation
+Date: Mon, 27 Jul 2026 03:24:00 +0000
+Message-ID: <5310221475@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-2602.hostwind.example [203.0.113.109]) by
+ mx.northwind-logistics.com with ESMTP id 618bd0; Mon, 27 Jul 2026 03:24:00
+ +0000
+Return-Path: <billing@harborline-supplies.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Good morning,
+
+The updated policy is now on the intranet for everyone to read.
+Details are here: https://intranet.northwind-logistics.com/policies/remote-wo=
+rking
+This follows on from our earlier discussion.
+
+Thanks,

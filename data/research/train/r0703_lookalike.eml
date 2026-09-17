@@ -1,0 +1,23 @@
+From: "Sandra Whitlock - Finance Director"
+ <sandra.whitlock@northwind-logistics.com.secure-mx.net>
+To: c.reid@northwind-logistics.com
+Subject: Action required: mailbox verification
+Date: Fri, 27 Feb 2026 05:42:00 +0000
+Message-ID: <1257996355@northwind-logistics.com.secure-mx.net>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-9183.hostwind.example [203.0.113.3]) by
+ mx.northwind-logistics.com with ESMTP id 50adeb; Fri, 27 Feb 2026 05:42:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Please action this right away - the deadline is this afternoon.
+The outstanding balance of GBP 77,255.00 needs to be remitted today.
+  IBAN: GB129313179067899
+Happy to discuss if that helps.
+
+Best,

@@ -1,0 +1,24 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: f.haddad@northwind-logistics.com
+Subject: Notes from the depot review
+Date: Fri, 23 Jan 2026 06:41:00 +0000
+Message-ID: <2316446149@delaney-freight.co>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-8772.hostwind.example [203.0.113.58]) by
+ mx.northwind-logistics.com with ESMTP id 1eda65; Fri, 23 Jan 2026 06:41:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+This is urgent and must be completed today.
+Please process the wire transfer of GBP 59,399.00 to the beneficiary below.
+Details are unchanged and already on file.
+  Beneficiary account (unchanged): IBAN LT459083376484726
+Details are here: https://intranet.northwind-logistics.com/hr/handbook
+This follows on from our earlier discussion.
+
+Regards,

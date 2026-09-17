@@ -1,0 +1,25 @@
+From: "Sandra Whitlock (CFO)" <sandra.whitlock@northwind-logistics.com>
+To: it@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Sat, 16 May 2026 08:33:00 +0000
+Message-ID: <8877277422@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id b5163d; Sat, 16
+ May 2026 08:33:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Priya,
+
+Time sensitive: the auditors arrive tomorrow and I need the schedule today.
+Please settle USD 7,427.00 to the account details provided.
+  Beneficiary account (unchanged): IBAN CY537271050514652
+Please handle this discreetly and do not cc anyone.
+Details are here: https://portal.northwind-logistics.com/invoices/view
+I have copied the relevant team.
+
+Thanks,

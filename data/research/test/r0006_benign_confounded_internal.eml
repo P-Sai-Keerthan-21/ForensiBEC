@@ -1,0 +1,22 @@
+From: "Aisha Bello (Operations Director)" <a.bello@northwind-logistics.com>
+To: it@northwind-logistics.com
+Subject: Updated remote working policy
+Date: Thu, 06 Aug 2026 05:33:00 +0000
+Message-ID: <6820778323@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 3bf773; Thu, 06
+ Aug 2026 05:33:00 +0000
+Return-Path: <a.bello@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Please settle EUR 47,043.00 to the account details provided.
+  Beneficiary account (unchanged): IBAN GB917358410084212
+
+Many thanks,

@@ -1,0 +1,23 @@
+From: "Callum Reid (CEO)" <c.reid@northwind-logistics.com>
+To: t.nowak@northwind-logistics.com
+Subject: Invoice INV-44519 attached
+Date: Tue, 25 Aug 2026 09:30:00 +0000
+Message-ID: <8081054043@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id c90aae; Tue, 25
+ Aug 2026 09:30:00 +0000
+Return-Path: <c.reid@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Tomasz,
+
+Notes from the depot review are attached for your records.
+The updated policy is now on the intranet for everyone to read.
+Details are here: https://delaney-freight.co/contract-portal
+
+Regards,

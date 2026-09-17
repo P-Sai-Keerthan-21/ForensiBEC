@@ -1,0 +1,20 @@
+From: "Sandra Whitlock (CFO)" <sandra.whitlock@northwind-l0gistics.com>
+To: t.nowak@northwind-logistics.com
+Subject: Urgent - confidential transfer required today
+Date: Fri, 30 Jan 2026 21:01:00 +0000
+Message-ID: <7910289630@northwind-l0gistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=northwind-l0gistics.com; dkim=none; dmarc=fail
+Received: from unknown (vps-2732.hostwind.example [203.0.113.97]) by
+ mx.northwind-logistics.com with ESMTP id 287317; Fri, 30 Jan 2026 21:01:00
+ +0000
+Reply-To: sandra.66@outlook.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Tomasz,
+
+Could you let me know when you are free to action a transfer?
+
+Regards,

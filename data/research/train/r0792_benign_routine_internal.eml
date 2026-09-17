@@ -1,0 +1,20 @@
+From: "Mei Lin" <m.lin@northwind-logistics.com>
+To: warehouse.leads@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Mon, 16 Mar 2026 23:07:00 +0000
+Message-ID: <8371807886@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id e52d6d; Mon, 16
+ Mar 2026 23:07:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Tomasz,
+
+Notes from the depot review are attached for your records.
+
+Best regards,

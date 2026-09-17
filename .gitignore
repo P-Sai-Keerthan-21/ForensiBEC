@@ -8,3 +8,4 @@ output/*.json
 .env
 output/audit.jsonl
 output/ioc_store.json
+output/research/

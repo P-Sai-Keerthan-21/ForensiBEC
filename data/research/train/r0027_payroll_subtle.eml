@@ -1,0 +1,20 @@
+From: "Ravi Menon" <r.menon@northwind-logistics.com.secure-mx.net>
+To: m.lin@northwind-logistics.com
+Subject: Payment instruction - INV-95529
+Date: Mon, 13 Apr 2026 22:34:00 +0000
+Message-ID: <4505029713@northwind-logistics.com.secure-mx.net>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=northwind-logistics.com.secure-mx.net; dkim=none; dmarc=fail
+Received: from unknown (vps-5082.hostwind.example [203.0.113.51]) by
+ mx.northwind-logistics.com with ESMTP id 4e404f; Mon, 13 Apr 2026 22:34:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Are you at your desk? I need something handled.
+Let me know if you need anything else.
+
+Best regards,

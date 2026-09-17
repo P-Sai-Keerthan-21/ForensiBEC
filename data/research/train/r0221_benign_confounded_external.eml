@@ -1,0 +1,23 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: t.nowak@northwind-logistics.com
+Subject: Weekly operations summary
+Date: Thu, 27 Aug 2026 20:15:00 +0000
+Message-ID: <6754960488@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-9931.hostwind.example [203.0.113.246]) by
+ mx.northwind-logistics.com with ESMTP id d2ac92; Thu, 27 Aug 2026 20:15:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Apologies for the rush, but the report deadline is end of day.
+Kindly release the payment of USD 24,996.00 against the invoice attached.
+Details are unchanged and already on file.
+I have copied the relevant team.
+
+Best regards,

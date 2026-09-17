@@ -1,0 +1,22 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: j.okafor@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Sat, 09 May 2026 04:32:00 +0000
+Message-ID: <9306338944@bergindustrial.se>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-8818.hostwind.example [203.0.113.193]) by
+ mx.northwind-logistics.com with ESMTP id 5a3196; Sat, 09 May 2026 04:32:00
+ +0000
+Return-Path: <t.berg@bergindustrial.se>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Joseph,
+
+The maintenance window is confirmed for Saturday morning.
+Details are here: https://harborline-supplies.com/terms
+This follows on from our earlier discussion.
+
+Best,

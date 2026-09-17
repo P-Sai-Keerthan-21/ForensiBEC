@@ -1,0 +1,22 @@
+From: "Daniel Osei" <d.osei@n0rthwind-logistics.com>
+To: j.okafor@northwind-logistics.com
+Subject: Action required: mailbox verification
+Date: Tue, 28 Apr 2026 04:55:00 +0000
+Message-ID: <3578269078@n0rthwind-logistics.com>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-3669.hostwind.example [203.0.113.51]) by
+ mx.northwind-logistics.com with ESMTP id 1a0319; Tue, 28 Apr 2026 04:55:00
+ +0000
+Reply-To: daniel.49@aol.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Joseph,
+
+Could you let me know when you are free to action a transfer?
+Verify here: http://203.0.113.180/secure/login.php
+Please treat this as routine unless you hear otherwise.
+
+Regards,

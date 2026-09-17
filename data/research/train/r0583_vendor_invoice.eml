@@ -1,0 +1,24 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrin-marine.co.uk>
+To: priya.sharma@northwind-logistics.com
+Subject: Important: account update needed
+Date: Sun, 24 May 2026 16:46:00 +0000
+Message-ID: <8693051271@orrin-marine.co.uk>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-9529.hostwind.example [203.0.113.32]) by
+ mx.northwind-logistics.com with ESMTP id 412039; Sun, 24 May 2026 16:46:00
+ +0000
+Return-Path: <bounce@northwlnd-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+This is urgent and must be completed today.
+We have changed banks, so please use the new beneficiary account below.
+The outstanding balance of EUR 41,191.00 needs to be remitted today.
+  IBAN: LT263071687630772
+I am counting on you to handle this personally.
+
+Thanks,

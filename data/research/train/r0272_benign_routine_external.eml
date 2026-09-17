@@ -1,0 +1,20 @@
+From: "Callum Reid (Contractor)" <c.reid.contract@aol.com>
+To: sales@northwind-logistics.com
+Subject: Updated remote working policy
+Date: Sun, 29 Mar 2026 12:49:00 +0000
+Message-ID: <7386353289@aol.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=aol.com; dkim=pass header.d=aol.com; dmarc=pass
+Received: from unknown (vps-2467.hostwind.example [203.0.113.197]) by
+ mx.northwind-logistics.com with ESMTP id f7265f; Sun, 29 Mar 2026 12:49:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+The updated policy is now on the intranet for everyone to read.
+Notes from the depot review are attached for your records.
+
+Kind regards,

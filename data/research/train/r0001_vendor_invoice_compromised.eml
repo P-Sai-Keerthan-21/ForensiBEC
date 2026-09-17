@@ -1,0 +1,24 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: t.nowak@northwind-logistics.com
+Subject: Urgent - confidential transfer required today
+Date: Wed, 27 May 2026 13:12:00 +0000
+Message-ID: <8938219447@bergindustrial.se>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se;
+ dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id b00f5c; Wed, 27
+ May 2026 13:12:00 +0000
+Return-Path: <t.berg@bergindustrial.se>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Please treat this as time sensitive - it must clear before close of business.
+Kindly update your records - we have moved to a new account.
+The outstanding balance of USD 37,479.00 needs to be remitted today.
+  IBAN: DE143413841984021
+
+Regards,

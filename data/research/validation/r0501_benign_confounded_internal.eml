@@ -1,0 +1,23 @@
+From: "Sandra Whitlock" <sandra.whitlock@northwind-logistics.com>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Sat, 14 Mar 2026 02:46:00 +0000
+Message-ID: <4403301655@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id b2be44; Sat, 14
+ Mar 2026 02:46:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+Time sensitive: the auditors arrive tomorrow and I need the schedule today.
+The outstanding balance of EUR 79,707.00 needs to be remitted today.
+Details are unchanged and already on file.
+Details are here: https://delaney-freight.co/contract-portal
+
+Kind regards,

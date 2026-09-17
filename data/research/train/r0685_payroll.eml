@@ -1,0 +1,25 @@
+From: "Daniel Osei (CFO)" <d.osei@northwind-l0gistics.com>
+To: c.reid@northwind-logistics.com
+Subject: Re: INV-67159 - revised remittance details
+Date: Sun, 05 Apr 2026 13:32:00 +0000
+Message-ID: <4660853285@northwind-l0gistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=northwind-l0gistics.com; dkim=none; dmarc=fail
+Received: from unknown (vps-6490.hostwind.example [203.0.113.13]) by
+ mx.northwind-logistics.com with ESMTP id a96c8f; Sun, 05 Apr 2026 13:32:00
+ +0000
+Reply-To: daniel.65@yandex.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Please settle EUR 5,252.00 to the account details provided.
+  IBAN: DE865909257247722
+Do not discuss this with anyone else in the team for now.
+I am counting on you to handle this personally.
+Verify here: http://203.0.113.180/secure/login.php
+This follows on from our earlier discussion.
+
+Best,

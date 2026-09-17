@@ -1,0 +1,19 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: sales@northwind-logistics.com
+Subject: Purchase order INV-44003 confirmation
+Date: Sun, 19 Jul 2026 18:55:00 +0000
+Message-ID: <5780940182@castellan-pack.eu>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-2693.hostwind.example [203.0.113.44]) by
+ mx.northwind-logistics.com with ESMTP id 13d721; Sun, 19 Jul 2026 18:55:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Daniel,
+
+The Q3 budget review has been scheduled for the 24th.
+
+Kind regards,

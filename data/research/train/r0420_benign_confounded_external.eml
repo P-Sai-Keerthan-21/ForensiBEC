@@ -1,0 +1,23 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: m.lin@northwind-logistics.com
+Subject: Stocktake figures needed before close of business
+Date: Wed, 26 Aug 2026 17:39:00 +0000
+Message-ID: <6038991408@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from unknown (vps-8175.hostwind.example [203.0.113.92]) by
+ mx.northwind-logistics.com with ESMTP id c1fe1d; Wed, 26 Aug 2026 17:39:00
+ +0000
+Return-Path: <finance@orrinmarine.co.uk>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+This is urgent - I need the stocktake figures before close of business.
+Please process the wire transfer of USD 23,084.00 to the beneficiary below.
+  Beneficiary account (unchanged): IBAN LT821264623562073
+
+Thanks,

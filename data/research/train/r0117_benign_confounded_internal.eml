@@ -1,0 +1,25 @@
+From: "Callum Reid" <c.reid@northwind-logistics.com>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Statement for August
+Date: Sun, 09 Aug 2026 10:27:00 +0000
+Message-ID: <5450884690@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id b8f5b0; Sun, 09
+ Aug 2026 10:27:00 +0000
+Return-Path: <c.reid@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+Please treat this as time sensitive - it must clear before close of business.
+The outstanding balance of USD 72,778.00 needs to be remitted today.
+Details are unchanged and already on file.
+Details are here: https://intranet.northwind-logistics.com/policies/remote-wo=
+rking
+
+Best,

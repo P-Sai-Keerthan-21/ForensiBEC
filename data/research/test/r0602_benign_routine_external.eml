@@ -1,0 +1,21 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: sales@northwind-logistics.com
+Subject: Updated remote working policy
+Date: Sat, 28 Feb 2026 00:19:00 +0000
+Message-ID: <3789683685@bergindustrial.se>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se;
+ dmarc=pass
+Received: from unknown (vps-9682.hostwind.example [203.0.113.184]) by
+ mx.northwind-logistics.com with ESMTP id 9181af; Sat, 28 Feb 2026 00:19:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Could you confirm the pallet dimensions for the Rotterdam depot?
+Notes from the depot review are attached for your records.
+
+Regards,

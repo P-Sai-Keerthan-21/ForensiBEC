@@ -1,0 +1,21 @@
+From: "Mei Lin" <m.lin@northwind-logistics.com>
+To: c.reid@northwind-logistics.com
+Subject: Weekly operations summary
+Date: Sun, 15 Feb 2026 15:46:00 +0000
+Message-ID: <1449965063@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id d68f6b; Sun, 15
+ Feb 2026 15:46:00 +0000
+Return-Path: <m.lin@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Kindly release the payment of EUR 29,920.00 against the invoice attached.
+
+Many thanks,

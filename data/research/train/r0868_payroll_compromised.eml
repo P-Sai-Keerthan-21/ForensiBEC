@@ -1,0 +1,23 @@
+From: "Callum Reid" <c.reid@northwind-logistics.com>
+To: a.bello@northwind-logistics.com
+Subject: Re: INV-21455 - revised remittance details
+Date: Sat, 14 Mar 2026 17:52:00 +0000
+Message-ID: <9527603516@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 31a2da; Sat, 14
+ Mar 2026 17:52:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+This is urgent and must be completed today.
+Please settle USD 86,780.00 to the account details provided.
+  IBAN: DE786601289642306
+Please keep this strictly between us until the announcement.
+
+Regards,

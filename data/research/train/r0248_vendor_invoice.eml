@@ -1,0 +1,24 @@
+From: "Harborline Supplies Accounts" <billing@orrin-marine.co.uk>
+To: r.menon@northwind-logistics.com
+Subject: Urgent - confidential transfer required today
+Date: Thu, 02 Apr 2026 11:24:00 +0000
+Message-ID: <3197887370@orrin-marine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=orrin-marine.co.uk; dkim=none; dmarc=fail
+Received: from unknown (vps-1595.hostwind.example [203.0.113.182]) by
+ mx.northwind-logistics.com with ESMTP id 909bc2; Thu, 02 Apr 2026 11:24:00
+ +0000
+Return-Path: <bounce@northwind-logistic.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Please action this right away - the deadline is this afternoon.
+We have changed banks, so please use the new beneficiary account below.
+Please settle USD 34,813.00 to the account details provided.
+  IBAN: GB778018947580736
+I am currently in meetings and cannot take a call.
+
+Kind regards,

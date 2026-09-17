@@ -1,0 +1,26 @@
+From: "Tomasz Nowak (Operations Director)" <t.nowak@northwind-logistics.com>
+To: m.lin@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Sun, 05 Jul 2026 23:13:00 +0000
+Message-ID: <8634779765@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id af01c5; Sun, 05
+ Jul 2026 23:13:00 +0000
+Return-Path: <t.nowak@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Mei,
+
+Time sensitive: the auditors arrive tomorrow and I need the schedule today.
+The invoice for EUR 93,054.00 is due at the end of the month through the usua=
+l process.
+  Beneficiary account (unchanged): IBAN DE518612256457941
+Please handle this discreetly and do not cc anyone.
+Apologies for the short notice.
+
+Kind regards,

@@ -1,0 +1,23 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: warehouse.leads@northwind-logistics.com
+Subject: Question about pallet dimensions
+Date: Thu, 22 Jan 2026 22:53:00 +0000
+Message-ID: <7878572534@bergindustrial.se>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se;
+ dmarc=pass
+Received: from unknown (vps-1652.hostwind.example [203.0.113.103]) by
+ mx.northwind-logistics.com with ESMTP id de9a95; Thu, 22 Jan 2026 22:53:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Ravi,
+
+This is urgent and must be completed today.
+The outstanding balance of GBP 8,645.00 needs to be remitted today.
+Details are unchanged and already on file.
+Let me know if you need anything else.
+
+Regards,

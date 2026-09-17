@@ -1,0 +1,20 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: procurement@northwind-logistics.com
+Subject: Q3 budget review scheduled
+Date: Thu, 21 May 2026 04:49:00 +0000
+Message-ID: <7172184308@delaney-freight.co>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=delaney-freight.co; dkim=pass header.d=delaney-freight.co;
+ dmarc=pass
+Received: from unknown (vps-5343.hostwind.example [203.0.113.17]) by
+ mx.northwind-logistics.com with ESMTP id 88dc2c; Thu, 21 May 2026 04:49:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Callum,
+
+Please process the wire transfer of GBP 26,110.00 to the beneficiary below.
+
+Kind regards,

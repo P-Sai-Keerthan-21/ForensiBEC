@@ -1,0 +1,22 @@
+From: "Priya Sharma - Finance Director" <priya.sharma@northwind-l0gistics.com>
+To: d.osei@northwind-logistics.com
+Subject: Important: account update needed
+Date: Thu, 06 Aug 2026 03:52:00 +0000
+Message-ID: <9921323750@northwind-l0gistics.com>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-8061.hostwind.example [203.0.113.94]) by
+ mx.northwind-logistics.com with ESMTP id a6694e; Thu, 06 Aug 2026 03:52:00
+ +0000
+Reply-To: priya.60@yandex.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Daniel,
+
+The maintenance window is confirmed for Saturday morning.
+Verify here: http://203.0.113.180/secure/login.php
+Let me know if you need anything else.
+
+Regards,

@@ -1,0 +1,27 @@
+From: "Fatima Haddad (CFO)" <f.haddad@northwind-logistics.com>
+To: c.reid@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Mon, 29 Jun 2026 23:05:00 +0000
+Message-ID: <1084138120@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 74b277; Mon, 29
+ Jun 2026 23:05:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+Please action this right away - the deadline is this afternoon.
+Accounts payable have the invoice for GBP 57,288.00 - no action needed from y=
+ou.
+Details are unchanged and already on file.
+  Beneficiary account (unchanged): IBAN GB323282811156934
+I am currently in meetings and cannot take a call.
+Details are here: https://delaney-freight.co/contract-portal
+Please treat this as routine unless you hear otherwise.
+
+Thanks,

@@ -18,5 +18,10 @@ numpy>=2.0
 # implementation if this is absent)
 networkx>=3.0
 
+# ML research layer (research/ package only - the forensic engine
+# does not depend on these)
+scikit-learn>=1.5
+scipy>=1.11
+
 # Testing
 pytest>=8.0

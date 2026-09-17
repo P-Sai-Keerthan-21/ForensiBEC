@@ -1,0 +1,22 @@
+From: "Fatima Haddad (Operations Director)" <f.haddad@northwind-logistics.com>
+To: warehouse.leads@northwind-logistics.com
+Subject: Statement for November
+Date: Sat, 29 Aug 2026 03:31:00 +0000
+Message-ID: <9399899679@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 3a2fcf; Sat, 29
+ Aug 2026 03:31:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Tomasz,
+
+Please settle EUR 25,906.00 to the account details provided.
+  Beneficiary account (unchanged): IBAN DE401528366225973
+Do not discuss this with anyone else in the team for now.
+
+Thanks,

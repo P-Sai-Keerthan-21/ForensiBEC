@@ -1,0 +1,23 @@
+From: "Tomasz Nowak - Finance Director" <t.nowak@northwind-logistics.com>
+To: m.lin@northwind-logistics.com
+Subject: Invoice INV-92388 attached
+Date: Mon, 06 Jul 2026 07:15:00 +0000
+Message-ID: <2310626345@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 181a53; Mon, 06
+ Jul 2026 07:15:00 +0000
+Return-Path: <t.nowak@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Mei,
+
+The delivery window is confirmed for Friday afternoon.
+The delivery window is confirmed for Friday afternoon.
+I have copied the relevant team.
+
+Kind regards,

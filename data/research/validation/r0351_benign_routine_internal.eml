@@ -1,0 +1,23 @@
+From: "Joseph Okafor (CFO)" <j.okafor@northwind-logistics.com>
+To: t.nowak@northwind-logistics.com
+Subject: Q3 budget review scheduled
+Date: Fri, 01 May 2026 22:39:00 +0000
+Message-ID: <3883320413@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id dbea63; Fri, 01
+ May 2026 22:39:00 +0000
+Reply-To: scheduling@northwind-logistics.com
+Return-Path: <j.okafor@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Tomasz,
+
+The Q3 budget review has been scheduled for the 24th.
+The maintenance window is confirmed for Saturday morning.
+
+Thanks,

@@ -1,0 +1,25 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: accounts.payable@northwind-logistics.com
+Subject: Purchase order INV-83877 confirmation
+Date: Sun, 26 Jul 2026 05:12:00 +0000
+Message-ID: <3970814167@orrinmarine.co.uk>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-5118.hostwind.example [203.0.113.20]) by
+ mx.northwind-logistics.com with ESMTP id 9133f3; Sun, 26 Jul 2026 05:12:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+Time sensitive: the auditors arrive tomorrow and I need the schedule today.
+Kindly release the payment of USD 52,924.00 against the invoice attached.
+Details are unchanged and already on file.
+  Beneficiary account (unchanged): IBAN MT988806748584494
+I need you to deal with this on my behalf.
+Details are here: https://portal.northwind-logistics.com/invoices/view
+Please treat this as routine unless you hear otherwise.
+
+Many thanks,

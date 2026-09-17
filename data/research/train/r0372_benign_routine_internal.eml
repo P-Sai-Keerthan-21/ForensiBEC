@@ -1,0 +1,22 @@
+From: "Tomasz Nowak" <t.nowak@northwind-logistics.com>
+To: r.menon@northwind-logistics.com
+Subject: Re: pallet contract renewal
+Date: Sun, 25 Jan 2026 03:34:00 +0000
+Message-ID: <2626871257@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 5bc38b; Sun, 25
+ Jan 2026 03:34:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Ravi,
+
+The Q3 budget review has been scheduled for the 24th.
+Details are here: https://intranet.northwind-logistics.com/hr/handbook
+Please treat this as routine unless you hear otherwise.
+
+Regards,

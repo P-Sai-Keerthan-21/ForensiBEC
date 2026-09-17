@@ -1,0 +1,24 @@
+From: "Berg Industrial AB Accounts" <t.berg@castellan-pack.com>
+To: j.okafor@northwind-logistics.com
+Subject: Payment instruction - INV-89359
+Date: Thu, 14 May 2026 16:37:00 +0000
+Message-ID: <9794326092@castellan-pack.com>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=castellan-pack.com; dkim=none; dmarc=fail
+Received: from unknown (vps-3366.hostwind.example [203.0.113.115]) by
+ mx.northwind-logistics.com with ESMTP id 8517fa; Thu, 14 May 2026 16:37:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+Our remittance details are now different; please amend the bank details on fi=
+le.
+Please process the wire transfer of EUR 19,681.00 to the beneficiary below.
+  IBAN: GB375057030390114
+Please keep this strictly between us until the announcement.
+Happy to discuss if that helps.
+
+Best,

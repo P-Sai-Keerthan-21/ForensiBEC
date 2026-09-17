@@ -1,0 +1,25 @@
+From: "Aisha Bello" <a.bello@northwind-logistics.com>
+To: f.haddad@northwind-logistics.com
+Subject: Payment instruction - INV-29285
+Date: Sat, 07 Feb 2026 09:40:00 +0000
+Message-ID: <1501587186@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id dbff4c; Sat, 07
+ Feb 2026 09:40:00 +0000
+Reply-To: aisha@aol.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Fatima,
+
+Please treat this as time sensitive - it must clear before close of business.
+Kindly release the payment of EUR 67,339.00 against the invoice attached.
+  IBAN: MT323076422585275
+Please keep this strictly between us until the announcement.
+I am counting on you to handle this personally.
+
+Best,

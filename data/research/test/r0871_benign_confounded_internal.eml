@@ -1,0 +1,21 @@
+From: "Daniel Osei" <d.osei@northwind-logistics.com>
+To: procurement@northwind-logistics.com
+Subject: Updated remote working policy
+Date: Wed, 22 Apr 2026 18:12:00 +0000
+Message-ID: <4489968882@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 7e2dd2; Wed, 22
+ Apr 2026 18:12:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Dear Sandra,
+
+Accounts payable have the invoice for GBP 74,754.00 - no action needed from y=
+ou.
+
+Regards,

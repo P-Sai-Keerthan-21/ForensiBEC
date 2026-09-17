@@ -1,0 +1,22 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: accounts.payable@northwind-logistics.com
+Subject: Notes from the depot review
+Date: Tue, 10 Mar 2026 06:59:00 +0000
+Message-ID: <1013714981@orrinmarine.co.uk>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-6681.hostwind.example [203.0.113.208]) by
+ mx.northwind-logistics.com with ESMTP id e8da60; Tue, 10 Mar 2026 06:59:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+This is urgent - I need the stocktake figures before close of business.
+The outstanding balance of EUR 69,812.00 needs to be remitted today.
+  Beneficiary account (unchanged): IBAN LT754262131321648
+Do check the attached schedule when you get a moment.
+
+Thanks,

@@ -1,0 +1,23 @@
+From: "Fatima Haddad - Finance Director" <f.haddad@northwind-logistics.com>
+To: a.bello@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Fri, 21 Aug 2026 17:37:00 +0000
+Message-ID: <3606148737@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 14abe9; Fri, 21
+ Aug 2026 17:37:00 +0000
+Reply-To: scheduling@northwind-logistics.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Please treat this as time sensitive - it must clear before close of business.
+Please settle GBP 46,177.00 to the account details provided.
+Details are here: https://delaney-freight.co/contract-portal
+
+Kind regards,

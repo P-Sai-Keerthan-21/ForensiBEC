@@ -1,0 +1,23 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: warehouse.leads@northwind-logistics.com
+Subject: Weekly operations summary
+Date: Mon, 03 Aug 2026 15:03:00 +0000
+Message-ID: <4685379761@delaney-freight.co>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=delaney-freight.co; dkim=pass header.d=delaney-freight.co;
+ dmarc=pass
+Received: from unknown (vps-2166.hostwind.example [203.0.113.92]) by
+ mx.northwind-logistics.com with ESMTP id 6002f8; Mon, 03 Aug 2026 15:03:00
+ +0000
+Return-Path: <m.kalina@delaney-freight.co>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Notes from the depot review are attached for your records.
+The updated policy is now on the intranet for everyone to read.
+Let me know if you need anything else.
+
+Kind regards,

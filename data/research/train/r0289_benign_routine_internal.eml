@@ -1,0 +1,21 @@
+From: "Callum Reid" <c.reid@northwind-logistics.com>
+To: t.nowak@northwind-logistics.com
+Subject: Purchase order INV-56671 confirmation
+Date: Thu, 19 Mar 2026 20:12:00 +0000
+Message-ID: <4042736351@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 2b9aa0; Thu, 19
+ Mar 2026 20:12:00 +0000
+Return-Path: <c.reid@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+The maintenance window is confirmed for Saturday morning.
+
+Thanks,

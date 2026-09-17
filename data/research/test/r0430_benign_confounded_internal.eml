@@ -1,0 +1,22 @@
+From: "Callum Reid - Finance Director" <c.reid@northwind-logistics.com>
+To: priya.sharma@northwind-logistics.com
+Subject: Purchase order INV-50129 confirmation
+Date: Sat, 13 Jun 2026 18:59:00 +0000
+Message-ID: <6629611864@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 6973ca; Sat, 13
+ Jun 2026 18:59:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Please treat this as time sensitive - it must clear before close of business.
+Please process the wire transfer of EUR 25,270.00 to the beneficiary below.
+Let me know if you need anything else.
+
+Kind regards,

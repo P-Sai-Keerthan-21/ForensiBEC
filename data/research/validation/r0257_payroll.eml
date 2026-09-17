@@ -1,0 +1,24 @@
+From: "Sandra Whitlock" <sandra.whitlock@n0rthwind-logistics.com>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Payment instruction - INV-90364
+Date: Thu, 13 Aug 2026 09:05:00 +0000
+Message-ID: <5981449147@n0rthwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=n0rthwind-logistics.com; dkim=none; dmarc=fail
+Received: from unknown (vps-7863.hostwind.example [203.0.113.141]) by
+ mx.northwind-logistics.com with ESMTP id 3b6faa; Thu, 13 Aug 2026 09:05:00
+ +0000
+Reply-To: sandra.32@gmail.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Please action this right away - the deadline is this afternoon.
+Please settle GBP 8,578.00 to the account details provided.
+  IBAN: MT785616099886424
+Please keep this strictly between us until the announcement.
+This follows on from our earlier discussion.
+
+Many thanks,

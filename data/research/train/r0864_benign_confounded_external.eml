@@ -1,0 +1,22 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: j.okafor@northwind-logistics.com
+Subject: Q3 budget review scheduled
+Date: Wed, 27 May 2026 19:59:00 +0000
+Message-ID: <5943974733@delaney-freight.co>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=delaney-freight.co; dkim=pass header.d=delaney-freight.co;
+ dmarc=pass
+Received: from unknown (vps-3595.hostwind.example [203.0.113.208]) by
+ mx.northwind-logistics.com with ESMTP id 138b3a; Wed, 27 May 2026 19:59:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Please treat this as a priority; the depot review is this afternoon.
+The outstanding balance of GBP 50,271.00 needs to be remitted today.
+This is confidential and should not be copied to the wider group.
+
+Thanks,

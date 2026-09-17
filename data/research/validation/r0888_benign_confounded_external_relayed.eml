@@ -1,0 +1,20 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: it@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Thu, 27 Aug 2026 05:41:00 +0000
+Message-ID: <3569984632@delaney-freight.co>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-4983.hostwind.example [203.0.113.116]) by
+ mx.northwind-logistics.com with ESMTP id 779eed; Thu, 27 Aug 2026 05:41:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+This is urgent and must be completed today.
+The outstanding balance of GBP 28,237.00 needs to be remitted today.
+
+Kind regards,

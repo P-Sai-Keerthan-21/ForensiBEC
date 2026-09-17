@@ -1,0 +1,21 @@
+From: "Berg Industrial AB Accounts" <t.berg@delaney-freight.co.inv-portal.net>
+To: a.bello@northwind-logistics.com
+Subject: Action required: mailbox verification
+Date: Wed, 18 Mar 2026 19:22:00 +0000
+Message-ID: <3796329724@delaney-freight.co.inv-portal.net>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=delaney-freight.co.inv-portal.net; dkim=none; dmarc=fail
+Received: from unknown (vps-2428.hostwind.example [203.0.113.34]) by
+ mx.northwind-logistics.com with ESMTP id fed7f4; Wed, 18 Mar 2026 19:22:00
+ +0000
+Reply-To: berg.36@gmail.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Good morning,
+
+Our remittance details are now different; please amend the bank details on fi=
+le.
+
+Kind regards,

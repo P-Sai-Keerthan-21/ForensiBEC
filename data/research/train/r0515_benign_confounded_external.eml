@@ -1,0 +1,23 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: hr.payroll@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Fri, 27 Feb 2026 21:34:00 +0000
+Message-ID: <2969394628@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-6803.hostwind.example [203.0.113.134]) by
+ mx.northwind-logistics.com with ESMTP id a8e0b6; Fri, 27 Feb 2026 21:34:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Aisha,
+
+Please process the wire transfer of EUR 82,624.00 to the beneficiary below.
+Details are unchanged and already on file.
+  Beneficiary account (unchanged): IBAN MT451550376060243
+I have copied the relevant team.
+
+Kind regards,

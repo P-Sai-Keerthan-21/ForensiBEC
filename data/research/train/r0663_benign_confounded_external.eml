@@ -1,0 +1,26 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: m.lin@northwind-logistics.com
+Subject: Q3 budget review scheduled
+Date: Tue, 17 Feb 2026 09:05:00 +0000
+Message-ID: <7169997811@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-9003.hostwind.example [203.0.113.88]) by
+ mx.northwind-logistics.com with ESMTP id 198152; Tue, 17 Feb 2026 09:05:00
+ +0000
+Return-Path: <billing@harborline-supplies.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Good morning,
+
+This is urgent - I need the stocktake figures before close of business.
+Accounts payable have the invoice for GBP 18,569.00 - no action needed from y=
+ou.
+  Beneficiary account (unchanged): IBAN DE384497402305974
+Please keep this strictly between us until the announcement.
+Details are here: https://portal.northwind-logistics.com/invoices/view
+
+Regards,

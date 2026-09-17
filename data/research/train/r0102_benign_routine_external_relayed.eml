@@ -1,0 +1,20 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: j.okafor@northwind-logistics.com
+Subject: Purchase order INV-39184 confirmation
+Date: Sat, 25 Apr 2026 06:20:00 +0000
+Message-ID: <1185889568@delaney-freight.co>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-6915.hostwind.example [203.0.113.7]) by
+ mx.northwind-logistics.com with ESMTP id d87c95; Sat, 25 Apr 2026 06:20:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Joseph,
+
+Could you confirm the pallet dimensions for the Rotterdam depot?
+Please treat this as routine unless you hear otherwise.
+
+Kind regards,

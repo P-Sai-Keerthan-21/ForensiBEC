@@ -1,0 +1,22 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: t.nowak@northwind-logistics.com
+Subject: Weekly operations summary
+Date: Sun, 23 Aug 2026 08:08:00 +0000
+Message-ID: <8256316176@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from unknown (vps-4334.hostwind.example [203.0.113.85]) by
+ mx.northwind-logistics.com with ESMTP id 17cbe2; Sun, 23 Aug 2026 08:08:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Tomasz,
+
+Notes from the depot review are attached for your records.
+Details are here: https://portal.northwind-logistics.com/invoices/view
+Please treat this as routine unless you hear otherwise.
+
+Regards,
