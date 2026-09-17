@@ -8,10 +8,11 @@ Reproduce with:
 ```bash
 venv\Scripts\python.exe data/build_research_corpus.py
 venv\Scripts\python.exe -m research.evaluate
-venv\Scripts\python.exe -m research.ablation
+venv\Scripts\python.exe -m research.ablation            # unbalanced baseline
+venv\Scripts\python.exe -m research.balanced_ablation   # feature-balanced
 ```
 
-Machine-readable output: `output/research/evaluation.json`, `output/research/ablation.json`.
+Machine-readable output: `output/research/evaluation.json`, `output/research/ablation.json`, `output/research/balanced_ablation.json`.
 Both files carry `"not_real_world_accuracy": true` in their own payload, so a
 number cannot be separated from its caveat by being copied out of context.
 
@@ -92,7 +93,7 @@ Seed `20260918` throughout. Vectorisers are fitted on training folds only —
 
 ---
 
-## 5. Ablation study
+## 5. Ablation study 1 - unbalanced (baseline)
 
 Cumulative feature groups, Random Forest, 5-fold stratified CV over the pooled
 corpus alongside the held-out test split.
@@ -110,7 +111,12 @@ corpus alongside the held-out test split.
 | I | **Full fusion** | 6567 | 0.993 | 0.9877 | 0.0119 | −0.0028 |
 | S | Structured only (no text) | 82 | 0.960 | 0.9732 | 0.0109 | — |
 
-### 5.1 The result is negative, and that is reported as such
+### 5.1 The result is negative *in this configuration*
+
+> **Superseded in part by §6.** This experiment is preserved unchanged as the
+> unbalanced baseline. Its conclusion was revisited after the confound
+> identified in §5.2 item 2 was controlled for; see §6.4 for what changed.
+
 
 **On this corpus, adding forensic evidence families to a text-only classifier
 does not measurably improve classification accuracy.**
@@ -126,7 +132,8 @@ compromised-account subset is 1.000 for text-only and 0.981 for every fused
 configuration. Fusion did not rescue the hard cases here.
 
 **No claim that "evidence fusion beats text-only classification" is supported
-by this experiment.** The hypothesis was tested and not confirmed on this data.
+by this experiment as configured.** The hypothesis was tested and not confirmed
+under a 79:1 feature imbalance. §6 tests it again with that imbalance removed.
 
 ### 5.2 Why — and what it does and does not imply
 
@@ -184,12 +191,161 @@ This is Phase 2 work and is **not** claimed to be done.
 
 ---
 
-## 6. Limitations
+---
+
+## 6. Ablation study 2 — feature-balanced
+
+`research/balanced_ablation.py` · `output/research/balanced_ablation.json`
+
+The baseline experiment (§5) compared ~6485 text features against 82 structured
+ones. A channel outnumbered 79:1 can be decisive for individual messages and
+still fail to move an aggregate metric, because the learner's capacity is
+dominated by the larger block. §5.2 named this as a confound; this section
+removes it and re-tests the hypothesis.
+
+### 6.1 Method
+
+**Reduction.** Truncated SVD (latent semantic analysis) on the combined
+word + character TF-IDF matrix. SVD was chosen over supervised feature
+selection specifically because selection ranks features by their association
+with the label, which would leak target information into the representation.
+SVD is unsupervised and never sees a label — `test_reduction_is_unsupervised`
+enforces this.
+
+**Pre-registered parameter.** The component count is fixed at **82**, the
+number of structured features, by a matching rule stated before any result was
+observed. It was not searched for, and no configuration was selected because
+it favoured fusion. `test_matching_rule_still_holds` fails if the structured
+feature count ever drifts away from 82, so the balance cannot silently break.
+
+**Cross-validation.** `RepeatedStratifiedKFold`, 5 splits × 3 repeats = 15
+folds, seed `20260918`. Every configuration is evaluated on **identical folds**,
+so per-fold scores are paired.
+
+**Significance.** Paired t-test on per-fold F1 differences. A difference is
+called significant only when `p < 0.05` **and** the 95% confidence interval
+excludes zero — `test_significance_requires_both_p_and_ci` asserts both
+conditions are enforced in code.
+
+**Leakage control.** Vectoriser, SVD and scaler are all fitted inside each fold
+on training data only.
+
+### 6.2 Configurations and results
+
+| Cfg | Configuration | Text | Struct | Precision | Recall | F1 | ±sd | ROC-AUC | PR-AUC |
+|---|---|---|---|---|---|---|---|---|---|
+| A | Balanced text only | 82 | 0 | 0.9684 | 0.9509 | **0.9594** | 0.0161 | 0.9957 | 0.9942 |
+| B | Balanced text + structured | 82 | 82 | 0.9937 | 0.9724 | **0.9828** | 0.0089 | 0.9991 | 0.9989 |
+| C | Full fusion (unbalanced text) | 6825 | 82 | 1.0000 | 0.9831 | **0.9914** | 0.0088 | 0.9999 | 0.9999 |
+| D | Structured only | 0 | 82 | 0.9804 | 0.9662 | **0.9731** | 0.0137 | 0.9978 | 0.9972 |
+
+Means over 15 folds; ±sd is the sample standard deviation of per-fold F1.
+
+**Pooled confusion matrices** (summed across all 15 folds):
+
+| Cfg | Configuration | TN | FP | FN | TP |
+|---|---|---|---|---|---|
+| A | Balanced text only | 1543 | 35 | 55 | 1067 |
+| B | Balanced text + structured | 1571 | 7 | 31 | 1091 |
+| C | Full fusion (unbalanced text) | 1578 | 0 | 19 | 1103 |
+| D | Structured only | 1556 | 22 | 38 | 1084 |
+
+### 6.3 Statistical comparisons
+
+**Primary — the experiment:**
+
+| Comparison | Mean ΔF1 | 95% CI | p | Verdict |
+|---|---|---|---|---|
+| **B − A** (structured added at equal text capacity) | **+0.02339** | [+0.01552, +0.03125] | <0.0001 | **Significant improvement** |
+
+**Secondary:**
+
+| Comparison | Mean ΔF1 | p | Verdict |
+|---|---|---|---|
+| D − A (82 forensic vs 82 text features) | +0.01365 | 0.0022 | Significant improvement |
+| C − A (unbalanced fusion vs balanced text) | +0.03195 | <0.0001 | Significant improvement |
+| B − C (balanced fusion vs unbalanced fusion) | −0.00856 | 0.0074 | Significant degradation |
+| B − D (fusion vs structured alone) | +0.00974 | 0.0172 | Significant improvement |
+
+**Sensitivity (robustness only — did not select the primary parameter):**
+
+| SVD components | Text-only F1 | Fusion F1 | ΔF1 | p | Significant |
+|---|---|---|---|---|---|
+| 25 | 0.9520 | 0.9824 | +0.03037 | <0.0001 | yes |
+| 50 | 0.9520 | 0.9806 | +0.02855 | <0.0001 | yes |
+| **82** (pre-registered) | 0.9594 | 0.9828 | +0.02339 | <0.0001 | yes |
+| 150 | 0.9667 | 0.9828 | +0.01613 | 0.0010 | yes |
+| 300 | 0.9584 | 0.9764 | +0.01793 | 0.0004 | yes |
+
+The direction and significance hold at every component count tested, so the
+finding is not an artifact of the pre-registered choice.
+
+### 6.4 What changed, and what did not
+
+**The conclusion of §5.1 does not survive contact with a fair comparison.**
+
+Adding structured forensic evidence to a text channel of equal capacity
+improves F1 by **+0.0234** (95% CI [+0.0155, +0.0313], p < 0.0001). That is
+roughly **three times the CV standard deviation**, where the unbalanced
+experiment's largest delta (+0.0041) sat *inside* it. The earlier negative
+result was substantially an artifact of the 79:1 feature imbalance, not
+evidence that forensic features lack signal.
+
+The error mechanism is visible in the confusion matrices. Against balanced
+text alone, adding structured evidence cuts **false positives from 35 to 7**
+(−80%) and **false negatives from 55 to 31** (−44%). For an investigator those
+are the two numbers that matter: fewer benign messages dragged into review, and
+fewer attacks missed.
+
+Two further findings are worth stating plainly because neither was predicted:
+
+1. **At equal capacity, forensic evidence outperforms text.** Configuration D
+   (82 structured features, no text at all) beats configuration A (82 text
+   components) by +0.0137 (p = 0.0022). Eighty-two engineered forensic
+   features carry more separable signal than eighty-two dimensions of latent
+   semantic structure.
+
+2. **The unbalanced full-fusion arm is still the strongest overall.**
+   Configuration C reaches 0.9914 and significantly beats balanced fusion
+   (p = 0.0074). Reducing the text channel *does* discard useful information.
+   The balancing is a diagnostic instrument for attributing credit between
+   channels — it is not a recommendation to deploy a reduced text channel.
+
+**What has not changed.** Everything in §5.3 still stands. This experiment
+shows that forensic features contribute measurable classification signal; it
+does not show that classification accuracy is the right way to judge the
+system. The project's contribution remains investigability — named findings
+quoting their own evidence, chain of custody, and per-finding recommendations —
+none of which any F1 score measures.
+
+### 6.5 Limitations specific to this experiment
+
+- Everything remains synthetic. Absolute values are an optimistic upper bound;
+  only the **relative** comparison between configurations is meaningful.
+- SVD is a linear reduction. A non-linear text encoder might preserve more of
+  the discarded signal, which would narrow the A-versus-B gap. This has not
+  been tested.
+- Results are for Random Forest. The direction was not re-verified across all
+  three baseline models.
+- Fifteen paired folds drawn from one 900-message corpus. The confidence
+  intervals describe variation across folds of *this* corpus, not variation
+  across corpora.
+- The improvement is measured against a *reduced* text baseline. Against the
+  full text channel (§5) the marginal gain remains small, because text-only
+  already saturates at 0.985 on synthetic data.
+
+---
+
+## 7. Limitations
 
 - Everything here is synthetic; no real mailbox contributed.
 - Absolute scores are an optimistic upper bound.
-- The ablation's aggregate result is inconclusive (§5.1).
+- The unbalanced ablation's aggregate result is inconclusive (§5.1); the
+  feature-balanced re-test (§6) finds a significant fusion benefit once the
+  79:1 channel imbalance is removed.
 - Per-family recall rests on ~50 compromised-account messages across
   validation and test — enough to notice a large effect, not a small one.
-- No calibration analysis yet (Phase D): the risk score and statistical
-  confidence are still the same number, which §5.3 argues they should not be.
+- No calibration analysis yet: the risk score and statistical confidence are
+  still the same number, which §5.3 argues they should not be.
+- The balanced experiment covers one model (Random Forest) and one linear
+  reduction (SVD); see §6.5.
