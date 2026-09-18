@@ -20,6 +20,7 @@ from ..config import (
 )
 from ..models import Category, EmailArtifact, Indicator, Severity
 from .confusables import analyse_domain, core_label, decode_idna, describe, skeleton
+from .confusables import levenshtein as _levenshtein  # edit distance for look-alike checks
 
 EMAIL_IN_TEXT = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
 
@@ -50,28 +51,6 @@ def _normalise_domain(domain: str) -> str:
     """
     unicode_form, _ = decode_idna((domain or "").strip().strip("."))
     return skeleton(core_label(unicode_form.lower()))
-
-
-def _levenshtein(a: str, b: str) -> int:
-    """Edit distance, used to catch single-character domain substitutions."""
-    if a == b:
-        return 0
-    if not a:
-        return len(b)
-    if not b:
-        return len(a)
-
-    previous = list(range(len(b) + 1))
-    for i, ca in enumerate(a, 1):
-        current = [i]
-        for j, cb in enumerate(b, 1):
-            current.append(min(
-                previous[j] + 1,               # deletion
-                current[j - 1] + 1,            # insertion
-                previous[j - 1] + (ca != cb),  # substitution
-            ))
-        previous = current
-    return previous[-1]
 
 
 def _extract_person_name(display: str) -> str:

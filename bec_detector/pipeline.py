@@ -28,7 +28,6 @@ from .analysis import (
 )
 from .forensics import (
     AuditLog,
-    CommunicationGraph,
     EvidenceGraph,
     IOCStore,
     LocalThreatIntelProvider,
@@ -63,7 +62,6 @@ class BECPipeline:
         self.threads = ThreadIndex()
         self.style = StyleBaseline()
         self.anomaly = AnomalyModel()
-        self.graph = CommunicationGraph()
 
         self.audit = AuditLog(audit_path, actor=examiner or "system")
         self.intel = intel if intel is not None else LocalThreatIntelProvider()
@@ -164,7 +162,6 @@ class BECPipeline:
         assessment.mitre = map_indicators(assessment.indicators)
         assessment.timeline = build_message_timeline(assessment)
 
-        self.graph.add_assessment(assessment)
         self.audit.record(
             "message_assessed",
             f"score={assessment.score}; band={assessment.band.value}; "

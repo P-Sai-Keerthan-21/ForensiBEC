@@ -23,7 +23,6 @@ at all rather than guessing.
 from __future__ import annotations
 
 import re
-from collections import defaultdict
 
 from ..config import WEIGHTS
 from ..models import Category, Confidence, EmailArtifact, Indicator, Severity

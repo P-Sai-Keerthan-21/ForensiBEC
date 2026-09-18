@@ -63,7 +63,6 @@ def _load_spacy() -> Any | None:
 def _load_nltk() -> Any | None:
     """Return a lemmatiser-like callable, or None if NLTK data is missing."""
     try:
-        import nltk
         from nltk.stem import WordNetLemmatizer
 
         lemmatiser = WordNetLemmatizer()

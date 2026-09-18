@@ -11,7 +11,7 @@ from __future__ import annotations
 import re
 from urllib.parse import urlparse
 
-from ..config import FREEMAIL_DOMAINS, TRUSTED_DOMAINS, WEIGHTS
+from ..config import TRUSTED_DOMAINS, WEIGHTS
 from ..models import Category, Confidence, EmailArtifact, Indicator, Severity, UrlArtifact
 from .confusables import analyse_domain, describe
 

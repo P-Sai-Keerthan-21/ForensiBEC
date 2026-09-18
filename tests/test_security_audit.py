@@ -17,7 +17,6 @@ Plus malformed-input robustness: no input may produce a 500 or leak internals.
 
 from __future__ import annotations
 
-import os
 import re
 from pathlib import Path
 

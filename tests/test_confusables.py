@@ -349,7 +349,6 @@ def test_distant_domain_is_not_described_as_resembling():
 
 
 def test_lookalike_evidence_names_nearest_trusted_domain():
-    from bec_detector.config import TRUSTED_DOMAINS
     indicators = analyse_sender(load_bytes(_msg("Ravi <r@northwind-l0gistics.com>"), "t.eml"))
     lookalike = next(i for i in indicators if i.code == "LOOKALIKE_DOMAIN")
     assert "vs trusted domain 'northwind-logistics.com'" in lookalike.evidence

@@ -7,7 +7,6 @@ from pathlib import Path
 
 import pytest
 
-from bec_detector.acquisition import load_bytes
 from bec_detector.forensics import IOCStore
 from bec_detector.pipeline import BECPipeline
 from bec_detector.report import render_html

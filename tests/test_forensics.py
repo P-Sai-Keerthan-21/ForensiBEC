@@ -545,7 +545,6 @@ def _styled(i: int, greet: str, sign: str):
 def test_habitual_greeting_is_not_unfamiliar():
     """The old check was tautological: 'Hello,' used four times before was
     still reported as an unfamiliar greeting."""
-    from bec_detector.acquisition import load_bytes as _lb  # noqa: F401
     from bec_detector.analysis.stylometry import StyleBaseline
 
     msgs = [_styled(i, "Hello," if i % 2 == 0 else "Hi,",

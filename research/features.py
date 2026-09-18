@@ -48,7 +48,7 @@ from bec_detector.analysis import (
     analyse_urls,
 )
 from bec_detector.config import FREEMAIL_DOMAINS, TRUSTED_DOMAINS
-from bec_detector.models import Category, EmailArtifact, Indicator
+from bec_detector.models import EmailArtifact, Indicator
 
 # Ordered so that a feature vector is stable across runs.
 FEATURE_GROUPS: tuple[str, ...] = (

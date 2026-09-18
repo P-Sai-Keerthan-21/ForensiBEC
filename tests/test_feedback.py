@@ -12,7 +12,6 @@ from fastapi.testclient import TestClient
 
 from bec_detector.cases import CaseStore
 from bec_detector.feedback import (
-    ASSESSMENTS,
     FeedbackError,
     FeedbackStore,
     agreement_of,

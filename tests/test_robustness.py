@@ -7,7 +7,6 @@ never touch the network, and the result artifact carries its caveats.
 
 from __future__ import annotations
 
-import json
 import random
 import re
 from pathlib import Path
