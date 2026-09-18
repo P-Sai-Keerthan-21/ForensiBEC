@@ -10,7 +10,7 @@ application itself, not of the mail it analyses.
 
 | Asset | Threat | Control |
 |---|---|---|
-| Analyst workstation | Malicious attachment executes | Attachments are never written to disk and never executed; only hashed and type-sniffed in memory |
+| Analyst workstation | Malicious attachment executes | Attachments are never extracted to a separate file and never executed; only hashed and type-sniffed in memory |
 | Analyst workstation | Malicious URL contacted, alerting the attacker | Static analysis only; the tool never resolves or requests a URL found in evidence |
 | Filesystem | Path traversal via upload filename | Filenames are sanitised to a label and never joined to a path |
 | Availability | Memory exhaustion via large upload | Size enforced while streaming; upload abandoned before full read |
@@ -56,7 +56,7 @@ Verified: 11 MB upload → 400; empty upload → 400.
 ### 2.4 Unsafe attachment handling — **mitigated**
 
 Attachments are decoded in memory only long enough to compute SHA-256 and read
-leading magic bytes. They are never written to disk, never passed to a shell,
+leading magic bytes. They are never extracted to a separate file, never passed to a shell,
 never opened by an external handler, and archives are **not** extracted
 (recorded explicitly as unexamined in the report).
 
@@ -94,6 +94,29 @@ fix. No stack traces, filesystem paths or internal state are disclosed.
 There is no code path that makes an outbound request. URL analysis is purely
 lexical, which is a deliberate forensic requirement as well as a security one:
 contacting attacker infrastructure would disclose the investigation.
+
+### 2.10 Evidence retention — **changed by case management**
+
+Earlier builds analysed uploads in memory and wrote nothing to disk. Case
+management requires preserving original evidence, so accepted messages are
+now written to the case store. The controls on that write:
+
+| Control | Implementation |
+|---|---|
+| No user-controlled path | Stored as `cases/<CASE-ID>/evidence/<sha256>.eml`. The uploaded filename is metadata only. |
+| Case ID cannot traverse | `^[A-Za-z0-9][A-Za-z0-9_-]{0,63}$`, then the resolved path is checked to lie inside the store |
+| Write-once | Exclusive create (`open(..., "xb")`); identical bytes are a no-op; a colliding file with different content is refused, never overwritten |
+| Tamper evidence | Every read re-hashes the file and refuses mismatches; `case verify` / `GET /api/cases/{id}/verify` re-hash the whole register |
+| Not served back | The web interface never returns stored evidence bytes |
+| Not executed | Stored evidence is only ever read and parsed as a message |
+| Read-only | Files are chmod read-only after writing (best effort on Windows) |
+
+Tests: `tests/test_cases.py` (`test_evidence_stored_under_its_hash_not_its_filename`,
+`test_tampered_evidence_is_detected`, `test_analysis_refuses_tampered_evidence`,
+`test_evidence_file_is_never_overwritten`, `test_traversal_case_id_cannot_create_directories`).
+
+Residual risk: the case store holds real message content. Treat the data
+directory (`output/` by default, or `FORENSIBEC_DATA_DIR`) as case material.
 
 ---
 

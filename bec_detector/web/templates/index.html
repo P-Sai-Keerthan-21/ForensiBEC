@@ -101,8 +101,9 @@
 
     <div class="sec">
       <strong>Handling.</strong> Analysis runs entirely on this machine.
-      Uploads are held in memory only, are never written to disk and are never
-      executed. URLs found in evidence are analysed statically and are never
+      Accepted messages are preserved unmodified as case evidence, stored under
+      their SHA-256 hash and re-verified on every read. Evidence is never
+      executed, and attachments are never extracted to separate files. URLs found in evidence are analysed statically and are never
       contacted.
     </div>
   </div>

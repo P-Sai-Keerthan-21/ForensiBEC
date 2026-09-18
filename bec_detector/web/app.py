@@ -5,8 +5,9 @@ returns. Every detection decision lives in the engine, so the CLI and the web
 UI can never disagree about a verdict.
 
 Security posture is enforced in `security.py`; see that module's docstring for
-the threat model. In short: uploads are validated, size-limited while
-streaming, never written to disk and never executed.
+the threat model. In short: uploads are validated and size-limited while
+streaming, then preserved as original evidence in the case store under their
+SHA-256 (never under the uploaded filename). Evidence is never executed.
 """
 
 from __future__ import annotations
@@ -19,9 +20,9 @@ from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.templating import Jinja2Templates
 
 from .. import __tool_name__, __version__
-from ..forensics import CommunicationGraph, build_case_timeline
+from ..cases import CaseError, CaseStore, validate_case_id
 from ..pipeline import BECPipeline
-from ..report import build_case_report, render_html
+from ..report import render_html
 from .security import (
     MAX_FILES_PER_REQUEST,
     MAX_TOTAL_BYTES,
@@ -79,52 +80,19 @@ async def _collect(files: list[UploadFile]) -> tuple[list[tuple[str, bytes]], li
     return payloads, rejected
 
 
-def _analyse(payloads: list[tuple[str, bytes]], case: str, examiner: str):
-    """Acquire, baseline across the upload set, then assess each message."""
-    pipeline = BECPipeline(
-        examiner=examiner or None,
-        case_id=case or "CASE-000",
-        audit_path=Path("output") / "audit.jsonl",
-    )
-    emails = [pipeline.acquire_bytes(raw, label) for label, raw in payloads]
-    pipeline.fit(emails)
-    assessments = [pipeline.assess(email) for email in emails]
-    pipeline._finalise(assessments)
-    return pipeline, assessments
+def _analyse_into_case(payloads: list[tuple[str, bytes]], case: str,
+                       examiner: str) -> dict:
+    """Preserve the uploads in the case store, then analyse the whole case.
 
-
-def _build_report(pipeline: BECPipeline, assessments, case: str, examiner: str) -> dict:
-    graph = CommunicationGraph()
-    graph.add_all(assessments)
-
-    report = build_case_report(
-        assessments, case_name=case, examiner=examiner or None,
-        nlp_status=pipeline.nlp_status(),
-    )
-    report["case"]["case_id"] = pipeline.case_id
-    report["timeline"] = [e.to_dict() for e in build_case_timeline(assessments)]
-    report["graph"] = graph.to_dict()
-    evidence_graph = pipeline.evidence_graph(assessments)
-    report["evidence_graph"] = evidence_graph.to_dict()
-    report["evidence_graph_svg"] = evidence_graph.to_svg()
-    report["audit"] = {
-        "entries": pipeline.audit.to_list(),
-        "integrity": pipeline.integrity(),
-    }
-    report["intelligence"] = {
-        "provider": pipeline.intel.name,
-        "status": pipeline.intel.status(),
-        "external_configured": pipeline.intel.is_external,
-    }
-    report["correlation"] = {
-        "matches": pipeline.correlation_matches,
-        "store": str(pipeline.ioc_store.path) if pipeline.ioc_store else None,
-        "note": (
-            "Correlation reflects only cases previously analysed by this "
-            "installation. It is not external threat intelligence."
-        ),
-    }
-    return report
+    The case ID is validated before it touches the filesystem; evidence is
+    stored under its SHA-256, never under the uploaded filename.
+    """
+    store = CaseStore()
+    case_id = validate_case_id(case)
+    store.open_or_create(case_id, examiner or "", case_id)
+    for label, raw in payloads:
+        store.add_evidence(case_id, raw, label, examiner or "")
+    return store.analyse(case_id, examiner or "")
 
 
 @app.post("/analyse", response_class=HTMLResponse)
@@ -146,8 +114,10 @@ async def analyse(
             detail += " " + " ".join(rejected)
         return HTMLResponse(_error_page(detail), status_code=400)
 
-    pipeline, assessments = _analyse(payloads, case, examiner)
-    report = _build_report(pipeline, assessments, case, examiner)
+    try:
+        report = _analyse_into_case(payloads, case, examiner)
+    except CaseError as exc:
+        return HTMLResponse(_error_page(str(exc)), status_code=400)
     if rejected:
         report["case"]["rejected_uploads"] = rejected
 
@@ -172,12 +142,82 @@ async def analyse_api(
             status_code=400,
         )
 
-    pipeline, assessments = _analyse(payloads, case, examiner)
-    report = _build_report(pipeline, assessments, case, examiner)
+    try:
+        report = _analyse_into_case(payloads, case, examiner)
+    except CaseError as exc:
+        return JSONResponse({"error": str(exc)}, status_code=400)
     if rejected:
         report["case"]["rejected_uploads"] = rejected
 
     return JSONResponse(report)
+
+
+# ---------------------------------------------------------------------------
+# Case retrieval (read-only)
+# ---------------------------------------------------------------------------
+
+def _load_case_or_error(case_id: str):
+    store = CaseStore()
+    try:
+        return store, store.load(case_id)
+    except CaseError:
+        return store, None
+
+
+@app.get("/api/cases")
+async def api_cases():
+    return {"cases": [
+        {"case_id": c.case_id, "title": c.title, "examiner": c.examiner,
+         "created_utc": c.created_utc, "evidence_count": len(c.evidence),
+         "summary": c.summary}
+        for c in CaseStore().list()
+    ]}
+
+
+@app.get("/api/cases/{case_id}")
+async def api_case(case_id: str):
+    store, case = _load_case_or_error(case_id)
+    if case is None:
+        return JSONResponse({"error": "Case not found."}, status_code=404)
+    return {"case": case.to_dict(), "related_cases": store.related_cases(case.case_id)}
+
+
+@app.get("/api/cases/{case_id}/verify")
+async def api_case_verify(case_id: str):
+    store, case = _load_case_or_error(case_id)
+    if case is None:
+        return JSONResponse({"error": "Case not found."}, status_code=404)
+    return store.verify(case.case_id)
+
+
+@app.get("/api/cases/{case_id}/analysis")
+async def api_case_analysis(case_id: str):
+    store, case = _load_case_or_error(case_id)
+    if case is None:
+        return JSONResponse({"error": "Case not found."}, status_code=404)
+    analysis = store.load_analysis(case.case_id)
+    if analysis is None:
+        return JSONResponse({"error": "Case has not been analysed."}, status_code=404)
+    return analysis
+
+
+@app.get("/api/search")
+async def api_search(q: str = ""):
+    if len(q) > 200:
+        return JSONResponse({"error": "Query too long."}, status_code=400)
+    return {"query": q, "results": CaseStore().search(q)}
+
+
+@app.get("/cases/{case_id}/report", response_class=HTMLResponse)
+async def case_report(case_id: str):
+    store, case = _load_case_or_error(case_id)
+    if case is None:
+        return HTMLResponse(_error_page("Case not found."), status_code=404)
+    path = store.report_path(case.case_id)
+    if not path.exists():
+        return HTMLResponse(_error_page("This case has not been analysed yet."),
+                            status_code=404)
+    return HTMLResponse(path.read_text(encoding="utf-8"))
 
 
 @app.get("/api/health")

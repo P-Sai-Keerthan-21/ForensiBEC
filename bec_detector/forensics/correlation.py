@@ -54,7 +54,10 @@ class IOCStore:
     """JSON-backed record of IOC -> cases seen in."""
 
     def __init__(self, path: str | Path | None = None) -> None:
-        self.path = Path(path) if path is not None else DEFAULT_STORE
+        if path is None:
+            import os
+            path = Path(os.environ.get("FORENSIBEC_DATA_DIR", "output")) / "ioc_store.json"
+        self.path = Path(path)
         # {kind: {value: {"cases": [...], "first_seen": ..., "last_seen": ...}}}
         self.data: dict[str, dict[str, dict[str, Any]]] = {}
         self._load()

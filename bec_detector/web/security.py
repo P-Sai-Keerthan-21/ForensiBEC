@@ -5,7 +5,9 @@ Threat model for this application
 The tool ingests hostile input by design: every uploaded file is, by
 assumption, attacker-authored. The defences below follow from that.
 
-  * Uploads are never written to disk and never executed. Analysis is
+  * Uploads are never executed. Accepted messages are preserved in the case
+    store as original evidence, named only by their SHA-256; attachments are
+    never extracted to separate files. Analysis is
     in-memory only, so a malicious attachment has no filesystem to reach.
   * Upload filenames are treated as untrusted data. They are sanitised before
     being used as a label and are never joined to a filesystem path, which

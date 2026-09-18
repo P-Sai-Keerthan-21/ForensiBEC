@@ -12,10 +12,10 @@ import sys
 from pathlib import Path
 
 from . import __tool_name__, __version__
-from .forensics import CommunicationGraph, build_case_timeline
 from .models import RiskBand
 from .pipeline import BECPipeline
-from .report import build_case_report, render_html, write_json
+from .report import render_html, write_json
+from .report.assemble import assemble_report
 
 BAND_MARK = {
     RiskBand.CONFIRMED_BEC: "[!!]",
@@ -74,33 +74,8 @@ def _cmd_scan(args: argparse.Namespace) -> int:
         print(f"correlation : {len(pipeline.correlation_matches)} indicator(s) "
               "previously seen in other local cases")
 
-    graph = CommunicationGraph()
-    graph.add_all(assessments)
-
-    report = build_case_report(
-        assessments,
-        case_name=args.case,
-        examiner=args.examiner,
-        nlp_status=pipeline.nlp_status(),
-    )
-    report["case"]["case_id"] = pipeline.case_id
-    report["timeline"] = [e.to_dict() for e in build_case_timeline(assessments)]
-    report["graph"] = graph.to_dict()
-    evidence_graph = pipeline.evidence_graph(assessments)
-    report["evidence_graph"] = evidence_graph.to_dict()
-    report["evidence_graph_svg"] = evidence_graph.to_svg()
-    report["audit"] = {"entries": pipeline.audit.to_list(), "integrity": integrity}
-    report["intelligence"] = {
-        "provider": pipeline.intel.name,
-        "status": pipeline.intel.status(),
-        "external_configured": pipeline.intel.is_external,
-    }
-    report["correlation"] = {
-        "matches": pipeline.correlation_matches,
-        "store": str(pipeline.ioc_store.path) if pipeline.ioc_store else None,
-        "note": ("Correlation reflects only cases previously analysed by this "
-                 "installation. It is not external threat intelligence."),
-    }
+    report = assemble_report(pipeline, assessments, case_name=args.case,
+                             examiner=args.examiner)
 
     if args.json:
         written = write_json(report, args.json)
@@ -139,6 +114,129 @@ def _cmd_status(_: argparse.Namespace) -> int:
     return 0
 
 
+# ---------------------------------------------------------------------------
+# Case management
+# ---------------------------------------------------------------------------
+
+def _store():
+    from .cases import CaseStore
+    return CaseStore()
+
+
+def _case_fail(exc: Exception) -> int:
+    print(f"error: {exc}", file=sys.stderr)
+    return 2
+
+
+def _cmd_case_create(args: argparse.Namespace) -> int:
+    from .cases import CaseError
+    try:
+        case = _store().create(args.case_id, args.examiner or "", args.title or "")
+    except CaseError as exc:
+        return _case_fail(exc)
+    print(f"created {case.case_id} (examiner {case.examiner}) at {case.created_utc}")
+    return 0
+
+
+def _cmd_case_add(args: argparse.Namespace) -> int:
+    from .cases import CaseError
+    store = _store()
+    source = Path(args.path)
+    files = sorted(p for p in source.rglob("*.eml")) if source.is_dir() else [source]
+    if not files or not all(f.is_file() for f in files):
+        print(f"error: no .eml evidence found at {source}", file=sys.stderr)
+        return 2
+    try:
+        for path in files:
+            record = store.add_evidence(args.case_id, path.read_bytes(), path.name,
+                                        args.examiner or "")
+            print(f"  {record.evidence_id}  sha256={record.sha256}  {path.name}")
+    except CaseError as exc:
+        return _case_fail(exc)
+    print(f"{len(files)} item(s) registered in {args.case_id}")
+    return 0
+
+
+def _cmd_case_analyse(args: argparse.Namespace) -> int:
+    from .cases import CaseError
+    store = _store()
+    try:
+        report = store.analyse(args.case_id, args.examiner or "")
+    except CaseError as exc:
+        return _case_fail(exc)
+    for item in report["assessments"]:
+        email = item["email"]
+        print(f"{BAND_MARK[RiskBand(item['risk_band'])]} {item['risk_score']:5.1f}  "
+              f"{item['risk_band']:<14} {item['evidence_id']}  {(email['subject'] or '')[:40]}")
+    case = store.load(args.case_id)
+    print(f"highest risk: {case.summary['highest_risk_band']} "
+          f"({case.summary['highest_risk_score']}) in {case.summary['highest_risk_evidence']}")
+    print(f"audit chain : {'VERIFIED' if report['audit']['integrity']['valid'] else 'BROKEN'}")
+    print(f"report      : {store.report_path(args.case_id)}")
+    return 0
+
+
+def _cmd_case_show(args: argparse.Namespace) -> int:
+    from .cases import CaseError
+    store = _store()
+    try:
+        case = store.load(args.case_id)
+    except CaseError as exc:
+        return _case_fail(exc)
+    print(f"case      : {case.case_id}  ({case.title})")
+    print(f"examiner  : {case.examiner}")
+    print(f"created   : {case.created_utc}   updated: {case.updated_utc}")
+    print(f"evidence  : {len(case.evidence)} item(s)")
+    for e in case.evidence:
+        print(f"  {e.evidence_id}  {e.size_bytes:>7} bytes  sha256={e.sha256}  {e.original_filename}")
+    if case.summary:
+        s = case.summary
+        print(f"analysed  : {s['analysed_utc']}")
+        print(f"risk      : highest {s['highest_risk_band']} ({s['highest_risk_score']})")
+        print(f"bands     : {s['band_counts']}")
+        print(f"iocs      : {s['ioc_counts']}")
+    else:
+        print("analysed  : not yet")
+    related = store.related_cases(case.case_id)
+    print(f"related   : {', '.join(r['case_id'] for r in related) or 'none recorded'}")
+    return 0
+
+
+def _cmd_case_list(_: argparse.Namespace) -> int:
+    cases = _store().list()
+    if not cases:
+        print("no cases")
+        return 0
+    for case in cases:
+        risk = case.summary.get("highest_risk_band", "not analysed")
+        print(f"{case.case_id:<20} {len(case.evidence):>3} evidence  {risk:<14} {case.title}")
+    return 0
+
+
+def _cmd_case_search(args: argparse.Namespace) -> int:
+    hits = _store().search(args.query)
+    if not hits:
+        print("no matches")
+        return 0
+    for hit in hits:
+        print(f"{hit['case_id']:<20} {', '.join(hit['matched_on'])}")
+    return 0
+
+
+def _cmd_case_verify(args: argparse.Namespace) -> int:
+    from .cases import CaseError
+    try:
+        result = _store().verify(args.case_id)
+    except CaseError as exc:
+        return _case_fail(exc)
+    for item in result["evidence"]:
+        print(f"  {item['evidence_id']}  {item['status']}")
+    print(f"audit chain : {'VERIFIED' if result['audit']['valid'] else 'BROKEN'} "
+          f"({result['audit']['entries']} entries)")
+    print(f"case        : {'INTACT' if result['intact'] else 'INTEGRITY FAILURE'}")
+    return 0 if result["intact"] else 1
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="bec_detector",
@@ -164,6 +262,41 @@ def build_parser() -> argparse.ArgumentParser:
     verify = sub.add_parser("verify-audit", help="verify a tamper-evident audit log")
     verify.add_argument("path", help="audit log file (.jsonl)")
     verify.set_defaults(func=_cmd_verify)
+
+    case = sub.add_parser("case", help="case management: create, add, analyse, show, ...")
+    case_sub = case.add_subparsers(dest="case_command", required=True)
+
+    c = case_sub.add_parser("create", help="open a new case")
+    c.add_argument("case_id")
+    c.add_argument("--examiner", default=None)
+    c.add_argument("--title", default=None)
+    c.set_defaults(func=_cmd_case_create)
+
+    c = case_sub.add_parser("add", help="preserve evidence (.eml file or directory) in a case")
+    c.add_argument("case_id")
+    c.add_argument("path")
+    c.add_argument("--examiner", default=None)
+    c.set_defaults(func=_cmd_case_add)
+
+    c = case_sub.add_parser("analyse", help="analyse all evidence in a case and write its report")
+    c.add_argument("case_id")
+    c.add_argument("--examiner", default=None)
+    c.set_defaults(func=_cmd_case_analyse)
+
+    c = case_sub.add_parser("show", help="case summary")
+    c.add_argument("case_id")
+    c.set_defaults(func=_cmd_case_show)
+
+    c = case_sub.add_parser("list", help="list cases")
+    c.set_defaults(func=_cmd_case_list)
+
+    c = case_sub.add_parser("search", help="search cases by ID, evidence, IOC, sender or subject")
+    c.add_argument("query")
+    c.set_defaults(func=_cmd_case_search)
+
+    c = case_sub.add_parser("verify", help="re-hash evidence and verify the case audit chain")
+    c.add_argument("case_id")
+    c.set_defaults(func=_cmd_case_verify)
 
     status = sub.add_parser("status", help="report which NLP backends are available")
     status.set_defaults(func=_cmd_status)

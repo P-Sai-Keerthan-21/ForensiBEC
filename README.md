@@ -318,7 +318,7 @@ for the full threat model and review. Summary:
 - Uploads are validated, extension/MIME-restricted, and size-limited **while
   streaming** (an oversized file is abandoned before it is fully read)
 - Filenames are sanitised and **never used as filesystem paths**
-- Attachments are never written to disk and never executed
+- Attachments are never extracted to separate files and never executed
 - No `subprocess`, `eval`, `exec`, `shell=True` or `pickle` anywhere
 - No hard-coded secrets
 - Errors are generic; attacker-controlled content is HTML-escaped in reports
