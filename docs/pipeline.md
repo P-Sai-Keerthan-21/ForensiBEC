@@ -141,11 +141,11 @@ PASS 2  for each message: assess() against those baselines
 | Stage | Module | Category emitted |
 |---|---|---|
 | Acquisition, custody | `acquisition/custody.py`, `acquisition/loader.py` | — |
-| Identity | `analysis/sender.py` | `SENDER` |
+| Identity (incl. Unicode confusables, mixed script) | `analysis/sender.py`, `analysis/confusables.py` | `SENDER` |
 | Authentication | `analysis/sender.py` | `AUTHENTICATION` |
 | Behaviour | `analysis/behavior.py` | `BEHAVIOR` |
 | NLP **incl. financial intent** | `analysis/text.py`, `analysis/lexicons.py` | `CONTENT` |
-| Thread | `analysis/thread.py` | `THREAD` |
+| Thread (from `References` / `In-Reply-To` / `Message-ID` only) | `analysis/thread.py` | `THREAD` |
 | Stylometry | `analysis/stylometry.py` | `STYLOMETRY` |
 | URL (static) | `analysis/urls.py` | `URL` |
 | Attachment (static) | `analysis/attachments.py` | `ATTACHMENT` |
@@ -153,7 +153,9 @@ PASS 2  for each message: assess() against those baselines
 | Threat intel / correlation | `forensics/intel.py`, `forensics/correlation.py` | `INTELLIGENCE` |
 | Fusion, scoring | `validation/fusion.py` | — |
 | IOC, timeline, graph, ATT&CK | `forensics/` | — |
-| Report | `report/builder.py`, `report/html.py` | — |
+| Evidence graph (typed entities, provenance on every edge) | `forensics/evidence_graph.py` | — |
+| Report assembly and rendering | `report/assemble.py`, `report/builder.py`, `report/html.py` | — |
+| Case store, feedback, assistant (after the pipeline) | `cases.py`, `feedback.py`, `assistant.py` | — |
 
 **Note:** financial intent is *not* a separate stage. It is detected inside the
 NLP module, because the signal is linguistic — the lexicons for payment
@@ -166,15 +168,22 @@ and spaCy `MONEY` entities corroborate them.
 
 | Module | Rule codes |
 |---|---|
-| `sender.py` | 13 |
-| `urls.py` | 9 |
+| `sender.py` | 14 |
 | `text.py` | 9 |
+| `urls.py` | 9 |
 | `thread.py` | 6 |
 | `attachments.py` | 6 |
 | `behavior.py` | 5 |
+| `stylometry.py` | 3 |
+| `intel.py` | 2 |
+| `anomaly.py` | 1 |
+| `correlation.py` | 1 |
+| **Total** | **56** (every code has a weight in `config.WEIGHTS`) |
 
 Ten indicator categories, each independently capped during fusion so no single
-evidence family can dominate a verdict.
+evidence family can dominate a verdict. The full fusion arithmetic (raw and
+capped totals per category, corroboration bonuses, identity suppression,
+thresholds) is retained on every assessment and printed in the report.
 
 ---
 
@@ -184,9 +193,16 @@ Not a stage — it runs *alongside* every stage. Each action appends an entry
 whose hash covers both its own content and the previous entry's hash:
 
 ```
-case_opened -> evidence_acquired -> baseline_established
+case_opened -> evidence_acquired (xN) [-> evidence_skipped] -> baseline_established
             -> message_assessed (xN) -> iocs_recorded
 ```
+
+Case-backed analysis adds `case_created`, `evidence_added`,
+`case_report_generated`, `integrity_verified` and `investigator_assessment` to
+the case's own log (`<data dir>/cases/<CASE-ID>/audit.jsonl`). Unparseable
+input is logged as `evidence_skipped` with the reason, never dropped silently.
+IOCs are recorded to the cross-case store only for messages in the
+`LIKELY_BEC` or `CONFIRMED_BEC` bands.
 
 Altering, reordering or deleting any entry breaks the chain from that point
 onward. `python -m bec_detector verify-audit <log>` names the first broken

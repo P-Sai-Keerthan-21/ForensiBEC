@@ -1,0 +1,4 @@
+# Evidence files must be byte-exact: their SHA-256 is the evidence ID and the
+# chain-of-custody hash. Never let Git convert their line endings.
+*.eml   -text
+*.mbox  -text

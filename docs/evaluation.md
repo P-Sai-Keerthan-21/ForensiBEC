@@ -277,7 +277,7 @@ Required before any fusion-improves-detection claim:
 3. Evaluation restricted to the hard subset, with enough compromised-account
    cases for the per-family recall to have usable statistical support.
 
-This is Phase 2 work and is **not** claimed to be done.
+Item 2 was carried out in §6. Items 1 and 3 have **not** been done.
 
 ---
 

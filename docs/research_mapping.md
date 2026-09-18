@@ -13,7 +13,7 @@ the validation caveat in the README.
 | Problem requirement | Implementation | Module | Paper section |
 |---|---|---|---|
 | Display-name spoofing | Impersonation rule: external sender asserting an internal executive identity; display name embedding a different address | `analysis/sender.py` | Feature Engineering → Identity Features |
-| Look-alike domains (implied by spoofing) | Confusable normalisation + Levenshtein distance against trusted domains | `analysis/sender.py` | Feature Engineering → Identity Features |
+| Look-alike domains (implied by spoofing) | IDNA decoding, NFKC, TR39-derived confusable skeleton, mixed-script detection, Levenshtein distance against trusted domains | `analysis/confusables.py`, `analysis/sender.py` | Feature Engineering → Identity Features |
 | Unusual sending behaviour | Corpus-baselined deviation: known correspondent on a new domain, display-name rotation, first contact, off-hours send, unusual recipient set | `analysis/behavior.py` | Feature Engineering → Behavioural Analysis |
 | Urgency language | Lexicon matching over NLTK-lemmatised text, with multi-cue confidence weighting | `analysis/text.py`, `analysis/lexicons.py` | NLP Analysis |
 | Extract sender features | Header parsing into `EmailArtifact`; From / Reply-To / Return-Path comparison; SPF, DKIM, DMARC verdict extraction | `acquisition/loader.py`, `analysis/sender.py` | Feature Engineering |
@@ -46,7 +46,28 @@ the validation caveat in the README.
 | ATT&CK evidence mapping | Indicator → technique mapping, labelled as potential and never attributive | `forensics/mitre.py` | Threat Modelling |
 | Investigation timeline | Events built only from real timestamps; undated messages recorded as collection gaps | `forensics/timeline.py` | Investigative Workflow |
 | Communication graph | Address/domain nodes, communication edges, boundary-crossing relationship highlighting (NetworkX optional) | `forensics/graph.py` | Relationship Analysis |
-| Application security | Upload validation, streaming size limits, filename sanitisation, no execution, no disk writes, generic errors | `web/security.py` | Secure System Design |
+| Application security | Upload validation, streaming size limits, filename sanitisation, MIME nesting limit, CSRF and trusted-host middleware, no execution, generic errors | `web/security.py`, `web/app.py`, `acquisition/loader.py` | Secure System Design |
+| Evidence graph | Typed entities (message, address, domain, IP, URL, attachment, payment detail, case); every edge carries the header or finding that established it | `forensics/evidence_graph.py` | Relationship Analysis |
+| Case management | Evidence preserved write-once under its SHA-256; findings retained; re-hash integrity verification; search; related cases via shared IOCs | `cases.py` | Investigative Workflow |
+| Forensic report | Evidence → inference → risk → recommendation per finding; explicit statements of absent evidence; full fusion arithmetic; reproducibility fingerprint | `report/assemble.py`, `report/html.py` | Explainability / Results |
+| Investigator feedback | Human determinations as hash-chained records; agreement derived, never a verdict change; controlled export, no retraining | `feedback.py` | Human-in-the-loop Investigation |
+| Grounded assistant | Template explanations whose every claim cites recorded evidence; certainty/attribution language rejected; prompt-injection safe by construction | `assistant.py` | Explainability |
+
+---
+
+## 2a. Research experiments → paper section
+
+All on synthetic data; see [`research.md`](research.md).
+
+| Experiment | Module | Document | Paper section |
+|---|---|---|---|
+| ML baselines | `research/evaluate.py`, `baselines.py`, `features.py` | `evaluation.md` §4 | Results → Baselines |
+| Unbalanced ablation | `research/ablation.py` | `evaluation.md` §5 | Results → Ablation |
+| Feature-balanced ablation | `research/balanced_ablation.py` | `evaluation.md` §6 | Results → Ablation |
+| Rule engine on the research corpus | `research/engine_eval.py` | `evaluation.md` §8 | Results → System evaluation |
+| Adversarial robustness | `research/robustness.py` | `adversarial_testing.md` | Robustness |
+| Concept drift | `research/drift.py`, `data/build_drift_corpus.py` | `concept_drift.md` | Robustness → Distribution shift |
+| Performance | `research/performance.py` | `performance.md` | Implementation |
 
 ---
 
@@ -65,7 +86,7 @@ the validation caveat in the README.
 11. **Digital Evidence Integrity** — hashing, custody, hash-chained audit log, verification.
 12. **Threat-Aware Investigation** — IOC extraction, local correlation, intelligence adapter, ATT&CK mapping.
 13. **Secure System Design** — the application's own threat model (`docs/security.md`).
-14. **Results** — development-corpus validation, per-indicator contribution analysis.
+14. **Results** — development-corpus validation; ML baselines and both ablations; the rule engine on the research corpus, including its false-positive analysis; robustness; drift (all synthetic).
 15. **Limitations and Future Work** — see §4.
 16. **Conclusion**
 
@@ -76,17 +97,22 @@ the validation caveat in the README.
 **Supported by the current implementation**
 
 - A fully explainable BEC risk assessment in which every score point traces to a named rule and quoted evidence.
-- End-to-end forensic workflow with verifiable evidence integrity.
-- Detection across seven independent evidence families (identity, authentication, behaviour, content, thread, URL, attachment) plus statistical anomaly.
-- Correct rejection of the urgency-alone control case, demonstrating that indicator combination — not any single signal — drives the verdict.
+- End-to-end forensic workflow with verifiable evidence integrity: hash before parse, write-once preservation, hash-chained audit logs, re-verification.
+- Detection across seven independent evidence families (identity, authentication, behaviour, content, thread, URL, attachment) plus stylometry and statistical anomaly.
+- Correct rejection of the urgency-alone control case, demonstrating that indicator combination, not any single signal, drives the verdict.
+- **On synthetic data:** structured forensic features add significant classification signal over text at equal capacity (balanced ablation, B − A = +0.0257, 95% CI [+0.0181, +0.0332]).
+- **On synthetic data:** header and identity evidence keeps the engine's verdict stable under text-only rewording; compromised-account messages are its weak point.
 
 **NOT supported — do not claim**
 
-- Real-world accuracy, generalisation, or comparison against published detectors. The reported precision/recall/F1 are **development-corpus validation results** on a self-authored 22-message corpus. See the README caveat.
+- Real-world accuracy, generalisation, or comparison against published detectors. Development results come from 26 hand-written messages the engine was built against; research results come from generated corpora. See [`research.md`](research.md).
+- That the rule engine has a low false-positive rate. On the synthetic research corpus it flags about 39% of benign test mail (`evaluation.md` §8).
+- That evidence fusion beats a full-capacity text classifier. The unbalanced ablation was inconclusive.
+- That the drift experiment reproduces how real attackers change.
 - Threat attribution. The ATT&CK layer maps observed indicators to techniques commonly associated with such behaviour; it identifies no actor.
 - External threat-intelligence coverage. Only a local operator-maintained list is consulted.
 - That a criminal offence occurred. The tool reports technical indicators; that determination is not a technical one.
 
 **Required before an accuracy claim**
 
-Validation against an independent corpus — e.g. Enron for benign traffic plus a public phishing set — with a held-out split and confusion matrix. This is Phase 2 work and is not yet done.
+Validation against an independent corpus (for example Enron for benign traffic plus a public phishing set) with a held-out split and confusion matrix. This has not been done.
