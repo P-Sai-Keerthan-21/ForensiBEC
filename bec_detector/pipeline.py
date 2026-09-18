@@ -29,6 +29,7 @@ from .analysis import (
 from .forensics import (
     AuditLog,
     CommunicationGraph,
+    EvidenceGraph,
     IOCStore,
     LocalThreatIntelProvider,
     ThreatIntelProvider,
@@ -213,6 +214,18 @@ class BECPipeline:
 
     def case_timeline(self, assessments: list[Assessment]):
         return build_case_timeline(assessments)
+
+    def evidence_graph(self, assessments: list[Assessment]) -> EvidenceGraph:
+        """Provenance-carrying entity graph for this case.
+
+        Cross-case links are added only for IOC reuse the local correlation
+        store actually reported during this run.
+        """
+        graph = EvidenceGraph()
+        graph.add_all(assessments, self.case_id)
+        if self.correlation_matches:
+            graph.add_cross_case_links(self.correlation_matches, self.case_id)
+        return graph
 
     def integrity(self) -> dict:
         """Verify the audit chain for this run."""

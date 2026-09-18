@@ -44,6 +44,10 @@ RECOMMENDATIONS: dict[str, str] = {
     "REPLY_TO_FREEMAIL": (
         "Do not reply. Record the consumer address as an IOC and block it."
     ),
+    "MIXED_SCRIPT_DOMAIN": (
+        "Compare the punycode (xn--) form of the domain against your known-good "
+        "domains, block it at the gateway, and record it as an IOC."
+    ),
     "RETURN_PATH_MISMATCH": (
         "Corroborate with the authentication results before drawing a "
         "conclusion; mailing lists and relays produce this legitimately."

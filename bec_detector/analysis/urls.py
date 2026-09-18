@@ -13,6 +13,7 @@ from urllib.parse import urlparse
 
 from ..config import FREEMAIL_DOMAINS, TRUSTED_DOMAINS, WEIGHTS
 from ..models import Category, Confidence, EmailArtifact, Indicator, Severity, UrlArtifact
+from .confusables import analyse_domain, describe
 
 URL_PATTERN = re.compile(r"""https?://[^\s<>"'\)\]]+""", re.I)
 
@@ -114,6 +115,13 @@ def analyse_urls(email: EmailArtifact) -> list[Indicator]:
         return indicators
 
     for url in urls:
+        # A host equal to, or a subdomain of, ANY trusted domain is our own
+        # estate. Decided once against the whole set so that no verdict
+        # depends on set iteration order (which varies with the hash seed).
+        in_own_estate = any(
+            url.host == t or url.host.endswith("." + t) for t in TRUSTED_DOMAINS
+        )
+
         # -- Anchor text disagrees with destination ------------------------
         if url.display_mismatch:
             indicators.append(_indicator(
@@ -185,7 +193,7 @@ def analyse_urls(email: EmailArtifact) -> list[Indicator]:
         # -- Credential-harvest style path ----------------------------------
         lowered = url.path.lower()
         hits = [t for t in SUSPICIOUS_PATH_TERMS if t in lowered]
-        if hits and url.host not in TRUSTED_DOMAINS:
+        if hits and not in_own_estate:
             indicators.append(_indicator(
                 "URL_SUSPICIOUS_PATH", "Link path suggests a credential or payment page",
                 Severity.MEDIUM,
@@ -228,9 +236,22 @@ def analyse_urls(email: EmailArtifact) -> list[Indicator]:
             ))
 
         # -- Lookalike of a trusted domain -----------------------------------
-        for trusted in TRUSTED_DOMAINS:
+        # Own estate is excluded before looking for imitation. The original
+        # loop checked one trusted domain at a time and broke on the first
+        # brand match, so with both northwind-logistics.com and .co.uk trusted
+        # a legitimate intranet.northwind-logistics.com link was flagged in
+        # roughly half of all process runs.
+        lookalike_raised = False
+
+        for trusted in sorted(TRUSTED_DOMAINS):
+            if in_own_estate:
+                break
             if url.host and url.host != trusted and trusted.split(".")[0] in url.host:
-                if not url.host.endswith(trusted):
+                # Own estate was excluded above, so any remaining host carrying
+                # the brand label is imitating it - including one that merely
+                # ends with the brand text, such as evilnorthwind-logistics.com.
+                if True:
+                    lookalike_raised = True
                     indicators.append(_indicator(
                         "URL_LOOKALIKE_HOST", "Link host imitates a trusted domain",
                         Severity.HIGH,
@@ -243,6 +264,30 @@ def analyse_urls(email: EmailArtifact) -> list[Indicator]:
                         mitre=["T1566.002"],
                     ))
                 break
+
+        # Homograph host: punycode or non-Latin characters whose skeleton
+        # reproduces a trusted brand. Restricted to non-ASCII hosts, so plain
+        # ASCII hosts are judged exactly as before.
+        if url.host and not lookalike_raised and (url.is_punycode or not url.host.isascii()):
+            host_analysis = analyse_domain(url.host, TRUSTED_DOMAINS)
+            if (not in_own_estate and host_analysis.best_match
+                    and (host_analysis.has_confusables or host_analysis.is_mixed_script)
+                    and (host_analysis.edit_distance or 0) <= 2):
+                indicators.append(_indicator(
+                    "URL_LOOKALIKE_HOST", "Link host is a homograph of a trusted domain",
+                    Severity.CRITICAL,
+                    evidence=describe(host_analysis),
+                    explanation=(
+                        "The link host uses non-Latin characters that render as the "
+                        "trusted brand. A recipient reading the link sees the "
+                        "familiar name; the browser resolves a different domain."
+                    ),
+                    recommendation=(
+                        "Do not open. Block both the Unicode and punycode forms of "
+                        "the host and record them as IOCs."
+                    ),
+                    mitre=["T1566.002", "T1583.001"],
+                ))
 
     # -- Overall volume ------------------------------------------------------
     if len(urls) > 12:

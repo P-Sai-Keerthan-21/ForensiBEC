@@ -54,6 +54,7 @@ WEIGHTS: dict[str, float] = {
     "REPLY_TO_FREEMAIL": 18.0,
     "RETURN_PATH_MISMATCH": 12.0,
     "DISPLAY_NAME_IS_EMAIL": 8.0,
+    "MIXED_SCRIPT_DOMAIN": 24.0,
     # --- Authentication ----------------------------------------------------
     "SPF_FAIL": 18.0,
     "DKIM_FAIL": 16.0,

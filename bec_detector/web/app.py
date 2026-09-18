@@ -104,6 +104,9 @@ def _build_report(pipeline: BECPipeline, assessments, case: str, examiner: str) 
     report["case"]["case_id"] = pipeline.case_id
     report["timeline"] = [e.to_dict() for e in build_case_timeline(assessments)]
     report["graph"] = graph.to_dict()
+    evidence_graph = pipeline.evidence_graph(assessments)
+    report["evidence_graph"] = evidence_graph.to_dict()
+    report["evidence_graph_svg"] = evidence_graph.to_svg()
     report["audit"] = {
         "entries": pipeline.audit.to_list(),
         "integrity": pipeline.integrity(),

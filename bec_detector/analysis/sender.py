@@ -19,14 +19,10 @@ from ..config import (
     WEIGHTS,
 )
 from ..models import Category, EmailArtifact, Indicator, Severity
+from .confusables import analyse_domain, core_label, decode_idna, describe, skeleton
 
 EMAIL_IN_TEXT = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
 
-# Characters an attacker swaps to build a visually similar domain.
-CONFUSABLE_MAP = str.maketrans({
-    "0": "o", "1": "l", "3": "e", "4": "a", "5": "s", "7": "t", "8": "b",
-    "$": "s", "|": "l",
-})
 
 
 def _indicator(code: str, title: str, category: Category, severity: Severity,
@@ -44,14 +40,16 @@ def _indicator(code: str, title: str, category: Category, severity: Severity,
 
 
 def _normalise_domain(domain: str) -> str:
-    """Collapse a domain to its confusable-normalised core label.
+    """Collapse a domain to the Latin letters its brand label visually presents.
 
-    "nOrthwind-l0gistics.com" and "northwind-logistics.com" both normalise to
-    "northwindlogistics", which is what makes the lookalike comparison work.
+    Punycode labels are decoded first, then Cyrillic/Greek/fullwidth confusables
+    are mapped to the Latin letters they imitate (see confusables.py). On a
+    pure-ASCII domain the result is identical to the original comparer:
+    "nOrthwind-l0gistics.com" and "northwind-logistics.com" both give
+    "northwindlogistics".
     """
-    core = domain.lower().split(".")[0]
-    core = core.translate(CONFUSABLE_MAP)
-    return re.sub(r"[^a-z]", "", core)
+    unicode_form, _ = decode_idna((domain or "").strip().strip("."))
+    return skeleton(core_label(unicode_form.lower()))
 
 
 def _levenshtein(a: str, b: str) -> int:
@@ -170,18 +168,25 @@ def analyse_sender(email: EmailArtifact) -> list[Indicator]:
 
     # -- Lookalike domain ----------------------------------------------------
     if domain and domain not in TRUSTED_DOMAINS:
+        analysis = analyse_domain(domain, TRUSTED_DOMAINS)
         normalised = _normalise_domain(domain)
-        for trusted in TRUSTED_DOMAINS:
+        for trusted in sorted(TRUSTED_DOMAINS):
             trusted_norm = _normalise_domain(trusted)
             distance = _levenshtein(normalised, trusted_norm)
             if normalised == trusted_norm or 0 < distance <= 2:
                 identical = normalised == trusted_norm
-                detail = ("identical once homoglyph substitutions are reversed"
-                          if identical else f"edit distance {distance}")
+                if analysis.confusable_chars:
+                    detail = (f"{len(analysis.confusable_chars)} non-Latin character(s) "
+                              "render as Latin letters")
+                elif identical:
+                    detail = "identical once homoglyph substitutions are reversed"
+                else:
+                    detail = f"edit distance {distance}"
                 indicators.append(_indicator(
                     "LOOKALIKE_DOMAIN", "Sender domain imitates a trusted domain",
                     Category.SENDER, Severity.CRITICAL,
-                    evidence=f"sender domain {domain!r} vs trusted domain {trusted!r}",
+                    evidence=(f"sender domain {domain!r} vs trusted domain {trusted!r} | "
+                              + describe(analysis)),
                     explanation=(
                         f"{domain!r} is visually confusable with the legitimate "
                         f"{trusted!r} ({detail}). Registering a near-identical "
@@ -191,6 +196,24 @@ def analyse_sender(email: EmailArtifact) -> list[Indicator]:
                     confidence=1.0 if identical else 0.85,
                 ))
                 break
+
+        # A single label mixing Latin with Cyrillic/Greek has essentially no
+        # legitimate use. Genuine internationalised domains are single-script,
+        # so they are never flagged here.
+        if analysis.is_mixed_script:
+            indicators.append(_indicator(
+                "MIXED_SCRIPT_DOMAIN", "Domain label mixes writing systems",
+                Category.SENDER, Severity.HIGH,
+                evidence=describe(analysis)
+                         + f" | mixed-script label(s): {analysis.mixed_script_labels}"
+                         + f" | scripts present: {analysis.scripts}",
+                explanation=(
+                    "A single domain label combines Latin letters with Cyrillic or "
+                    "Greek letters. Legitimate internationalised domains are "
+                    "written in one script; mixing scripts is the construction "
+                    "used in IDN homograph attacks."
+                ),
+            ))
 
     # -- Reply-To divergence -------------------------------------------------
     if email.reply_to_address and email.reply_to_address != address:

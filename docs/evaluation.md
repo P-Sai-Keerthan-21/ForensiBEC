@@ -16,6 +16,47 @@ Machine-readable output: `output/research/evaluation.json`, `output/research/abl
 Both files carry `"not_real_world_accuracy": true` in their own payload, so a
 number cannot be separated from its caveat by being copied out of context.
 
+> ### Correction notice — results regenerated after an implementation bug
+>
+> The figures in this document were **regenerated** after two bugs in URL
+> analysis (`bec_detector/analysis/urls.py`) were found during the Unicode
+> confusables work. Both affected the `artifact` feature group.
+>
+> 1. **Non-determinism.** With two trusted domains configured, the URL
+>    look-alike check broke on whichever came first in `set` iteration order,
+>    which varies with Python's per-process hash seed. A legitimate
+>    `intranet.northwind-logistics.com` link was flagged as a look-alike in
+>    roughly half of all process runs (verified: hash seeds 3 and 5 flagged it,
+>    0/1/2/4 did not). This is why configuration B moved from 0.9824 to 0.9828
+>    between two runs of the balanced ablation — a discrepancy that was not
+>    investigated at the time.
+> 2. **Own-estate false positive.** `URL_SUSPICIOUS_PATH` compared hosts by
+>    exact membership, so the organisation's own
+>    `portal.northwind-logistics.com/invoices/view` was scored as a credential
+>    page.
+>
+> 114 benign research messages carry own-estate links and were exposed to one
+> or both bugs. After the fix, the balanced ablation was re-run under hash
+> seeds 0 **and** 3 and produced **identical** results, so the reported figures
+> are now reproducible across processes. `test_url_lookalike_is_independent_of_hash_seed`
+> guards this.
+>
+> The pre-fix outputs are preserved in `output/research/pre_fix_68b0e0a/`.
+> **No conclusion changed.** Every comparison that was significant remains
+> significant, in the same direction.
+>
+> | Figure | Pre-fix (`68b0e0a`) | Post-fix |
+> |---|---|---|
+> | Linear SVM held-out test F1 | 0.993 | 1.000 |
+> | Random Forest held-out ROC-AUC | 0.999 | 1.000 |
+> | Ablation 1, structured-only test F1 | 0.960 | 0.953 |
+> | Ablation 1, structured-only CV-F1 | 0.9732 ± 0.0109 | 0.9745 ± 0.0076 |
+> | Ablation 1, configurations A–I | — | unchanged |
+> | Ablation 2, B − A (primary) | +0.02339 | **+0.02254** |
+> | Ablation 2, D − A | +0.01365 (p=0.0022) | **+0.01132** (p=0.0042) |
+> | Ablation 2, B F1 | 0.9828 | 0.9820 |
+> | Ablation 2, D F1 | 0.9731 | 0.9708 |
+
 ---
 
 ## 1. Two result families — never merge them
@@ -88,8 +129,8 @@ Seed `20260918` throughout. Vectorisers are fitted on training folds only —
 | Model | Precision | Recall | F1 | Accuracy | ROC-AUC | PR-AUC | FPR | FNR |
 |---|---|---|---|---|---|---|---|---|
 | Logistic Regression | 0.974 | 0.987 | 0.980 | 0.984 | 0.999 | 0.999 | 0.019 | 0.013 |
-| Random Forest | 1.000 | 0.987 | 0.993 | 0.995 | 0.999 | 0.999 | 0.000 | 0.013 |
-| Linear SVM | 1.000 | 0.987 | 0.993 | 0.995 | 1.000 | 1.000 | 0.000 | 0.013 |
+| Random Forest | 1.000 | 0.987 | 0.993 | 0.995 | 1.000 | 1.000 | 0.000 | 0.013 |
+| Linear SVM | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 0.000 | 0.000 |
 
 ---
 
@@ -109,7 +150,7 @@ corpus alongside the held-out test split.
 | G | + Thread | 6542 | 0.993 | 0.9905 | 0.0070 | +0.0027 |
 | H | + Stylometry | 6549 | 0.993 | 0.9905 | 0.0070 | +0.0000 |
 | I | **Full fusion** | 6567 | 0.993 | 0.9877 | 0.0119 | −0.0028 |
-| S | Structured only (no text) | 82 | 0.960 | 0.9732 | 0.0109 | — |
+| S | Structured only (no text) | 82 | 0.953 | 0.9745 | 0.0076 | — |
 
 ### 5.1 The result is negative *in this configuration*
 
@@ -235,9 +276,9 @@ on training data only.
 | Cfg | Configuration | Text | Struct | Precision | Recall | F1 | ±sd | ROC-AUC | PR-AUC |
 |---|---|---|---|---|---|---|---|---|---|
 | A | Balanced text only | 82 | 0 | 0.9684 | 0.9509 | **0.9594** | 0.0161 | 0.9957 | 0.9942 |
-| B | Balanced text + structured | 82 | 82 | 0.9937 | 0.9724 | **0.9828** | 0.0089 | 0.9991 | 0.9989 |
+| B | Balanced text + structured | 82 | 82 | 0.9920 | 0.9724 | **0.9820** | 0.0071 | 0.9992 | 0.9990 |
 | C | Full fusion (unbalanced text) | 6825 | 82 | 1.0000 | 0.9831 | **0.9914** | 0.0088 | 0.9999 | 0.9999 |
-| D | Structured only | 0 | 82 | 0.9804 | 0.9662 | **0.9731** | 0.0137 | 0.9978 | 0.9972 |
+| D | Structured only | 0 | 82 | 0.9803 | 0.9617 | **0.9708** | 0.0137 | 0.9976 | 0.9970 |
 
 Means over 15 folds; ±sd is the sample standard deviation of per-fold F1.
 
@@ -246,9 +287,9 @@ Means over 15 folds; ±sd is the sample standard deviation of per-fold F1.
 | Cfg | Configuration | TN | FP | FN | TP |
 |---|---|---|---|---|---|
 | A | Balanced text only | 1543 | 35 | 55 | 1067 |
-| B | Balanced text + structured | 1571 | 7 | 31 | 1091 |
+| B | Balanced text + structured | 1569 | 9 | 31 | 1091 |
 | C | Full fusion (unbalanced text) | 1578 | 0 | 19 | 1103 |
-| D | Structured only | 1556 | 22 | 38 | 1084 |
+| D | Structured only | 1556 | 22 | 43 | 1079 |
 
 ### 6.3 Statistical comparisons
 
@@ -256,26 +297,26 @@ Means over 15 folds; ±sd is the sample standard deviation of per-fold F1.
 
 | Comparison | Mean ΔF1 | 95% CI | p | Verdict |
 |---|---|---|---|---|
-| **B − A** (structured added at equal text capacity) | **+0.02339** | [+0.01552, +0.03125] | <0.0001 | **Significant improvement** |
+| **B − A** (structured added at equal text capacity) | **+0.02254** | [+0.01473, +0.03035] | <0.0001 | **Significant improvement** |
 
 **Secondary:**
 
 | Comparison | Mean ΔF1 | p | Verdict |
 |---|---|---|---|
-| D − A (82 forensic vs 82 text features) | +0.01365 | 0.0022 | Significant improvement |
+| D − A (82 forensic vs 82 text features) | +0.01132 | 0.0042 | Significant improvement |
 | C − A (unbalanced fusion vs balanced text) | +0.03195 | <0.0001 | Significant improvement |
-| B − C (balanced fusion vs unbalanced fusion) | −0.00856 | 0.0074 | Significant degradation |
-| B − D (fusion vs structured alone) | +0.00974 | 0.0172 | Significant improvement |
+| B − C (balanced fusion vs unbalanced fusion) | −0.00941 | 0.0008 | Significant degradation |
+| B − D (fusion vs structured alone) | +0.01122 | 0.0066 | Significant improvement |
 
 **Sensitivity (robustness only — did not select the primary parameter):**
 
 | SVD components | Text-only F1 | Fusion F1 | ΔF1 | p | Significant |
 |---|---|---|---|---|---|
-| 25 | 0.9520 | 0.9824 | +0.03037 | <0.0001 | yes |
-| 50 | 0.9520 | 0.9806 | +0.02855 | <0.0001 | yes |
-| **82** (pre-registered) | 0.9594 | 0.9828 | +0.02339 | <0.0001 | yes |
-| 150 | 0.9667 | 0.9828 | +0.01613 | 0.0010 | yes |
-| 300 | 0.9584 | 0.9764 | +0.01793 | 0.0004 | yes |
+| 25 | 0.9520 | 0.9811 | +0.02901 | <0.0001 | yes |
+| 50 | 0.9520 | 0.9819 | +0.02993 | <0.0001 | yes |
+| **82** (pre-registered) | 0.9594 | 0.9820 | +0.02254 | <0.0001 | yes |
+| 150 | 0.9667 | 0.9814 | +0.01479 | 0.0006 | yes |
+| 300 | 0.9584 | 0.9764 | +0.01793 | 0.0009 | yes |
 
 The direction and significance hold at every component count tested, so the
 finding is not an artifact of the pre-registered choice.
@@ -285,15 +326,15 @@ finding is not an artifact of the pre-registered choice.
 **The conclusion of §5.1 does not survive contact with a fair comparison.**
 
 Adding structured forensic evidence to a text channel of equal capacity
-improves F1 by **+0.0234** (95% CI [+0.0155, +0.0313], p < 0.0001). That is
+improves F1 by **+0.0225** (95% CI [+0.0147, +0.0304], p < 0.0001). That is
 roughly **three times the CV standard deviation**, where the unbalanced
 experiment's largest delta (+0.0041) sat *inside* it. The earlier negative
 result was substantially an artifact of the 79:1 feature imbalance, not
 evidence that forensic features lack signal.
 
 The error mechanism is visible in the confusion matrices. Against balanced
-text alone, adding structured evidence cuts **false positives from 35 to 7**
-(−80%) and **false negatives from 55 to 31** (−44%). For an investigator those
+text alone, adding structured evidence cuts **false positives from 35 to 9**
+(−74%) and **false negatives from 55 to 31** (−44%). For an investigator those
 are the two numbers that matter: fewer benign messages dragged into review, and
 fewer attacks missed.
 
@@ -301,13 +342,13 @@ Two further findings are worth stating plainly because neither was predicted:
 
 1. **At equal capacity, forensic evidence outperforms text.** Configuration D
    (82 structured features, no text at all) beats configuration A (82 text
-   components) by +0.0137 (p = 0.0022). Eighty-two engineered forensic
+   components) by +0.0113 (p = 0.0042). Eighty-two engineered forensic
    features carry more separable signal than eighty-two dimensions of latent
    semantic structure.
 
 2. **The unbalanced full-fusion arm is still the strongest overall.**
    Configuration C reaches 0.9914 and significantly beats balanced fusion
-   (p = 0.0074). Reducing the text channel *does* discard useful information.
+   (p = 0.0008). Reducing the text channel *does* discard useful information.
    The balancing is a diagnostic instrument for attributing credit between
    channels — it is not a recommendation to deploy a reduced text channel.
 

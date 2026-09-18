@@ -8,6 +8,7 @@ intelligence adapter and ATT&CK mapping.
 
 from .audit import AuditEntry, AuditLog, compute_entry_hash
 from .correlation import IOCStore, correlation_indicators
+from .evidence_graph import EvidenceGraph, Provenance
 from .graph import HAS_NETWORKX, CommunicationGraph
 from .intel import (
     IntelMatch,
@@ -23,7 +24,7 @@ from .timeline import build_case_timeline, build_message_timeline
 __all__ = [
     "AuditEntry", "AuditLog", "compute_entry_hash",
     "IOCStore", "correlation_indicators",
-    "CommunicationGraph", "HAS_NETWORKX",
+    "CommunicationGraph", "HAS_NETWORKX", "EvidenceGraph", "Provenance",
     "ThreatIntelProvider", "LocalThreatIntelProvider", "NullThreatIntelProvider",
     "IntelMatch", "intel_indicators",
     "extract_iocs", "flatten", "normalise_domain", "normalise_url",
