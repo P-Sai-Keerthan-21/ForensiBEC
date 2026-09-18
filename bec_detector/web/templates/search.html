@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}FORENSIBEC - Search{% endblock %}
+{% block content %}
+<div class="panel">
+  <h2>Search</h2>
+  <form action="/search" method="get">
+    <label for="q">Case reference, evidence ID or hash, IOC, sender or subject</label>
+    <input type="text" id="q" name="q" value="{{ query }}" maxlength="200" autofocus>
+    <p><button type="submit">Search</button></p>
+  </form>
+  {% if error %}<div class="bad">{{ error }}</div>{% endif %}
+  {% if query and not error %}
+    {% if results %}
+    <div class="table-wrap"><table>
+      <tr><th>Case</th><th>Matched on</th></tr>
+      {% for r in results %}
+      <tr><td><a class="mono" href="/cases/{{ r.case_id }}">{{ r.case_id }}</a>
+            {% if r.title != r.case_id %}<div class="small">{{ r.title }}</div>{% endif %}</td>
+          <td class="small">{{ r.matched_on|join('; ') }}</td></tr>
+      {% endfor %}
+    </table></div>
+    {% else %}<p class="muted">No case matches &ldquo;{{ query }}&rdquo;.</p>{% endif %}
+  {% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,151 @@
+{% extends "base.html" %}
+{% block title %}FORENSIBEC - {{ case.case_id }}{% endblock %}
+{% block content %}
+
+{% if rejected %}
+<div class="bad" style="margin-bottom:16px">
+  <strong>Some uploads were rejected and are not part of this case:</strong>
+  <ul>{% for r in rejected %}<li>{{ r }}</li>{% endfor %}</ul>
+</div>
+{% endif %}
+
+<div class="panel">
+  <div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-start">
+    <div>
+      <h3 class="mono">{{ case.case_id }}</h3>
+      <div class="muted">{{ case.title }} &middot; examiner {{ case.examiner }} &middot;
+        opened <span class="mono">{{ case.created_utc }}</span></div>
+    </div>
+    <div>
+      {% if analysis %}<a class="btn" href="/cases/{{ case.case_id }}/report">Open full report</a>{% endif %}
+      <a class="btn secondary" href="/cases/{{ case.case_id }}/verify">Verify integrity</a>
+      <a class="btn secondary" href="/api/cases/{{ case.case_id }}/analysis">JSON</a>
+    </div>
+  </div>
+</div>
+
+{% if integrity %}
+<div class="{{ 'sec' if integrity.intact else 'bad' }}" style="margin-bottom:18px">
+  <strong>{{ 'Integrity verified.' if integrity.intact else 'INTEGRITY FAILURE.' }}</strong>
+  Evidence: {% for e in integrity.evidence %}<span class="mono">{{ e.evidence_id }}</span>
+  <span class="{{ 'ok' if e.status == 'VERIFIED' else 'fail' }}">{{ e.status }}</span>{% if not loop.last %}, {% endif %}{% endfor %}.
+  Audit chain: <span class="{{ 'ok' if integrity.audit.valid else 'fail' }}">{{ 'intact' if integrity.audit.valid else 'BROKEN' }}</span>
+  ({{ integrity.audit.entries }} entries; {{ integrity.audit.reason }}).
+</div>
+{% endif %}
+
+{% if not analysis %}
+<div class="panel"><p class="muted">This case has not been analysed yet.</p></div>
+{% else %}
+{% set s = analysis.summary %}
+<div class="panel">
+  <h2>Assessment</h2>
+  <div class="grid">
+    <div class="stat"><div class="n">{{ s.messages_analysed }}</div><div class="l">Messages analysed</div></div>
+    <div class="stat"><div class="n">{{ s.messages_flagged }}</div><div class="l">Above BENIGN</div></div>
+    <div class="stat"><div class="n">{{ '%.1f'|format(s.highest_score) }}</div><div class="l">Highest risk score</div></div>
+    <div class="stat"><div class="n">{{ graph.node_count }}</div><div class="l">Graph entities</div></div>
+  </div>
+  <p class="small" style="margin-top:12px">Risk scores are rule-based, not probabilities.
+    Each one decomposes into the findings shown in the full report.</p>
+
+  <div class="table-wrap"><table>
+    <tr><th>Risk</th><th>Evidence</th><th>Message</th><th>Principal findings</th></tr>
+    {% for a in analysis.assessments %}
+    <tr>
+      <td><span class="band band-{{ a.risk_band }}">{{ a.risk_band }}</span><br>
+          <span class="mono">{{ '%.1f'|format(a.risk_score) }}</span></td>
+      <td class="mono">{{ a.evidence_id }}</td>
+      <td><strong>{{ a.email.subject or '(no subject)' }}</strong><br>
+          <span class="small mono">{{ a.email.from_display }} &lt;{{ a.email.from_address }}&gt;</span>
+          {% if a.email.reply_to_address and a.email.reply_to_address != a.email.from_address %}
+          <br><span class="small">Reply-To <span class="mono">{{ a.email.reply_to_address }}</span></span>{% endif %}</td>
+      <td class="small">
+        {% set top = a.indicators[:4] %}
+        {% if top %}{% for i in top %}&bull; {{ i.title }} <span class="muted">({{ i.severity }}, +{{ '%.1f'|format(i.contribution) }})</span><br>{% endfor %}
+        {% if a.indicators|length > 4 %}<span class="muted">+{{ a.indicators|length - 4 }} more in the report</span>{% endif %}
+        {% else %}<span class="muted">No indicators raised.</span>{% endif %}
+      </td>
+    </tr>
+    {% endfor %}
+  </table></div>
+</div>
+
+<div class="panel">
+  <h2>Next steps recommended by the findings</h2>
+  {% if recommendations %}
+  <ol>{% for rec, codes in recommendations %}<li>{{ rec }} <span class="small">({{ codes|join(', ') }})</span></li>{% endfor %}</ol>
+  <p class="small">Drawn from findings on messages scored LIKELY_BEC or above.</p>
+  {% else %}<p class="muted">No message in this case was scored LIKELY_BEC or above.</p>{% endif %}
+</div>
+
+<div class="panel">
+  <h2>Indicators of compromise</h2>
+  {% if iocs %}
+  <div class="table-wrap"><table>
+    <tr><th>Kind</th><th>Values</th></tr>
+    {% for kind, values in iocs %}<tr><td>{{ kind }}</td><td>{% for v in values %}<span class="pill">{{ v }}</span>{% endfor %}</td></tr>{% endfor %}
+  </table></div>
+  <p class="small">From messages scored LIKELY_BEC or above. The full per-message list is in the report.</p>
+  {% else %}<p class="muted">No message in this case was scored LIKELY_BEC or above, so no IOCs are listed.</p>{% endif %}
+</div>
+
+<div class="panel">
+  <h2>Evidence graph</h2>
+  <p class="small">{{ graph.node_count }} entities, {{ graph.edge_count }} relationships, each traceable to the
+    header or body location that established it. Red rings mark messages scored LIKELY/CONFIRMED BEC;
+    red lines are Reply-To and Return-Path relationships.</p>
+  {{ graph_svg|safe }}
+</div>
+
+<div class="panel">
+  <h2>Timeline</h2>
+  {% if timeline %}
+  <div class="table-wrap"><table>
+    <tr><th>Time (UTC)</th><th>Event</th><th>Source of timestamp</th></tr>
+    {% for e in timeline %}
+    <tr><td class="mono">{{ e.timestamp or 'undated' }}</td>
+        <td><strong>{{ e.kind }}</strong> &mdash; {{ e.description }}</td>
+        <td class="small">{{ e.source }}</td></tr>
+    {% endfor %}
+  </table></div>
+  {% else %}<p class="muted">No timeline events.</p>{% endif %}
+</div>
+
+<div class="panel">
+  <h2>Related cases</h2>
+  {% if related %}
+  <table><tr><th>Case</th><th>Shared indicators</th></tr>
+  {% for r in related %}<tr><td><a class="mono" href="/cases/{{ r.case_id }}">{{ r.case_id }}</a></td>
+    <td>{% for s in r.shared_indicators %}<span class="pill">{{ s }}</span>{% endfor %}</td></tr>{% endfor %}
+  </table>
+  {% else %}<p class="muted">No indicator in this case was previously recorded in another local case.</p>{% endif %}
+  <p class="small">Local correlation only; no external threat intelligence is consulted.</p>
+</div>
+{% endif %}
+
+<div class="panel">
+  <h2>Evidence register</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Evidence ID</th><th>Submitted as</th><th>Bytes</th><th>SHA-256</th><th>Added</th></tr>
+    {% for e in case.evidence %}
+    <tr><td class="mono">{{ e.evidence_id }}</td><td>{{ e.original_filename }}</td>
+        <td class="mono">{{ e.size_bytes }}</td><td class="mono small">{{ e.sha256 }}</td>
+        <td class="small">{{ e.added_utc }}<br>{{ e.added_by }}</td></tr>
+    {% endfor %}
+  </table></div>
+</div>
+
+<div class="panel">
+  <h2>Audit trail</h2>
+  <div class="table-wrap"><table>
+    <tr><th>#</th><th>Time (UTC)</th><th>Actor</th><th>Action</th><th>Entry hash</th></tr>
+    {% for e in audit[-25:] %}
+    <tr><td class="mono">{{ e.sequence }}</td><td class="mono">{{ e.timestamp_utc }}</td>
+        <td>{{ e.actor }}</td><td class="mono">{{ e.action }}</td>
+        <td class="mono small">{{ e.entry_hash[:16] }}&hellip;</td></tr>
+    {% endfor %}
+  </table></div>
+  {% if audit|length > 25 %}<p class="small">Showing the latest 25 of {{ audit|length }} entries. The full chain is in the report.</p>{% endif %}
+</div>
+{% endblock %}

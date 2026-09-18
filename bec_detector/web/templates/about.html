@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}FORENSIBEC - Method and limits{% endblock %}
+{% block content %}
+<div class="panel">
+  <h2>How an assessment is produced</h2>
+  <ol>
+    <li><strong>Acquisition.</strong> Each message is hashed (SHA-256) over its raw bytes before parsing,
+        recorded in the chain of custody, and preserved in the case under that hash.</li>
+    <li><strong>Analysis.</strong> Rules examine sender identity, domains (including Unicode
+        confusables), SPF/DKIM/DMARC, sending behaviour, urgency/authority/secrecy language,
+        financial intent, thread headers, writing style, URLs and attachments.</li>
+    <li><strong>Fusion.</strong> Each finding contributes weight &times; confidence; categories are
+        capped; corroborating combinations add a documented bonus; the total is normalised to 0&ndash;100.</li>
+    <li><strong>Report.</strong> Every finding shows the observed evidence, the inference drawn,
+        its risk contribution and a recommendation. The audit trail is hash-chained.</li>
+  </ol>
+</div>
+<div class="panel">
+  <h2>Limits you should know</h2>
+  <ul>
+    {% for item in limitations %}<li>{{ item }}</li>{% endfor %}
+  </ul>
+</div>
+{% endblock %}

@@ -1,155 +1,80 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FORENSIBEC</title>
-<style>
-  :root { --bg:#0f172a; --panel:#fff; --ink:#0f172a; --muted:#64748b;
-          --line:#e2e8f0; --accent:#1d4ed8; --page:#f1f5f9; }
-  * { box-sizing:border-box; }
-  body { margin:0; background:var(--page); color:var(--ink);
-         font:15px/1.6 "Segoe UI", system-ui, -apple-system, sans-serif; }
-  header { background:var(--bg); color:#fff; padding:26px 24px; }
-  header .inner { max-width:940px; margin:0 auto; }
-  h1 { font-size:27px; margin:0; letter-spacing:.06em; font-weight:700; }
-  header p { margin:4px 0 0; color:#94a3b8; font-size:13.5px;
-             text-transform:uppercase; letter-spacing:.09em; }
-  .wrap { max-width:940px; margin:0 auto; padding:28px 24px 56px; }
-  .panel { background:var(--panel); border:1px solid var(--line);
-           border-radius:10px; padding:24px; margin-bottom:18px; }
-  h2 { font-size:15px; margin:0 0 16px; text-transform:uppercase;
-       letter-spacing:.06em; color:var(--muted);
-       border-bottom:1px solid var(--line); padding-bottom:8px; }
-  label { display:block; font-weight:600; font-size:12px; margin:14px 0 5px;
-          text-transform:uppercase; letter-spacing:.05em; color:var(--muted); }
-  input[type=text], input[type=file] { width:100%; padding:10px 12px;
-          border:1px solid #cbd5e1; border-radius:7px; font-size:14px;
-          font-family:inherit; background:#fff; }
-  .row { display:flex; gap:16px; flex-wrap:wrap; }
-  .row > div { flex:1; min-width:210px; }
-  .drop { border:2px dashed #cbd5e1; border-radius:9px; padding:20px;
-          background:#f8fafc; margin-top:5px; }
-  .drop p { margin:10px 0 0; color:var(--muted); font-size:13px; }
-  button { margin-top:22px; width:100%; padding:13px; background:var(--accent);
-           color:#fff; border:0; border-radius:7px; font-size:15px;
-           font-weight:600; cursor:pointer; font-family:inherit; }
-  button:hover { background:#1e40af; }
-  .stages { display:flex; gap:9px; flex-wrap:wrap; margin-bottom:18px; }
-  .stage { flex:1; min-width:110px; background:#fff; border:1px solid var(--line);
-           border-left:3px solid var(--accent); border-radius:7px;
-           padding:10px 12px; font-size:12px; }
-  .stage b { display:block; font-size:13px; }
-  .stage span { color:var(--muted); }
-  .cols { columns:2; column-gap:26px; font-size:13.5px; }
-  .cols li { margin-bottom:5px; break-inside:avoid; }
-  ul { margin:0; padding-left:19px; }
-  .note { background:#fefce8; border:1px solid #fde68a; border-radius:7px;
-          padding:11px 14px; font-size:13px; color:#713f12; margin-top:16px; }
-  .sec { background:#f0fdf4; border:1px solid #bbf7d0; border-radius:7px;
-         padding:11px 14px; font-size:13px; color:#14532d; margin-top:12px; }
-  footer { color:var(--muted); font-size:12.5px; margin-top:22px; }
-  .ok { color:#166534; font-weight:600; } .bad { color:#b91c1c; font-weight:600; }
-  code { font-family:Consolas, monospace; font-size:12.5px; }
-</style>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}FORENSIBEC - Evidence intake{% endblock %}
+{% block content %}
 
-<header>
-  <div class="inner">
-    <h1>FORENSIBEC</h1>
-    <p>Business Email Compromise &mdash; Detection &amp; Digital Investigation</p>
-  </div>
-</header>
-
-<div class="wrap">
-
-  <div class="stages">
-    <div class="stage"><b>1. Acquisition</b><span>Hash &amp; preserve</span></div>
-    <div class="stage"><b>2. Analysis</b><span>Identity, NLP, thread</span></div>
-    <div class="stage"><b>3. Validation</b><span>Anomaly &amp; fusion</span></div>
-    <div class="stage"><b>4. Report</b><span>Explained verdict</span></div>
-  </div>
-
-  <div class="panel">
-    <h2>Upload Evidence &amp; Case Information</h2>
-    <form action="/analyse" method="post" enctype="multipart/form-data">
-      <div class="row">
-        <div>
-          <label for="case">Case reference</label>
-          <input type="text" id="case" name="case" value="{{ suggested_case }}">
-        </div>
-        <div>
-          <label for="examiner">Examiner (recorded in chain of custody)</label>
-          <input type="text" id="examiner" name="examiner" placeholder="your name">
-        </div>
-      </div>
-
-      <label for="files">Evidence files</label>
-      <div class="drop">
-        <input type="file" id="files" name="files" accept=".eml,.txt,.mbox" multiple required>
-        <p>
-          Accepted: <code>.eml</code>, <code>.mbox</code>, <code>.txt</code>
-          &mdash; 10&nbsp;MB per file, 100 files per submission.
-          Upload a whole conversation together: thread, behavioural and
-          stylometric analysis compare each message against the rest of the set.
-        </p>
-      </div>
-
-      <button type="submit">Analyse evidence</button>
-    </form>
-
-    <div class="sec">
-      <strong>Handling.</strong> Analysis runs entirely on this machine.
-      Accepted messages are preserved unmodified as case evidence, stored under
-      their SHA-256 hash and re-verified on every read. Evidence is never
-      executed, and attachments are never extracted to separate files. URLs found in evidence are analysed statically and are never
-      contacted.
-    </div>
-  </div>
-
-  <div class="panel">
-    <h2>Report Sections Produced</h2>
-    <ul class="cols">
-      <li>BEC risk score &amp; band</li>
-      <li>Identity &amp; display-name spoofing</li>
-      <li>Header authentication (SPF/DKIM/DMARC)</li>
-      <li>Behavioural deviation</li>
-      <li>NLP: urgency, authority, secrecy</li>
-      <li>Financial intent</li>
-      <li>Thread / conversation analysis</li>
-      <li>Look-alike domain analysis</li>
-      <li>URL static analysis</li>
-      <li>Attachment static analysis</li>
-      <li>Stylometry</li>
-      <li>Extracted IOCs</li>
-      <li>Investigation timeline</li>
-      <li>Communication graph</li>
-      <li>Cross-case IOC correlation</li>
-      <li>Potential ATT&amp;CK mapping</li>
-      <li>Evidence integrity (SHA-256)</li>
-      <li>Chain of custody</li>
-      <li>Tamper-evident audit log</li>
-    </ul>
-
-    <div class="note">
-      Findings separate <strong>observed evidence</strong> from
-      <strong>inference</strong> and <strong>recommendation</strong>. The tool
-      reports technical indicators only; it does not determine that a criminal
-      offence occurred.
-    </div>
-  </div>
-
-  <footer>
-    FORENSIBEC v{{ version }} &middot; NLP backends:
-    {% for name, ok in nlp.items() %}
-      <span class="{{ 'ok' if ok else 'bad' }}">{{ name }}:
-      {{ 'available' if ok else 'unavailable' }}</span>{% if not loop.last %} &middot; {% endif %}
-    {% endfor %}
-    <br>JSON API <code>POST /api/analyse</code> &middot;
-    health <code>GET /api/health</code>
-  </footer>
-
+<div class="steps">
+  <div class="step"><b>1. Case &amp; examiner</b><span>Who and which case</span></div>
+  <div class="step"><b>2. Acquire</b><span>Hash &amp; preserve evidence</span></div>
+  <div class="step"><b>3. Analyse</b><span>Identity, auth, NLP, thread, style</span></div>
+  <div class="step"><b>4. Fuse &amp; explain</b><span>Evidence &rarr; inference &rarr; risk</span></div>
+  <div class="step"><b>5. Report</b><span>Timeline, IOCs, graph, audit</span></div>
 </div>
-</body>
-</html>
+
+<div class="panel">
+  <h2>Upload evidence</h2>
+  <form action="/analyse" method="post" enctype="multipart/form-data">
+    <div class="row">
+      <div>
+        <label for="case">Case reference</label>
+        <input type="text" id="case" name="case" value="{{ suggested_case }}" required
+               maxlength="64" pattern="[A-Za-z0-9][A-Za-z0-9_\-]{0,63}"
+               title="Letters, digits, '-' or '_', starting with a letter or digit">
+        <div class="small">Use an existing reference to add evidence to that case.</div>
+      </div>
+      <div>
+        <label for="examiner">Examiner</label>
+        <input type="text" id="examiner" name="examiner" maxlength="120"
+               placeholder="recorded in the chain of custody">
+      </div>
+    </div>
+
+    <label for="files">Evidence files</label>
+    <input type="file" id="files" name="files" accept=".eml,.txt,.mbox" multiple required>
+    <p class="small">
+      Accepted: <code>.eml</code>, <code>.mbox</code>, <code>.txt</code> &mdash; 10&nbsp;MB per
+      file, 50&nbsp;MB and 100 files per submission. Submit a whole conversation together:
+      behavioural, thread and stylometric analysis compare each message against the rest of
+      the case.
+    </p>
+    <button type="submit">Acquire and analyse</button>
+  </form>
+
+  <div class="sec" style="margin-top:16px">
+    <strong>Evidence handling.</strong> Analysis runs entirely on this machine. Accepted
+    messages are preserved unmodified as case evidence, stored under their SHA-256 hash and
+    re-verified on every read. Evidence is never executed, attachments are never extracted to
+    separate files, and URLs found in evidence are never contacted.
+  </div>
+</div>
+
+<div class="panel">
+  <h2>Recent cases</h2>
+  {% if cases %}
+  <div class="table-wrap"><table>
+    <tr><th>Case</th><th>Examiner</th><th>Evidence</th><th>Highest risk</th><th>Updated (UTC)</th></tr>
+    {% for c in cases %}
+    <tr>
+      <td><a href="/cases/{{ c.case_id }}" class="mono">{{ c.case_id }}</a>
+        {% if c.title != c.case_id %}<div class="small">{{ c.title }}</div>{% endif %}</td>
+      <td>{{ c.examiner }}</td>
+      <td>{{ c.evidence|length }}</td>
+      <td>{% if c.summary.highest_risk_band %}
+            <span class="band band-{{ c.summary.highest_risk_band }}">{{ c.summary.highest_risk_band }}</span>
+            <span class="mono">{{ c.summary.highest_risk_score }}</span>
+          {% else %}<span class="muted">not analysed</span>{% endif %}</td>
+      <td class="mono">{{ c.updated_utc }}</td>
+    </tr>
+    {% endfor %}
+  </table></div>
+  {% if more_cases %}<p class="small"><a href="/cases">All {{ total_cases }} cases &rarr;</a></p>{% endif %}
+  {% else %}
+  <p class="muted">No cases yet. Upload evidence above to open one.</p>
+  {% endif %}
+</div>
+
+<div class="note">
+  Findings separate <strong>observed evidence</strong>, <strong>system inference</strong>,
+  <strong>risk contribution</strong> and <strong>recommendation</strong>. The tool reports
+  technical indicators; whether an offence occurred is the investigator's determination.
+</div>
+{% endblock %}

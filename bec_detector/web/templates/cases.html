@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}FORENSIBEC - Cases{% endblock %}
+{% block content %}
+<div class="panel">
+  <h2>Cases ({{ cases|length }})</h2>
+  {% if cases %}
+  <div class="table-wrap"><table>
+    <tr><th>Case</th><th>Examiner</th><th>Opened (UTC)</th><th>Evidence</th><th>Highest risk</th><th>Report</th></tr>
+    {% for c in cases %}
+    <tr>
+      <td><a href="/cases/{{ c.case_id }}" class="mono">{{ c.case_id }}</a>
+        {% if c.title != c.case_id %}<div class="small">{{ c.title }}</div>{% endif %}</td>
+      <td>{{ c.examiner }}</td>
+      <td class="mono">{{ c.created_utc }}</td>
+      <td>{{ c.evidence|length }}</td>
+      <td>{% if c.summary.highest_risk_band %}
+            <span class="band band-{{ c.summary.highest_risk_band }}">{{ c.summary.highest_risk_band }}</span>
+            <span class="mono">{{ c.summary.highest_risk_score }}</span>
+          {% else %}<span class="muted">not analysed</span>{% endif %}</td>
+      <td>{% if c.summary.highest_risk_band %}<a href="/cases/{{ c.case_id }}/report">report</a>{% endif %}</td>
+    </tr>
+    {% endfor %}
+  </table></div>
+  {% else %}
+  <p class="muted">No cases yet. <a href="/">Upload evidence</a> to open one.</p>
+  {% endif %}
+</div>
+{% endblock %}
