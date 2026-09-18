@@ -212,7 +212,8 @@ where every edge records the header or finding that established it.
 re-verified on every read; findings retained; search; related cases via
 shared indicators.
 
-**Report:** 32 sections covering an executive summary, findings as
+**Report:** 16 case-level sections plus 28 per-message subsections, covering
+an executive summary, findings as
 evidence/inference/risk/recommendation, explicit statements of what was *not*
 found, the fusion arithmetic, graph, timeline, IOCs, custody, the audit chain,
 investigator determinations, limitations and a reproducibility fingerprint.

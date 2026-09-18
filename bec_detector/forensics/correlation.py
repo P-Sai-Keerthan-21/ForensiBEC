@@ -20,6 +20,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlsplit
 
 from ..config import (
     CORRELATION_ALLOWLIST,
@@ -30,11 +31,14 @@ from ..config import (
 )
 from ..models import Category, Confidence, Indicator, Severity
 
-DEFAULT_STORE = Path("output") / "ioc_store.json"
-
 # Indicator kinds too common to be interesting on their own. Correlating on an
 # internal recipient address would link every case to every other case.
 LOW_VALUE_KINDS = {"email_addresses"}
+
+
+def _on_own_estate(host: str) -> bool:
+    host = host.lower().rstrip(".")
+    return host in TRUSTED_DOMAINS or any(host.endswith("." + t) for t in TRUSTED_DOMAINS)
 
 
 def _is_linkable(kind: str, value: str) -> bool:
@@ -53,7 +57,17 @@ def _is_linkable(kind: str, value: str) -> bool:
         if value in CORRELATION_ALLOWLIST:
             return False
         # A subdomain of our own estate is equally uninformative.
-        if any(value.endswith("." + trusted) for trusted in TRUSTED_DOMAINS):
+        if _on_own_estate(value):
+            return False
+    if kind == "urls":
+        # A link to our own portal appears in genuine and fraudulent mail
+        # alike (BEC often quotes the real URL as anchor text). Lexical parse
+        # only - nothing is resolved or fetched.
+        try:
+            host = urlsplit(value).hostname or ""
+        except ValueError:
+            return True
+        if _on_own_estate(host):
             return False
     return True
 

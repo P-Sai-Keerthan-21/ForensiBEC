@@ -516,6 +516,21 @@ def test_allowlisted_partner_domain_never_links_cases():
     assert _is_linkable("domains", "delaney-freigth.co") is True  # the lookalike still links
 
 
+def test_own_estate_url_never_links_cases(tmp_path):
+    """Found in end-to-end validation: a BEC quoting the organisation's real
+    portal URL as anchor text linked to every other case quoting it."""
+    from bec_detector.forensics.correlation import _is_linkable
+
+    assert _is_linkable("urls", "https://payroll.northwind-logistics.com/verify") is False
+    assert _is_linkable("urls", "https://northwind-logistics.com/") is False
+    assert _is_linkable("urls", "http://203.0.113.45/payroll/secure/login.php") is True
+    assert _is_linkable("urls", "https://northwind-logistics.com.evil.example/") is True
+
+    store = IOCStore(tmp_path / "ioc.json")
+    store.record({"urls": ["https://payroll.northwind-logistics.com/verify"]}, "CASE-A")
+    assert store.lookup({"urls": ["https://payroll.northwind-logistics.com/verify"]}, "CASE-B") == []
+
+
 # ---------------------------------------------------------------------------
 # Regression: stylometry greeting/signature tautology
 # ---------------------------------------------------------------------------
