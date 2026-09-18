@@ -12,14 +12,17 @@ SHA-256 (never under the uploaded filename). Evidence is never executed.
 
 from __future__ import annotations
 
+import os
 import uuid
 from pathlib import Path
 
 from fastapi import FastAPI, File, Form, Request, UploadFile
 from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
+from starlette.middleware.trustedhost import TrustedHostMiddleware
 
 from .. import __tool_name__, __version__
+from ..acquisition import EvidenceParseError, load_bytes
 from ..cases import CaseError, CaseStore, validate_case_id
 from ..pipeline import BECPipeline
 from .security import (
@@ -36,6 +39,41 @@ app = FastAPI(
     title=f"{__tool_name__} {__version__}",
     description="FORENSIBEC - Business Email Compromise detection and digital investigation.",
 )
+
+# DNS-rebinding defence: a hostile page that re-points its own hostname at
+# 127.0.0.1 would otherwise be same-origin with this app and could read case
+# data. Only requests addressed to a known local host name are served.
+ALLOWED_HOSTS = [h.strip() for h in os.environ.get(
+    "FORENSIBEC_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",") if h.strip()]
+app.add_middleware(TrustedHostMiddleware, allowed_hosts=ALLOWED_HOSTS)
+
+UNSAFE_METHODS = {"POST", "PUT", "PATCH", "DELETE"}
+
+
+@app.middleware("http")
+async def reject_cross_site_writes(request: Request, call_next):
+    """Cross-site request forgery defence for state-changing requests.
+
+    There is no login, so without this any web page the investigator visits
+    could POST to /analyse and plant fabricated evidence into an existing case.
+    Browsers label cross-site requests with Sec-Fetch-Site and Origin; either
+    one identifying a different origin causes a refusal. Non-browser clients
+    (the CLI, scripts, tests) send neither and are unaffected.
+    """
+    if request.method in UNSAFE_METHODS:
+        fetch_site = request.headers.get("sec-fetch-site", "")
+        origin = request.headers.get("origin", "")
+        host = request.headers.get("host", "")
+        cross = fetch_site == "cross-site"
+        if origin and origin != "null":
+            from urllib.parse import urlsplit
+            cross = cross or urlsplit(origin).netloc.lower() != host.lower()
+        elif origin == "null":
+            cross = True
+        if cross:
+            return JSONResponse(
+                {"error": "Cross-site request refused."}, status_code=403)
+    return await call_next(request)
 
 
 RECENT_CASES = 8
@@ -76,8 +114,14 @@ async def _collect(files: list[UploadFile]) -> tuple[list[tuple[str, bytes]], li
         try:
             raw = await read_limited(upload)
             label = validate_upload(upload.filename, upload.content_type, len(raw))
+            # Parse before accepting, so evidence that cannot be analysed is
+            # reported at intake rather than stored and then failing later.
+            load_bytes(raw, label)
         except UploadRejected as exc:
             rejected.append(str(exc))
+            continue
+        except EvidenceParseError as exc:
+            rejected.append(f"{label}: cannot be parsed safely - {exc}")
             continue
 
         total += len(raw)

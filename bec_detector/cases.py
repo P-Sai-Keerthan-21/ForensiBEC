@@ -40,6 +40,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from .acquisition import EvidenceParseError
 from .forensics import AuditLog
 
 CASE_ID_PATTERN = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_-]{0,63}$")
@@ -292,7 +293,10 @@ class CaseStore:
             # Slash-free by design: the custody source names the stored item
             # (case + hash) without ever looking like a filesystem path.
             label = f"{case_id}:evidence:{record.sha256}.eml [{record.original_filename}]"
-            emails.append(pipeline.acquire_bytes(raw, label))
+            try:
+                emails.append(pipeline.acquire_bytes(raw, label))
+            except EvidenceParseError as exc:
+                raise CaseError(f"Evidence {record.evidence_id} cannot be parsed safely: {exc}") from exc
 
         pipeline.fit(emails)
         assessments = [pipeline.assess(email) for email in emails]

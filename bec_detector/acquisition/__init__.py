@@ -6,7 +6,7 @@ content; it only preserves and structures it.
 """
 
 from .custody import build_custody_record, sha256_file, sha256_bytes
-from .loader import load_eml, load_bytes, load_mbox, load_path
+from .loader import EvidenceParseError, load_bytes, load_eml, load_mbox, load_path
 
 __all__ = [
     "build_custody_record",
@@ -16,4 +16,5 @@ __all__ = [
     "load_bytes",
     "load_mbox",
     "load_path",
+    "EvidenceParseError",
 ]

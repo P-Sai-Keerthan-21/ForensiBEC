@@ -118,6 +118,58 @@ Tests: `tests/test_cases.py` (`test_evidence_stored_under_its_hash_not_its_filen
 Residual risk: the case store holds real message content. Treat the data
 directory (`output/` by default, or `FORENSIBEC_DATA_DIR`) as case material.
 
+### 2.11 MIME nesting bomb — **found and fixed in the final audit**
+
+A ~40 KB message containing 2,000 nested `multipart/mixed` containers exhausted
+the Python standard-library parser's recursion limit (around 1,000 levels) and
+crashed analysis with HTTP 500. No internals leaked, but the request failed and
+earlier builds could leave evidence stored without an analysis.
+
+Fix: messages declaring more than 100 multipart containers are refused before
+parsing (`MAX_MULTIPART_CONTAINERS`), and any `RecursionError` during parsing is
+converted to `EvidenceParseError`. The web intake now parses each upload before
+accepting it, so unparseable evidence is rejected with a reason and never stored.
+A folded `Content-Type` header that evades the count still hits the recursion
+guard.
+
+### 2.12 Silent evidence loss — **found and fixed**
+
+Directory acquisition skipped any file that failed to parse, with no record.
+For a forensic tool, evidence disappearing without trace is itself a defect.
+Skipped files are now returned to the caller, written to the audit log as
+`evidence_skipped` with the reason, and printed as a warning by the CLI.
+
+### 2.13 Cross-site request forgery — **found and fixed**
+
+With no login, any web page the investigator visited could submit a form to
+`http://127.0.0.1:8000/analyse` and **plant fabricated evidence into an existing
+case** — a direct attack on evidence integrity.
+
+Fix: state-changing requests are refused (403) when the browser marks them
+`Sec-Fetch-Site: cross-site`, or when an `Origin` header names a different
+origin or is `null`. Non-browser clients (CLI, scripts) send neither header and
+are unaffected.
+
+### 2.14 DNS rebinding — **found and fixed**
+
+A hostile site that re-points its own hostname at 127.0.0.1 becomes same-origin
+with the app and could read case data. The app now serves only requests whose
+`Host` is on an allowlist (`FORENSIBEC_ALLOWED_HOSTS`, default
+`127.0.0.1,localhost`); anything else receives 400.
+
+### 2.15 Malformed input — **verified**
+
+Binary garbage, missing or broken MIME boundaries, invalid base64, invalid
+UTF-8, NUL bytes, 1 MB header lines, encoded-word floods, impossible dates,
+malformed URLs and right-to-left override characters all produce a normal
+response. Malformed API requests (missing fields, wrong content type, oversized
+fields, wrong methods) return 4xx without internal detail.
+
+Tests: `tests/test_security_audit.py` (38 tests), including a repository-wide
+static scan of `bec_detector/`, `research/`, `data/` and `run_server.py` for
+code execution, unsafe deserialisation, outbound network calls and debug-mode
+servers. The earlier scan covered `bec_detector/` only.
+
 ---
 
 ## 3. Authentication — architecture only
@@ -150,6 +202,9 @@ local analyst.
 | spaCy/NLTK model files trusted | Installed from PyPI at setup; standard supply-chain assumption |
 | Reports contain full evidence | By design; handle as case material |
 | IOC store is plain JSON | Readable and editable by anyone with filesystem access; integrity of *findings* is protected by the audit chain, not the store |
+| Concurrent writes to one case | Two simultaneous analyses of the same case can race on `case.json`. Single-analyst localhost use makes this unlikely; there is no file locking |
+| CSRF defence relies on browser headers | Modern browsers send `Origin`/`Sec-Fetch-Site` on cross-site POSTs; very old browsers may not. There is no CSRF token |
+| Case data readable by local users | The data directory is not encrypted; protect it with filesystem permissions |
 
 ---
 
@@ -157,5 +212,5 @@ local analyst.
 
 ```bash
 grep -rnE "subprocess|os\.system|eval\(|exec\(|shell=True|pickle" bec_detector/
-python -m pytest tests/test_security.py -v
+python -m pytest tests/test_security.py tests/test_security_audit.py -v
 ```

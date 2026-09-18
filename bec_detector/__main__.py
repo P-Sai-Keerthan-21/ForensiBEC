@@ -39,6 +39,9 @@ def _cmd_scan(args: argparse.Namespace) -> int:
     )
     assessments = pipeline.run(source)
 
+    for skipped_path, reason in getattr(pipeline, "skipped", []):
+        print(f"warning: skipped {skipped_path}: {reason}", file=sys.stderr)
+
     if not assessments:
         print(f"error: no parsable messages found at {source}", file=sys.stderr)
         return 2

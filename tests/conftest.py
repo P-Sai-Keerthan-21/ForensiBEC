@@ -12,6 +12,11 @@ import os
 
 import pytest
 
+# The web app only serves known local host names (DNS-rebinding defence).
+# The test client addresses requests to "testserver", so allow it - set at
+# import time, before any test module imports the app.
+os.environ.setdefault("FORENSIBEC_ALLOWED_HOSTS", "127.0.0.1,localhost,testserver")
+
 
 @pytest.fixture(scope="session", autouse=True)
 def isolated_data_dir(tmp_path_factory):

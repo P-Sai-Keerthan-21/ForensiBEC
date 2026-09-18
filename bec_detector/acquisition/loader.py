@@ -187,11 +187,37 @@ def _to_artifact(msg: EmailMessage, custody: CustodyRecord) -> EmailArtifact:
     )
 
 
+# Legitimate mail nests a handful of multipart containers. The standard-library
+# parser recurses once per level and exhausts the interpreter stack at roughly a
+# thousand, so a ~40 KB crafted message could crash analysis. Anything beyond
+# this limit is refused before parsing.
+MAX_MULTIPART_CONTAINERS = 100
+_MULTIPART_HEADER = re.compile(rb"(?im)^content-type:[ \t]*multipart/")
+
+
+class EvidenceParseError(ValueError):
+    """The evidence could not be parsed safely. Message is safe to show a user."""
+
+
+def _acquire(raw: bytes, custody: CustodyRecord) -> EmailArtifact:
+    """Parse and normalise one message, converting parser failure to a clean error."""
+    containers = len(_MULTIPART_HEADER.findall(raw))
+    if containers > MAX_MULTIPART_CONTAINERS:
+        raise EvidenceParseError(
+            f"message declares {containers} multipart containers (limit "
+            f"{MAX_MULTIPART_CONTAINERS}); refusing to parse a structure this deep"
+        )
+    try:
+        msg = email.message_from_bytes(raw, policy=default_policy)
+        return _to_artifact(msg, custody)
+    except RecursionError as exc:
+        raise EvidenceParseError("MIME structure is too deeply nested to parse safely") from exc
+
+
 def load_bytes(raw: bytes, source_label: str, examiner: str | None = None) -> EmailArtifact:
     """Parse an in-memory message (e.g. an HTTP upload)."""
     custody = build_custody_record(source_label, raw, examiner)
-    msg = email.message_from_bytes(raw, policy=default_policy)
-    return _to_artifact(msg, custody)
+    return _acquire(raw, custody)
 
 
 def load_eml(path: str | Path, examiner: str | None = None) -> EmailArtifact:
@@ -199,8 +225,7 @@ def load_eml(path: str | Path, examiner: str | None = None) -> EmailArtifact:
     path = Path(path)
     raw = path.read_bytes()
     custody = build_custody_record(str(path), raw, examiner)
-    msg = email.message_from_bytes(raw, policy=default_policy)
-    return _to_artifact(msg, custody)
+    return _acquire(raw, custody)
 
 
 def load_mbox(path: str | Path, examiner: str | None = None) -> list[EmailArtifact]:
@@ -212,18 +237,20 @@ def load_mbox(path: str | Path, examiner: str | None = None) -> list[EmailArtifa
         for index, message in enumerate(box):
             raw = message.as_bytes()
             custody = build_custody_record(f"{path}#msg{index}", raw, examiner)
-            msg = email.message_from_bytes(raw, policy=default_policy)
-            artifacts.append(_to_artifact(msg, custody))
+            artifacts.append(_acquire(raw, custody))
     finally:
         box.close()
     return artifacts
 
 
-def load_path(path: str | Path, examiner: str | None = None) -> list[EmailArtifact]:
+def load_path(path: str | Path, examiner: str | None = None,
+              errors: list[tuple[str, str]] | None = None) -> list[EmailArtifact]:
     """Acquire from a file or a directory of evidence.
 
     Accepts a single .eml, an .mbox archive, or a directory scanned recursively
-    for .eml files.  Unreadable files are skipped rather than aborting the run.
+    for .eml files. In a directory, a file that cannot be parsed does not abort
+    the run - but it is never dropped silently either: pass `errors` to receive
+    (path, reason) for every file that was skipped.
     """
     path = Path(path)
 
@@ -233,8 +260,9 @@ def load_path(path: str | Path, examiner: str | None = None) -> list[EmailArtifa
             if candidate.suffix.lower() in {".eml", ".txt", ".msg-text"} and candidate.is_file():
                 try:
                     artifacts.append(load_eml(candidate, examiner))
-                except Exception:
-                    continue
+                except (EvidenceParseError, OSError, ValueError, LookupError) as exc:
+                    if errors is not None:
+                        errors.append((str(candidate), f"{type(exc).__name__}: {exc}"))
         return artifacts
 
     if path.suffix.lower() == ".mbox":

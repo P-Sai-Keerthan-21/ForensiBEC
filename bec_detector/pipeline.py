@@ -82,7 +82,10 @@ class BECPipeline:
 
     def acquire(self, path: str | Path) -> list[EmailArtifact]:
         """Load evidence from a file, directory or mbox archive."""
-        emails = load_path(path, examiner=self.examiner)
+        self.skipped: list[tuple[str, str]] = []
+        emails = load_path(path, examiner=self.examiner, errors=self.skipped)
+        for source, reason in self.skipped:
+            self.audit.record("evidence_skipped", f"source={source}; reason={reason}")
         for email in emails:
             self.audit.record(
                 "evidence_acquired",
