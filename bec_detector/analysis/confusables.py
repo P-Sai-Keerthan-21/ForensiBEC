@@ -115,6 +115,9 @@ class DomainAnalysis:
     best_match: str = ""
     similarity: float = 0.0
     edit_distance: int | None = None
+    # True only when the skeleton is within the look-alike threshold of a
+    # trusted domain. A distant 'closest match' is not evidence of anything.
+    resembles_trusted: bool = False
 
     @property
     def is_mixed_script(self) -> bool:
@@ -307,17 +310,24 @@ def analyse_domain(domain: str, trusted: set[str] | frozenset[str] = frozenset()
     )
 
     best, best_distance = "", None
-    for candidate in sorted(trusted):
-        target = skeleton(core_label(candidate))
-        distance = levenshtein(result.skeleton, target)
-        if best_distance is None or distance < best_distance:
-            best, best_distance = candidate, distance
+    # Rank by skeleton distance, then by distance between the full rendered
+    # domains, so that northwind-l0gistics.com is matched to the .com it
+    # imitates rather than to a .co.uk sibling that merely sorts first.
+    ranked = sorted(
+        trusted,
+        key=lambda t: (levenshtein(result.skeleton, skeleton(core_label(t))),
+                       levenshtein(unicode_form, t), t),
+    )
+    if ranked:
+        best = ranked[0]
+        best_distance = levenshtein(result.skeleton, skeleton(core_label(best)))
     if best:
         target = skeleton(core_label(best))
         longest = max(len(result.skeleton), len(target)) or 1
         result.best_match = best
         result.edit_distance = best_distance
         result.similarity = round(1 - (best_distance or 0) / longest, 3)
+        result.resembles_trusted = (best_distance or 0) <= 2 and unicode_form not in trusted
 
     return result
 
@@ -336,7 +346,7 @@ def describe(analysis: DomainAnalysis) -> str:
             for c in analysis.confusable_chars[:6]
         )
         parts.append(f"confusable characters: {chars}")
-    if analysis.best_match:
+    if analysis.best_match and analysis.resembles_trusted:
         parts.append(
             f"closest trusted domain {analysis.best_match!r} "
             f"(similarity {analysis.similarity:.2f}, edit distance {analysis.edit_distance})"

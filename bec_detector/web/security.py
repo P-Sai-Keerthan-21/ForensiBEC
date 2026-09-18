@@ -7,8 +7,8 @@ assumption, attacker-authored. The defences below follow from that.
 
   * Uploads are never executed. Accepted messages are preserved in the case
     store as original evidence, named only by their SHA-256; attachments are
-    never extracted to separate files. Analysis is
-    in-memory only, so a malicious attachment has no filesystem to reach.
+    never extracted to separate files, so a malicious attachment never
+    exists on disk as a file that could be opened or executed.
   * Upload filenames are treated as untrusted data. They are sanitised before
     being used as a label and are never joined to a filesystem path, which
     removes the path-traversal class entirely.

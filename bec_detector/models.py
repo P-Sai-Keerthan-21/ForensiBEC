@@ -202,6 +202,9 @@ class EmailArtifact:
             "attachment_detail": [a.to_dict() for a in self.attachments],
             "urls": [u.to_dict() for u in self.urls],
             "sha256": self.custody.sha256,
+            "headers": dict(self.headers),
+            "received_chain": list(self.received_chain),
+            "authentication_results": self.auth_results,
         }
 
 
@@ -286,6 +289,7 @@ class Assessment:
     timeline: list[TimelineEvent] = field(default_factory=list)
     mitre: list[dict[str, str]] = field(default_factory=list)
     notes: list[str] = field(default_factory=list)
+    fusion: dict[str, Any] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
         return {
@@ -302,4 +306,5 @@ class Assessment:
             "timeline": [e.to_dict() for e in self.timeline],
             "mitre": self.mitre,
             "analysis_notes": self.notes,
+            "fusion": self.fusion,
         }

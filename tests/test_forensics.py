@@ -479,3 +479,38 @@ def test_stylometry_quotes_measured_features(case):
     deviation = next(i for i in assessment.indicators if i.code == "STYLE_DEVIATION")
     assert "baseline of" in deviation.evidence
     assert "z=" in deviation.evidence
+
+
+# ---------------------------------------------------------------------------
+# Regression: benign correspondents must not become indicators of compromise
+# ---------------------------------------------------------------------------
+
+def test_only_flagged_messages_contribute_iocs(tmp_path):
+    """Recording every message turned legitimate partners into 'IOCs'."""
+    import shutil
+
+    for name in ("ben_05_customer_query.eml", "bec_01_ceo_wire_urgent.eml"):
+        shutil.copy(SAMPLES / name, tmp_path / name)
+    store = IOCStore(tmp_path / "store.json")
+    BECPipeline(case_id="CASE-A", ioc_store=store).run(tmp_path)
+
+    recorded = set(store.data.get("domains", {}))
+    assert "northwind-l0gistics.com" in recorded           # from the confirmed BEC
+    assert "bergindustrial.se" not in recorded            # benign customer query
+
+
+def test_benign_partner_mail_is_not_scored_for_reuse(tmp_path):
+    """Two cases containing the same benign partner mail must not link."""
+    store = IOCStore(tmp_path / "store.json")
+    for case_id in ("CASE-1", "CASE-2"):
+        pipeline = BECPipeline(case_id=case_id, ioc_store=store)
+        assessments = pipeline.run(SAMPLES / "ben_03_vendor_normal.eml")
+    codes = {i.code for i in assessments[0].indicators}
+    assert "INTEL_IOC_REUSE" not in codes
+
+
+def test_allowlisted_partner_domain_never_links_cases():
+    from bec_detector.forensics.correlation import _is_linkable
+
+    assert _is_linkable("domains", "delaney-freight.co") is False
+    assert _is_linkable("domains", "delaney-freigth.co") is True  # the lookalike still links

@@ -1,7 +1,7 @@
 """Static attachment analysis.
 
 Attachments are described, hashed and type-checked. They are NEVER executed,
-never written to disk by this tool, and never opened by any external handler.
+never extracted to a separate file, and never opened by any external handler.
 The payload is held in memory only long enough to hash it and read its leading
 magic bytes.
 """

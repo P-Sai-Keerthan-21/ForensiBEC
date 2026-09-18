@@ -234,7 +234,7 @@ def fuse(email: EmailArtifact, indicators: list[Indicator]) -> Assessment:
         key=lambda i: (SEVERITY_ORDER[i.severity], -i.contribution),
     )
 
-    return Assessment(
+    assessment = Assessment(
         artifact=email,
         indicators=ordered,
         score=score,
@@ -242,3 +242,20 @@ def fuse(email: EmailArtifact, indicators: list[Indicator]) -> Assessment:
         category_scores=capped,
         narrative=_narrative(email, ordered, band, score, bonus_reasons),
     )
+    # The complete arithmetic behind the score, retained so the report can show
+    # exactly how evidence became risk rather than only the final number.
+    assessment.fusion = {
+        "raw_by_category": {k: round(v, 3) for k, v in raw_by_category.items() if v},
+        "category_caps": {k: CATEGORY_CAPS.get(k, 100.0)
+                          for k, v in raw_by_category.items() if v},
+        "capped_by_category": {k: v for k, v in capped.items() if v},
+        "subtotal": round(subtotal, 3),
+        "corroboration_bonus": bonus,
+        "corroboration_reasons": bonus_reasons,
+        "identity_verified": _identity_is_verified(email, {i.code for i in unique}),
+        "normaliser": SCORE_NORMALISER,
+        "formula": "score = min(100, (sum of capped category scores + corroboration bonus) "
+                   f"/ {SCORE_NORMALISER} x 100)",
+        "band_thresholds": {band: threshold for threshold, band in BAND_THRESHOLDS},
+    }
+    return assessment

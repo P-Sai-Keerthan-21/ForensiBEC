@@ -37,6 +37,87 @@ LIMITATIONS = [
 ]
 
 
+def config_fingerprint() -> dict[str, Any]:
+    """SHA-256 over every parameter that affects a score.
+
+    Two reports with the same fingerprint were scored under identical rules;
+    a different fingerprint means the weights, caps, thresholds or trusted
+    domains changed between them.
+    """
+    import hashlib
+    import json
+
+    from .. import config
+
+    material = {
+        "weights": config.WEIGHTS,
+        "category_caps": config.CATEGORY_CAPS,
+        "band_thresholds": config.BAND_THRESHOLDS,
+        "score_normaliser": config.SCORE_NORMALISER,
+        "business_hours": config.BUSINESS_HOURS,
+        "trusted_domains": sorted(config.TRUSTED_DOMAINS),
+        "trusted_relay_ips": sorted(config.TRUSTED_RELAY_IPS),
+        "freemail_domains": sorted(config.FREEMAIL_DOMAINS),
+    }
+    blob = json.dumps(material, sort_keys=True, default=str).encode("utf-8")
+    return {"sha256": hashlib.sha256(blob).hexdigest(),
+            "covers": sorted(material)}
+
+
+def reproducibility(pipeline: Any, assessments: list[Assessment]) -> dict[str, Any]:
+    import platform
+    import sys
+
+    from .. import __tool_name__, __version__
+
+    record: dict[str, Any] = {
+        "tool": f"{__tool_name__} {__version__}",
+        "python": sys.version.split()[0],
+        "platform": platform.platform(),
+        "nlp_backends": pipeline.nlp_status(),
+        "configuration": config_fingerprint(),
+        "evidence_sha256": sorted(a.artifact.custody.sha256 for a in assessments),
+        "deterministic": (
+            "Scoring is rule-based and deterministic: the same evidence under the "
+            "same configuration fingerprint produces the same findings and scores. "
+            "Behavioural, thread and stylometric findings also depend on the other "
+            "messages analysed alongside, so re-analyse the same evidence set."
+        ),
+    }
+    try:
+        import spacy
+        record["spacy"] = spacy.__version__
+    except Exception:
+        record["spacy"] = None
+    return record
+
+
+def domain_analyses(assessment: Assessment) -> list[dict[str, Any]]:
+    """Confusable analysis of every domain the message presents to a reader."""
+    from ..analysis.confusables import analyse_domain
+    from ..config import TRUSTED_DOMAINS
+
+    email = assessment.artifact
+    seen: set[str] = set()
+    rows: list[dict[str, Any]] = []
+
+    candidates = [("From", email.from_domain), ("Reply-To", email.reply_to_domain)]
+    if email.return_path and "@" in email.return_path:
+        candidates.append(("Return-Path", email.return_path.rsplit("@", 1)[1].lower()))
+    candidates += [("Link host", u.host) for u in email.urls if u.host and not u.is_ip_literal]
+
+    for role, domain in candidates:
+        if not domain or (role, domain) in seen:
+            continue
+        seen.add((role, domain))
+        analysis = analyse_domain(domain, TRUSTED_DOMAINS)
+        data = analysis.to_dict()
+        data["role"] = role
+        data["trusted"] = domain in TRUSTED_DOMAINS
+        rows.append(data)
+    return rows
+
+
 def assemble_report(pipeline: Any, assessments: list[Assessment],
                     case_name: str = "Untitled case",
                     examiner: str | None = None) -> dict[str, Any]:
@@ -73,4 +154,14 @@ def assemble_report(pipeline: Any, assessments: list[Assessment],
         ),
     }
     report["limitations"] = list(LIMITATIONS)
+    report["reproducibility"] = reproducibility(pipeline, assessments)
+
+    by_id = {a.artifact.evidence_id: a for a in assessments}
+    for item in report["assessments"]:
+        source = by_id.get(item["evidence_id"])
+        item["domain_analysis"] = domain_analyses(source) if source else []
+
+    # Filled from the investigator feedback store when one exists for the case.
+    # Kept separate from system inference by design.
+    report.setdefault("investigator_assessments", [])
     return report

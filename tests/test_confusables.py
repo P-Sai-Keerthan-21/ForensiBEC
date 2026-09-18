@@ -333,3 +333,23 @@ def test_own_estate_path_is_not_a_credential_page():
         "t.eml",
     )
     assert "URL_SUSPICIOUS_PATH" not in {i.code for i in analyse_urls(email)}
+
+
+def test_best_match_prefers_the_nearer_sibling():
+    """Both trusted domains share the brand skeleton; the TLD decides."""
+    both = frozenset({"northwind-logistics.com", "northwind-logistics.co.uk"})
+    assert analyse_domain("northwind-l0gistics.com", both).best_match == "northwind-logistics.com"
+    assert analyse_domain("northwind-l0gistics.co.uk", both).best_match == "northwind-logistics.co.uk"
+
+
+def test_distant_domain_is_not_described_as_resembling():
+    result = analyse_domain("gmail.com", TRUSTED)
+    assert result.resembles_trusted is False
+    assert "closest trusted domain" not in describe(result)
+
+
+def test_lookalike_evidence_names_nearest_trusted_domain():
+    from bec_detector.config import TRUSTED_DOMAINS
+    indicators = analyse_sender(load_bytes(_msg("Ravi <r@northwind-l0gistics.com>"), "t.eml"))
+    lookalike = next(i for i in indicators if i.code == "LOOKALIKE_DOMAIN")
+    assert "vs trusted domain 'northwind-logistics.com'" in lookalike.evidence

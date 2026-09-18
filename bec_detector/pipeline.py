@@ -197,17 +197,28 @@ class BECPipeline:
 
     # -- Case finalisation ---------------------------------------------------
 
+    # Only these bands contribute indicators of COMPROMISE to the store.
+    IOC_RECORDING_BANDS = frozenset({"LIKELY_BEC", "CONFIRMED_BEC"})
+
     def _finalise(self, assessments: list[Assessment]) -> None:
-        """Record this case's IOCs so future cases can correlate against them."""
+        """Record this case's IOCs so future cases can correlate against them.
+
+        Only messages assessed LIKELY_BEC or CONFIRMED_BEC contribute. Recording
+        every message made legitimate correspondents' domains into "indicators
+        of compromise", so that each later benign message from a regular partner
+        was scored for "IOC reuse".
+        """
         if self.ioc_store is None:
             return
         try:
-            for assessment in assessments:
+            recorded = [a for a in assessments if a.band.value in self.IOC_RECORDING_BANDS]
+            for assessment in recorded:
                 self.ioc_store.record(assessment.iocs, self.case_id)
             self.ioc_store.save()
             self.audit.record(
                 "iocs_recorded",
-                f"case={self.case_id}; store={self.ioc_store.path}",
+                f"case={self.case_id}; from {len(recorded)} of {len(assessments)} "
+                f"message(s) assessed LIKELY_BEC or above; store={self.ioc_store.path}",
             )
         except Exception as exc:
             self.audit.record("ioc_store_error", f"{type(exc).__name__}: {exc}")

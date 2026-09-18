@@ -170,7 +170,14 @@ def analyse_sender(email: EmailArtifact) -> list[Indicator]:
     if domain and domain not in TRUSTED_DOMAINS:
         analysis = analyse_domain(domain, TRUSTED_DOMAINS)
         normalised = _normalise_domain(domain)
-        for trusted in sorted(TRUSTED_DOMAINS):
+        # Nearest trusted domain first, so evidence names the domain actually
+        # imitated rather than whichever sibling sorts first.
+        by_nearness = sorted(
+            TRUSTED_DOMAINS,
+            key=lambda t: (_levenshtein(_normalise_domain(domain), _normalise_domain(t)),
+                           _levenshtein(domain, t), t),
+        )
+        for trusted in by_nearness:
             trusted_norm = _normalise_domain(trusted)
             distance = _levenshtein(normalised, trusted_norm)
             if normalised == trusted_norm or 0 < distance <= 2:

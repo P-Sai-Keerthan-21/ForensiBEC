@@ -24,6 +24,16 @@ TRUSTED_RELAY_IPS: set[str] = {
     "198.51.100.24",  # sample internal relay used by the synthetic corpus
 }
 
+# Known legitimate external correspondents. Never used as cross-case links:
+# a genuine partner domain that was SPOOFED in one confirmed BEC would otherwise
+# become an "indicator" that penalises every later benign message from that
+# partner. Operators should list their established suppliers and customers.
+CORRELATION_ALLOWLIST: set[str] = {
+    # Legitimate partners of the fictional organisation in the synthetic corpus.
+    "delaney-freight.co", "harborline-supplies.com", "bergindustrial.se",
+    "castellan-pack.eu", "orrinmarine.co.uk",
+}
+
 # Consumer mailbox providers.  Legitimate for personal mail, highly suspicious
 # as the Reply-To on an invoice or payroll request.
 FREEMAIL_DOMAINS: set[str] = {

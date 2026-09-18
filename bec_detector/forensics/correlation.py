@@ -21,7 +21,13 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from ..config import FREEMAIL_DOMAINS, TRUSTED_DOMAINS, TRUSTED_RELAY_IPS, WEIGHTS
+from ..config import (
+    CORRELATION_ALLOWLIST,
+    FREEMAIL_DOMAINS,
+    TRUSTED_DOMAINS,
+    TRUSTED_RELAY_IPS,
+    WEIGHTS,
+)
 from ..models import Category, Confidence, Indicator, Severity
 
 DEFAULT_STORE = Path("output") / "ioc_store.json"
@@ -43,6 +49,8 @@ def _is_linkable(kind: str, value: str) -> bool:
         return False
     if kind == "domains":
         if value in TRUSTED_DOMAINS or value in FREEMAIL_DOMAINS:
+            return False
+        if value in CORRELATION_ALLOWLIST:
             return False
         # A subdomain of our own estate is equally uninformative.
         if any(value.endswith("." + trusted) for trusted in TRUSTED_DOMAINS):
