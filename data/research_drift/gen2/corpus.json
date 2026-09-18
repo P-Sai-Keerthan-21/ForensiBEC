@@ -1,0 +1,30 @@
+{
+  "name": "ForensiBEC synthetic research corpus - generation 2 (shifted)",
+  "provenance": "SYNTHETIC. A deliberately shifted variant of generation 1. Does NOT reproduce real attacker evolution.",
+  "generator": "data/build_drift_corpus.py",
+  "seed": 20270301,
+  "size": 400,
+  "counts": {
+    "BENIGN": 223,
+    "MALICIOUS": 177
+  },
+  "corpus_sha256": "eb2fb1a3699503514116ede72785515947e857594ca705af2d11db8896fc1f40",
+  "shift": {
+    "compromised_share_of_attacks": {
+      "gen1": 0.35,
+      "gen2": 0.8
+    },
+    "pressure_language_share": {
+      "gen1": "~0.80",
+      "gen2": 0.25
+    },
+    "novel_lure": "salary-deposit switch / route settlements to a new institution, worded to avoid the engine's lexicons",
+    "dates": {
+      "gen1": "2026-01 to 2026-08",
+      "gen2": "2027-03 to 2027-10"
+    },
+    "benign_generator": "unchanged",
+    "gen1_style_attacks": "20% of gen2 attacks use the original generator unchanged"
+  },
+  "generated_utc": "2026-09-18T18:57:10+00:00"
+}

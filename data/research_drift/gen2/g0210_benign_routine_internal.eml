@@ -1,0 +1,20 @@
+From: "Ravi Menon - Finance Director" <r.menon@northwind-logistics.com>
+To: m.lin@northwind-logistics.com
+Subject: Notes from the depot review
+Date: Thu, 01 Jul 2027 09:02:00 +0000
+Message-ID: <9757088310@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 739950; Thu, 01
+ Jul 2027 09:02:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Mei,
+
+The delivery window is confirmed for Friday afternoon.
+
+Many thanks,

@@ -1,0 +1,24 @@
+From: "Aisha Bello (CEO)" <a.bello@northwind-logistics.com>
+To: c.reid@northwind-logistics.com
+Subject: Statement for September
+Date: Thu, 27 May 2027 12:44:00 +0000
+Message-ID: <4664265641@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 70559c; Thu, 27
+ May 2027 12:44:00 +0000
+Return-Path: <a.bello@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Please settle GBP 87,532.00 to the account details provided.
+Details are unchanged and already on file.
+  Beneficiary account (unchanged): IBAN GB103592986017890
+I am travelling and unable to talk right now, so please just reply here.
+
+Best regards,

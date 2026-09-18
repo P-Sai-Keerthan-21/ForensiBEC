@@ -1,0 +1,23 @@
+From: "Sandra Whitlock" <sandra.whitlock@northwind-logistics.com>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Statement for August
+Date: Tue, 25 May 2027 21:58:00 +0000
+Message-ID: <6814533999@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 90caf7; Tue, 25
+ May 2027 21:58:00 +0000
+Reply-To: procurement@northwind-logistics.com
+Return-Path: <sandra.whitlock@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+The maintenance window is confirmed for Saturday morning.
+I have copied the relevant team.
+
+Thanks,

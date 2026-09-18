@@ -1,0 +1,23 @@
+From: "Aisha Bello" <a.bello@northwind-logistics.com>
+To: f.haddad@northwind-logistics.com
+Subject: Quick admin change
+Date: Tue, 16 Mar 2027 13:42:00 +0000
+Message-ID: <4744092582@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 5da7bd; Tue, 16
+ Mar 2027 13:42:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+We have migrated receivables to a new institution; kindly route upcoming sett=
+lements there from now on.
+  Account: 12287940  Sort: 37-64-86
+This is critical and cannot wait until tomorrow.
+
+Many thanks,

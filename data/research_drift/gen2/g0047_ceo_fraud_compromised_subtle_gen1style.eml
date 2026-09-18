@@ -1,0 +1,22 @@
+From: "Aisha Bello" <a.bello@northwind-logistics.com>
+To: a.bello@northwind-logistics.com
+Subject: Important: account update needed
+Date: Wed, 16 Jun 2027 04:56:00 +0000
+Message-ID: <9619925371@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id fb804a; Wed, 16
+ Jun 2027 04:56:00 +0000
+Reply-To: aisha@mail.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Aisha,
+
+Are you at your desk? I need something handled.
+Let me know if you need anything else.
+
+Kind regards,

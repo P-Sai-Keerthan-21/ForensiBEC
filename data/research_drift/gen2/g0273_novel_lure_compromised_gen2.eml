@@ -1,0 +1,23 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: accounts.payable@northwind-logistics.com
+Subject: Admin update
+Date: Mon, 20 Sep 2027 06:58:00 +0000
+Message-ID: <4846526588@bergindustrial.se>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se;
+ dmarc=pass
+Received: from unknown (vps-5920.hostwind.example [203.0.113.160]) by
+ mx.northwind-logistics.com with ESMTP id 689086; Mon, 20 Sep 2027 06:58:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Daniel,
+
+Could you move my pay to the new account listed here from this month?
+  CY291973591705968
+It would be great to have this sorted before the next run.
+Do check the attached schedule when you get a moment.
+
+Many thanks,

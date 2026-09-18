@@ -1,0 +1,23 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: j.okafor@northwind-logistics.com
+Subject: Payroll change for next run
+Date: Sun, 08 Aug 2027 15:29:00 +0000
+Message-ID: <1113744833@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-9412.hostwind.example [203.0.113.49]) by
+ mx.northwind-logistics.com with ESMTP id c7a767; Sun, 08 Aug 2027 15:29:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Going forward, please direct our remittances to the arrangement below.
+  Account: 73373781  Sort: 23-21-30
+Appreciate you picking this up.
+This follows on from our earlier discussion.
+
+Thanks,

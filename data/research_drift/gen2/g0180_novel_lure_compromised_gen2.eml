@@ -1,0 +1,23 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: m.lin@northwind-logistics.com
+Subject: Remittance arrangement
+Date: Tue, 01 Jun 2027 18:50:00 +0000
+Message-ID: <5179541969@castellan-pack.eu>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=castellan-pack.eu; dkim=pass header.d=castellan-pack.eu;
+ dmarc=pass
+Received: from unknown (vps-2858.hostwind.example [203.0.113.203]) by
+ mx.northwind-logistics.com with ESMTP id 28045f; Tue, 01 Jun 2027 18:50:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Good morning,
+
+We have migrated receivables to a new institution; kindly route upcoming sett=
+lements there from now on.
+  LT111126962090736
+Please action this right away - the deadline is this afternoon.
+
+Best regards,

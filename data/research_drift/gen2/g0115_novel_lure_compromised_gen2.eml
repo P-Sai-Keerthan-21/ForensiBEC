@@ -1,0 +1,24 @@
+From: "Sandra Whitlock" <sandra.whitlock@northwind-logistics.com>
+To: hr.payroll@northwind-logistics.com
+Subject: Quick admin change
+Date: Fri, 20 Aug 2027 16:13:00 +0000
+Message-ID: <9487622447@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id cf5134; Fri, 20
+ Aug 2027 16:13:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Mei,
+
+Our finance team now works with a different receiving institution - please ad=
+just your records before the next cycle.
+  Account: 65643071  Sort: 58-50-39
+This is critical and cannot wait until tomorrow.
+Do check the attached schedule when you get a moment.
+
+Thanks,

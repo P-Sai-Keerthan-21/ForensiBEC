@@ -1,0 +1,25 @@
+From: "Ravi Menon (Contractor)" <r.menon.contract@mail.com>
+To: it@northwind-logistics.com
+Subject: Purchase order INV-33457 confirmation
+Date: Wed, 09 Jun 2027 01:47:00 +0000
+Message-ID: <7723284079@mail.com>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-5457.hostwind.example [203.0.113.183]) by
+ mx.northwind-logistics.com with ESMTP id da81cd; Wed, 09 Jun 2027 01:47:00
+ +0000
+Return-Path: <r.menon.contract@mail.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Dear Daniel,
+
+Please action this right away - the deadline is this afternoon.
+Accounts payable have the invoice for GBP 70,436.00 - no action needed from y=
+ou.
+  Beneficiary account (unchanged): IBAN GB352570070930310
+This is confidential and should not be copied to the wider group.
+Details are here: https://northwind-logistics.com/depot-schedule
+
+Best regards,

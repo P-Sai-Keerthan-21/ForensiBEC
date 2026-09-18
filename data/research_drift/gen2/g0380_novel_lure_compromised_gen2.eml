@@ -1,0 +1,23 @@
+From: "Fatima Haddad" <f.haddad@northwind-logistics.com>
+To: t.nowak@northwind-logistics.com
+Subject: Change for this month
+Date: Sat, 31 Jul 2027 15:51:00 +0000
+Message-ID: <3559406426@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id bb6b74; Sat, 31
+ Jul 2027 15:51:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Tomasz,
+
+We have migrated receivables to a new institution; kindly route upcoming sett=
+lements there from now on.
+  Account: 14128001  Sort: 35-90-50
+Please treat this as routine unless you hear otherwise.
+
+Best,

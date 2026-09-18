@@ -1,0 +1,23 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: d.osei@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Wed, 16 Jun 2027 18:38:00 +0000
+Message-ID: <3946634151@bergindustrial.se>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-4536.hostwind.example [203.0.113.154]) by
+ mx.northwind-logistics.com with ESMTP id 1f7983; Wed, 16 Jun 2027 18:38:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+Please treat this as a priority; the depot review is this afternoon.
+Accounts payable have the invoice for GBP 16,141.00 - no action needed from y=
+ou.
+  Beneficiary account (unchanged): IBAN MT442135466445939
+Details are here: https://portal.northwind-logistics.com/invoices/view
+
+Kind regards,

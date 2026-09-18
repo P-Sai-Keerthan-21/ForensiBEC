@@ -1,0 +1,22 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Purchase order INV-88848 confirmation
+Date: Sat, 03 Apr 2027 23:09:00 +0000
+Message-ID: <7766091316@delaney-freight.co>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=delaney-freight.co; dkim=pass header.d=delaney-freight.co;
+ dmarc=pass
+Received: from unknown (vps-1333.hostwind.example [203.0.113.84]) by
+ mx.northwind-logistics.com with ESMTP id 6fdfea; Sat, 03 Apr 2027 23:09:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Sandra,
+
+Please settle EUR 33,226.00 to the account details provided.
+Details are unchanged and already on file.
+This follows on from our earlier discussion.
+
+Kind regards,

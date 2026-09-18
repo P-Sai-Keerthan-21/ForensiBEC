@@ -1,0 +1,20 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: scheduling@northwind-logistics.com
+Subject: Stocktake figures needed before close of business
+Date: Sun, 27 Jun 2027 06:45:00 +0000
+Message-ID: <7905911055@bergindustrial.se>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se;
+ dmarc=pass
+Received: from unknown (vps-5073.hostwind.example [203.0.113.46]) by
+ mx.northwind-logistics.com with ESMTP id e0b046; Sun, 27 Jun 2027 06:45:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Mei,
+
+Notes from the depot review are attached for your records.
+
+Best regards,

@@ -1,0 +1,22 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Weekly operations summary
+Date: Thu, 25 Mar 2027 14:16:00 +0000
+Message-ID: <4141233988@harborline-supplies.com>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-3874.hostwind.example [203.0.113.69]) by
+ mx.northwind-logistics.com with ESMTP id a627f7; Thu, 25 Mar 2027 14:16:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Dear Sandra,
+
+Time sensitive: the auditors arrive tomorrow and I need the schedule today.
+The EUR 13,318.00 payment was approved at the last review; details are unchan=
+ged.
+Details are here: https://northwind-logistics.com/depot-schedule
+
+Best,

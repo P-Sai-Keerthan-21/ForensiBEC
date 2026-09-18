@@ -1,0 +1,22 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: r.menon@northwind-logistics.com
+Subject: Change for this month
+Date: Fri, 18 Jun 2027 04:25:00 +0000
+Message-ID: <4237045193@castellan-pack.eu>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=castellan-pack.eu; dkim=pass header.d=castellan-pack.eu;
+ dmarc=pass
+Received: from unknown (vps-7715.hostwind.example [203.0.113.217]) by
+ mx.northwind-logistics.com with ESMTP id 7b4a94; Fri, 18 Jun 2027 04:25:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Could you move my pay to the new account listed here from this month?
+  MT616906411103743
+It would be great to have this sorted before the next run.
+
+Best regards,

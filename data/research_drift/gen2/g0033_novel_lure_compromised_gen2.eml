@@ -1,0 +1,23 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: accounts.payable@northwind-logistics.com
+Subject: Quick admin change
+Date: Tue, 27 Apr 2027 04:56:00 +0000
+Message-ID: <6108709337@bergindustrial.se>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se;
+ dmarc=pass
+Received: from unknown (vps-6952.hostwind.example [203.0.113.9]) by
+ mx.northwind-logistics.com with ESMTP id 6594d6; Tue, 27 Apr 2027 04:56:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Fatima,
+
+We have migrated receivables to a new institution; kindly route upcoming sett=
+lements there from now on.
+  LT819214960358897
+This is critical and cannot wait until tomorrow.
+
+Many thanks,

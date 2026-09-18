@@ -1,0 +1,22 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: hr.payroll@northwind-logistics.com
+Subject: Quick admin change
+Date: Wed, 04 Aug 2027 15:00:00 +0000
+Message-ID: <8139432589@castellan-pack.eu>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=castellan-pack.eu; dkim=pass header.d=castellan-pack.eu;
+ dmarc=pass
+Received: from unknown (vps-3730.hostwind.example [203.0.113.186]) by
+ mx.northwind-logistics.com with ESMTP id 2ed675; Wed, 04 Aug 2027 15:00:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Tomasz,
+
+We have migrated receivables to a new institution; kindly route upcoming sett=
+lements there from now on.
+  Account: 99564284  Sort: 81-36-30
+
+Many thanks,

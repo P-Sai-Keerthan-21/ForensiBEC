@@ -1,0 +1,22 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: accounts.payable@northwind-logistics.com
+Subject: Payroll change for next run
+Date: Wed, 24 Mar 2027 08:33:00 +0000
+Message-ID: <4519637092@castellan-pack.eu>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=castellan-pack.eu; dkim=pass header.d=castellan-pack.eu;
+ dmarc=pass
+Received: from unknown (vps-6745.hostwind.example [203.0.113.49]) by
+ mx.northwind-logistics.com with ESMTP id f2e530; Wed, 24 Mar 2027 08:33:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Going forward, please direct our remittances to the arrangement below.
+  Account: 75929251  Sort: 58-18-21
+This follows on from our earlier discussion.
+
+Best regards,

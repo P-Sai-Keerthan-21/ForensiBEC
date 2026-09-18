@@ -1,0 +1,22 @@
+From: "Joseph Okafor" <j.okafor@northwind-logistics.com>
+To: accounts.payable@northwind-logistics.com
+Subject: Payroll change for next run
+Date: Thu, 01 Jul 2027 12:29:00 +0000
+Message-ID: <6490867685@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 3d4318; Thu, 01
+ Jul 2027 12:29:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+Could you move my pay to the new account listed here from this month?
+  Account: 57233919  Sort: 40-38-53
+Let me know if you need anything else.
+
+Kind regards,

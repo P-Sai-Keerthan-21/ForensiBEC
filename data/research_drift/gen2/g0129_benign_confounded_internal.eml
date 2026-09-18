@@ -1,0 +1,25 @@
+From: "Joseph Okafor" <j.okafor@northwind-logistics.com>
+To: c.reid@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Sun, 26 Sep 2027 01:02:00 +0000
+Message-ID: <2192452327@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id bcab95; Sun, 26
+ Sep 2027 01:02:00 +0000
+Return-Path: <j.okafor@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Callum,
+
+This is urgent and must be completed today.
+The outstanding balance of USD 73,159.00 needs to be remitted today.
+Please handle this discreetly and do not cc anyone.
+Details are here: https://intranet.northwind-logistics.com/policies/remote-wo=
+rking
+
+Best,

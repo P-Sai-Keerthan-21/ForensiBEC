@@ -1,0 +1,24 @@
+From: "Aisha Bello" <a.bello@northwind-logistics.com>
+To: accounts.payable@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Wed, 19 May 2027 16:18:00 +0000
+Message-ID: <5419671405@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id dea0b5; Wed, 19
+ May 2027 16:18:00 +0000
+Return-Path: <a.bello@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Callum,
+
+Please treat this as a priority; the depot review is this afternoon.
+Please process EUR 71,439.00 against the existing purchase order when conveni=
+ent.
+Happy to discuss if that helps.
+
+Many thanks,

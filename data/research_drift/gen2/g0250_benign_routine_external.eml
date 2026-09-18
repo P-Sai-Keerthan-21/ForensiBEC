@@ -1,0 +1,19 @@
+From: "Fatima Haddad (Contractor)" <f.haddad.contract@yandex.com>
+To: warehouse.leads@northwind-logistics.com
+Subject: Invoice INV-31161 attached
+Date: Thu, 03 Jun 2027 18:21:00 +0000
+Message-ID: <6170015688@yandex.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=yandex.com; dkim=pass header.d=yandex.com; dmarc=pass
+Received: from unknown (vps-2997.hostwind.example [203.0.113.142]) by
+ mx.northwind-logistics.com with ESMTP id bfd28a; Thu, 03 Jun 2027 18:21:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Sandra,
+
+The delivery window is confirmed for Friday afternoon.
+
+Best,

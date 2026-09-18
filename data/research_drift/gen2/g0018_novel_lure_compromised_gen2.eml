@@ -1,0 +1,23 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: c.reid@northwind-logistics.com
+Subject: Remittance arrangement
+Date: Sun, 05 Sep 2027 18:08:00 +0000
+Message-ID: <8312077584@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from unknown (vps-1406.hostwind.example [203.0.113.155]) by
+ mx.northwind-logistics.com with ESMTP id 6c938a; Sun, 05 Sep 2027 18:08:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Callum,
+
+We have migrated receivables to a new institution; kindly route upcoming sett=
+lements there from now on.
+  DE388118745227355
+This is urgent and must be completed today.
+
+Kind regards,

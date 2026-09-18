@@ -1,0 +1,23 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: accounts.payable@northwind-logistics.com
+Subject: Supplier account housekeeping
+Date: Wed, 26 May 2027 16:11:00 +0000
+Message-ID: <9143712041@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-6985.hostwind.example [203.0.113.203]) by
+ mx.northwind-logistics.com with ESMTP id 160a99; Wed, 26 May 2027 16:11:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Fatima,
+
+Could you move my pay to the new account listed here from this month?
+  Account: 50208167  Sort: 26-58-71
+It would be great to have this sorted before the next run.
+Happy to discuss if that helps.
+
+Best regards,

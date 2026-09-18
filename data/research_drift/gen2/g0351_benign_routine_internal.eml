@@ -1,0 +1,22 @@
+From: "Mei Lin (CFO)" <m.lin@northwind-logistics.com>
+To: procurement@northwind-logistics.com
+Subject: Q3 budget review scheduled
+Date: Tue, 20 Jul 2027 08:17:00 +0000
+Message-ID: <2193432237@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 2369df; Tue, 20
+ Jul 2027 08:17:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi all,
+
+The delivery window is confirmed for Friday afternoon.
+Details are here: https://intranet.northwind-logistics.com/policies/remote-wo=
+rking
+
+Thanks,

@@ -1,0 +1,28 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: j.okafor@northwind-logistics.com
+Subject: Urgent - confidential transfer required today
+Date: Thu, 14 Oct 2027 08:34:00 +0000
+Message-ID: <4863436911@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id b271b0; Thu, 14
+ Oct 2027 08:34:00 +0000
+Reply-To: harborline@protonmail.com
+Return-Path: <billing@harborline-supplies.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+This is urgent and must be completed today.
+Our remittance details are now different; please amend the bank details on fi=
+le.
+Please process the wire transfer of GBP 29,170.00 to the beneficiary below.
+  IBAN: CY589870611821894
+Verify here: http://203.0.113.180/secure/login.php
+Please treat this as routine unless you hear otherwise.
+
+Best regards,

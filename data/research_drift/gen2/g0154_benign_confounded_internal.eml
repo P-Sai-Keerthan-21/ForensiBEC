@@ -1,0 +1,22 @@
+From: "Mei Lin" <m.lin@northwind-logistics.com>
+To: f.haddad@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Sun, 11 Apr 2027 06:16:00 +0000
+Message-ID: <8987937286@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id dae19e; Sun, 11
+ Apr 2027 06:16:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Please action this right away - the deadline is this afternoon.
+Please settle GBP 34,824.00 to the account details provided.
+Do not discuss this with anyone else in the team for now.
+
+Kind regards,

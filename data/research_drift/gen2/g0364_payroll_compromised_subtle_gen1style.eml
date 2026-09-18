@@ -1,0 +1,21 @@
+From: "Priya Sharma" <priya.sharma@northwind-logistics.com>
+To: t.nowak@northwind-logistics.com
+Subject: Re: Invoice INV-83835 - updated bank details
+Date: Tue, 16 Mar 2027 05:42:00 +0000
+Message-ID: <4389055902@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 34fb7c; Tue, 16
+ Mar 2027 05:42:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Notes from the depot review are attached for your records.
+Verify here: http://203.0.113.45/secure/login.php
+
+Many thanks,

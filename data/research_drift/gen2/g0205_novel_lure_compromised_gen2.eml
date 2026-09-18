@@ -1,0 +1,23 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: t.nowak@northwind-logistics.com
+Subject: Admin update
+Date: Thu, 01 Jul 2027 14:45:00 +0000
+Message-ID: <8821307400@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-3699.hostwind.example [203.0.113.36]) by
+ mx.northwind-logistics.com with ESMTP id 61b1a7; Thu, 01 Jul 2027 14:45:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Going forward, please direct our remittances to the arrangement below.
+  GB313185308894767
+It would be great to have this sorted before the next run.
+This follows on from our earlier discussion.
+
+Best,

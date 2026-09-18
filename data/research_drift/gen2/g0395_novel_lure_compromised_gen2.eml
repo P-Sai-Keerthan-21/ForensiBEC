@@ -1,0 +1,23 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: d.osei@northwind-logistics.com
+Subject: Payroll change for next run
+Date: Mon, 08 Mar 2027 12:30:00 +0000
+Message-ID: <4771101477@bergindustrial.se>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se;
+ dmarc=pass
+Received: from unknown (vps-1213.hostwind.example [203.0.113.149]) by
+ mx.northwind-logistics.com with ESMTP id a2667e; Mon, 08 Mar 2027 12:30:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Daniel,
+
+Going forward, please direct our remittances to the arrangement below.
+  MT947252812614495
+It would be great to have this sorted before the next run.
+Do check the attached schedule when you get a moment.
+
+Thanks,

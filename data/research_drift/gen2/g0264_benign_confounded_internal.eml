@@ -1,0 +1,25 @@
+From: "Priya Sharma (CFO)" <priya.sharma@northwind-logistics.com>
+To: warehouse.leads@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Tue, 18 May 2027 02:41:00 +0000
+Message-ID: <5128269373@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id fef665; Tue, 18
+ May 2027 02:41:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Good morning,
+
+I need this processed immediately, without delay.
+Accounts payable have the invoice for GBP 30,792.00 - no action needed from y=
+ou.
+  Beneficiary account (unchanged): IBAN MT145574822471601
+I need you to deal with this on my behalf.
+Details are here: https://harborline-supplies.com/terms
+
+Best regards,

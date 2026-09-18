@@ -1,0 +1,22 @@
+From: "Priya Sharma" <priya.sharma@northwind-logistics.com>
+To: hr.payroll@northwind-logistics.com
+Subject: Weekly operations summary
+Date: Sat, 11 Sep 2027 20:29:00 +0000
+Message-ID: <5933076727@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id b0d351; Sat, 11
+ Sep 2027 20:29:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Please action this right away - the deadline is this afternoon.
+The outstanding balance of USD 61,526.00 needs to be remitted today.
+Please treat this as routine unless you hear otherwise.
+
+Kind regards,

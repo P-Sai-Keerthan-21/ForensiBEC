@@ -1,0 +1,20 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: r.menon@northwind-logistics.com
+Subject: Weekly operations summary
+Date: Tue, 29 Jun 2027 22:50:00 +0000
+Message-ID: <6686394052@castellan-pack.eu>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-4103.hostwind.example [203.0.113.140]) by
+ mx.northwind-logistics.com with ESMTP id ba7baf; Tue, 29 Jun 2027 22:50:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Ravi,
+
+The maintenance window is confirmed for Saturday morning.
+The updated policy is now on the intranet for everyone to read.
+
+Best,

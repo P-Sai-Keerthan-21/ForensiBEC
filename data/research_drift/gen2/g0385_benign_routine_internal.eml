@@ -1,0 +1,20 @@
+From: "Daniel Osei - Finance Director" <d.osei@northwind-logistics.com>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Fri, 08 Oct 2027 09:04:00 +0000
+Message-ID: <8680903853@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 179bce; Fri, 08
+ Oct 2027 09:04:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+The delivery window is confirmed for Friday afternoon.
+
+Regards,

@@ -1,0 +1,23 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Question about pallet dimensions
+Date: Tue, 04 May 2027 05:08:00 +0000
+Message-ID: <9166700977@orrinmarine.co.uk>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-3601.hostwind.example [203.0.113.50]) by
+ mx.northwind-logistics.com with ESMTP id 61ae10; Tue, 04 May 2027 05:08:00
+ +0000
+Reply-To: accounts.payable@orrinmarine.co.uk
+Return-Path: <finance@orrinmarine.co.uk>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+The maintenance window is confirmed for Saturday morning.
+Details are here: https://portal.northwind-logistics.com/invoices/view
+This follows on from our earlier discussion.
+
+Best regards,

@@ -1,0 +1,24 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: accounts.payable@northwind-logistics.com
+Subject: Change for this month
+Date: Sun, 27 Jun 2027 17:35:00 +0000
+Message-ID: <7955203295@delaney-freight.co>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=delaney-freight.co; dkim=pass header.d=delaney-freight.co;
+ dmarc=pass
+Received: from unknown (vps-6977.hostwind.example [203.0.113.2]) by
+ mx.northwind-logistics.com with ESMTP id 5e8a74; Sun, 27 Jun 2027 17:35:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi all,
+
+We have migrated receivables to a new institution; kindly route upcoming sett=
+lements there from now on.
+  Account: 12880142  Sort: 95-85-21
+Please action this right away - the deadline is this afternoon.
+This follows on from our earlier discussion.
+
+Best,

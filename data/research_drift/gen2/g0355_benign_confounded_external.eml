@@ -1,0 +1,23 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: sales@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Tue, 12 Oct 2027 07:43:00 +0000
+Message-ID: <4082499588@delaney-freight.co>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=delaney-freight.co; dkim=pass header.d=delaney-freight.co;
+ dmarc=pass
+Received: from unknown (vps-9867.hostwind.example [203.0.113.37]) by
+ mx.northwind-logistics.com with ESMTP id f8329a; Tue, 12 Oct 2027 07:43:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi all,
+
+The invoice for GBP 73,514.00 is due at the end of the month through the usua=
+l process.
+Details are here: https://intranet.northwind-logistics.com/policies/remote-wo=
+rking
+
+Kind regards,

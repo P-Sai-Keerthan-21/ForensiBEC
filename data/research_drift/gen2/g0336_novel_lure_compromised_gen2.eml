@@ -1,0 +1,24 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: accounts.payable@northwind-logistics.com
+Subject: Remittance arrangement
+Date: Sat, 05 Jun 2027 23:38:00 +0000
+Message-ID: <5357146759@bergindustrial.se>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se;
+ dmarc=pass
+Received: from unknown (vps-8060.hostwind.example [203.0.113.67]) by
+ mx.northwind-logistics.com with ESMTP id 9b44fd; Sat, 05 Jun 2027 23:38:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Callum,
+
+Our finance team now works with a different receiving institution - please ad=
+just your records before the next cycle.
+  Account: 51516633  Sort: 12-45-47
+It would be great to have this sorted before the next run.
+Apologies for the short notice.
+
+Thanks,

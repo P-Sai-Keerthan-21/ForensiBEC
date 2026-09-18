@@ -1,0 +1,25 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: priya.sharma@northwind-logistics.com
+Subject: Notes from the depot review
+Date: Fri, 12 Mar 2027 11:54:00 +0000
+Message-ID: <3383426924@bergindustrial.se>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se;
+ dmarc=pass
+Received: from unknown (vps-5429.hostwind.example [203.0.113.44]) by
+ mx.northwind-logistics.com with ESMTP id abf3bb; Fri, 12 Mar 2027 11:54:00
+ +0000
+Return-Path: <t.berg@bergindustrial.se>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Priya,
+
+Time sensitive: the auditors arrive tomorrow and I need the schedule today.
+Please settle GBP 46,450.00 to the account details provided.
+Please keep this strictly between us until the announcement.
+Details are here: https://intranet.northwind-logistics.com/hr/handbook
+Let me know if you need anything else.
+
+Kind regards,

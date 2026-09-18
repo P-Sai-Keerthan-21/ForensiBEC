@@ -1,0 +1,21 @@
+From: "Joseph Okafor" <j.okafor@northwind-logistics.com>
+To: hr.payroll@northwind-logistics.com
+Subject: Supplier account housekeeping
+Date: Tue, 19 Oct 2027 02:50:00 +0000
+Message-ID: <6764219499@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id a22d4e; Tue, 19
+ Oct 2027 02:50:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+Please switch my salary deposit to the account below before the next run.
+  CY585090537821523
+
+Regards,

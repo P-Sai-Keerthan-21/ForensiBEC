@@ -1,0 +1,23 @@
+From: "Tomasz Nowak" <t.nowak@northwind-logistics.com>
+To: hr.payroll@northwind-logistics.com
+Subject: Change for this month
+Date: Sat, 09 Oct 2027 01:19:00 +0000
+Message-ID: <1762263915@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 607169; Sat, 09
+ Oct 2027 01:19:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Ravi,
+
+Please switch my salary deposit to the account below before the next run.
+  Account: 23159595  Sort: 51-37-26
+Please treat this as time sensitive - it must clear before close of business.
+Apologies for the short notice.
+
+Many thanks,

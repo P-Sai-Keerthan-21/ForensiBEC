@@ -1,0 +1,21 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: d.osei@northwind-logistics.com
+Subject: Payroll change for next run
+Date: Wed, 25 Aug 2027 10:16:00 +0000
+Message-ID: <6830181318@delaney-freight.co>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=delaney-freight.co; dkim=pass header.d=delaney-freight.co;
+ dmarc=pass
+Received: from unknown (vps-3863.hostwind.example [203.0.113.17]) by
+ mx.northwind-logistics.com with ESMTP id 59c5bd; Wed, 25 Aug 2027 10:16:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+Going forward, please direct our remittances to the arrangement below.
+  Account: 36789505  Sort: 78-12-14
+
+Many thanks,

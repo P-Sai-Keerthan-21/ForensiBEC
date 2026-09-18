@@ -1,0 +1,23 @@
+From: "Daniel Osei" <d.osei@northwind-logistics.com>
+To: c.reid@northwind-logistics.com
+Subject: Payroll change for next run
+Date: Wed, 07 Apr 2027 05:31:00 +0000
+Message-ID: <6061431127@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 9210c6; Wed, 07
+ Apr 2027 05:31:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Dear Callum,
+
+We have migrated receivables to a new institution; kindly route upcoming sett=
+lements there from now on.
+  LT597691458054307
+Appreciate you picking this up.
+
+Many thanks,

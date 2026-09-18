@@ -1,0 +1,21 @@
+From: "Joseph Okafor - Finance Director" <j.okafor@northwlnd-logistics.com>
+To: t.nowak@northwind-logistics.com
+Subject: Re: outstanding remittance
+Date: Thu, 08 Apr 2027 16:54:00 +0000
+Message-ID: <8092440831@northwlnd-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=northwlnd-logistics.com; dkim=none; dmarc=fail
+Received: from unknown (vps-7126.hostwind.example [203.0.113.22]) by
+ mx.northwind-logistics.com with ESMTP id 3161b9; Thu, 08 Apr 2027 16:54:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+The delivery window is confirmed for Friday afternoon.
+Verify here: http://203.0.113.180/secure/login.php
+Let me know if you need anything else.
+
+Regards,

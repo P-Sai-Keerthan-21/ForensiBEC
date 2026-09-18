@@ -1,0 +1,24 @@
+From: "Daniel Osei" <d.osei@northwind-logistics.com>
+To: accounts.payable@northwind-logistics.com
+Subject: Quick admin change
+Date: Sun, 16 May 2027 06:44:00 +0000
+Message-ID: <6814869865@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 5fd359; Sun, 16
+ May 2027 06:44:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Fatima,
+
+We have migrated receivables to a new institution; kindly route upcoming sett=
+lements there from now on.
+  DE495835903357109
+Please action this right away - the deadline is this afternoon.
+Let me know if you need anything else.
+
+Kind regards,

@@ -1,0 +1,22 @@
+From: "Ravi Menon" <r.menon@northwind-logistics.com>
+To: hr.payroll@northwind-logistics.com
+Subject: Supplier account housekeeping
+Date: Thu, 01 Jul 2027 09:30:00 +0000
+Message-ID: <3357921206@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 736c27; Thu, 01
+ Jul 2027 09:30:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Good morning,
+
+Our finance team now works with a different receiving institution - please ad=
+just your records before the next cycle.
+  MT606058314253054
+
+Kind regards,

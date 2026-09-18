@@ -1,0 +1,23 @@
+From: "Tomasz Nowak" <t.nowak@northwind-logistics.com>
+To: d.osei@northwind-logistics.com
+Subject: Statement for August
+Date: Fri, 20 Aug 2027 21:32:00 +0000
+Message-ID: <7562593347@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id e3f58e; Fri, 20
+ Aug 2027 21:32:00 +0000
+Return-Path: <t.nowak@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Daniel,
+
+The Q3 budget review has been scheduled for the 24th.
+Could you confirm the pallet dimensions for the Rotterdam depot?
+Let me know if you need anything else.
+
+Regards,

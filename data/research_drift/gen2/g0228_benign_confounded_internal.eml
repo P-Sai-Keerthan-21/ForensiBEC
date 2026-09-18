@@ -1,0 +1,24 @@
+From: "Daniel Osei" <d.osei@northwind-logistics.com>
+To: all.staff@northwind-logistics.com
+Subject: Notes from the depot review
+Date: Fri, 06 Aug 2027 11:58:00 +0000
+Message-ID: <3078115278@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 454c70; Fri, 06
+ Aug 2027 11:58:00 +0000
+Return-Path: <d.osei@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Callum,
+
+This is critical and cannot wait until tomorrow.
+Please process the wire transfer of USD 6,395.00 to the beneficiary below.
+I am counting on you to handle this personally.
+Apologies for the short notice.
+
+Thanks,

@@ -1,0 +1,23 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: warehouse.leads@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Thu, 07 Oct 2027 17:53:00 +0000
+Message-ID: <8785447146@bergindustrial.se>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se;
+ dmarc=pass
+Received: from unknown (vps-9113.hostwind.example [203.0.113.121]) by
+ mx.northwind-logistics.com with ESMTP id 9779cb; Thu, 07 Oct 2027 17:53:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+This is urgent - I need the stocktake figures before close of business.
+Please process the wire transfer of GBP 91,065.00 to the beneficiary below.
+  Beneficiary account (unchanged): IBAN LT465916879750582
+Details are here: https://delaney-freight.co/contract-portal
+
+Many thanks,

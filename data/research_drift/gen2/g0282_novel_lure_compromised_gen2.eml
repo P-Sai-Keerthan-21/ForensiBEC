@@ -1,0 +1,22 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: accounts.payable@northwind-logistics.com
+Subject: Supplier account housekeeping
+Date: Sun, 26 Sep 2027 11:33:00 +0000
+Message-ID: <4911173486@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from unknown (vps-5828.hostwind.example [203.0.113.124]) by
+ mx.northwind-logistics.com with ESMTP id b3c2dd; Sun, 26 Sep 2027 11:33:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Going forward, please direct our remittances to the arrangement below.
+  CY135125082945096
+Apologies for the short notice.
+
+Kind regards,

@@ -1,0 +1,22 @@
+From: "Ravi Menon" <r.menon@northwind-logistics.com>
+To: m.lin@northwind-logistics.com
+Subject: Admin update
+Date: Tue, 01 Jun 2027 11:48:00 +0000
+Message-ID: <6853227764@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 8c3d41; Tue, 01
+ Jun 2027 11:48:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Could you move my pay to the new account listed here from this month?
+  CY327621770152739
+Let me know if you need anything else.
+
+Many thanks,

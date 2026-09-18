@@ -1,0 +1,24 @@
+From: "Fatima Haddad (CFO)" <f.haddad@northwind-logistics.com>
+To: scheduling@northwind-logistics.com
+Subject: Invoice INV-49888 attached
+Date: Sat, 26 Jun 2027 20:46:00 +0000
+Message-ID: <8951827639@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 94b36f; Sat, 26
+ Jun 2027 20:46:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+The GBP 74,447.00 payment was approved at the last review; details are unchan=
+ged.
+  Beneficiary account (unchanged): IBAN DE362002809164264
+I need you to deal with this on my behalf.
+I have copied the relevant team.
+
+Many thanks,

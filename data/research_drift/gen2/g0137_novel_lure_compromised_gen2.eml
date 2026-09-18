@@ -1,0 +1,24 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Supplier account housekeeping
+Date: Wed, 28 Apr 2027 17:14:00 +0000
+Message-ID: <1613275632@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from unknown (vps-4940.hostwind.example [203.0.113.73]) by
+ mx.northwind-logistics.com with ESMTP id 882d7d; Wed, 28 Apr 2027 17:14:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Dear Sandra,
+
+Our finance team now works with a different receiving institution - please ad=
+just your records before the next cycle.
+  GB727564103865626
+Please treat this as time sensitive - it must clear before close of business.
+Do check the attached schedule when you get a moment.
+
+Best regards,

@@ -1,0 +1,23 @@
+From: "Priya Sharma" <priya.sharma@northwind-logistics.com>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Statement for October
+Date: Thu, 05 Aug 2027 17:45:00 +0000
+Message-ID: <5065315547@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id e0368d; Thu, 05
+ Aug 2027 17:45:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Sandra,
+
+This is urgent and must be completed today.
+Please process the wire transfer of GBP 63,568.00 to the beneficiary below.
+Details are unchanged and already on file.
+Apologies for the short notice.
+
+Best regards,

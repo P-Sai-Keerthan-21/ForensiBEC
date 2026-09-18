@@ -1,0 +1,22 @@
+From: "Daniel Osei" <d.osei@northwind-logistics.com>
+To: d.osei@northwind-logistics.com
+Subject: Payroll change for next run
+Date: Wed, 18 Aug 2027 08:05:00 +0000
+Message-ID: <6176243035@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 9ab53f; Wed, 18
+ Aug 2027 08:05:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Daniel,
+
+Please switch my salary deposit to the account below before the next run.
+  Account: 42556153  Sort: 66-17-97
+Please treat this as routine unless you hear otherwise.
+
+Thanks,

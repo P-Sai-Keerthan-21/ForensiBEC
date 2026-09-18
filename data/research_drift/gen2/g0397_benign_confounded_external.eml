@@ -1,0 +1,22 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: sales@northwind-logistics.com
+Subject: Q3 budget review scheduled
+Date: Wed, 21 Apr 2027 12:10:00 +0000
+Message-ID: <6527040807@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-9419.hostwind.example [203.0.113.116]) by
+ mx.northwind-logistics.com with ESMTP id 117a4a; Wed, 21 Apr 2027 12:10:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+Please settle EUR 83,271.00 to the account details provided.
+  Beneficiary account (unchanged): IBAN CY951084917284460
+Apologies for the short notice.
+
+Many thanks,

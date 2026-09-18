@@ -1,0 +1,24 @@
+From: "Callum Reid (CFO)" <c.reid@northwind-logistics.com>
+To: d.osei@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Mon, 03 May 2027 17:20:00 +0000
+Message-ID: <7918946986@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 415b23; Mon, 03
+ May 2027 17:20:00 +0000
+Return-Path: <c.reid@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Dear Daniel,
+
+This is urgent - I need the stocktake figures before close of business.
+Please process EUR 72,361.00 against the existing purchase order when conveni=
+ent.
+  Beneficiary account (unchanged): IBAN DE409298908528879
+
+Best,

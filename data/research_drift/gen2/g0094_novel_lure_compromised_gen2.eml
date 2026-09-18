@@ -1,0 +1,22 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: accounts.payable@northwind-logistics.com
+Subject: Remittance arrangement
+Date: Wed, 17 Mar 2027 20:47:00 +0000
+Message-ID: <7143090921@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-5040.hostwind.example [203.0.113.6]) by
+ mx.northwind-logistics.com with ESMTP id e08367; Wed, 17 Mar 2027 20:47:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+We have migrated receivables to a new institution; kindly route upcoming sett=
+lements there from now on.
+  Account: 93686257  Sort: 90-40-17
+
+Regards,

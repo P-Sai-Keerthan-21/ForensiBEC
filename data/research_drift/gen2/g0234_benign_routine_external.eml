@@ -1,0 +1,20 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: accounts.payable@northwind-logistics.com
+Subject: Statement for October
+Date: Sun, 19 Sep 2027 19:29:00 +0000
+Message-ID: <9513627866@delaney-freight.co>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=delaney-freight.co; dkim=pass header.d=delaney-freight.co;
+ dmarc=pass
+Received: from unknown (vps-1083.hostwind.example [203.0.113.78]) by
+ mx.northwind-logistics.com with ESMTP id 8687d0; Sun, 19 Sep 2027 19:29:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Notes from the depot review are attached for your records.
+
+Regards,

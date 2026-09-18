@@ -1,0 +1,22 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: t.nowak@northwind-logistics.com
+Subject: Change for this month
+Date: Mon, 05 Apr 2027 23:13:00 +0000
+Message-ID: <5390807598@castellan-pack.eu>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=castellan-pack.eu; dkim=pass header.d=castellan-pack.eu;
+ dmarc=pass
+Received: from unknown (vps-9386.hostwind.example [203.0.113.203]) by
+ mx.northwind-logistics.com with ESMTP id f2fad0; Mon, 05 Apr 2027 23:13:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Tomasz,
+
+Going forward, please direct our remittances to the arrangement below.
+  Account: 69143455  Sort: 43-89-31
+Apologies for the short notice.
+
+Regards,

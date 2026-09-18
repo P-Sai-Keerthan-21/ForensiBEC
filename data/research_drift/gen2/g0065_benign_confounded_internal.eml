@@ -1,0 +1,24 @@
+From: "Sandra Whitlock (CEO)" <sandra.whitlock@northwind-logistics.com>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Re: pallet contract renewal
+Date: Thu, 22 Jul 2027 16:03:00 +0000
+Message-ID: <6798970898@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 1338db; Thu, 22
+ Jul 2027 16:03:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Sandra,
+
+Please process the wire transfer of EUR 3,190.00 to the beneficiary below.
+  Beneficiary account (unchanged): IBAN CY494380953742118
+I need you to deal with this on my behalf.
+Details are here: https://intranet.northwind-logistics.com/policies/remote-wo=
+rking
+
+Best regards,

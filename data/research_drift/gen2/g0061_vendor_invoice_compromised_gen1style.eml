@@ -1,0 +1,26 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: f.haddad@northwind-logistics.com
+Subject: Change of account for salary payment
+Date: Sat, 26 Jun 2027 21:15:00 +0000
+Message-ID: <1449113591@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id b0df51; Sat, 26
+ Jun 2027 21:15:00 +0000
+Reply-To: harborline@mail.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+This is urgent and must be completed today.
+Our remittance details are now different; please amend the bank details on fi=
+le.
+Please process the wire transfer of GBP 50,500.00 to the beneficiary below.
+  IBAN: GB684622555823247
+I am currently in meetings and cannot take a call.
+
+Thanks,

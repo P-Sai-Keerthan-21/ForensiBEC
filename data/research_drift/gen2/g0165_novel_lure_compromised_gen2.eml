@@ -1,0 +1,23 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: accounts.payable@northwind-logistics.com
+Subject: Supplier account housekeeping
+Date: Mon, 13 Sep 2027 17:36:00 +0000
+Message-ID: <4684702967@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from unknown (vps-5980.hostwind.example [203.0.113.6]) by
+ mx.northwind-logistics.com with ESMTP id de3f6d; Mon, 13 Sep 2027 17:36:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Callum,
+
+Could you move my pay to the new account listed here from this month?
+  Account: 76944811  Sort: 14-15-76
+This is critical and cannot wait until tomorrow.
+Happy to discuss if that helps.
+
+Best,

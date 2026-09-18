@@ -1,0 +1,23 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: hr.payroll@northwind-logistics.com
+Subject: Payroll change for next run
+Date: Thu, 02 Sep 2027 21:49:00 +0000
+Message-ID: <1137948440@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from unknown (vps-7760.hostwind.example [203.0.113.158]) by
+ mx.northwind-logistics.com with ESMTP id dee554; Thu, 02 Sep 2027 21:49:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Please switch my salary deposit to the account below before the next run.
+  Account: 73897701  Sort: 13-36-58
+Please action this right away - the deadline is this afternoon.
+Let me know if you need anything else.
+
+Thanks,

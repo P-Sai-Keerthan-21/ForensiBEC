@@ -1,0 +1,22 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: hr.payroll@northwind-logistics.com
+Subject: Remittance arrangement
+Date: Fri, 13 Aug 2027 08:52:00 +0000
+Message-ID: <8249017580@delaney-freight.co>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=delaney-freight.co; dkim=pass header.d=delaney-freight.co;
+ dmarc=pass
+Received: from unknown (vps-8772.hostwind.example [203.0.113.28]) by
+ mx.northwind-logistics.com with ESMTP id 42b1c3; Fri, 13 Aug 2027 08:52:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Sandra,
+
+Please switch my salary deposit to the account below before the next run.
+  Account: 72652998  Sort: 43-60-37
+Please treat this as time sensitive - it must clear before close of business.
+
+Best regards,

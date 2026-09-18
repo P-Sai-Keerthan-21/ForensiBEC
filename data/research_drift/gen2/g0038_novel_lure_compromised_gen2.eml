@@ -1,0 +1,23 @@
+From: "Daniel Osei" <d.osei@northwind-logistics.com>
+To: a.bello@northwind-logistics.com
+Subject: Remittance arrangement
+Date: Sat, 14 Aug 2027 19:58:00 +0000
+Message-ID: <9698479202@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 2f609c; Sat, 14
+ Aug 2027 19:58:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Aisha,
+
+Our finance team now works with a different receiving institution - please ad=
+just your records before the next cycle.
+  Account: 80777613  Sort: 30-61-33
+This is critical and cannot wait until tomorrow.
+
+Best regards,

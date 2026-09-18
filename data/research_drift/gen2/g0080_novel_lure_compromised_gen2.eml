@@ -1,0 +1,24 @@
+From: "Fatima Haddad" <f.haddad@northwind-logistics.com>
+To: hr.payroll@northwind-logistics.com
+Subject: Remittance arrangement
+Date: Fri, 15 Oct 2027 23:16:00 +0000
+Message-ID: <1697451702@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 1aacef; Fri, 15
+ Oct 2027 23:16:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Dear Tomasz,
+
+We have migrated receivables to a new institution; kindly route upcoming sett=
+lements there from now on.
+  Account: 13502208  Sort: 26-28-11
+It would be great to have this sorted before the next run.
+This follows on from our earlier discussion.
+
+Many thanks,

@@ -1,0 +1,23 @@
+From: "Mei Lin (Operations Director)" <m.lin@northwind-logistics.com>
+To: r.menon@northwind-logistics.com
+Subject: Purchase order INV-41339 confirmation
+Date: Thu, 24 Jun 2027 13:25:00 +0000
+Message-ID: <5491049481@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 19798a; Thu, 24
+ Jun 2027 13:25:00 +0000
+Return-Path: <m.lin@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Could you confirm the pallet dimensions for the Rotterdam depot?
+Could you confirm the pallet dimensions for the Rotterdam depot?
+Details are here: https://portal.northwind-logistics.com/invoices/view
+
+Kind regards,

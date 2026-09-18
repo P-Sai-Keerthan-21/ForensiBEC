@@ -1,0 +1,24 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: r.menon@northwind-logistics.com
+Subject: Remittance arrangement
+Date: Tue, 13 Apr 2027 16:26:00 +0000
+Message-ID: <1846912646@bergindustrial.se>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se;
+ dmarc=pass
+Received: from unknown (vps-6774.hostwind.example [203.0.113.61]) by
+ mx.northwind-logistics.com with ESMTP id 6a16f9; Tue, 13 Apr 2027 16:26:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi all,
+
+We have migrated receivables to a new institution; kindly route upcoming sett=
+lements there from now on.
+  LT552982104274305
+Appreciate you picking this up.
+Happy to discuss if that helps.
+
+Kind regards,

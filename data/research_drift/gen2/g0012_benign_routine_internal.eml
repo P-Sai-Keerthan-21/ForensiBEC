@@ -1,0 +1,22 @@
+From: "Priya Sharma (CFO)" <priya.sharma@northwind-logistics.com>
+To: accounts.payable@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Thu, 08 Jul 2027 05:52:00 +0000
+Message-ID: <5447182432@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 168ac0; Thu, 08
+ Jul 2027 05:52:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Mei,
+
+The updated policy is now on the intranet for everyone to read.
+Details are here: https://intranet.northwind-logistics.com/policies/remote-wo=
+rking
+
+Thanks,

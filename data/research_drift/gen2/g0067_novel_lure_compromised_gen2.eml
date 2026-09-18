@@ -1,0 +1,21 @@
+From: "Aisha Bello" <a.bello@northwind-logistics.com>
+To: hr.payroll@northwind-logistics.com
+Subject: Change for this month
+Date: Wed, 15 Sep 2027 09:09:00 +0000
+Message-ID: <7850654666@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 60de37; Wed, 15
+ Sep 2027 09:09:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Going forward, please direct our remittances to the arrangement below.
+  Account: 69726923  Sort: 72-17-19
+
+Thanks,

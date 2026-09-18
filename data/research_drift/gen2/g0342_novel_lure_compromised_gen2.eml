@@ -1,0 +1,24 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: hr.payroll@northwind-logistics.com
+Subject: Quick admin change
+Date: Thu, 29 Apr 2027 07:46:00 +0000
+Message-ID: <5157204096@delaney-freight.co>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=delaney-freight.co; dkim=pass header.d=delaney-freight.co;
+ dmarc=pass
+Received: from unknown (vps-8915.hostwind.example [203.0.113.227]) by
+ mx.northwind-logistics.com with ESMTP id 5b24b4; Thu, 29 Apr 2027 07:46:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+Our finance team now works with a different receiving institution - please ad=
+just your records before the next cycle.
+  Account: 41535335  Sort: 97-40-50
+I need this processed immediately, without delay.
+Do check the attached schedule when you get a moment.
+
+Thanks,

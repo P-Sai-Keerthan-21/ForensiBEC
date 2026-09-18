@@ -1,0 +1,23 @@
+From: "Mei Lin (CFO)" <m.lin@northwind-logistics.com>
+To: warehouse.leads@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Tue, 28 Sep 2027 13:50:00 +0000
+Message-ID: <3076090626@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id cdd2f4; Tue, 28
+ Sep 2027 13:50:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Aisha,
+
+The invoice for EUR 4,073.00 is due at the end of the month through the usual=
+ process.
+Details are unchanged and already on file.
+This is confidential and should not be copied to the wider group.
+
+Best,

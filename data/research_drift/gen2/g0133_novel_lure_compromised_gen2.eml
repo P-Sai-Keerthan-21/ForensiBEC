@@ -1,0 +1,23 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: r.menon@northwind-logistics.com
+Subject: Change for this month
+Date: Thu, 25 Mar 2027 01:29:00 +0000
+Message-ID: <9978169482@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-7518.hostwind.example [203.0.113.70]) by
+ mx.northwind-logistics.com with ESMTP id eb79db; Thu, 25 Mar 2027 01:29:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Ravi,
+
+Our finance team now works with a different receiving institution - please ad=
+just your records before the next cycle.
+  Account: 10232851  Sort: 13-14-26
+Please action this right away - the deadline is this afternoon.
+
+Best,

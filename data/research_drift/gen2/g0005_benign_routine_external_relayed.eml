@@ -1,0 +1,21 @@
+From: "Ravi Menon (Contractor)" <r.menon.contract@protonmail.com>
+To: it@northwind-logistics.com
+Subject: Q3 budget review scheduled
+Date: Mon, 25 Oct 2027 21:15:00 +0000
+Message-ID: <4793143278@protonmail.com>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-9798.hostwind.example [203.0.113.125]) by
+ mx.northwind-logistics.com with ESMTP id d28b6c; Mon, 25 Oct 2027 21:15:00
+ +0000
+Return-Path: <r.menon.contract@protonmail.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Tomasz,
+
+Notes from the depot review are attached for your records.
+Details are here: https://intranet.northwind-logistics.com/hr/handbook
+
+Best,

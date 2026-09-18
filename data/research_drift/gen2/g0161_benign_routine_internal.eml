@@ -1,0 +1,21 @@
+From: "Callum Reid" <c.reid@northwind-logistics.com>
+To: t.nowak@northwind-logistics.com
+Subject: Stocktake figures needed before close of business
+Date: Thu, 26 Aug 2027 18:55:00 +0000
+Message-ID: <4787762527@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 92c9b8; Thu, 26
+ Aug 2027 18:55:00 +0000
+Return-Path: <c.reid@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+The maintenance window is confirmed for Saturday morning.
+
+Many thanks,

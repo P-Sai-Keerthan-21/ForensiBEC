@@ -1,0 +1,23 @@
+From: "Fatima Haddad (Operations Director)" <f.haddad@northwind-logistics.com>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Mon, 21 Jun 2027 13:22:00 +0000
+Message-ID: <6671021789@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 2474c5; Mon, 21
+ Jun 2027 13:22:00 +0000
+Reply-To: all.staff@northwind-logistics.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+Could you confirm the pallet dimensions for the Rotterdam depot?
+Details are here: https://portal.northwind-logistics.com/invoices/view
+Do check the attached schedule when you get a moment.
+
+Many thanks,

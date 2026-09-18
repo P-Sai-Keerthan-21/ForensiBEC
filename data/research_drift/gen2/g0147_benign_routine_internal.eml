@@ -1,0 +1,23 @@
+From: "Ravi Menon" <r.menon@northwind-logistics.com>
+To: accounts.payable@northwind-logistics.com
+Subject: Invoice INV-46142 attached
+Date: Fri, 27 Aug 2027 12:24:00 +0000
+Message-ID: <2652623285@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id e7b586; Fri, 27
+ Aug 2027 12:24:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+The Q3 budget review has been scheduled for the 24th.
+Details are here: https://intranet.northwind-logistics.com/policies/remote-wo=
+rking
+Please treat this as routine unless you hear otherwise.
+
+Many thanks,

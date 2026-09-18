@@ -1,0 +1,22 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: procurement@northwind-logistics.com
+Subject: Statement for October
+Date: Mon, 27 Sep 2027 09:57:00 +0000
+Message-ID: <6378329409@bergindustrial.se>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se;
+ dmarc=pass
+Received: from unknown (vps-2255.hostwind.example [203.0.113.189]) by
+ mx.northwind-logistics.com with ESMTP id b47a3e; Mon, 27 Sep 2027 09:57:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Notes from the depot review are attached for your records.
+Could you confirm the pallet dimensions for the Rotterdam depot?
+This follows on from our earlier discussion.
+
+Many thanks,

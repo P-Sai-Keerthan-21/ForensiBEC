@@ -1,0 +1,24 @@
+From: "Ravi Menon" <r.menon@northwind-logistics.com>
+To: m.lin@northwind-logistics.com
+Subject: Stocktake figures needed before close of business
+Date: Tue, 28 Sep 2027 03:52:00 +0000
+Message-ID: <2022238772@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 2e7d92; Tue, 28
+ Sep 2027 03:52:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Time sensitive: the auditors arrive tomorrow and I need the schedule today.
+Please process the wire transfer of USD 67,894.00 to the beneficiary below.
+  Beneficiary account (unchanged): IBAN LT444323689456929
+Details are here: https://harborline-supplies.com/terms
+Apologies for the short notice.
+
+Kind regards,

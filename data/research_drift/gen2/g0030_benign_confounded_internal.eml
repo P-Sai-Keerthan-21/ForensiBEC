@@ -1,0 +1,24 @@
+From: "Ravi Menon" <r.menon@northwind-logistics.com>
+To: c.reid@northwind-logistics.com
+Subject: Updated remote working policy
+Date: Sat, 13 Mar 2027 12:19:00 +0000
+Message-ID: <8345725457@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 8dd36d; Sat, 13
+ Mar 2027 12:19:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+This is urgent - I need the stocktake figures before close of business.
+Kindly release the payment of GBP 66,672.00 against the invoice attached.
+Details are unchanged and already on file.
+  Beneficiary account (unchanged): IBAN DE139687611662223
+I have copied the relevant team.
+
+Many thanks,

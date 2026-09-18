@@ -1,0 +1,20 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: accounts.payable@northwind-logistics.com
+Subject: Question about pallet dimensions
+Date: Tue, 01 Jun 2027 04:29:00 +0000
+Message-ID: <9932070357@harborline-supplies.com>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-9775.hostwind.example [203.0.113.80]) by
+ mx.northwind-logistics.com with ESMTP id ebb22a; Tue, 01 Jun 2027 04:29:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+The maintenance window is confirmed for Saturday morning.
+Do check the attached schedule when you get a moment.
+
+Best regards,

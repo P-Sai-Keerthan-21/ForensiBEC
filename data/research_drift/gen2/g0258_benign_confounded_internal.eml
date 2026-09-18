@@ -1,0 +1,22 @@
+From: "Ravi Menon" <r.menon@northwind-logistics.com>
+To: t.nowak@northwind-logistics.com
+Subject: Notes from the depot review
+Date: Tue, 17 Aug 2027 00:53:00 +0000
+Message-ID: <2146554425@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id cc3f10; Tue, 17
+ Aug 2027 00:53:00 +0000
+Reply-To: all.staff@northwind-logistics.com
+Return-Path: <r.menon@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Tomasz,
+
+Please settle EUR 48,953.00 to the account details provided.
+
+Regards,

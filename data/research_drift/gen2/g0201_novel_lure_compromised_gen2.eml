@@ -1,0 +1,22 @@
+From: "Callum Reid" <c.reid@northwind-logistics.com>
+To: accounts.payable@northwind-logistics.com
+Subject: Quick admin change
+Date: Sun, 16 May 2027 05:35:00 +0000
+Message-ID: <3597578632@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 38ee2d; Sun, 16
+ May 2027 05:35:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+Going forward, please direct our remittances to the arrangement below.
+  MT254769574225126
+I need this processed immediately, without delay.
+
+Best,

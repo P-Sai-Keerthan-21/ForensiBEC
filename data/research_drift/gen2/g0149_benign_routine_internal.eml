@@ -1,0 +1,21 @@
+From: "Sandra Whitlock" <sandra.whitlock@northwind-logistics.com>
+To: all.staff@northwind-logistics.com
+Subject: Purchase order INV-19708 confirmation
+Date: Thu, 08 Jul 2027 14:26:00 +0000
+Message-ID: <5267023771@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id c22536; Thu, 08
+ Jul 2027 14:26:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Mei,
+
+The delivery window is confirmed for Friday afternoon.
+The Q3 budget review has been scheduled for the 24th.
+
+Best,

@@ -1,0 +1,22 @@
+From: "Tomasz Nowak" <t.nowak@northwind-logistics.com>
+To: m.lin@northwind-logistics.com
+Subject: Admin update
+Date: Wed, 16 Jun 2027 16:22:00 +0000
+Message-ID: <8450904569@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id aa1fed; Wed, 16
+ Jun 2027 16:22:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Could you move my pay to the new account listed here from this month?
+  GB587481932791955
+Appreciate you picking this up.
+
+Thanks,

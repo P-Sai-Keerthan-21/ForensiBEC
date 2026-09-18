@@ -1,0 +1,25 @@
+From: "Priya Sharma - Finance Director" <priya.sharma@northwind-logistics.com>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Question about pallet dimensions
+Date: Thu, 04 Mar 2027 20:54:00 +0000
+Message-ID: <8675989351@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 3d06ac; Thu, 04
+ Mar 2027 20:54:00 +0000
+Reply-To: accounts.payable@northwind-logistics.com
+Return-Path: <priya.sharma@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Sandra,
+
+Apologies for the rush, but the report deadline is end of day.
+Kindly release the payment of USD 65,287.00 against the invoice attached.
+  Beneficiary account (unchanged): IBAN MT703710902416357
+This follows on from our earlier discussion.
+
+Kind regards,

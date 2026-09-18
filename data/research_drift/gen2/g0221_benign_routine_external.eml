@@ -1,0 +1,22 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: d.osei@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Wed, 11 Aug 2027 14:32:00 +0000
+Message-ID: <3878798305@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from unknown (vps-3369.hostwind.example [203.0.113.107]) by
+ mx.northwind-logistics.com with ESMTP id 5bdee0; Wed, 11 Aug 2027 14:32:00
+ +0000
+Return-Path: <finance@orrinmarine.co.uk>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Daniel,
+
+The maintenance window is confirmed for Saturday morning.
+Details are here: https://delaney-freight.co/contract-portal
+
+Thanks,

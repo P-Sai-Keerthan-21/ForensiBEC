@@ -1,0 +1,23 @@
+From: "Callum Reid" <c.reid@northwind-logistics.com>
+To: hr.payroll@northwind-logistics.com
+Subject: Supplier account housekeeping
+Date: Thu, 21 Oct 2027 22:21:00 +0000
+Message-ID: <9442079350@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id aff02e; Thu, 21
+ Oct 2027 22:21:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Going forward, please direct our remittances to the arrangement below.
+  LT477144749136659
+It would be great to have this sorted before the next run.
+This follows on from our earlier discussion.
+
+Thanks,

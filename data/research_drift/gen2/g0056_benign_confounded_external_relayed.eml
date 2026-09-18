@@ -1,0 +1,22 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: m.lin@northwind-logistics.com
+Subject: Purchase order INV-19277 confirmation
+Date: Sun, 07 Mar 2027 17:27:00 +0000
+Message-ID: <5852802875@bergindustrial.se>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-2798.hostwind.example [203.0.113.133]) by
+ mx.northwind-logistics.com with ESMTP id 95a95f; Sun, 07 Mar 2027 17:27:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi all,
+
+Please treat this as time sensitive - it must clear before close of business.
+Accounts payable have the invoice for GBP 83,322.00 - no action needed from y=
+ou.
+  Beneficiary account (unchanged): IBAN DE766627143708435
+
+Thanks,

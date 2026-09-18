@@ -1,0 +1,23 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: accounts.payable@northwind-logistics.com
+Subject: Admin update
+Date: Sun, 04 Apr 2027 12:04:00 +0000
+Message-ID: <3881641225@castellan-pack.eu>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=castellan-pack.eu; dkim=pass header.d=castellan-pack.eu;
+ dmarc=pass
+Received: from unknown (vps-3833.hostwind.example [203.0.113.10]) by
+ mx.northwind-logistics.com with ESMTP id 60eeed; Sun, 04 Apr 2027 12:04:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi all,
+
+Our finance team now works with a different receiving institution - please ad=
+just your records before the next cycle.
+  Account: 69634509  Sort: 84-91-92
+This is critical and cannot wait until tomorrow.
+
+Many thanks,

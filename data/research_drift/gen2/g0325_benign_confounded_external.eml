@@ -1,0 +1,24 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: it@northwind-logistics.com
+Subject: Planned maintenance this Saturday
+Date: Tue, 20 Apr 2027 13:14:00 +0000
+Message-ID: <2680178242@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from unknown (vps-2388.hostwind.example [203.0.113.228]) by
+ mx.northwind-logistics.com with ESMTP id 6323be; Tue, 20 Apr 2027 13:14:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi all,
+
+Apologies for the rush, but the report deadline is end of day.
+The invoice for EUR 53,688.00 is due at the end of the month through the usua=
+l process.
+Details are unchanged and already on file.
+I have copied the relevant team.
+
+Best regards,

@@ -1,0 +1,26 @@
+From: "Priya Sharma - Finance Director" <priya.sharma@northwind-logistics.com>
+To: scheduling@northwind-logistics.com
+Subject: Purchase order INV-62760 confirmation
+Date: Fri, 16 Apr 2027 01:27:00 +0000
+Message-ID: <8091364132@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 33a523; Fri, 16
+ Apr 2027 01:27:00 +0000
+Return-Path: <priya.sharma@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+Please treat this as a priority; the depot review is this afternoon.
+The invoice for EUR 37,824.00 is due at the end of the month through the usua=
+l process.
+  Beneficiary account (unchanged): IBAN GB375430762360652
+Details are here: https://intranet.northwind-logistics.com/policies/remote-wo=
+rking
+
+Many thanks,

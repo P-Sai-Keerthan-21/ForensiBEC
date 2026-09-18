@@ -1,0 +1,25 @@
+From: "Berg Industrial AB Accounts" <t.berg@bergindustrial.se>
+To: procurement@northwind-logistics.com
+Subject: Notes from the depot review
+Date: Sat, 21 Aug 2027 23:00:00 +0000
+Message-ID: <8314973276@bergindustrial.se>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=bergindustrial.se; dkim=pass header.d=bergindustrial.se;
+ dmarc=pass
+Received: from unknown (vps-8278.hostwind.example [203.0.113.44]) by
+ mx.northwind-logistics.com with ESMTP id e0ddca; Sat, 21 Aug 2027 23:00:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Ravi,
+
+Please treat this as a priority; the depot review is this afternoon.
+The GBP 16,963.00 payment was approved at the last review; details are unchan=
+ged.
+Details are unchanged and already on file.
+  Beneficiary account (unchanged): IBAN MT364098433040497
+Details are here: https://intranet.northwind-logistics.com/hr/handbook
+
+Kind regards,

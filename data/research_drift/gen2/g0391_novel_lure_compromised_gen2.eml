@@ -1,0 +1,23 @@
+From: "Sandra Whitlock" <sandra.whitlock@northwind-logistics.com>
+To: a.bello@northwind-logistics.com
+Subject: Remittance arrangement
+Date: Fri, 16 Jul 2027 20:38:00 +0000
+Message-ID: <3276730153@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 481959; Fri, 16
+ Jul 2027 20:38:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Could you move my pay to the new account listed here from this month?
+  Account: 26336708  Sort: 40-74-98
+Appreciate you picking this up.
+This follows on from our earlier discussion.
+
+Best regards,

@@ -1,0 +1,25 @@
+From: "Daniel Osei (CFO)" <d.osei@northwind-l0gistics.com>
+To: c.reid@northwind-logistics.com
+Subject: Important: account update needed
+Date: Sat, 05 Jun 2027 22:08:00 +0000
+Message-ID: <4794052932@northwind-l0gistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=fail
+ smtp.mailfrom=northwind-l0gistics.com; dkim=none; dmarc=fail
+Received: from unknown (vps-4741.hostwind.example [203.0.113.180]) by
+ mx.northwind-logistics.com with ESMTP id a3cfdb; Sat, 05 Jun 2027 22:08:00
+ +0000
+Reply-To: daniel.53@aol.com
+Return-Path: <d.osei@northwind-l0gistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+This is critical and cannot wait until tomorrow.
+Please process the wire transfer of EUR 30,337.00 to the beneficiary below.
+  IBAN: LT566043621902892
+Do not discuss this with anyone else in the team for now.
+Happy to discuss if that helps.
+
+Kind regards,

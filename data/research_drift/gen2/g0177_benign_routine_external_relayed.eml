@@ -1,0 +1,22 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: scheduling@northwind-logistics.com
+Subject: Notes from the depot review
+Date: Fri, 09 Jul 2027 10:46:00 +0000
+Message-ID: <8067316741@castellan-pack.eu>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-8729.hostwind.example [203.0.113.66]) by
+ mx.northwind-logistics.com with ESMTP id c12047; Fri, 09 Jul 2027 10:46:00
+ +0000
+Return-Path: <accounts@castellan-pack.eu>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+The delivery window is confirmed for Friday afternoon.
+Details are here: https://intranet.northwind-logistics.com/policies/remote-wo=
+rking
+
+Thanks,

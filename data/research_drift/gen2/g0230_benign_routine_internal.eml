@@ -1,0 +1,22 @@
+From: "Tomasz Nowak (CFO)" <t.nowak@northwind-logistics.com>
+To: d.osei@northwind-logistics.com
+Subject: Q3 budget review scheduled
+Date: Sun, 26 Sep 2027 23:48:00 +0000
+Message-ID: <8423159460@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id b1ad11; Sun, 26
+ Sep 2027 23:48:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Daniel,
+
+The Q3 budget review has been scheduled for the 24th.
+Details are here: https://intranet.northwind-logistics.com/hr/handbook
+Let me know if you need anything else.
+
+Kind regards,

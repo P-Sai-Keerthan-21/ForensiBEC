@@ -1,0 +1,23 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: j.okafor@northwind-logistics.com
+Subject: Payroll change for next run
+Date: Wed, 14 Apr 2027 15:37:00 +0000
+Message-ID: <6354717016@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-6262.hostwind.example [203.0.113.76]) by
+ mx.northwind-logistics.com with ESMTP id 6dc6e1; Wed, 14 Apr 2027 15:37:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Could you move my pay to the new account listed here from this month?
+  Account: 71095498  Sort: 28-68-54
+Please treat this as time sensitive - it must clear before close of business.
+This follows on from our earlier discussion.
+
+Many thanks,

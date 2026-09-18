@@ -1,0 +1,24 @@
+From: "Delaney Freight Solutions Accounts" <m.kalina@delaney-freight.co>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Quick admin change
+Date: Sun, 06 Jun 2027 04:24:00 +0000
+Message-ID: <6109181464@delaney-freight.co>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=delaney-freight.co; dkim=pass header.d=delaney-freight.co;
+ dmarc=pass
+Received: from unknown (vps-4705.hostwind.example [203.0.113.151]) by
+ mx.northwind-logistics.com with ESMTP id 27a367; Sun, 06 Jun 2027 04:24:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Dear Sandra,
+
+We have migrated receivables to a new institution; kindly route upcoming sett=
+lements there from now on.
+  GB425294808182238
+It would be great to have this sorted before the next run.
+Happy to discuss if that helps.
+
+Kind regards,

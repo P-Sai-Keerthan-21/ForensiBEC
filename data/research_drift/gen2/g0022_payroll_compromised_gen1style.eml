@@ -1,0 +1,27 @@
+From: "Ravi Menon" <r.menon@northwind-logistics.com>
+To: priya.sharma@northwind-logistics.com
+Subject: Action required: mailbox verification
+Date: Wed, 30 Jun 2027 07:24:00 +0000
+Message-ID: <6249707542@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 3224df; Wed, 30
+ Jun 2027 07:24:00 +0000
+Return-Path: <r.menon@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Please treat this as time sensitive - it must clear before close of business.
+The outstanding balance of GBP 59,789.00 needs to be remitted today.
+  IBAN: CY902329426444643
+Please keep this strictly between us until the announcement.
+I am counting on you to handle this personally.
+Verify here: http://203.0.113.45/secure/login.php
+I have copied the relevant team.
+
+Thanks,

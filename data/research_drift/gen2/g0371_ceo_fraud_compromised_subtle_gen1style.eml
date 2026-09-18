@@ -1,0 +1,22 @@
+From: "Sandra Whitlock" <sandra.whitlock@northwind-logistics.com>
+To: r.menon@northwind-logistics.com
+Subject: Urgent - confidential transfer required today
+Date: Sat, 14 Aug 2027 04:20:00 +0000
+Message-ID: <9751604265@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 195130; Sat, 14
+ Aug 2027 04:20:00 +0000
+Return-Path: <sandra.whitlock@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Ravi,
+
+Could you let me know when you are free to action a transfer?
+Happy to discuss if that helps.
+
+Many thanks,

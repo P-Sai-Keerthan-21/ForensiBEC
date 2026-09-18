@@ -1,0 +1,22 @@
+From: "Callum Reid" <c.reid@northwind-logistics.com>
+To: d.osei@northwind-logistics.com
+Subject: Admin update
+Date: Sat, 11 Sep 2027 04:01:00 +0000
+Message-ID: <2094626812@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 141a2d; Sat, 11
+ Sep 2027 04:01:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Daniel,
+
+Could you move my pay to the new account listed here from this month?
+  Account: 70179689  Sort: 22-29-68
+It would be great to have this sorted before the next run.
+
+Kind regards,

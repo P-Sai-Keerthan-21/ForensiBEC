@@ -1,0 +1,23 @@
+From: "Sandra Whitlock" <sandra.whitlock@northwind-logistics.com>
+To: hr.payroll@northwind-logistics.com
+Subject: Quick admin change
+Date: Sat, 01 May 2027 07:07:00 +0000
+Message-ID: <7752364696@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 9bb210; Sat, 01
+ May 2027 07:07:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Dear Tomasz,
+
+We have migrated receivables to a new institution; kindly route upcoming sett=
+lements there from now on.
+  Account: 65527038  Sort: 10-36-68
+This follows on from our earlier discussion.
+
+Best,

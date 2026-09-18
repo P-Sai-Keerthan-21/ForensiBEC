@@ -1,0 +1,23 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: accounts.payable@northwind-logistics.com
+Subject: Change for this month
+Date: Sat, 07 Aug 2027 15:58:00 +0000
+Message-ID: <5477663424@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-5456.hostwind.example [203.0.113.112]) by
+ mx.northwind-logistics.com with ESMTP id fffd66; Sat, 07 Aug 2027 15:58:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+Please switch my salary deposit to the account below before the next run.
+  Account: 72088467  Sort: 75-67-36
+It would be great to have this sorted before the next run.
+Let me know if you need anything else.
+
+Regards,

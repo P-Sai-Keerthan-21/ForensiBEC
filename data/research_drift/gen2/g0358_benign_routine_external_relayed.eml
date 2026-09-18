@@ -1,0 +1,19 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: it@northwind-logistics.com
+Subject: Q3 budget review scheduled
+Date: Mon, 08 Mar 2027 11:16:00 +0000
+Message-ID: <3581212451@orrinmarine.co.uk>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-9218.hostwind.example [203.0.113.218]) by
+ mx.northwind-logistics.com with ESMTP id 597d21; Mon, 08 Mar 2027 11:16:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Fatima,
+
+Notes from the depot review are attached for your records.
+
+Regards,

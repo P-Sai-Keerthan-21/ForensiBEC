@@ -1,0 +1,22 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: hr.payroll@northwind-logistics.com
+Subject: Change for this month
+Date: Thu, 22 Jul 2027 01:20:00 +0000
+Message-ID: <4213664625@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from unknown (vps-6576.hostwind.example [203.0.113.66]) by
+ mx.northwind-logistics.com with ESMTP id 439ce4; Thu, 22 Jul 2027 01:20:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hello,
+
+Going forward, please direct our remittances to the arrangement below.
+  GB459867540166161
+Appreciate you picking this up.
+
+Best regards,

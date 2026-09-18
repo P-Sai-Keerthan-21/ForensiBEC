@@ -1,0 +1,20 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: sandra.whitlock@northwind-logistics.com
+Subject: Re: pallet contract renewal
+Date: Mon, 12 Jul 2027 10:50:00 +0000
+Message-ID: <8095553729@orrinmarine.co.uk>
+Authentication-Results:
+ mx.northwind-logistics.com; spf=softfail; dkim=none; dmarc=fail
+Received: from unknown (vps-7188.hostwind.example [203.0.113.145]) by
+ mx.northwind-logistics.com with ESMTP id e4eea2; Mon, 12 Jul 2027 10:50:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi all,
+
+The Q3 budget review has been scheduled for the 24th.
+Details are here: https://northwind-logistics.com/depot-schedule
+
+Regards,

@@ -1,0 +1,25 @@
+From: "Aisha Bello (CEO)" <a.bello@northwind-logistics.com>
+To: all.staff@northwind-logistics.com
+Subject: Statement for August
+Date: Sat, 17 Apr 2027 02:49:00 +0000
+Message-ID: <8655370172@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id b8854c; Sat, 17
+ Apr 2027 02:49:00 +0000
+Reply-To: sales@northwind-logistics.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hello,
+
+The invoice for USD 24,275.00 is due at the end of the month through the usua=
+l process.
+Details are unchanged and already on file.
+  Beneficiary account (unchanged): IBAN GB123719608427325
+This follows on from our earlier discussion.
+
+Many thanks,

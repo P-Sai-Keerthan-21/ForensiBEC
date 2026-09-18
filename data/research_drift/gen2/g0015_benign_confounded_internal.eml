@@ -1,0 +1,25 @@
+From: "Fatima Haddad" <f.haddad@northwind-logistics.com>
+To: a.bello@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Sat, 04 Sep 2027 06:24:00 +0000
+Message-ID: <8168760961@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id a69acd; Sat, 04
+ Sep 2027 06:24:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi Aisha,
+
+Time sensitive: the auditors arrive tomorrow and I need the schedule today.
+Please process USD 80,974.00 against the existing purchase order when conveni=
+ent.
+  Beneficiary account (unchanged): IBAN DE133685966156491
+Details are here: https://delaney-freight.co/contract-portal
+I have copied the relevant team.
+
+Regards,

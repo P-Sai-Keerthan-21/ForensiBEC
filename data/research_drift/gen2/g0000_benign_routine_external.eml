@@ -1,0 +1,22 @@
+From: "Castellan Packaging Accounts" <accounts@castellan-pack.eu>
+To: j.okafor@northwind-logistics.com
+Subject: Purchase order INV-95124 confirmation
+Date: Sat, 01 May 2027 04:12:00 +0000
+Message-ID: <5636782179@castellan-pack.eu>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=castellan-pack.eu; dkim=pass header.d=castellan-pack.eu;
+ dmarc=pass
+Received: from unknown (vps-9937.hostwind.example [203.0.113.243]) by
+ mx.northwind-logistics.com with ESMTP id 651ec9; Sat, 01 May 2027 04:12:00
+ +0000
+Reply-To: procurement@castellan-pack.eu
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Joseph,
+
+The delivery window is confirmed for Friday afternoon.
+The updated policy is now on the intranet for everyone to read.
+
+Many thanks,

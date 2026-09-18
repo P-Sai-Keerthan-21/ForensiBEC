@@ -1,0 +1,1602 @@
+{
+  "g0000_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "g0001_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0002_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0003_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0004_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0005_benign_routine_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external_relayed"
+  },
+  "g0006_benign_confounded_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external_relayed"
+  },
+  "g0007_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "g0008_benign_routine_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external_relayed"
+  },
+  "g0009_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0010_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0011_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "g0012_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0013_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0014_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0015_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0016_payroll_subtle_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_subtle_gen1style"
+  },
+  "g0017_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0018_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0019_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0020_vendor_invoice_compromised_subtle_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "vendor_invoice_compromised_subtle_gen1style"
+  },
+  "g0021_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "g0022_payroll_compromised_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_compromised_gen1style"
+  },
+  "g0023_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0024_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "g0025_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0026_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0027_benign_confounded_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external_relayed"
+  },
+  "g0028_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0029_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0030_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0031_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0032_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0033_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0034_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0035_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0036_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0037_gift_card_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "gift_card_gen1style"
+  },
+  "g0038_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0039_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0040_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0041_credential_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "credential_gen1style"
+  },
+  "g0042_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0043_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0044_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0045_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0046_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0047_ceo_fraud_compromised_subtle_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_compromised_subtle_gen1style"
+  },
+  "g0048_benign_routine_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external_relayed"
+  },
+  "g0049_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0050_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0051_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0052_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0053_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0054_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0055_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0056_benign_confounded_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external_relayed"
+  },
+  "g0057_credential_subtle_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "credential_subtle_gen1style"
+  },
+  "g0058_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0059_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0060_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0061_vendor_invoice_compromised_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "vendor_invoice_compromised_gen1style"
+  },
+  "g0062_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0063_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0064_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "g0065_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0066_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0067_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0068_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0069_vendor_invoice_compromised_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "vendor_invoice_compromised_gen1style"
+  },
+  "g0070_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0071_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0072_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0073_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0074_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0075_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0076_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0077_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0078_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "g0079_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0080_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0081_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0082_payroll_compromised_subtle_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_compromised_subtle_gen1style"
+  },
+  "g0083_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0084_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0085_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0086_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0087_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0088_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0089_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0090_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0091_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0092_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0093_lookalike_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "lookalike_gen1style"
+  },
+  "g0094_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0095_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0096_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0097_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0098_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0099_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0100_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0101_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0102_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0103_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0104_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0105_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0106_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0107_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "g0108_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0109_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0110_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0111_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0112_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "g0113_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0114_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "g0115_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0116_credential_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "credential_gen1style"
+  },
+  "g0117_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0118_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0119_gift_card_subtle_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "gift_card_subtle_gen1style"
+  },
+  "g0120_benign_routine_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external_relayed"
+  },
+  "g0121_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0122_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0123_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0124_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0125_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "g0126_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0127_benign_routine_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external_relayed"
+  },
+  "g0128_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0129_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0130_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "g0131_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0132_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0133_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0134_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0135_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0136_benign_routine_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external_relayed"
+  },
+  "g0137_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0138_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0139_credential_subtle_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "credential_subtle_gen1style"
+  },
+  "g0140_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0141_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0142_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0143_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0144_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0145_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0146_gift_card_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "gift_card_gen1style"
+  },
+  "g0147_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0148_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0149_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0150_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0151_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0152_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0153_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0154_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0155_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "g0156_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0157_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "g0158_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "g0159_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0160_ceo_fraud_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_gen1style"
+  },
+  "g0161_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0162_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0163_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0164_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0165_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0166_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0167_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0168_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0169_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0170_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0171_ceo_fraud_compromised_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_compromised_gen1style"
+  },
+  "g0172_benign_routine_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external_relayed"
+  },
+  "g0173_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0174_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0175_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0176_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0177_benign_routine_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external_relayed"
+  },
+  "g0178_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "g0179_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0180_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0181_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0182_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "g0183_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0184_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0185_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0186_benign_routine_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external_relayed"
+  },
+  "g0187_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0188_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0189_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0190_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0191_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "g0192_lookalike_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "lookalike_gen1style"
+  },
+  "g0193_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0194_gift_card_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "gift_card_gen1style"
+  },
+  "g0195_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0196_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0197_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0198_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0199_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0200_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0201_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0202_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0203_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0204_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0205_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0206_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0207_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0208_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0209_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0210_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0211_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0212_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0213_payroll_compromised_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_compromised_gen1style"
+  },
+  "g0214_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "g0215_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0216_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0217_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0218_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0219_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0220_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0221_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "g0222_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0223_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0224_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0225_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "g0226_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0227_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0228_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0229_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "g0230_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0231_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0232_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0233_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0234_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "g0235_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0236_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0237_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0238_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0239_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0240_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0241_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0242_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0243_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0244_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0245_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0246_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "g0247_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0248_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0249_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0250_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "g0251_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0252_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0253_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0254_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0255_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0256_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0257_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0258_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0259_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0260_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0261_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0262_payroll_compromised_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_compromised_gen1style"
+  },
+  "g0263_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0264_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0265_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0266_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0267_benign_confounded_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external_relayed"
+  },
+  "g0268_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0269_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0270_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0271_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0272_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0273_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0274_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0275_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0276_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0277_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0278_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0279_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0280_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0281_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0282_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0283_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0284_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0285_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0286_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "g0287_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0288_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0289_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0290_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0291_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0292_payroll_compromised_subtle_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_compromised_subtle_gen1style"
+  },
+  "g0293_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "g0294_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0295_benign_routine_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external_relayed"
+  },
+  "g0296_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0297_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0298_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0299_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0300_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0301_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0302_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0303_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0304_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0305_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0306_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0307_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0308_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0309_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0310_benign_routine_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external_relayed"
+  },
+  "g0311_credential_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "credential_gen1style"
+  },
+  "g0312_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0313_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0314_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0315_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0316_benign_routine_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external_relayed"
+  },
+  "g0317_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0318_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0319_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0320_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0321_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0322_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0323_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0324_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0325_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "g0326_lookalike_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "lookalike_gen1style"
+  },
+  "g0327_payroll_compromised_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_compromised_gen1style"
+  },
+  "g0328_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0329_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0330_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0331_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0332_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0333_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0334_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0335_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0336_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0337_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0338_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0339_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0340_payroll_compromised_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_compromised_gen1style"
+  },
+  "g0341_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "g0342_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0343_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0344_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0345_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0346_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0347_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0348_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0349_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0350_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "g0351_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0352_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0353_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0354_lookalike_subtle_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "lookalike_subtle_gen1style"
+  },
+  "g0355_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "g0356_benign_routine_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external"
+  },
+  "g0357_ceo_fraud_subtle_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_subtle_gen1style"
+  },
+  "g0358_benign_routine_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external_relayed"
+  },
+  "g0359_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0360_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0361_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0362_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0363_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0364_payroll_compromised_subtle_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "payroll_compromised_subtle_gen1style"
+  },
+  "g0365_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0366_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0367_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0368_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0369_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0370_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0371_ceo_fraud_compromised_subtle_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "ceo_fraud_compromised_subtle_gen1style"
+  },
+  "g0372_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0373_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "g0374_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "g0375_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0376_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0377_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0378_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0379_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0380_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0381_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0382_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0383_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0384_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  },
+  "g0385_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0386_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0387_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0388_benign_routine_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_external_relayed"
+  },
+  "g0389_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0390_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0391_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0392_benign_confounded_external_relayed.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external_relayed"
+  },
+  "g0393_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0394_credential_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "credential_gen1style"
+  },
+  "g0395_novel_lure_compromised_gen2.eml": {
+    "label": "MALICIOUS",
+    "family": "novel_lure_compromised_gen2"
+  },
+  "g0396_credential_gen1style.eml": {
+    "label": "MALICIOUS",
+    "family": "credential_gen1style"
+  },
+  "g0397_benign_confounded_external.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_external"
+  },
+  "g0398_benign_routine_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_routine_internal"
+  },
+  "g0399_benign_confounded_internal.eml": {
+    "label": "BENIGN",
+    "family": "benign_confounded_internal"
+  }
+}

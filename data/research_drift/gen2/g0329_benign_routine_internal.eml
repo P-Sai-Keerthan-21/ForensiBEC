@@ -1,0 +1,23 @@
+From: "Callum Reid - Finance Director" <c.reid@northwind-logistics.com>
+To: procurement@northwind-logistics.com
+Subject: Question about pallet dimensions
+Date: Wed, 29 Sep 2027 00:55:00 +0000
+Message-ID: <1851068094@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id f1ff57; Wed, 29
+ Sep 2027 00:55:00 +0000
+Return-Path: <c.reid@northwind-logistics.com>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Daniel,
+
+The delivery window is confirmed for Friday afternoon.
+Details are here: https://northwind-logistics.com/depot-schedule
+I have copied the relevant team.
+
+Thanks,

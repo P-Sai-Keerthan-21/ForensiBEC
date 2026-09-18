@@ -1,0 +1,22 @@
+From: "Priya Sharma" <priya.sharma@northwind-logistics.com>
+To: accounts.payable@northwind-logistics.com
+Subject: Payroll change for next run
+Date: Mon, 26 Jul 2027 12:23:00 +0000
+Message-ID: <1641506165@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 573471; Mon, 26
+ Jul 2027 12:23:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Hi Sandra,
+
+Going forward, please direct our remittances to the arrangement below.
+  CY502373910642698
+It would be great to have this sorted before the next run.
+
+Best,

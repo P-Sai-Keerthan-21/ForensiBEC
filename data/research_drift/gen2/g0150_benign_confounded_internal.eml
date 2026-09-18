@@ -1,0 +1,24 @@
+From: "Sandra Whitlock" <sandra.whitlock@northwind-logistics.com>
+To: f.haddad@northwind-logistics.com
+Subject: Notes from the depot review
+Date: Sat, 20 Mar 2027 09:27:00 +0000
+Message-ID: <8125078570@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 40c47b; Sat, 20
+ Mar 2027 09:27:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Good morning,
+
+Apologies for the rush, but the report deadline is end of day.
+The outstanding balance of USD 40,193.00 needs to be remitted today.
+  Beneficiary account (unchanged): IBAN CY932177806519372
+Details are here: https://harborline-supplies.com/terms
+Apologies for the short notice.
+
+Kind regards,

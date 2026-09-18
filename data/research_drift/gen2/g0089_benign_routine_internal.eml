@@ -1,0 +1,21 @@
+From: "Tomasz Nowak (CFO)" <t.nowak@northwind-logistics.com>
+To: t.nowak@northwind-logistics.com
+Subject: Notes from the depot review
+Date: Tue, 01 Jun 2027 08:22:00 +0000
+Message-ID: <1127072547@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 1c8c99; Tue, 01
+ Jun 2027 08:22:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Tomasz,
+
+The delivery window is confirmed for Friday afternoon.
+Let me know if you need anything else.
+
+Many thanks,

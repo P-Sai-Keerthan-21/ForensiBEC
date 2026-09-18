@@ -1,0 +1,22 @@
+From: "Daniel Osei" <d.osei@northwind-logistics.com>
+To: m.lin@northwind-logistics.com
+Subject: Admin update
+Date: Fri, 23 Jul 2027 07:51:00 +0000
+Message-ID: <9853657923@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id de5722; Fri, 23
+ Jul 2027 07:51:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Mei,
+
+Going forward, please direct our remittances to the arrangement below.
+  LT664972286074029
+Appreciate you picking this up.
+
+Kind regards,

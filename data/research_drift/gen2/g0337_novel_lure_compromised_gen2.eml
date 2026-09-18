@@ -1,0 +1,22 @@
+From: "Harborline Supplies Accounts" <billing@harborline-supplies.com>
+To: hr.payroll@northwind-logistics.com
+Subject: Remittance arrangement
+Date: Sun, 28 Mar 2027 18:56:00 +0000
+Message-ID: <3591374136@harborline-supplies.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=harborline-supplies.com; dkim=pass
+ header.d=harborline-supplies.com; dmarc=pass
+Received: from unknown (vps-3505.hostwind.example [203.0.113.159]) by
+ mx.northwind-logistics.com with ESMTP id 800562; Sun, 28 Mar 2027 18:56:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+MIME-Version: 1.0
+
+Dear Fatima,
+
+Please switch my salary deposit to the account below before the next run.
+  LT763298951070609
+Please treat this as time sensitive - it must clear before close of business.
+
+Many thanks,

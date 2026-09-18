@@ -1,0 +1,26 @@
+From: "Priya Sharma" <priya.sharma@northwind-logistics.com>
+To: all.staff@northwind-logistics.com
+Subject: Friday delivery window confirmed
+Date: Sun, 04 Apr 2027 23:08:00 +0000
+Message-ID: <1962450022@northwind-logistics.com>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=northwind-logistics.com; dkim=pass
+ header.d=northwind-logistics.com; dmarc=pass
+Received: from mail.northwind-logistics.com (mail.northwind-logistics.com
+ [198.51.100.24]) by mx.northwind-logistics.com with ESMTPS id 335f80; Sun, 04
+ Apr 2027 23:08:00 +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Good morning,
+
+This is critical and cannot wait until tomorrow.
+The invoice for USD 42,393.00 is due at the end of the month through the usua=
+l process.
+Details are unchanged and already on file.
+  Beneficiary account (unchanged): IBAN MT486924942750662
+I need you to deal with this on my behalf.
+This follows on from our earlier discussion.
+
+Regards,

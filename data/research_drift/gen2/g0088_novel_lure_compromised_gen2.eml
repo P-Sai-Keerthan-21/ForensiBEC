@@ -1,0 +1,23 @@
+From: "Orrin Marine Ltd Accounts" <finance@orrinmarine.co.uk>
+To: r.menon@northwind-logistics.com
+Subject: Supplier account housekeeping
+Date: Tue, 16 Mar 2027 03:08:00 +0000
+Message-ID: <5213680157@orrinmarine.co.uk>
+Authentication-Results: mx.northwind-logistics.com; spf=pass
+ smtp.mailfrom=orrinmarine.co.uk; dkim=pass header.d=orrinmarine.co.uk;
+ dmarc=pass
+Received: from unknown (vps-7839.hostwind.example [203.0.113.10]) by
+ mx.northwind-logistics.com with ESMTP id f93522; Tue, 16 Mar 2027 03:08:00
+ +0000
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Hi all,
+
+Our finance team now works with a different receiving institution - please ad=
+just your records before the next cycle.
+  Account: 23269579  Sort: 36-45-20
+It would be great to have this sorted before the next run.
+
+Thanks,
