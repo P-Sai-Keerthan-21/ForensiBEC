@@ -55,30 +55,61 @@ def _mentions(text: str, terms: set[str]) -> bool:
 
 
 class ThreadIndex:
-    """Reconstructs conversations across the acquired corpus."""
+    """Reconstructs conversations across the acquired corpus from HEADERS.
+
+    A conversation is identified by its root Message-ID: the first entry of
+    References, otherwise the earliest ancestor reachable through In-Reply-To,
+    otherwise the message's own Message-ID.
+
+    An earlier version grouped messages by normalised subject, contrary to this
+    module's documented design. Unrelated messages that happened to share a
+    generic subject ("Invoice attached") were then treated as one conversation
+    and the second sender was reported as an intruder. Subject similarity is
+    not evidence that two messages belong together; threading headers are.
+    """
 
     def __init__(self) -> None:
         self.by_message_id: dict[str, EmailArtifact] = {}
-        self.threads: dict[str, list[EmailArtifact]] = defaultdict(list)
-        self._thread_of: dict[str, str] = {}
+        self._members: list[EmailArtifact] = []
+        self._roots: dict[int, str] | None = None
 
     def observe(self, email: EmailArtifact) -> None:
         if email.message_id:
-            self.by_message_id[email.message_id] = email
-        key = normalise_subject(email.subject)
-        if key:
-            self.threads[key].append(email)
-            if email.message_id:
-                self._thread_of[email.message_id] = key
+            self.by_message_id[email.message_id.strip()] = email
+        self._members.append(email)
+        self._roots = None  # a new message may complete an ancestor chain
 
     def observe_all(self, emails: list[EmailArtifact]) -> None:
         for email in emails:
             self.observe(email)
 
+    def root_of(self, email: EmailArtifact) -> str:
+        """Root Message-ID of the conversation this message belongs to."""
+        refs = [r.strip() for r in email.references if r.strip()]
+        if refs:
+            return refs[0]
+        parent = (email.in_reply_to or "").strip()
+        seen: set[str] = set()
+        while parent and parent in self.by_message_id and parent not in seen:
+            seen.add(parent)
+            ancestor = self.by_message_id[parent]
+            ancestor_refs = [r.strip() for r in ancestor.references if r.strip()]
+            if ancestor_refs:
+                return ancestor_refs[0]
+            if not (ancestor.in_reply_to or "").strip():
+                return parent
+            parent = ancestor.in_reply_to.strip()
+        if parent:
+            return parent
+        own = (email.message_id or "").strip()
+        return own or f"sha256:{email.custody.sha256}"
+
     def thread_for(self, email: EmailArtifact) -> list[EmailArtifact]:
-        """Every message sharing this message's base subject, date-ordered."""
-        key = normalise_subject(email.subject)
-        members = list(self.threads.get(key, []))
+        """Every acquired message in the same header-defined conversation."""
+        if self._roots is None:
+            self._roots = {id(m): self.root_of(m) for m in self._members}
+        root = self.root_of(email)
+        members = [m for m in self._members if self._roots.get(id(m)) == root]
         members.sort(key=lambda e: (e.date_utc is None, e.date_utc))
         return members
 
@@ -157,7 +188,7 @@ class ThreadIndex:
                 "THREAD_SENDER_DIVERGENCE", "Message from an address not party to this conversation",
                 Severity.HIGH,
                 evidence=(
-                    f"thread {normalise_subject(email.subject)!r} involved "
+                    f"thread rooted at {self.root_of(email)!r} involved "
                     f"{sorted(prior_participants)}; this message is from "
                     f"{email.from_address!r}, which appears in no earlier message"
                 ),
@@ -238,7 +269,7 @@ class ThreadIndex:
                 "THREAD_PAYMENT_PIVOT", "Conversation pivots to a payment instruction as identity changes",
                 Severity.CRITICAL,
                 evidence=(
-                    f"no earlier message in thread {normalise_subject(email.subject)!r} "
+                    f"no earlier message in thread rooted at {self.root_of(email)!r} "
                     f"discussed payment; this message does, and the sender or "
                     f"Reply-To also changed"
                 ),

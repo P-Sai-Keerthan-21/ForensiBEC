@@ -163,10 +163,17 @@ class StyleBaseline:
             ))
 
         # -- Greeting change -----------------------------------------------
+        # "Unfamiliar" means not used in this sender's PRIOR messages. The
+        # message's own entry is removed once before checking. The original
+        # code built `others` by excluding the current greeting and then asked
+        # whether the current greeting was absent from it - always true - so
+        # the finding fired for any sender who ever varied their greeting.
         greetings = [g for g in self._greetings[address] if g]
         current_greeting = _greeting(email.body_text)
         if greetings and current_greeting:
-            others = [g for g in greetings if g != current_greeting]
+            others = list(greetings)
+            if current_greeting in others:
+                others.remove(current_greeting)
             if len(others) >= MIN_BASELINE_MESSAGES and current_greeting not in others:
                 indicators.append(Indicator(
                     code="STYLE_GREETING_CHANGE",
@@ -184,10 +191,13 @@ class StyleBaseline:
                 ))
 
         # -- Signature change ------------------------------------------------
+        # Same correction as the greeting check above.
         signatures = [s for s in self._signatures[address] if s]
         current_signature = _signature_block(email.body_text)
         if len(signatures) > MIN_BASELINE_MESSAGES and current_signature:
-            others = [s for s in signatures if s != current_signature]
+            others = list(signatures)
+            if current_signature in others:
+                others.remove(current_signature)
             if len(others) >= MIN_BASELINE_MESSAGES and current_signature not in others:
                 indicators.append(Indicator(
                     code="STYLE_SIGNATURE_CHANGE",

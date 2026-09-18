@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pytest
 
-from bec_detector.acquisition import load_eml, load_path
+from bec_detector.acquisition import load_bytes, load_eml, load_path
 from bec_detector.analysis.attachments import describe_attachment, sniff_type
 from bec_detector.analysis.thread import ThreadIndex, normalise_subject
 from bec_detector.analysis.urls import extract_urls
@@ -514,3 +514,92 @@ def test_allowlisted_partner_domain_never_links_cases():
 
     assert _is_linkable("domains", "delaney-freight.co") is False
     assert _is_linkable("domains", "delaney-freigth.co") is True  # the lookalike still links
+
+
+# ---------------------------------------------------------------------------
+# Regression: stylometry greeting/signature tautology
+# ---------------------------------------------------------------------------
+
+def _styled(i: int, greet: str, sign: str):
+    return load_bytes(
+        (f"From: p@x.test\r\nTo: q@x.test\r\nSubject: s{i}\r\nMessage-ID: <{i}@x.test>\r\n\r\n"
+         f"{greet}\r\n\r\nThe stock figures are attached for review today.\r\n"
+         f"Please check them.\r\n\r\n{sign}\r\nPriya\r\n").encode(), f"m{i}")
+
+
+def test_habitual_greeting_is_not_unfamiliar():
+    """The old check was tautological: 'Hello,' used four times before was
+    still reported as an unfamiliar greeting."""
+    from bec_detector.acquisition import load_bytes as _lb  # noqa: F401
+    from bec_detector.analysis.stylometry import StyleBaseline
+
+    msgs = [_styled(i, "Hello," if i % 2 == 0 else "Hi,",
+                    "Regards," if i % 2 == 0 else "Thanks,") for i in range(8)]
+    baseline = StyleBaseline()
+    baseline.observe_all(msgs)
+    codes = {i.code for i in baseline.analyse(msgs[0])[0]}
+    assert "STYLE_GREETING_CHANGE" not in codes
+    assert "STYLE_SIGNATURE_CHANGE" not in codes
+
+
+def test_genuinely_new_greeting_still_flagged():
+    from bec_detector.analysis.stylometry import StyleBaseline
+
+    msgs = [_styled(i, "Good morning,", "Regards,") for i in range(5)]
+    msgs.append(_styled(9, "Hey!", "Cheers!!"))
+    baseline = StyleBaseline()
+    baseline.observe_all(msgs)
+    codes = {i.code for i in baseline.analyse(msgs[-1])[0]}
+    assert "STYLE_GREETING_CHANGE" in codes
+    assert "STYLE_SIGNATURE_CHANGE" in codes
+
+
+# ---------------------------------------------------------------------------
+# Regression: threads are reconstructed from headers, not subject
+# ---------------------------------------------------------------------------
+
+def _plain(sender: str, mid: str, subject: str, day: int, extra: str = "") -> object:
+    return load_bytes(
+        (f"From: {sender}\r\nTo: ap@x.test\r\nSubject: {subject}\r\nMessage-ID: <{mid}>\r\n"
+         f"Date: Mon, 0{day} Sep 2026 09:00:00 +0000\r\n{extra}\r\nInvoice attached.").encode(), mid)
+
+
+def test_shared_subject_is_not_a_conversation():
+    """Two unrelated suppliers sending 'Invoice attached' are not one thread."""
+    a = _plain("alice@supplier-a.test", "a1@a", "Invoice attached", 1)
+    b = _plain("bob@supplier-b.test", "b1@b", "Invoice attached", 2)
+    index = ThreadIndex()
+    index.observe_all([a, b])
+    codes = {i.code for i in index.analyse(b)}
+    assert "THREAD_SENDER_DIVERGENCE" not in codes
+    assert "THREAD_NEW_PARTICIPANT" not in codes
+    assert index.root_of(a) != index.root_of(b)
+
+
+def test_header_linked_reply_is_one_conversation():
+    parent = _plain("alice@a.test", "p1@a", "Contract", 1)
+    child = _plain("mallory@evil.test", "c1@e", "Re: Contract", 2,
+                   "In-Reply-To: <p1@a>\r\nReferences: <p1@a>\r\n")
+    index = ThreadIndex()
+    index.observe_all([parent, child])
+    assert index.root_of(child) == index.root_of(parent) == "<p1@a>"
+    assert "THREAD_SENDER_DIVERGENCE" in {i.code for i in index.analyse(child)}
+
+
+def test_in_reply_to_chain_resolves_to_root():
+    a = _plain("x@a.test", "1@a", "Q", 1)
+    b = _plain("y@a.test", "2@a", "Re: Q", 2, "In-Reply-To: <1@a>\r\n")
+    c = _plain("x@a.test", "3@a", "Re: Q", 3, "In-Reply-To: <2@a>\r\n")
+    index = ThreadIndex()
+    index.observe_all([a, b, c])
+    assert index.root_of(c) == "<1@a>"
+    assert len(index.thread_for(c)) == 3
+
+
+def test_reply_loop_in_headers_terminates():
+    """Malicious In-Reply-To cycles must not hang reconstruction."""
+    a = _plain("x@a.test", "1@a", "Q", 1, "In-Reply-To: <2@a>\r\n")
+    b = _plain("y@a.test", "2@a", "Q", 2, "In-Reply-To: <1@a>\r\n")
+    index = ThreadIndex()
+    index.observe_all([a, b])
+    assert index.root_of(a)  # returns rather than looping
