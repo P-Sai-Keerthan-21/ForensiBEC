@@ -72,6 +72,54 @@
 </div>
 
 <div class="panel">
+  <h2>Ask about this case</h2>
+  <form action="/cases/{{ case.case_id }}/ask" method="get" style="display:flex;gap:8px;flex-wrap:wrap">
+    <input type="text" name="q" maxlength="500" required style="flex:1;min-width:260px"
+           placeholder="e.g. Why was this email flagged? What should I review next?">
+    <select name="evidence_id" aria-label="Evidence" style="padding:8px">
+      <option value="">highest-risk message</option>
+      {% for a in analysis.assessments %}<option value="{{ a.evidence_id }}">{{ a.evidence_id }}</option>{% endfor %}
+    </select>
+    <button type="submit">Ask</button>
+  </form>
+  <p class="small">Answers are assembled from this case's recorded findings by deterministic
+    templates &mdash; no language model is used and nothing leaves this machine. Every
+    statement cites the finding it comes from.</p>
+</div>
+
+<div class="panel" id="feedback">
+  <h2>Investigator assessment</h2>
+  <p class="small">Your determination is recorded separately from the system's assessment,
+    with your name, the time, and what the system said at that moment. Records are never
+    edited &mdash; a new entry supersedes the previous one. Nothing here retrains any model.</p>
+  <div class="table-wrap"><table>
+    <tr><th>Evidence</th><th>System</th><th>Current determination</th><th>Record a determination</th></tr>
+    {% for a in analysis.assessments %}
+    {% set fb = feedback.get(a.evidence_id) %}
+    <tr>
+      <td class="mono">{{ a.evidence_id }}<div class="small">{{ (a.email.subject or '(no subject)')[:50] }}</div></td>
+      <td><span class="band band-{{ a.risk_band }}">{{ a.risk_band }}</span></td>
+      <td>{% if fb %}<strong>{{ fb.assessment_label }}</strong>
+            <div class="small">{{ fb.examiner }}, {{ fb.timestamp_utc }}<br>{{ fb.agreement }}</div>
+            {% if fb.notes %}<div class="small">&ldquo;{{ fb.notes }}&rdquo;</div>{% endif %}
+          {% else %}<span class="muted">none recorded</span>{% endif %}</td>
+      <td>
+        <form action="/cases/{{ case.case_id }}/feedback" method="post" style="display:grid;gap:6px">
+          <input type="hidden" name="evidence_id" value="{{ a.evidence_id }}">
+          <select name="assessment" required aria-label="Assessment" style="padding:6px">
+            {% for key, label in assessments.items() %}<option value="{{ key }}">{{ label }}</option>{% endfor %}
+          </select>
+          <input type="text" name="examiner" placeholder="examiner (required)" required maxlength="120">
+          <input type="text" name="notes" placeholder="notes" maxlength="2000">
+          <button type="submit" style="padding:7px 12px;font-size:13px">Record</button>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+  </table></div>
+</div>
+
+<div class="panel">
   <h2>Next steps recommended by the findings</h2>
   {% if recommendations %}
   <ol>{% for rec, codes in recommendations %}<li>{{ rec }} <span class="small">({{ codes|join(', ') }})</span></li>{% endfor %}</ol>

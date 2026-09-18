@@ -702,12 +702,15 @@ def _investigator(report: dict[str, Any]) -> str:
             f'<span class="mono">{_esc(e.get("evidence_id"))}</span>',
             _esc(f'{e.get("system_band")} ({e.get("system_score")})'),
             f"<strong>{_esc(e.get('assessment'))}</strong>",
+            _esc(e.get("agreement")),
             _esc(e.get("notes")),
         ])
     return ('<div class="human"><strong>Human determinations.</strong> '
             '<span class="small">Recorded by examiners; not produced by the system.</span></div>'
             + _table(["Recorded (UTC)", "Examiner", "Evidence", "System assessment at the time",
-                      "Investigator assessment", "Notes"], rows))
+                      "Investigator assessment", "Compared with system", "Notes"], rows)
+            + '<p class="small">History, oldest first. A later entry for the same evidence '
+              "supersedes an earlier one; nothing is edited.</p>")
 
 
 def _audit(report: dict[str, Any]) -> str:

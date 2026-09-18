@@ -306,6 +306,7 @@ class CaseStore:
                                  examiner=examiner or case.examiner)
         report["case"]["evidence_register"] = [e.to_dict() for e in case.evidence]
         report["case"]["related_cases"] = self.related_cases(case_id, report)
+        report["investigator_assessments"] = self._investigator_entries(case_id)
 
         self.analysis_path(case_id).write_text(
             json.dumps(report, indent=2, ensure_ascii=False, default=str), encoding="utf-8")
@@ -330,6 +331,40 @@ class CaseStore:
                               f"messages={len(assessments)}; highest={worst.band.value}")
         report["audit"]["integrity"] = pipeline.integrity()
         return report
+
+    def _investigator_entries(self, case_id: str) -> list[dict[str, Any]]:
+        """Human determinations for the report - history, oldest first."""
+        from .feedback import FeedbackStore
+
+        return [
+            {**r.to_dict(), "assessment": r.assessment_label}
+            for r in FeedbackStore(self, case_id).history()
+        ]
+
+    def refresh_report(self, case_id: str) -> None:
+        """Re-render the stored report so it shows the latest human assessments.
+
+        Only the investigator section changes; system findings are untouched.
+        """
+        from .report import render_html
+
+        analysis = self.load_analysis(case_id)
+        if analysis is None:
+            return
+        analysis["investigator_assessments"] = self._investigator_entries(case_id)
+        self.analysis_path(case_id).write_text(
+            json.dumps(analysis, indent=2, ensure_ascii=False, default=str), encoding="utf-8")
+        render_html(analysis, self.report_path(case_id))
+
+    def record_feedback(self, case_id: str, evidence_id: str, assessment: str,
+                        examiner: str, notes: str = ""):
+        """Record a human determination and refresh the stored report."""
+        from .feedback import FeedbackStore
+
+        self.load(case_id)  # validates the case exists
+        record = FeedbackStore(self, case_id).record(evidence_id, assessment, examiner, notes)
+        self.refresh_report(case_id)
+        return record
 
     def load_analysis(self, case_id: str) -> dict[str, Any] | None:
         path = self.analysis_path(case_id)

@@ -293,7 +293,10 @@ def _case_page(request: Request, case_id: str, integrity: dict | None = None,
         return HTMLResponse(_error_page("Case not found."), status_code=404)
 
     analysis = store.load_analysis(case.case_id)
+    from ..feedback import ASSESSMENTS, FeedbackStore
+    current_feedback = {k: v.to_dict() for k, v in FeedbackStore(store, case.case_id).current().items()}
     context = {"case": case, "analysis": analysis, "integrity": integrity,
+               "feedback": current_feedback, "assessments": ASSESSMENTS,
                "rejected": rejected or [], "related": store.related_cases(case.case_id),
                "audit": store.audit_entries(case.case_id)}
 
@@ -319,6 +322,70 @@ def _case_page(request: Request, case_id: str, integrity: dict | None = None,
             graph_svg=analysis.get("evidence_graph_svg") or "",
         )
     return _page(request, "case.html", "cases", **context)
+
+
+@app.post("/cases/{case_id}/feedback", response_class=HTMLResponse)
+async def feedback_form(request: Request, case_id: str,
+                        evidence_id: str = Form(...), assessment: str = Form(...),
+                        examiner: str = Form(""), notes: str = Form("")):
+    """Record an investigator assessment from the case page."""
+    from ..feedback import FeedbackError
+    try:
+        CaseStore().record_feedback(case_id, evidence_id, assessment, examiner, notes)
+    except (CaseError, FeedbackError) as exc:
+        return HTMLResponse(_error_page(str(exc)), status_code=400)
+    return RedirectResponse(f"/cases/{case_id}#feedback", status_code=303)
+
+
+@app.post("/api/cases/{case_id}/feedback")
+async def feedback_api(case_id: str, payload: dict):
+    from ..feedback import FeedbackError
+    try:
+        record = CaseStore().record_feedback(
+            case_id, str(payload.get("evidence_id", "")), str(payload.get("assessment", "")),
+            str(payload.get("examiner", "")), str(payload.get("notes", "")))
+    except (CaseError, FeedbackError) as exc:
+        return JSONResponse({"error": str(exc)}, status_code=400)
+    return record.to_dict()
+
+
+@app.get("/api/cases/{case_id}/feedback")
+async def feedback_list(case_id: str):
+    from ..feedback import FeedbackStore
+    store, case = _load_case_or_error(case_id)
+    if case is None:
+        return JSONResponse({"error": "Case not found."}, status_code=404)
+    fb = FeedbackStore(store, case.case_id)
+    return {"history": [r.to_dict() for r in fb.history()], "integrity": fb.verify()}
+
+
+def _ask(case_id: str, question: str, evidence_id: str | None):
+    from ..assistant import ask
+    store, case = _load_case_or_error(case_id)
+    if case is None:
+        return None, "Case not found."
+    analysis = store.load_analysis(case.case_id)
+    if analysis is None:
+        return None, "This case has not been analysed yet."
+    return ask(question, analysis, evidence_id or None), None
+
+
+@app.post("/api/cases/{case_id}/assistant")
+async def assistant_api(case_id: str, payload: dict):
+    question = str(payload.get("question", ""))[:500]
+    answer, error = _ask(case_id, question, payload.get("evidence_id"))
+    if error:
+        return JSONResponse({"error": error}, status_code=404)
+    return answer.to_dict()
+
+
+@app.get("/cases/{case_id}/ask", response_class=HTMLResponse)
+async def assistant_page(request: Request, case_id: str, q: str = "", evidence_id: str = ""):
+    answer, error = _ask(case_id, q[:500], evidence_id)
+    if error:
+        return HTMLResponse(_error_page(error), status_code=404)
+    return _page(request, "ask.html", "cases", case_id=case_id, question=q[:500],
+                 answer=answer)
 
 
 @app.get("/cases", response_class=HTMLResponse)

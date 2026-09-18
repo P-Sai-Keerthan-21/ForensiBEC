@@ -226,6 +226,44 @@ def _cmd_case_search(args: argparse.Namespace) -> int:
     return 0
 
 
+def _cmd_case_feedback(args: argparse.Namespace) -> int:
+    from .cases import CaseError
+    from .feedback import FeedbackError
+    try:
+        record = _store().record_feedback(args.case_id, args.evidence_id, args.assessment,
+                                          args.examiner, args.notes or "")
+    except (CaseError, FeedbackError) as exc:
+        return _case_fail(exc)
+    print(f"recorded: {record.evidence_id} -> {record.assessment_label} "
+          f"(system said {record.system_band} {record.system_score}; {record.agreement})")
+    return 0
+
+
+def _cmd_case_export_feedback(args: argparse.Namespace) -> int:
+    import json as _json
+    from .feedback import export_training_candidates
+    data = export_training_candidates(_store(), args.case_id or None)
+    Path(args.output).write_text(_json.dumps(data, indent=2), encoding="utf-8")
+    print(f"{len(data['rows'])} candidate label(s), {len(data['withheld'])} withheld -> {args.output}")
+    print("Not used for training by this application.")
+    return 0
+
+
+def _cmd_case_ask(args: argparse.Namespace) -> int:
+    from .assistant import ask
+    store = _store()
+    analysis = store.load_analysis(args.case_id) if store.exists(args.case_id) else None
+    if analysis is None:
+        print("error: case not found or not analysed", file=sys.stderr)
+        return 2
+    answer = ask(args.question, analysis, args.evidence)
+    print(f"[{answer.provider}; intent={answer.intent}; "
+          f"grounded={'yes' if answer.grounded else 'NO'}]")
+    print()
+    print(answer.text())
+    return 0 if answer.grounded else 1
+
+
 def _cmd_case_verify(args: argparse.Namespace) -> int:
     from .cases import CaseError
     try:
@@ -296,6 +334,26 @@ def build_parser() -> argparse.ArgumentParser:
     c = case_sub.add_parser("search", help="search cases by ID, evidence, IOC, sender or subject")
     c.add_argument("query")
     c.set_defaults(func=_cmd_case_search)
+
+    c = case_sub.add_parser("feedback", help="record an investigator assessment")
+    c.add_argument("case_id")
+    c.add_argument("evidence_id")
+    c.add_argument("assessment", choices=["confirmed_suspicious", "confirmed_benign", "needs_review"])
+    c.add_argument("--examiner", required=True)
+    c.add_argument("--notes", default="")
+    c.set_defaults(func=_cmd_case_feedback)
+
+    c = case_sub.add_parser("export-feedback",
+                            help="export candidate labels for a future, deliberate retraining step")
+    c.add_argument("output")
+    c.add_argument("case_id", nargs="*")
+    c.set_defaults(func=_cmd_case_export_feedback)
+
+    c = case_sub.add_parser("ask", help="ask the grounded assistant about an analysed case")
+    c.add_argument("case_id")
+    c.add_argument("question")
+    c.add_argument("--evidence", default=None, help="evidence ID to focus on")
+    c.set_defaults(func=_cmd_case_ask)
 
     c = case_sub.add_parser("verify", help="re-hash evidence and verify the case audit chain")
     c.add_argument("case_id")

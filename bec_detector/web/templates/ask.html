@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}FORENSIBEC - {{ case_id }} - assistant{% endblock %}
+{% block content %}
+<div class="panel">
+  <p class="small"><a href="/cases/{{ case_id }}">&larr; {{ case_id }}</a></p>
+  <h2>Question</h2>
+  <p><strong>{{ question }}</strong></p>
+  <p class="small">Provider: {{ answer.provider }} &middot; intent: <code>{{ answer.intent }}</code> &middot;
+    grounding: {% if answer.grounded %}<span class="ok">every statement cites recorded evidence</span>
+    {% else %}<span class="fail">FAILED - this answer must not be relied on</span>{% endif %}</p>
+  {% if not answer.grounded %}
+  <div class="bad"><ul>{% for e in answer.grounding_errors %}<li>{{ e }}</li>{% endfor %}</ul></div>
+  {% endif %}
+</div>
+{% for section in answer.sections %}
+<div class="panel">
+  <h2>{{ section.heading }}</h2>
+  <ul>
+  {% for claim in section.claims %}
+    <li>{{ claim.text }}<br>{% for c in claim.citations %}<span class="pill">{{ c }}</span>{% endfor %}</li>
+  {% endfor %}
+  </ul>
+</div>
+{% endfor %}
+<div class="note">{% for c in answer.caveats %}{{ c }}{% if not loop.last %}<br>{% endif %}{% endfor %}</div>
+{% endblock %}
