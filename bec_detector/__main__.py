@@ -149,24 +149,34 @@ def _cmd_case_add(args: argparse.Namespace) -> int:
     if not files or not all(f.is_file() for f in files):
         print(f"error: no .eml evidence found at {source}", file=sys.stderr)
         return 2
-    added = duplicates = 0
     try:
-        for path in files:
+        store.load(args.case_id)
+    except CaseError as exc:
+        return _case_fail(exc)
+    added = duplicates = 0
+    rejected: list[str] = []
+    for path in files:
+        try:
             known = {e.sha256 for e in store.load(args.case_id).evidence}
             record = store.add_evidence(args.case_id, path.read_bytes(), path.name,
                                         args.examiner or "")
-            if record.sha256 in known:
-                duplicates += 1
-                note = "  (already preserved - identical bytes, not added again)"
-            else:
-                added += 1
-                note = ""
-            print(f"  {record.evidence_id}  sha256={record.sha256}  {path.name}{note}")
-    except CaseError as exc:
-        return _case_fail(exc)
+        except CaseError as exc:
+            # One unusable file must not stop the rest of a directory, and
+            # must never be preserved (it would block every later analysis).
+            rejected.append(f"{path.name}: {exc}")
+            print(f"  REJECTED  {path.name}: {exc}", file=sys.stderr)
+            continue
+        if record.sha256 in known:
+            duplicates += 1
+            note = "  (already preserved - identical bytes, not added again)"
+        else:
+            added += 1
+            note = ""
+        print(f"  {record.evidence_id}  sha256={record.sha256}  {path.name}{note}")
     print(f"{added} new item(s) registered in {args.case_id}"
-          + (f"; {duplicates} already present" if duplicates else ""))
-    return 0
+          + (f"; {duplicates} already present" if duplicates else "")
+          + (f"; {len(rejected)} rejected (not preserved)" if rejected else ""))
+    return 2 if rejected else 0
 
 
 def _cmd_case_analyse(args: argparse.Namespace) -> int:

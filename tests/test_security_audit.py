@@ -314,3 +314,11 @@ def test_browser_same_origin_form_post_is_accepted(client):
                     files=[("files", ("a.eml", (ROOT / "data" / "samples" / "ben_01_internal_meeting.eml").read_bytes(),
                                       "message/rfc822"))], follow_redirects=False)
     assert r.status_code == 303 and r.headers["location"].endswith("/cases/CASE-FORM")
+
+
+def test_feedback_on_missing_case_is_404_like_every_other_case_route(client):
+    """Found in the final audit: it returned 400 while all other routes 404."""
+    body = {"evidence_id": "EV-X", "assessment": "confirmed_benign", "examiner": "X"}
+    assert client.post("/api/cases/NOPE/feedback", json=body).status_code == 404
+    assert client.post("/cases/NOPE/feedback", data=body).status_code == 404
+    assert client.post("/api/cases/bad%20id/feedback", json=body).status_code == 404

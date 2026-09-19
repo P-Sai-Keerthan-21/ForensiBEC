@@ -201,6 +201,11 @@ class EvidenceParseError(ValueError):
 
 def _acquire(raw: bytes, custody: CustodyRecord) -> EmailArtifact:
     """Parse and normalise one message, converting parser failure to a clean error."""
+    if not raw.strip():
+        # An empty file carries no message; analysing it would report an
+        # empty "email" as BENIGN. Every intake (CLI scan, case add, web)
+        # rejects it with this reason instead.
+        raise EvidenceParseError("file is empty - no message to analyse")
     containers = len(_MULTIPART_HEADER.findall(raw))
     if containers > MAX_MULTIPART_CONTAINERS:
         raise EvidenceParseError(

@@ -376,3 +376,52 @@ def test_cli_reports_duplicate_evidence_honestly(capsys):
     out = capsys.readouterr().out
     assert "0 new item(s) registered" in out and "1 already present" in out
     assert len(CaseStore().load("CASE-CLIDUP").evidence) == 1
+
+
+BOMB = (b"From: a@b.example\r\nContent-Type: multipart/mixed; boundary=b0\r\n\r\n"
+        + b"".join(b"--b%d\r\nContent-Type: multipart/mixed; boundary=b%d\r\n\r\n" % (i, i + 1)
+                   for i in range(500)))
+
+
+def test_unparseable_evidence_is_refused_not_preserved(tmp_path):
+    """Found in the final audit: `case add` preserved a MIME bomb (the web
+    intake parsed first, the case store did not). Evidence is write-once, so
+    the case could never be analysed again."""
+    store = CaseStore(tmp_path / "cases")
+    store.create("CASE-BOMB")
+    with pytest.raises(CaseError, match="cannot be parsed safely"):
+        store.add_evidence("CASE-BOMB", BOMB, "bomb.eml")
+    store.add_evidence("CASE-BOMB", (SAMPLES / "bec_01_ceo_wire_urgent.eml").read_bytes(), "ok.eml")
+    assert len(store.load("CASE-BOMB").evidence) == 1
+    assert store.analyse("CASE-BOMB", ioc_store=IOCStore(tmp_path / "i.json"))["assessments"]
+    assert len(list(store._dir("CASE-BOMB").joinpath("evidence").iterdir())) == 1
+
+
+def test_cli_add_directory_skips_bad_files_and_keeps_case_usable(tmp_path, capsys):
+    from bec_detector.__main__ import main
+
+    folder = tmp_path / "in"
+    folder.mkdir()
+    (folder / "a_good.eml").write_bytes((SAMPLES / "bec_02_vendor_bank_change.eml").read_bytes())
+    (folder / "b_bomb.eml").write_bytes(BOMB)
+    (folder / "c_empty.eml").write_bytes(b"")
+    (folder / "d_good.eml").write_bytes((SAMPLES / "ben_01_internal_meeting.eml").read_bytes())
+    assert main(["case", "create", "CASE-CLIBAD"]) == 0
+    assert main(["case", "add", "CASE-CLIBAD", str(folder)]) == 2
+    captured = capsys.readouterr()
+    assert "2 new item(s) registered" in captured.out and "2 rejected" in captured.out
+    assert "b_bomb.eml" in captured.err and "c_empty.eml" in captured.err
+    assert main(["case", "analyse", "CASE-CLIBAD"]) == 0
+
+
+def test_scan_skips_empty_file_with_a_reason(tmp_path, capsys):
+    from bec_detector.__main__ import main
+
+    folder = tmp_path / "in"
+    folder.mkdir()
+    (folder / "empty.eml").write_bytes(b"")
+    (folder / "ok.eml").write_bytes((SAMPLES / "bec_01_ceo_wire_urgent.eml").read_bytes())
+    out = tmp_path / "r.json"
+    assert main(["scan", str(folder), "--no-correlate", "--json", str(out)]) == 0
+    assert "empty.eml" in capsys.readouterr().err
+    assert len(json.loads(out.read_text(encoding="utf-8"))["assessments"]) == 1

@@ -359,6 +359,8 @@ async def feedback_form(request: Request, case_id: str,
                         examiner: str = Form(""), notes: str = Form("")):
     """Record an investigator assessment from the case page."""
     from ..feedback import FeedbackError
+    if _load_case_or_error(case_id)[1] is None:
+        return HTMLResponse(_error_page("Case not found."), status_code=404)
     try:
         CaseStore().record_feedback(case_id, evidence_id, assessment, examiner, notes)
     except (CaseError, FeedbackError) as exc:
@@ -369,6 +371,8 @@ async def feedback_form(request: Request, case_id: str,
 @app.post("/api/cases/{case_id}/feedback")
 async def feedback_api(case_id: str, payload: dict):
     from ..feedback import FeedbackError
+    if _load_case_or_error(case_id)[1] is None:
+        return JSONResponse({"error": "Case not found."}, status_code=404)
     try:
         record = CaseStore().record_feedback(
             case_id, str(payload.get("evidence_id", "")), str(payload.get("assessment", "")),

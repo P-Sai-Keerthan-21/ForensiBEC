@@ -42,7 +42,7 @@ from pathlib import Path
 from typing import Any
 
 from . import config
-from .acquisition import EvidenceParseError
+from .acquisition import EvidenceParseError, load_bytes
 from .forensics import AuditLog
 from .storage import StateBusy, atomic_write_text, locked
 
@@ -233,6 +233,15 @@ class CaseStore:
                              examiner: str) -> EvidenceRecord:
         case = self.load(case_id)
         sha256 = hashlib.sha256(raw).hexdigest()
+        if not any(e.sha256 == sha256 for e in case.evidence):
+            # Preserved evidence is write-once and can never be removed, so an
+            # item the analysis would refuse (a MIME bomb, an empty file) must
+            # be refused here - otherwise it blocks every future analysis of
+            # the whole case.
+            try:
+                load_bytes(raw, f"{case_id}:intake-check")
+            except EvidenceParseError as exc:
+                raise CaseError(f"{original_filename[:200]}: cannot be parsed safely - {exc}") from exc
 
         for existing in case.evidence:
             if existing.sha256 == sha256:
