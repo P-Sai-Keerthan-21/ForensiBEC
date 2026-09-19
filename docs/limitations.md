@@ -81,7 +81,6 @@ fitted. The threshold table in `evaluation.md` §8 is analysis, not selection.
 | No authentication or user accounts | Binds to `127.0.0.1`; CSRF and trusted-host checks (`security.md`) |
 | No TLS | Localhost only |
 | Case data stored unencrypted | Protect the data directory with filesystem permissions |
-| Concurrent analysis of one case is not locked | Single-analyst use |
 | Threat intelligence is a local list only | Stated in every report; the adapter supports future providers |
 | Assistant uses keyword intents and templates | Grounding validator; unsupported questions get a list, not a guess |
 

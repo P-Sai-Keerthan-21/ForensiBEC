@@ -35,6 +35,7 @@ import hashlib
 import json
 import os
 import re
+from contextlib import contextmanager
 from dataclasses import asdict, dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
@@ -43,6 +44,7 @@ from typing import Any
 from . import config
 from .acquisition import EvidenceParseError
 from .forensics import AuditLog
+from .storage import StateBusy, atomic_write_text, locked
 
 CASE_ID_PATTERN = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_-]{0,63}$")
 SHA256_PATTERN = re.compile(r"^[0-9a-f]{64}$")
@@ -143,6 +145,20 @@ class CaseStore:
     def analysis_path(self, case_id: str) -> Path:
         return self._dir(case_id) / "analysis.json"
 
+    @contextmanager
+    def lock(self, case_id: str):
+        """Exclusive, cross-process lock on one case (CLI and server alike).
+
+        Every change to a case - its register, audit chain, feedback log,
+        analysis and report - happens under this lock, so two processes can
+        never fork the audit hash chain or interleave writes.
+        """
+        try:
+            with locked(self._dir(case_id) / ".lock"):
+                yield
+        except StateBusy as exc:
+            raise CaseError(f"Case {case_id} is busy in another process; try again.") from exc
+
     # -- lifecycle -----------------------------------------------------------
 
     def exists(self, case_id: str) -> bool:
@@ -155,21 +171,29 @@ class CaseStore:
         case_id = validate_case_id(case_id)
         if self.exists(case_id):
             raise CaseError(f"Case {case_id} already exists.")
-        directory = self._dir(case_id)
-        (directory / "evidence").mkdir(parents=True, exist_ok=True)
-        now = _now()
-        case = Case(case_id=case_id, title=title or case_id,
-                    examiner=examiner or "unspecified-examiner",
-                    created_utc=now, updated_utc=now)
-        self._save(case)
-        AuditLog(self.audit_path(case_id), actor=case.examiner).record(
-            "case_created", f"title={case.title!r}")
-        return case
+        with self.lock(case_id):
+            if self.exists(case_id):  # created by another process meanwhile
+                raise CaseError(f"Case {case_id} already exists.")
+            directory = self._dir(case_id)
+            (directory / "evidence").mkdir(parents=True, exist_ok=True)
+            now = _now()
+            case = Case(case_id=case_id, title=title or case_id,
+                        examiner=examiner or "unspecified-examiner",
+                        created_utc=now, updated_utc=now)
+            self._save(case)
+            AuditLog(self.audit_path(case_id), actor=case.examiner).record(
+                "case_created", f"title={case.title!r}")
+            return case
 
     def open_or_create(self, case_id: str, examiner: str = "", title: str = "") -> Case:
         if self.exists(case_id):
             return self.load(case_id)
-        return self.create(case_id, examiner, title)
+        try:
+            return self.create(case_id, examiner, title)
+        except CaseError:
+            if self.exists(case_id):  # another process created it first
+                return self.load(case_id)
+            raise
 
     def load(self, case_id: str) -> Case:
         path = self._dir(case_id) / "case.json"
@@ -180,8 +204,7 @@ class CaseStore:
     def _save(self, case: Case) -> None:
         case.updated_utc = _now()
         path = self._dir(case.case_id) / "case.json"
-        path.write_text(json.dumps(case.to_dict(), indent=2, ensure_ascii=False),
-                        encoding="utf-8")
+        atomic_write_text(path, json.dumps(case.to_dict(), indent=2, ensure_ascii=False))
 
     def list(self) -> list[Case]:
         if not self.root.exists():
@@ -202,6 +225,12 @@ class CaseStore:
         """Preserve one evidence item. Write-once; identical bytes are a no-op."""
         if not raw:
             raise CaseError("Evidence is empty.")
+        self.load(case_id)  # must exist before a lock (and directory) is taken
+        with self.lock(case_id):
+            return self._add_evidence_locked(case_id, raw, original_filename, examiner)
+
+    def _add_evidence_locked(self, case_id: str, raw: bytes, original_filename: str,
+                             examiner: str) -> EvidenceRecord:
         case = self.load(case_id)
         sha256 = hashlib.sha256(raw).hexdigest()
 
@@ -276,6 +305,11 @@ class CaseStore:
     def analyse(self, case_id: str, examiner: str = "",
                 ioc_store=None, intel=None) -> dict[str, Any]:
         """Analyse every evidence item in the case and retain the results."""
+        self.load(case_id)
+        with self.lock(case_id):
+            return self._analyse_locked(case_id, examiner, ioc_store, intel)
+
+    def _analyse_locked(self, case_id: str, examiner: str, ioc_store, intel) -> dict[str, Any]:
         from .pipeline import BECPipeline
         from .report import render_html
         from .report.assemble import assemble_report
@@ -309,9 +343,9 @@ class CaseStore:
         report["case"]["related_cases"] = self.related_cases(case_id, report)
         report["investigator_assessments"] = self._investigator_entries(case_id)
 
-        self.analysis_path(case_id).write_text(
-            json.dumps(report, indent=2, ensure_ascii=False, default=str), encoding="utf-8")
-        render_html(report, self.report_path(case_id))
+        atomic_write_text(self.analysis_path(case_id),
+                          json.dumps(report, indent=2, ensure_ascii=False, default=str))
+        atomic_write_text(self.report_path(case_id), render_html(report))
 
         worst = max(assessments, key=lambda a: (BAND_RANK[a.band.value], a.score))
         case.summary = {
@@ -349,13 +383,14 @@ class CaseStore:
         """
         from .report import render_html
 
-        analysis = self.load_analysis(case_id)
-        if analysis is None:
-            return
-        analysis["investigator_assessments"] = self._investigator_entries(case_id)
-        self.analysis_path(case_id).write_text(
-            json.dumps(analysis, indent=2, ensure_ascii=False, default=str), encoding="utf-8")
-        render_html(analysis, self.report_path(case_id))
+        with self.lock(case_id):
+            analysis = self.load_analysis(case_id)
+            if analysis is None:
+                return
+            analysis["investigator_assessments"] = self._investigator_entries(case_id)
+            atomic_write_text(self.analysis_path(case_id),
+                              json.dumps(analysis, indent=2, ensure_ascii=False, default=str))
+            atomic_write_text(self.report_path(case_id), render_html(analysis))
 
     def record_feedback(self, case_id: str, evidence_id: str, assessment: str,
                         examiner: str, notes: str = ""):
@@ -363,9 +398,10 @@ class CaseStore:
         from .feedback import FeedbackStore
 
         self.load(case_id)  # validates the case exists
-        record = FeedbackStore(self, case_id).record(evidence_id, assessment, examiner, notes)
-        self.refresh_report(case_id)
-        return record
+        with self.lock(case_id):
+            record = FeedbackStore(self, case_id).record(evidence_id, assessment, examiner, notes)
+            self.refresh_report(case_id)
+            return record
 
     def load_analysis(self, case_id: str) -> dict[str, Any] | None:
         path = self.analysis_path(case_id)

@@ -97,10 +97,31 @@ class IOCStore:
             self.data = {}
 
     def save(self) -> None:
+        """Merge this process's records into the file and replace it atomically.
+
+        The store is shared by every case and may be written by the CLI and the
+        server at once. Re-reading under a lock and merging means neither can
+        drop the other's records, and an atomic replace means a crash can never
+        leave a truncated file (which _load would otherwise have to discard).
+        """
+        from ..storage import atomic_write_text, locked
+
         self.path.parent.mkdir(parents=True, exist_ok=True)
-        self.path.write_text(
-            json.dumps(self.data, indent=2, ensure_ascii=False), encoding="utf-8"
-        )
+        with locked(self.path.with_name(self.path.name + ".lock")):
+            on_disk = IOCStore.__new__(IOCStore)
+            on_disk.path, on_disk.data = self.path, {}
+            on_disk._load()
+            for kind, values in on_disk.data.items():
+                mine = self.data.setdefault(kind, {})
+                for value, theirs in values.items():
+                    record = mine.setdefault(value, dict(theirs))
+                    record["cases"] = sorted(set(record.get("cases", []))
+                                             | set(theirs.get("cases", [])))
+                    for key, pick in (("first_seen", min), ("last_seen", max)):
+                        seen = [r[key] for r in (record, theirs) if r.get(key)]
+                        if seen:
+                            record[key] = pick(seen)
+            atomic_write_text(self.path, json.dumps(self.data, indent=2, ensure_ascii=False))
 
     # -- query ---------------------------------------------------------------
 

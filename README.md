@@ -306,8 +306,7 @@ The most important, in full in [`docs/limitations.md`](docs/limitations.md):
 5. Known gaps include combosquat domains, a whitespace-sensitive currency
    pattern, and stylometry reacting to formatting. Archives, `.msg` and PST
    are not supported.
-6. There is no authentication or TLS, and no locking for concurrent writes to
-   one case.
+6. There is no authentication or TLS.
 
 ## 12. Future work
 

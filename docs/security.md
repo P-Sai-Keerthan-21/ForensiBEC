@@ -245,7 +245,7 @@ matter most without a login.
 | spaCy/NLTK model files trusted | Installed from PyPI at setup; standard supply-chain assumption |
 | Reports contain full evidence | By design; handle as case material |
 | IOC store is plain JSON | Readable and editable by anyone with filesystem access; integrity of *findings* is protected by the audit chain, not the store |
-| Concurrent writes to one case | Two simultaneous analyses of the same case can race on `case.json`. Single-analyst localhost use makes this unlikely; there is no file locking |
+| Concurrent writes to one case | Mitigated: every change to a case runs under a cross-process OS file lock (`bec_detector/storage.py`), and case files and the IOC store are replaced atomically. Before this, two processes could fork a case's audit hash chain. Tests: `tests/test_storage.py` |
 | CSRF defence relies on browser headers | Modern browsers send `Origin`/`Sec-Fetch-Site` on cross-site POSTs; very old browsers may not. There is no CSRF token |
 | Case data readable by local users | The data directory is not encrypted; protect it with filesystem permissions |
 

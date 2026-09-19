@@ -439,8 +439,9 @@ async def case_verify_page(request: Request, case_id: str):
     # Verification is itself an investigative action, so it is logged - after
     # the chain has been checked, so the entry cannot mask a break.
     from ..forensics import AuditLog
-    AuditLog(store.audit_path(case.case_id)).record(
-        "integrity_verified", "intact" if result["intact"] else "INTEGRITY FAILURE")
+    with store.lock(case.case_id):
+        AuditLog(store.audit_path(case.case_id)).record(
+            "integrity_verified", "intact" if result["intact"] else "INTEGRITY FAILURE")
     return _case_page(request, case.case_id, integrity=result)
 
 
