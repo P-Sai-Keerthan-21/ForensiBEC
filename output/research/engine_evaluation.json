@@ -1,0 +1,636 @@
+{
+  "result_type": "RESEARCH RESULTS - FORENSIC RULE ENGINE",
+  "provenance": "SYNTHETIC research corpus. The rule engine was not tuned on this corpus. Figures describe this engine on this synthetic distribution and are NOT real-world accuracy estimates.",
+  "not_real_world_accuracy": true,
+  "engine_tuned_on_this_corpus": false,
+  "configured_threshold": {
+    "band": "LIKELY_BEC",
+    "score": 50.0
+  },
+  "configuration": {
+    "threat_intelligence": "disabled",
+    "correlation": "disabled",
+    "baseline": "each split analysed as one corpus (two-pass)"
+  },
+  "generated_utc": "2026-09-18T18:55:44+00:00",
+  "splits": [
+    {
+      "split": "train",
+      "n": 539,
+      "class_counts": {
+        "MALICIOUS": 224,
+        "BENIGN": 315
+      },
+      "at_configured_threshold": {
+        "threshold": 50.0,
+        "tp": 213,
+        "fp": 135,
+        "fn": 11,
+        "tn": 180,
+        "precision": 0.6121,
+        "recall": 0.9509,
+        "f1": 0.7448,
+        "false_positive_rate": 0.4286
+      },
+      "threshold_table": [
+        {
+          "threshold": 25,
+          "tp": 223,
+          "fp": 255,
+          "fn": 1,
+          "tn": 60,
+          "precision": 0.4665,
+          "recall": 0.9955,
+          "f1": 0.6353,
+          "false_positive_rate": 0.8095
+        },
+        {
+          "threshold": 40,
+          "tp": 217,
+          "fp": 179,
+          "fn": 7,
+          "tn": 136,
+          "precision": 0.548,
+          "recall": 0.9688,
+          "f1": 0.7,
+          "false_positive_rate": 0.5683
+        },
+        {
+          "threshold": 50,
+          "tp": 213,
+          "fp": 135,
+          "fn": 11,
+          "tn": 180,
+          "precision": 0.6121,
+          "recall": 0.9509,
+          "f1": 0.7448,
+          "false_positive_rate": 0.4286
+        },
+        {
+          "threshold": 60,
+          "tp": 206,
+          "fp": 76,
+          "fn": 18,
+          "tn": 239,
+          "precision": 0.7305,
+          "recall": 0.9196,
+          "f1": 0.8142,
+          "false_positive_rate": 0.2413
+        },
+        {
+          "threshold": 75,
+          "tp": 182,
+          "fp": 23,
+          "fn": 42,
+          "tn": 292,
+          "precision": 0.8878,
+          "recall": 0.8125,
+          "f1": 0.8485,
+          "false_positive_rate": 0.073
+        },
+        {
+          "threshold": 90,
+          "tp": 158,
+          "fp": 5,
+          "fn": 66,
+          "tn": 310,
+          "precision": 0.9693,
+          "recall": 0.7054,
+          "f1": 0.8165,
+          "false_positive_rate": 0.0159
+        }
+      ],
+      "roc_auc": 0.936,
+      "pr_auc": 0.9334,
+      "score_distribution": {
+        "malicious": {
+          "min": 22.8,
+          "p25": 84.3,
+          "median": 100.0,
+          "p75": 100.0,
+          "max": 100.0
+        },
+        "benign": {
+          "min": 4.7,
+          "p25": 29.0,
+          "median": 43.8,
+          "p75": 59.6,
+          "max": 100.0
+        }
+      },
+      "false_positives_by_benign_group": {
+        "external, finance/urgency wording": {
+          "flagged": 12,
+          "of": 23,
+          "rate": 0.5217
+        },
+        "external, relayed (SPF softfail)": {
+          "flagged": 18,
+          "of": 34,
+          "rate": 0.5294
+        },
+        "external, routine": {
+          "flagged": 0,
+          "of": 35,
+          "rate": 0.0
+        },
+        "internal, finance/urgency wording": {
+          "flagged": 102,
+          "of": 121,
+          "rate": 0.843
+        },
+        "internal, routine": {
+          "flagged": 3,
+          "of": 102,
+          "rate": 0.0294
+        }
+      },
+      "missed_by_malicious_group": {
+        "compromised account": {
+          "missed": 11,
+          "of": 82,
+          "rate": 0.1341
+        },
+        "spoofed identity": {
+          "missed": 0,
+          "of": 142,
+          "rate": 0.0
+        }
+      },
+      "indicators_on_false_positives": [
+        {
+          "code": "DISPLAY_NAME_CHANGED",
+          "count": 133,
+          "share_of_fps": 0.985
+        },
+        {
+          "code": "STYLE_SIGNATURE_CHANGE",
+          "count": 132,
+          "share_of_fps": 0.978
+        },
+        {
+          "code": "PAYMENT_REQUEST",
+          "count": 128,
+          "share_of_fps": 0.948
+        },
+        {
+          "code": "MONEY_ENTITY_PRESENT",
+          "count": 125,
+          "share_of_fps": 0.926
+        },
+        {
+          "code": "URGENCY_LANGUAGE",
+          "count": 99,
+          "share_of_fps": 0.733
+        },
+        {
+          "code": "OFF_HOURS_SEND",
+          "count": 65,
+          "share_of_fps": 0.481
+        },
+        {
+          "code": "STYLE_GREETING_CHANGE",
+          "count": 36,
+          "share_of_fps": 0.267
+        },
+        {
+          "code": "STYLE_DEVIATION",
+          "count": 35,
+          "share_of_fps": 0.259
+        },
+        {
+          "code": "AUTHORITY_PRESSURE",
+          "count": 33,
+          "share_of_fps": 0.244
+        },
+        {
+          "code": "REPLY_TO_MISMATCH",
+          "count": 22,
+          "share_of_fps": 0.163
+        },
+        {
+          "code": "SECRECY_REQUEST",
+          "count": 21,
+          "share_of_fps": 0.156
+        },
+        {
+          "code": "DMARC_FAIL",
+          "count": 18,
+          "share_of_fps": 0.133
+        }
+      ]
+    },
+    {
+      "split": "validation",
+      "n": 179,
+      "class_counts": {
+        "MALICIOUS": 74,
+        "BENIGN": 105
+      },
+      "at_configured_threshold": {
+        "threshold": 50.0,
+        "tp": 71,
+        "fp": 48,
+        "fn": 3,
+        "tn": 57,
+        "precision": 0.5966,
+        "recall": 0.9595,
+        "f1": 0.7358,
+        "false_positive_rate": 0.4571
+      },
+      "threshold_table": [
+        {
+          "threshold": 25,
+          "tp": 74,
+          "fp": 83,
+          "fn": 0,
+          "tn": 22,
+          "precision": 0.4713,
+          "recall": 1.0,
+          "f1": 0.6407,
+          "false_positive_rate": 0.7905
+        },
+        {
+          "threshold": 40,
+          "tp": 71,
+          "fp": 57,
+          "fn": 3,
+          "tn": 48,
+          "precision": 0.5547,
+          "recall": 0.9595,
+          "f1": 0.703,
+          "false_positive_rate": 0.5429
+        },
+        {
+          "threshold": 50,
+          "tp": 71,
+          "fp": 48,
+          "fn": 3,
+          "tn": 57,
+          "precision": 0.5966,
+          "recall": 0.9595,
+          "f1": 0.7358,
+          "false_positive_rate": 0.4571
+        },
+        {
+          "threshold": 60,
+          "tp": 70,
+          "fp": 29,
+          "fn": 4,
+          "tn": 76,
+          "precision": 0.7071,
+          "recall": 0.9459,
+          "f1": 0.8092,
+          "false_positive_rate": 0.2762
+        },
+        {
+          "threshold": 75,
+          "tp": 67,
+          "fp": 8,
+          "fn": 7,
+          "tn": 97,
+          "precision": 0.8933,
+          "recall": 0.9054,
+          "f1": 0.8993,
+          "false_positive_rate": 0.0762
+        },
+        {
+          "threshold": 90,
+          "tp": 60,
+          "fp": 3,
+          "fn": 14,
+          "tn": 102,
+          "precision": 0.9524,
+          "recall": 0.8108,
+          "f1": 0.8759,
+          "false_positive_rate": 0.0286
+        }
+      ],
+      "roc_auc": 0.952,
+      "pr_auc": 0.9464,
+      "score_distribution": {
+        "malicious": {
+          "min": 28.4,
+          "p25": 100.0,
+          "median": 100.0,
+          "p75": 100.0,
+          "max": 100.0
+        },
+        "benign": {
+          "min": 10.7,
+          "p25": 28.6,
+          "median": 42.2,
+          "p75": 61.3,
+          "max": 100.0
+        }
+      },
+      "false_positives_by_benign_group": {
+        "external, finance/urgency wording": {
+          "flagged": 10,
+          "of": 12,
+          "rate": 0.8333
+        },
+        "external, relayed (SPF softfail)": {
+          "flagged": 8,
+          "of": 13,
+          "rate": 0.6154
+        },
+        "external, routine": {
+          "flagged": 0,
+          "of": 18,
+          "rate": 0.0
+        },
+        "internal, finance/urgency wording": {
+          "flagged": 28,
+          "of": 31,
+          "rate": 0.9032
+        },
+        "internal, routine": {
+          "flagged": 2,
+          "of": 31,
+          "rate": 0.0645
+        }
+      },
+      "missed_by_malicious_group": {
+        "compromised account": {
+          "missed": 3,
+          "of": 20,
+          "rate": 0.15
+        },
+        "spoofed identity": {
+          "missed": 0,
+          "of": 54,
+          "rate": 0.0
+        }
+      },
+      "indicators_on_false_positives": [
+        {
+          "code": "PAYMENT_REQUEST",
+          "count": 45,
+          "share_of_fps": 0.938
+        },
+        {
+          "code": "DISPLAY_NAME_CHANGED",
+          "count": 45,
+          "share_of_fps": 0.938
+        },
+        {
+          "code": "STYLE_SIGNATURE_CHANGE",
+          "count": 45,
+          "share_of_fps": 0.938
+        },
+        {
+          "code": "MONEY_ENTITY_PRESENT",
+          "count": 44,
+          "share_of_fps": 0.917
+        },
+        {
+          "code": "URGENCY_LANGUAGE",
+          "count": 34,
+          "share_of_fps": 0.708
+        },
+        {
+          "code": "STYLE_DEVIATION",
+          "count": 17,
+          "share_of_fps": 0.354
+        },
+        {
+          "code": "OFF_HOURS_SEND",
+          "count": 17,
+          "share_of_fps": 0.354
+        },
+        {
+          "code": "STYLE_GREETING_CHANGE",
+          "count": 17,
+          "share_of_fps": 0.354
+        },
+        {
+          "code": "AUTHORITY_PRESSURE",
+          "count": 11,
+          "share_of_fps": 0.229
+        },
+        {
+          "code": "SECRECY_REQUEST",
+          "count": 9,
+          "share_of_fps": 0.188
+        },
+        {
+          "code": "DMARC_FAIL",
+          "count": 8,
+          "share_of_fps": 0.167
+        },
+        {
+          "code": "SPF_FAIL",
+          "count": 8,
+          "share_of_fps": 0.167
+        }
+      ]
+    },
+    {
+      "split": "test",
+      "n": 182,
+      "class_counts": {
+        "MALICIOUS": 76,
+        "BENIGN": 106
+      },
+      "at_configured_threshold": {
+        "threshold": 50.0,
+        "tp": 70,
+        "fp": 41,
+        "fn": 6,
+        "tn": 65,
+        "precision": 0.6306,
+        "recall": 0.9211,
+        "f1": 0.7487,
+        "false_positive_rate": 0.3868
+      },
+      "threshold_table": [
+        {
+          "threshold": 25,
+          "tp": 75,
+          "fp": 86,
+          "fn": 1,
+          "tn": 20,
+          "precision": 0.4658,
+          "recall": 0.9868,
+          "f1": 0.6329,
+          "false_positive_rate": 0.8113
+        },
+        {
+          "threshold": 40,
+          "tp": 70,
+          "fp": 59,
+          "fn": 6,
+          "tn": 47,
+          "precision": 0.5426,
+          "recall": 0.9211,
+          "f1": 0.6829,
+          "false_positive_rate": 0.5566
+        },
+        {
+          "threshold": 50,
+          "tp": 70,
+          "fp": 41,
+          "fn": 6,
+          "tn": 65,
+          "precision": 0.6306,
+          "recall": 0.9211,
+          "f1": 0.7487,
+          "false_positive_rate": 0.3868
+        },
+        {
+          "threshold": 60,
+          "tp": 67,
+          "fp": 29,
+          "fn": 9,
+          "tn": 77,
+          "precision": 0.6979,
+          "recall": 0.8816,
+          "f1": 0.7791,
+          "false_positive_rate": 0.2736
+        },
+        {
+          "threshold": 75,
+          "tp": 60,
+          "fp": 10,
+          "fn": 16,
+          "tn": 96,
+          "precision": 0.8571,
+          "recall": 0.7895,
+          "f1": 0.8219,
+          "false_positive_rate": 0.0943
+        },
+        {
+          "threshold": 90,
+          "tp": 46,
+          "fp": 4,
+          "fn": 30,
+          "tn": 102,
+          "precision": 0.92,
+          "recall": 0.6053,
+          "f1": 0.7302,
+          "false_positive_rate": 0.0377
+        }
+      ],
+      "roc_auc": 0.9031,
+      "pr_auc": 0.8957,
+      "score_distribution": {
+        "malicious": {
+          "min": 19.4,
+          "p25": 78.7,
+          "median": 100.0,
+          "p75": 100.0,
+          "max": 100.0
+        },
+        "benign": {
+          "min": 9.4,
+          "p25": 29.1,
+          "median": 42.2,
+          "p75": 61.6,
+          "max": 100.0
+        }
+      },
+      "false_positives_by_benign_group": {
+        "external, finance/urgency wording": {
+          "flagged": 6,
+          "of": 15,
+          "rate": 0.4
+        },
+        "external, relayed (SPF softfail)": {
+          "flagged": 7,
+          "of": 11,
+          "rate": 0.6364
+        },
+        "external, routine": {
+          "flagged": 0,
+          "of": 10,
+          "rate": 0.0
+        },
+        "internal, finance/urgency wording": {
+          "flagged": 28,
+          "of": 31,
+          "rate": 0.9032
+        },
+        "internal, routine": {
+          "flagged": 0,
+          "of": 39,
+          "rate": 0.0
+        }
+      },
+      "missed_by_malicious_group": {
+        "compromised account": {
+          "missed": 6,
+          "of": 33,
+          "rate": 0.1818
+        },
+        "spoofed identity": {
+          "missed": 0,
+          "of": 43,
+          "rate": 0.0
+        }
+      },
+      "indicators_on_false_positives": [
+        {
+          "code": "PAYMENT_REQUEST",
+          "count": 41,
+          "share_of_fps": 1.0
+        },
+        {
+          "code": "MONEY_ENTITY_PRESENT",
+          "count": 41,
+          "share_of_fps": 1.0
+        },
+        {
+          "code": "STYLE_SIGNATURE_CHANGE",
+          "count": 39,
+          "share_of_fps": 0.951
+        },
+        {
+          "code": "URGENCY_LANGUAGE",
+          "count": 33,
+          "share_of_fps": 0.805
+        },
+        {
+          "code": "DISPLAY_NAME_CHANGED",
+          "count": 32,
+          "share_of_fps": 0.78
+        },
+        {
+          "code": "OFF_HOURS_SEND",
+          "count": 22,
+          "share_of_fps": 0.537
+        },
+        {
+          "code": "STYLE_GREETING_CHANGE",
+          "count": 17,
+          "share_of_fps": 0.415
+        },
+        {
+          "code": "STYLE_DEVIATION",
+          "count": 15,
+          "share_of_fps": 0.366
+        },
+        {
+          "code": "AUTHORITY_PRESSURE",
+          "count": 10,
+          "share_of_fps": 0.244
+        },
+        {
+          "code": "SECRECY_REQUEST",
+          "count": 8,
+          "share_of_fps": 0.195
+        },
+        {
+          "code": "DMARC_FAIL",
+          "count": 7,
+          "share_of_fps": 0.171
+        },
+        {
+          "code": "SPF_FAIL",
+          "count": 7,
+          "share_of_fps": 0.171
+        }
+      ]
+    }
+  ]
+}

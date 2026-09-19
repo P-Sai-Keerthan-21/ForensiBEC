@@ -1,0 +1,409 @@
+{
+  "result_type": "RESEARCH ADVERSARIAL ROBUSTNESS RESULTS",
+  "provenance": "SYNTHETIC research corpus, test split. Transformations are deterministic edits of synthetic messages. Results describe the robustness of this rule engine to these specific transformations; they are not a measure of resistance to a real, adaptive adversary.",
+  "not_real_world_accuracy": true,
+  "target": "forensic rule engine (bec_detector.pipeline.BECPipeline)",
+  "configuration": {
+    "data": "data\\research\\test",
+    "messages": 182,
+    "seed": 20260918,
+    "threat_intelligence": "disabled",
+    "cross_case_correlation": "disabled",
+    "baseline": "behavioural/thread/style baselines fitted on the original messages",
+    "flagged_bands": [
+      "CONFIRMED_BEC",
+      "LIKELY_BEC"
+    ]
+  },
+  "engine_tuned_in_response": false,
+  "generated_utc": "2026-09-18T18:58:06+00:00",
+  "transformations": [
+    {
+      "key": "uppercase",
+      "description": "Body in capitals",
+      "applies_to": "both",
+      "malicious": {
+        "n": 76,
+        "detected_before": 70,
+        "detected_after": 70,
+        "detection_rate_before": 0.9211,
+        "detection_rate_after": 0.9211,
+        "evaded": 0,
+        "mean_score_delta": 1.77,
+        "min_score_delta": -6.7
+      },
+      "benign": {
+        "n": 106,
+        "false_positives_before": 41,
+        "false_positives_after": 49,
+        "induced_false_positives": 8,
+        "mean_score_delta": 4.39
+      },
+      "most_lost_indicators": [
+        [
+          "STYLE_DEVIATION",
+          1
+        ]
+      ]
+    },
+    {
+      "key": "lowercase",
+      "description": "Subject and body in lower case",
+      "applies_to": "both",
+      "malicious": {
+        "n": 76,
+        "detected_before": 70,
+        "detected_after": 70,
+        "detection_rate_before": 0.9211,
+        "detection_rate_after": 0.9211,
+        "evaded": 0,
+        "mean_score_delta": -0.77,
+        "min_score_delta": -9.0
+      },
+      "benign": {
+        "n": 106,
+        "false_positives_before": 41,
+        "false_positives_after": 40,
+        "induced_false_positives": 0,
+        "mean_score_delta": -0.68
+      },
+      "most_lost_indicators": [
+        [
+          "STYLE_DEVIATION",
+          9
+        ]
+      ]
+    },
+    {
+      "key": "punctuation",
+      "description": "Punctuation stripped",
+      "applies_to": "both",
+      "malicious": {
+        "n": 76,
+        "detected_before": 70,
+        "detected_after": 70,
+        "detection_rate_before": 0.9211,
+        "detection_rate_after": 0.9211,
+        "evaded": 0,
+        "mean_score_delta": 2.31,
+        "min_score_delta": 0.0
+      },
+      "benign": {
+        "n": 106,
+        "false_positives_before": 41,
+        "false_positives_after": 53,
+        "induced_false_positives": 12,
+        "mean_score_delta": 5.77
+      },
+      "most_lost_indicators": [
+        [
+          "CREDENTIAL_SOLICITATION",
+          3
+        ]
+      ]
+    },
+    {
+      "key": "whitespace",
+      "description": "Whitespace inflated",
+      "applies_to": "both",
+      "malicious": {
+        "n": 76,
+        "detected_before": 70,
+        "detected_after": 70,
+        "detection_rate_before": 0.9211,
+        "detection_rate_after": 0.9211,
+        "evaded": 0,
+        "mean_score_delta": -0.64,
+        "min_score_delta": -7.5
+      },
+      "benign": {
+        "n": 106,
+        "false_positives_before": 41,
+        "false_positives_after": 32,
+        "induced_false_positives": 0,
+        "mean_score_delta": -3.4
+      },
+      "most_lost_indicators": [
+        [
+          "MONEY_ENTITY_PRESENT",
+          37
+        ]
+      ]
+    },
+    {
+      "key": "padding",
+      "description": "Benign text padding (dilution)",
+      "applies_to": "both",
+      "malicious": {
+        "n": 76,
+        "detected_before": 70,
+        "detected_after": 70,
+        "detection_rate_before": 0.9211,
+        "detection_rate_after": 0.9211,
+        "evaded": 0,
+        "mean_score_delta": 3.76,
+        "min_score_delta": 0.0
+      },
+      "benign": {
+        "n": 106,
+        "false_positives_before": 41,
+        "false_positives_after": 55,
+        "induced_false_positives": 14,
+        "mean_score_delta": 8.5
+      },
+      "most_lost_indicators": [
+        [
+          "STYLE_GREETING_CHANGE",
+          11
+        ]
+      ]
+    },
+    {
+      "key": "soften_urgency",
+      "description": "Urgency wording softened",
+      "applies_to": "malicious",
+      "malicious": {
+        "n": 76,
+        "detected_before": 70,
+        "detected_after": 69,
+        "detection_rate_before": 0.9211,
+        "detection_rate_after": 0.9079,
+        "evaded": 1,
+        "mean_score_delta": -1.93,
+        "min_score_delta": -19.0
+      },
+      "most_lost_indicators": [
+        [
+          "URGENCY_LANGUAGE",
+          47
+        ],
+        [
+          "STYLE_DEVIATION",
+          5
+        ]
+      ]
+    },
+    {
+      "key": "paraphrase_financial",
+      "description": "Financial wording paraphrased",
+      "applies_to": "malicious",
+      "malicious": {
+        "n": 76,
+        "detected_before": 70,
+        "detected_after": 69,
+        "detection_rate_before": 0.9211,
+        "detection_rate_after": 0.9079,
+        "evaded": 1,
+        "mean_score_delta": -2.32,
+        "min_score_delta": -29.3
+      },
+      "most_lost_indicators": [
+        [
+          "BANKING_CHANGE_REQUEST",
+          9
+        ],
+        [
+          "STYLE_DEVIATION",
+          6
+        ],
+        [
+          "GIFT_CARD_REQUEST",
+          5
+        ]
+      ]
+    },
+    {
+      "key": "strip_title",
+      "description": "Executive title removed from display name",
+      "applies_to": "malicious",
+      "malicious": {
+        "n": 76,
+        "detected_before": 70,
+        "detected_after": 70,
+        "detection_rate_before": 0.9211,
+        "detection_rate_after": 0.9211,
+        "evaded": 0,
+        "mean_score_delta": -0.22,
+        "min_score_delta": -16.8
+      },
+      "most_lost_indicators": [
+        [
+          "DISPLAY_NAME_IMPERSONATION",
+          32
+        ],
+        [
+          "FREEMAIL_EXEC_CLAIM",
+          6
+        ],
+        [
+          "NEW_DOMAIN_FOR_KNOWN_NAME",
+          1
+        ]
+      ]
+    },
+    {
+      "key": "homoglyph_domain",
+      "description": "Brand domain rebuilt with Unicode homoglyphs",
+      "applies_to": "malicious",
+      "malicious": {
+        "n": 76,
+        "detected_before": 70,
+        "detected_after": 75,
+        "detection_rate_before": 0.9211,
+        "detection_rate_after": 0.9868,
+        "evaded": 0,
+        "mean_score_delta": 7.47,
+        "min_score_delta": 0.0
+      },
+      "most_lost_indicators": [
+        [
+          "DISPLAY_NAME_CHANGED",
+          31
+        ],
+        [
+          "STYLE_SIGNATURE_CHANGE",
+          22
+        ],
+        [
+          "STYLE_DEVIATION",
+          12
+        ],
+        [
+          "STYLE_GREETING_CHANGE",
+          8
+        ]
+      ]
+    },
+    {
+      "key": "combosquat_domain",
+      "description": "Brand domain replaced by a combosquat",
+      "applies_to": "malicious",
+      "malicious": {
+        "n": 76,
+        "detected_before": 70,
+        "detected_after": 70,
+        "detection_rate_before": 0.9211,
+        "detection_rate_after": 0.9211,
+        "evaded": 0,
+        "mean_score_delta": 2.38,
+        "min_score_delta": -12.0
+      },
+      "most_lost_indicators": [
+        [
+          "DISPLAY_NAME_CHANGED",
+          31
+        ],
+        [
+          "LOOKALIKE_DOMAIN",
+          26
+        ],
+        [
+          "STYLE_SIGNATURE_CHANGE",
+          22
+        ],
+        [
+          "STYLE_DEVIATION",
+          12
+        ],
+        [
+          "STYLE_GREETING_CHANGE",
+          8
+        ]
+      ]
+    },
+    {
+      "key": "combined",
+      "description": "Soften + paraphrase + padding + strip title",
+      "applies_to": "malicious",
+      "malicious": {
+        "n": 76,
+        "detected_before": 70,
+        "detected_after": 69,
+        "detection_rate_before": 0.9211,
+        "detection_rate_after": 0.9079,
+        "evaded": 1,
+        "mean_score_delta": -0.47,
+        "min_score_delta": -24.2
+      },
+      "most_lost_indicators": [
+        [
+          "URGENCY_LANGUAGE",
+          47
+        ],
+        [
+          "DISPLAY_NAME_IMPERSONATION",
+          32
+        ],
+        [
+          "STYLE_GREETING_CHANGE",
+          11
+        ],
+        [
+          "BANKING_CHANGE_REQUEST",
+          9
+        ],
+        [
+          "FREEMAIL_EXEC_CLAIM",
+          6
+        ],
+        [
+          "GIFT_CARD_REQUEST",
+          5
+        ]
+      ]
+    }
+  ],
+  "evasion_examples": [
+    {
+      "message": "r0656_ceo_fraud_compromised.eml",
+      "label": "MALICIOUS",
+      "family": "ceo_fraud_compromised",
+      "change": "urgency wording softened (1 replacements)",
+      "original_score": 53.1,
+      "transformed_score": 39.0,
+      "score_delta": -14.1,
+      "original_band": "LIKELY_BEC",
+      "transformed_band": "SUSPICIOUS",
+      "verdict_changed": true,
+      "lost_indicators": [
+        "URGENCY_LANGUAGE"
+      ],
+      "gained_indicators": []
+    },
+    {
+      "message": "r0340_vendor_invoice_compromised_subtle.eml",
+      "label": "MALICIOUS",
+      "family": "vendor_invoice_compromised_subtle",
+      "change": "financial wording paraphrased (1 replacements)",
+      "original_score": 54.7,
+      "transformed_score": 33.3,
+      "score_delta": -21.4,
+      "original_band": "LIKELY_BEC",
+      "transformed_band": "SUSPICIOUS",
+      "verdict_changed": true,
+      "lost_indicators": [
+        "BANKING_CHANGE_REQUEST"
+      ],
+      "gained_indicators": []
+    },
+    {
+      "message": "r0340_vendor_invoice_compromised_subtle.eml",
+      "label": "MALICIOUS",
+      "family": "vendor_invoice_compromised_subtle",
+      "change": "urgency wording softened (0 replacements); financial wording paraphrased (1 replacements); benign paragraphs added before and after; display name 'Castellan Packaging Accounts' -> 'Castellan Packaging Accounts'",
+      "original_score": 54.7,
+      "transformed_score": 47.4,
+      "score_delta": -7.3,
+      "original_band": "LIKELY_BEC",
+      "transformed_band": "SUSPICIOUS",
+      "verdict_changed": true,
+      "lost_indicators": [
+        "BANKING_CHANGE_REQUEST"
+      ],
+      "gained_indicators": [
+        "STATISTICAL_OUTLIER",
+        "STYLE_DEVIATION"
+      ]
+    }
+  ]
+}

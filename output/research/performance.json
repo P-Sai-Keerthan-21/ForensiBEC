@@ -1,0 +1,217 @@
+{
+  "result_type": "LOCAL PERFORMANCE MEASUREMENT",
+  "scope": "Batches of 1, 10, 100 messages on one machine. No claim is made about larger batches or other hardware.",
+  "generated_utc": "2026-09-18T19:28:48+00:00",
+  "machine": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "cpu_count": 20,
+    "python": "3.14.3"
+  },
+  "method": {
+    "repeats": 3,
+    "statistic": "median (min/max shown)",
+    "intel": "disabled",
+    "correlation": "disabled",
+    "memory": "tracemalloc peak - Python allocations only",
+    "input": "data\\research\\train"
+  },
+  "one_off_model_load_s": {
+    "spacy": 1.259,
+    "nltk": 7.113
+  },
+  "batches": [
+    {
+      "messages": 1,
+      "input_bytes": 789,
+      "stages": {
+        "parse": {
+          "median_s": 0.0063,
+          "min_s": 0.0054,
+          "max_s": 0.007
+        },
+        "baseline": {
+          "median_s": 0.0002,
+          "min_s": 0.0002,
+          "max_s": 0.0002
+        },
+        "sender_and_auth": {
+          "median_s": 0.0022,
+          "min_s": 0.0018,
+          "max_s": 0.0022
+        },
+        "nlp": {
+          "median_s": 0.0175,
+          "min_s": 0.0169,
+          "max_s": 0.0238
+        },
+        "behaviour_thread_style": {
+          "median_s": 0.0001,
+          "min_s": 0.0001,
+          "max_s": 0.0001
+        },
+        "url_and_attachment": {
+          "median_s": 0.0,
+          "min_s": 0.0,
+          "max_s": 0.0
+        },
+        "fusion": {
+          "median_s": 0.0003,
+          "min_s": 0.0002,
+          "max_s": 0.0004
+        },
+        "assess_total": {
+          "median_s": 0.0231,
+          "min_s": 0.02,
+          "max_s": 0.0278
+        },
+        "report_assemble": {
+          "median_s": 0.0117,
+          "min_s": 0.0074,
+          "max_s": 0.0124
+        },
+        "report_render_html": {
+          "median_s": 0.0017,
+          "min_s": 0.0015,
+          "max_s": 0.0018
+        },
+        "end_to_end": {
+          "median_s": 0.0421,
+          "min_s": 0.0354,
+          "max_s": 0.0491
+        }
+      },
+      "per_message_end_to_end_ms": 42.1,
+      "throughput_messages_per_s": 23.8,
+      "peak_python_memory_mb": 0.7
+    },
+    {
+      "messages": 10,
+      "input_bytes": 8861,
+      "stages": {
+        "parse": {
+          "median_s": 0.0616,
+          "min_s": 0.0603,
+          "max_s": 0.0654
+        },
+        "baseline": {
+          "median_s": 0.0013,
+          "min_s": 0.0012,
+          "max_s": 0.0014
+        },
+        "sender_and_auth": {
+          "median_s": 0.0185,
+          "min_s": 0.0174,
+          "max_s": 0.021
+        },
+        "nlp": {
+          "median_s": 0.3249,
+          "min_s": 0.2989,
+          "max_s": 0.3611
+        },
+        "behaviour_thread_style": {
+          "median_s": 0.0006,
+          "min_s": 0.0006,
+          "max_s": 0.0008
+        },
+        "url_and_attachment": {
+          "median_s": 0.0001,
+          "min_s": 0.0001,
+          "max_s": 0.0001
+        },
+        "fusion": {
+          "median_s": 0.0014,
+          "min_s": 0.0014,
+          "max_s": 0.0016
+        },
+        "assess_total": {
+          "median_s": 0.3338,
+          "min_s": 0.3269,
+          "max_s": 0.4122
+        },
+        "report_assemble": {
+          "median_s": 0.0544,
+          "min_s": 0.0529,
+          "max_s": 0.0574
+        },
+        "report_render_html": {
+          "median_s": 0.0089,
+          "min_s": 0.0086,
+          "max_s": 0.0103
+        },
+        "end_to_end": {
+          "median_s": 0.462,
+          "min_s": 0.4562,
+          "max_s": 0.5385
+        }
+      },
+      "per_message_end_to_end_ms": 46.2,
+      "throughput_messages_per_s": 21.6,
+      "peak_python_memory_mb": 2.2
+    },
+    {
+      "messages": 100,
+      "input_bytes": 84877,
+      "stages": {
+        "parse": {
+          "median_s": 0.6005,
+          "min_s": 0.5946,
+          "max_s": 0.6386
+        },
+        "baseline": {
+          "median_s": 0.0098,
+          "min_s": 0.0095,
+          "max_s": 0.0104
+        },
+        "sender_and_auth": {
+          "median_s": 0.1285,
+          "min_s": 0.1276,
+          "max_s": 0.131
+        },
+        "nlp": {
+          "median_s": 3.0127,
+          "min_s": 2.9775,
+          "max_s": 3.0363
+        },
+        "behaviour_thread_style": {
+          "median_s": 0.0536,
+          "min_s": 0.0522,
+          "max_s": 0.0572
+        },
+        "url_and_attachment": {
+          "median_s": 0.0006,
+          "min_s": 0.0006,
+          "max_s": 0.0007
+        },
+        "fusion": {
+          "median_s": 0.0116,
+          "min_s": 0.0115,
+          "max_s": 0.0116
+        },
+        "assess_total": {
+          "median_s": 3.2971,
+          "min_s": 3.2599,
+          "max_s": 3.3041
+        },
+        "report_assemble": {
+          "median_s": 1.3908,
+          "min_s": 1.3217,
+          "max_s": 1.4257
+        },
+        "report_render_html": {
+          "median_s": 0.0887,
+          "min_s": 0.0854,
+          "max_s": 0.097
+        },
+        "end_to_end": {
+          "median_s": 5.394,
+          "min_s": 5.3161,
+          "max_s": 5.4238
+        }
+      },
+      "per_message_end_to_end_ms": 53.9,
+      "throughput_messages_per_s": 18.5,
+      "peak_python_memory_mb": 20.9
+    }
+  ]
+}

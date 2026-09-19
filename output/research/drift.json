@@ -1,0 +1,198 @@
+{
+  "result_type": "RESEARCH CONCEPT-DRIFT RESULTS",
+  "provenance": "SYNTHETIC. Generation 2 is a documented, hand-chosen shift of the generator (more compromised mailboxes, a novel lure worded to avoid the engine's lexicons, less pressure language, later dates). It does NOT reproduce real attacker evolution. Results show how this system responds to this shift.",
+  "not_real_world_accuracy": true,
+  "generated_utc": "2026-09-18T19:01:40+00:00",
+  "thresholds": {
+    "psi_moderate": 0.1,
+    "psi_significant": 0.25,
+    "indicator_rate_change": 0.15
+  },
+  "drift": {
+    "control_gen1_train_vs_gen1_test": {
+      "comparison": "gen1 train vs gen1 test (control)",
+      "reference_size": 539,
+      "current_size": 182,
+      "verdict": "No significant distribution shift detected",
+      "note": "A distribution shift means the reference data no longer describes the input. It is not, by itself, evidence of malicious activity.",
+      "excluded_corpus_relative_indicators": [
+        "DISPLAY_NAME_CHANGED",
+        "FIRST_TIME_SENDER",
+        "NEW_DOMAIN_FOR_KNOWN_NAME",
+        "STYLE_DEVIATION",
+        "STYLE_GREETING_CHANGE",
+        "STYLE_SIGNATURE_CHANGE",
+        "THREAD_NEW_PARTICIPANT",
+        "THREAD_PAYMENT_PIVOT",
+        "THREAD_REPLYTO_INTRODUCED",
+        "THREAD_SENDER_DIVERGENCE",
+        "THREAD_UNKNOWN_PARENT",
+        "UNUSUAL_RECIPIENT_SET"
+      ],
+      "features_significant_psi": [],
+      "features_moderate_psi": [],
+      "indicator_rate_changes": [],
+      "vocabulary_js_divergence": 0.0121,
+      "novel_vocabulary_share": 0.0
+    },
+    "gen1_train_vs_gen2": {
+      "comparison": "gen1 train vs gen2",
+      "reference_size": 539,
+      "current_size": 400,
+      "verdict": "Distribution shift detected",
+      "note": "A distribution shift means the reference data no longer describes the input. It is not, by itself, evidence of malicious activity.",
+      "excluded_corpus_relative_indicators": [
+        "DISPLAY_NAME_CHANGED",
+        "FIRST_TIME_SENDER",
+        "NEW_DOMAIN_FOR_KNOWN_NAME",
+        "STYLE_DEVIATION",
+        "STYLE_GREETING_CHANGE",
+        "STYLE_SIGNATURE_CHANGE",
+        "THREAD_NEW_PARTICIPANT",
+        "THREAD_PAYMENT_PIVOT",
+        "THREAD_REPLYTO_INTRODUCED",
+        "THREAD_SENDER_DIVERGENCE",
+        "THREAD_UNKNOWN_PARENT",
+        "UNUSUAL_RECIPIENT_SET"
+      ],
+      "features_significant_psi": [
+        {
+          "feature": "nlp::subject_length",
+          "psi": 0.6598
+        }
+      ],
+      "features_moderate_psi": [
+        {
+          "feature": "stylometry::body_length",
+          "psi": 0.2266
+        },
+        {
+          "feature": "stylometry::word_count",
+          "psi": 0.1812
+        },
+        {
+          "feature": "stylometry::mean_word_length",
+          "psi": 0.1196
+        }
+      ],
+      "indicator_rate_changes": [
+        {
+          "code": "SPF_FAIL",
+          "reference_rate": 0.327,
+          "current_rate": 0.092,
+          "change": -0.234
+        },
+        {
+          "code": "DMARC_FAIL",
+          "reference_rate": 0.327,
+          "current_rate": 0.092,
+          "change": -0.234
+        },
+        {
+          "code": "MONEY_ENTITY_PRESENT",
+          "reference_rate": 0.508,
+          "current_rate": 0.302,
+          "change": -0.206
+        },
+        {
+          "code": "AUTHORITY_PRESSURE",
+          "reference_rate": 0.247,
+          "current_rate": 0.085,
+          "change": -0.162
+        }
+      ],
+      "vocabulary_js_divergence": 0.0923,
+      "novel_vocabulary_share": 0.113
+    }
+  },
+  "performance": {
+    "rule_engine": {
+      "gen1_test": {
+        "accuracy": 0.7418,
+        "precision": 0.6306,
+        "recall": 0.9211,
+        "f1": 0.7487,
+        "confusion_matrix": {
+          "true_negative": 65,
+          "false_positive": 41,
+          "false_negative": 6,
+          "true_positive": 70
+        },
+        "false_positive_rate": 0.3868,
+        "false_negative_rate": 0.0789,
+        "support": {
+          "benign": 106,
+          "malicious": 76
+        },
+        "roc_auc": 0.9031,
+        "pr_auc": 0.8957
+      },
+      "gen2": {
+        "accuracy": 0.4275,
+        "precision": 0.3088,
+        "recall": 0.2373,
+        "f1": 0.2684,
+        "confusion_matrix": {
+          "true_negative": 129,
+          "false_positive": 94,
+          "false_negative": 135,
+          "true_positive": 42
+        },
+        "false_positive_rate": 0.4215,
+        "false_negative_rate": 0.7627,
+        "support": {
+          "benign": 223,
+          "malicious": 177
+        },
+        "roc_auc": 0.4587,
+        "pr_auc": 0.4754,
+        "novel_lure_recall": 0.069,
+        "novel_lure_n": 145
+      }
+    },
+    "random_forest_trained_on_gen1": {
+      "gen1_test": {
+        "accuracy": 0.9945,
+        "precision": 1.0,
+        "recall": 0.9868,
+        "f1": 0.9934,
+        "confusion_matrix": {
+          "true_negative": 106,
+          "false_positive": 0,
+          "false_negative": 1,
+          "true_positive": 75
+        },
+        "false_positive_rate": 0.0,
+        "false_negative_rate": 0.0132,
+        "support": {
+          "benign": 106,
+          "malicious": 76
+        },
+        "roc_auc": 1.0,
+        "pr_auc": 1.0
+      },
+      "gen2": {
+        "accuracy": 0.89,
+        "precision": 1.0,
+        "recall": 0.7514,
+        "f1": 0.8581,
+        "confusion_matrix": {
+          "true_negative": 223,
+          "false_positive": 0,
+          "false_negative": 44,
+          "true_positive": 133
+        },
+        "false_positive_rate": 0.0,
+        "false_negative_rate": 0.2486,
+        "support": {
+          "benign": 223,
+          "malicious": 177
+        },
+        "roc_auc": 0.9994,
+        "pr_auc": 0.9992,
+        "novel_lure_recall": 0.6966,
+        "novel_lure_n": 145
+      }
+    }
+  }
+}
