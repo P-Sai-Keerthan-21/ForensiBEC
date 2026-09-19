@@ -17,7 +17,7 @@ import uuid
 from pathlib import Path
 
 from fastapi import FastAPI, File, Form, Request, UploadFile
-from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse
+from fastapi.responses import HTMLResponse, JSONResponse, RedirectResponse, Response
 from fastapi.templating import Jinja2Templates
 from starlette.middleware.trustedhost import TrustedHostMiddleware
 
@@ -76,6 +76,35 @@ async def reject_cross_site_writes(request: Request, call_next):
     return await call_next(request)
 
 
+# No page uses scripts, external resources or frames, so the policy can be
+# strict: injected markup cannot run script or load anything, and no other site
+# can frame the dashboard (clickjacking an investigator into recording a
+# determination would pass the Sec-Fetch-Site check, being same-origin).
+CONTENT_SECURITY_POLICY = (
+    "default-src 'none'; style-src 'unsafe-inline'; img-src 'self' data:; "
+    "form-action 'self'; frame-ancestors 'none'; base-uri 'none'"
+)
+# FastAPI's interactive API docs load Swagger UI from a CDN; they keep the
+# framing and sniffing protections but not the script ban.
+DOCS_PATHS = ("/docs", "/redoc")
+
+
+@app.middleware("http")
+async def security_headers(request: Request, call_next):
+    response = await call_next(request)
+    response.headers.setdefault("X-Frame-Options", "DENY")
+    response.headers.setdefault("X-Content-Type-Options", "nosniff")
+    # "same-origin", not "no-referrer": under no-referrer browsers send
+    # "Origin: null" on the dashboard's own form POSTs, which the CSRF check
+    # (correctly) refuses. same-origin still sends nothing to other sites.
+    response.headers.setdefault("Referrer-Policy", "same-origin")
+    if not request.url.path.startswith(DOCS_PATHS):
+        response.headers.setdefault("Content-Security-Policy", CONTENT_SECURITY_POLICY)
+    else:
+        response.headers.setdefault("Content-Security-Policy", "frame-ancestors 'none'")
+    return response
+
+
 RECENT_CASES = 8
 
 
@@ -86,7 +115,7 @@ def _page(request: Request, template: str, active: str, **context):
     )
 
 
-@app.get("/", response_class=HTMLResponse)
+@app.api_route("/", methods=["GET", "HEAD"], response_class=HTMLResponse)
 async def index(request: Request):
     cases = sorted(CaseStore().list(), key=lambda c: c.updated_utc, reverse=True)
     return _page(
@@ -430,7 +459,13 @@ async def about_page(request: Request):
     return _page(request, "about.html", "about", limitations=LIMITATIONS)
 
 
-@app.get("/api/health")
+@app.get("/favicon.ico", include_in_schema=False)
+async def favicon():
+    """Browsers request this on every page; answer rather than log a 404."""
+    return Response(status_code=204)
+
+
+@app.api_route("/api/health", methods=["GET", "HEAD"])
 async def health():
     return {
         "status": "ok",

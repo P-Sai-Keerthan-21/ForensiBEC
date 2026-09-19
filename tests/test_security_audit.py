@@ -257,3 +257,60 @@ def test_repository_free_of(label, pattern):
             if regex.search(line):
                 offenders.append(f"{path.relative_to(ROOT)}:{number}")
     assert not offenders, f"{label}: {offenders}"
+
+
+# ---------------------------------------------------------------------------
+# Clickjacking / response hardening (found in the final audit)
+# ---------------------------------------------------------------------------
+
+@pytest.mark.parametrize("path", ["/", "/cases", "/about", "/api/health", "/search?q=x"])
+def test_pages_cannot_be_framed_and_forbid_script(client, path):
+    """A framed dashboard would let a hostile page trick the investigator into
+    a same-origin click (e.g. recording 'confirmed benign'), which the
+    Sec-Fetch-Site CSRF check cannot see. Framing is refused, and no page may
+    run script or load external resources."""
+    r = client.get(path)
+    assert r.status_code == 200
+    assert r.headers["x-frame-options"] == "DENY"
+    csp = r.headers["content-security-policy"]
+    assert "frame-ancestors 'none'" in csp and "default-src 'none'" in csp
+    assert "script-src" not in csp
+    assert r.headers["x-content-type-options"] == "nosniff"
+
+
+def test_rejected_requests_are_hardened_too(client):
+    r = client.post("/analyse", headers={"Origin": "https://evil.example"},
+                    data={"case": "CASE-X"})
+    assert r.status_code == 403
+    assert r.headers["x-frame-options"] == "DENY"
+
+
+def test_report_page_carries_policy(client):
+    client.post("/analyse", data={"case": "CASE-HDR"},
+                files=[("files", ("a.eml", (ROOT / "data" / "samples" / "bec_01_ceo_wire_urgent.eml").read_bytes(),
+                                  "message/rfc822"))])
+    r = client.get("/cases/CASE-HDR/report")
+    assert r.status_code == 200 and "<script" not in r.text
+    assert "frame-ancestors 'none'" in r.headers["content-security-policy"]
+
+
+def test_favicon_and_head_requests_do_not_error(client):
+    assert client.get("/favicon.ico").status_code == 204
+    assert client.head("/").status_code == 200
+    assert client.head("/api/health").status_code == 200
+
+
+def test_referrer_policy_does_not_null_the_origin_of_own_forms(client):
+    """Found in the final audit with a real browser: 'no-referrer' made the
+    browser send 'Origin: null' on the dashboard's own upload form, and the
+    CSRF check refused every upload from the UI."""
+    assert client.get("/").headers["referrer-policy"] == "same-origin"
+
+
+def test_browser_same_origin_form_post_is_accepted(client):
+    """What a browser sends for the dashboard's own form."""
+    r = client.post("/analyse", data={"case": "CASE-FORM"},
+                    headers={"Origin": "http://testserver", "Sec-Fetch-Site": "same-origin"},
+                    files=[("files", ("a.eml", (ROOT / "data" / "samples" / "ben_01_internal_meeting.eml").read_bytes(),
+                                      "message/rfc822"))], follow_redirects=False)
+    assert r.status_code == 303 and r.headers["location"].endswith("/cases/CASE-FORM")
