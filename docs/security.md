@@ -214,6 +214,28 @@ after the fact. Controls:
 
 Tests: `tests/test_feedback.py`.
 
+### 2.18 Clickjacking, response headers, path disclosure — **found and fixed in the final verification**
+
+No security headers were set. A hostile page could frame the dashboard and
+trick an investigator into a click (for example recording "confirmed benign");
+that click is same-origin, so the CSRF check in §2.13 cannot see it. Every
+response now carries `X-Frame-Options: DENY`, a strict
+`Content-Security-Policy` (`default-src 'none'`, no script,
+`frame-ancestors 'none'`, `form-action 'self'`), `X-Content-Type-Options:
+nosniff` and `Referrer-Policy: same-origin`. The referrer policy must not be
+`no-referrer`: under it, browsers send `Origin: null` on the dashboard's own
+forms and the CSRF check refused every upload (reproduced in a browser before
+the fix). Reports and the API show local paths relative to the project, never
+the absolute install path (which can contain the Windows user name).
+
+Also fixed in the same pass: unparseable evidence (for example a MIME bomb) is
+refused by the case store itself, not only by the web intake - preserved
+evidence is write-once, so accepting it would block analysis of the whole case
+forever; and every change to a case runs under a cross-process lock (see §4).
+
+Tests: `tests/test_security_audit.py`, `tests/test_paths.py`,
+`tests/test_cases.py`, `tests/test_storage.py`.
+
 ## 3. Authentication — architecture only
 
 No authentication is implemented. This is a deliberate scoping decision, and
