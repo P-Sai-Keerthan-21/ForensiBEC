@@ -81,3 +81,19 @@ def test_truncated_ioc_store_is_not_produced_by_save(tmp_path):
     store.record({"domains": ["x.example"]}, "CASE-A")
     store.save()
     json.loads(path.read_text(encoding="utf-8"))  # always complete JSON
+
+
+def test_two_audit_writers_on_one_file_never_fork_the_chain(tmp_path):
+    """Two AuditLog objects on one file stand in for two processes (e.g. two
+    `scan --audit same.jsonl` runs). Each was loaded before the other wrote;
+    each append must still chain from the true head."""
+    from bec_detector.forensics import AuditLog
+
+    path = tmp_path / "audit.jsonl"
+    first, second = AuditLog(path, actor="a"), AuditLog(path, actor="b")
+    for i in range(3):
+        first.record("step", f"a{i}")
+        second.record("step", f"b{i}")
+    result = AuditLog(path).verify()
+    assert result["valid"], result
+    assert result["entries"] == 6

@@ -66,6 +66,7 @@ class AuditLog:
         self.path = Path(path) if path else None
         self.actor = actor
         self.entries: list[AuditEntry] = []
+        self._size = 0  # bytes of the file reflected in self.entries
         if self.path and self.path.exists():
             self._load()
 
@@ -73,7 +74,9 @@ class AuditLog:
 
     def _load(self) -> None:
         assert self.path is not None
-        for line in self.path.read_text(encoding="utf-8").splitlines():
+        raw = self.path.read_bytes()
+        self._size = len(raw)
+        for line in raw.decode("utf-8").splitlines():
             line = line.strip()
             if not line:
                 continue
@@ -92,7 +95,35 @@ class AuditLog:
 
     def record(self, action: str, detail: str = "", evidence_id: str = "",
                actor: str | None = None) -> AuditEntry:
-        """Append one action to the chain."""
+        """Append one action to the chain.
+
+        With a file, the append happens under a cross-process lock and first
+        catches up with anything another process (or another AuditLog object)
+        appended since this one was loaded, so the new entry always chains from
+        the true head. Without this, two writers could both chain from the same
+        entry and fork the log, which would then fail verification forever.
+        """
+        if not self.path:
+            return self._new_entry(action, detail, evidence_id, actor)
+
+        from ..storage import locked
+
+        self.path.parent.mkdir(parents=True, exist_ok=True)
+        with locked(self.path.with_name(self.path.name + ".lock")):
+            on_disk = self.path.stat().st_size if self.path.exists() else 0
+            if on_disk != self._size:
+                self.entries = []
+                self._size = 0
+                if on_disk:
+                    self._load()
+            entry = self._new_entry(action, detail, evidence_id, actor)
+            with open(self.path, "a", encoding="utf-8", newline="\n") as fh:
+                fh.write(json.dumps(entry.to_dict(), ensure_ascii=False) + "\n")
+            self._size = self.path.stat().st_size
+        return entry
+
+    def _new_entry(self, action: str, detail: str, evidence_id: str,
+                   actor: str | None) -> AuditEntry:
         sequence = len(self.entries) + 1
         timestamp = datetime.now(timezone.utc).isoformat(timespec="seconds")
         who = actor or self.actor
@@ -111,12 +142,6 @@ class AuditLog:
             ),
         )
         self.entries.append(entry)
-
-        if self.path:
-            self.path.parent.mkdir(parents=True, exist_ok=True)
-            with open(self.path, "a", encoding="utf-8", newline="\n") as fh:
-                fh.write(json.dumps(entry.to_dict(), ensure_ascii=False) + "\n")
-
         return entry
 
     # -- verification --------------------------------------------------------
