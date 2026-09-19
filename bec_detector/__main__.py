@@ -149,14 +149,23 @@ def _cmd_case_add(args: argparse.Namespace) -> int:
     if not files or not all(f.is_file() for f in files):
         print(f"error: no .eml evidence found at {source}", file=sys.stderr)
         return 2
+    added = duplicates = 0
     try:
         for path in files:
+            known = {e.sha256 for e in store.load(args.case_id).evidence}
             record = store.add_evidence(args.case_id, path.read_bytes(), path.name,
                                         args.examiner or "")
-            print(f"  {record.evidence_id}  sha256={record.sha256}  {path.name}")
+            if record.sha256 in known:
+                duplicates += 1
+                note = "  (already preserved - identical bytes, not added again)"
+            else:
+                added += 1
+                note = ""
+            print(f"  {record.evidence_id}  sha256={record.sha256}  {path.name}{note}")
     except CaseError as exc:
         return _case_fail(exc)
-    print(f"{len(files)} item(s) registered in {args.case_id}")
+    print(f"{added} new item(s) registered in {args.case_id}"
+          + (f"; {duplicates} already present" if duplicates else ""))
     return 0
 
 

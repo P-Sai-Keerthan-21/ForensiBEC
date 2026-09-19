@@ -361,3 +361,18 @@ def test_case_cli_round_trip(capsys):
     assert main(["case", "create", "../bad"]) == 2
     output = capsys.readouterr().out
     assert "CONFIRMED_BEC" in output and "INTACT" in output
+
+
+def test_cli_reports_duplicate_evidence_honestly(capsys):
+    """Found in the final audit: re-adding identical bytes printed
+    '1 item(s) registered' although nothing new was preserved."""
+    from bec_detector.__main__ import main
+
+    sample = str(SAMPLES / "ben_01_internal_meeting.eml")
+    assert main(["case", "create", "CASE-CLIDUP"]) == 0
+    assert main(["case", "add", "CASE-CLIDUP", sample]) == 0
+    assert "1 new item(s) registered" in capsys.readouterr().out
+    assert main(["case", "add", "CASE-CLIDUP", sample]) == 0
+    out = capsys.readouterr().out
+    assert "0 new item(s) registered" in out and "1 already present" in out
+    assert len(CaseStore().load("CASE-CLIDUP").evidence) == 1
