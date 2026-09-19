@@ -21,6 +21,19 @@ DEFAULT_DATA_DIR: Path = PROJECT_ROOT / "output"
 LOCAL_INTEL_FILE: Path = PROJECT_ROOT / "data" / "local_intel.json"
 
 
+def display_path(path: str | Path) -> str:
+    """How a local file is named in reports and logs.
+
+    Paths inside the project are shown relative to it, so reports and the API
+    do not disclose the install location or the Windows user name.
+    """
+    path = Path(path)
+    try:
+        return str(path.resolve().relative_to(PROJECT_ROOT))
+    except ValueError:
+        return str(path)
+
+
 def data_dir() -> Path:
     """Root for all persisted state (cases, IOC store)."""
     override = os.environ.get("FORENSIBEC_DATA_DIR")

@@ -16,6 +16,7 @@ from __future__ import annotations
 from pathlib import Path
 
 from .acquisition import load_bytes, load_path
+from .config import display_path
 from .analysis import (
     BehaviorBaseline,
     StyleBaseline,
@@ -218,7 +219,7 @@ class BECPipeline:
             self.audit.record(
                 "iocs_recorded",
                 f"case={self.case_id}; from {len(recorded)} of {len(assessments)} "
-                f"message(s) assessed LIKELY_BEC or above; store={self.ioc_store.path}",
+                f"message(s) assessed LIKELY_BEC or above; store={display_path(self.ioc_store.path)}",
             )
         except Exception as exc:
             self.audit.record("ioc_store_error", f"{type(exc).__name__}: {exc}")

@@ -39,3 +39,17 @@ def test_data_dir_override_still_wins(tmp_path, monkeypatch):
     monkeypatch.setenv("FORENSIBEC_DATA_DIR", str(tmp_path))
     assert config.data_dir() == tmp_path
     assert CaseStore().root == tmp_path / "cases"
+
+
+def test_reports_do_not_disclose_the_install_location():
+    """Anchoring paths to the project must not put absolute paths (install
+    location, Windows user name) into reports or the API."""
+    provider = LocalThreatIntelProvider()
+    assert str(ROOT) not in provider.status()
+    assert "local_intel.json" in provider.status()
+    assert config.display_path(ROOT / "output" / "ioc_store.json") == str(
+        Path("output") / "ioc_store.json")
+
+
+def test_display_path_outside_project_is_unchanged(tmp_path):
+    assert config.display_path(tmp_path / "x.json") == str(tmp_path / "x.json")

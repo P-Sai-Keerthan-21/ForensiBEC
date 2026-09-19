@@ -17,7 +17,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-from ..config import LOCAL_INTEL_FILE, WEIGHTS
+from ..config import LOCAL_INTEL_FILE, WEIGHTS, display_path
 from ..models import Category, Confidence, Indicator, Severity
 
 DEFAULT_INTEL_FILE = LOCAL_INTEL_FILE
@@ -111,17 +111,17 @@ class LocalThreatIntelProvider(ThreatIntelProvider):
     def status(self) -> str:
         if not self.path.exists():
             return (
-                f"Local intelligence: no indicator file at {self.path} "
+                f"Local intelligence: no indicator file at {display_path(self.path)} "
                 "- no local intelligence applied. External intelligence not configured."
             )
         if not self._loaded:
             return (
-                f"Local intelligence: {self.path} could not be parsed "
+                f"Local intelligence: {display_path(self.path)} could not be parsed "
                 "- no local intelligence applied. External intelligence not configured."
             )
         total = sum(len(v) for v in self.indicators.values())
         return (
-            f"Local intelligence: {total} indicator(s) loaded from {self.path}. "
+            f"Local intelligence: {total} indicator(s) loaded from {display_path(self.path)}. "
             "External intelligence not configured - no external service was contacted."
         )
 

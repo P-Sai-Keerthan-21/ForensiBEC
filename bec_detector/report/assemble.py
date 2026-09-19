@@ -9,6 +9,7 @@ from __future__ import annotations
 
 from typing import Any
 
+from ..config import display_path
 from ..forensics import CommunicationGraph, build_case_timeline
 from ..models import Assessment
 from .builder import build_case_report
@@ -147,7 +148,7 @@ def assemble_report(pipeline: Any, assessments: list[Assessment],
     }
     report["correlation"] = {
         "matches": pipeline.correlation_matches,
-        "store": str(pipeline.ioc_store.path) if pipeline.ioc_store else None,
+        "store": display_path(pipeline.ioc_store.path) if pipeline.ioc_store else None,
         "note": (
             "Correlation reflects only cases previously analysed by this "
             "installation. It is not external threat intelligence."
