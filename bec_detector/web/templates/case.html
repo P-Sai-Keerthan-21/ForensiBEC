@@ -164,7 +164,7 @@
   <h2>Related cases</h2>
   {% if related %}
   <table><tr><th>Case</th><th>Shared indicators</th></tr>
-  {% for r in related %}<tr><td><a class="mono" href="/cases/{{ r.case_id }}">{{ r.case_id }}</a></td>
+  {% for r in related %}<tr><td>{% if r.stored %}<a class="mono" href="/cases/{{ r.case_id }}">{{ r.case_id }}</a>{% else %}<span class="mono">{{ r.case_id }}</span> <span class="small muted">(one-shot scan - no stored case)</span>{% endif %}</td>
     <td>{% for s in r.shared_indicators %}<span class="pill">{{ s }}</span>{% endfor %}</td></tr>{% endfor %}
   </table>
   {% else %}<p class="muted">No indicator in this case was previously recorded in another local case.</p>{% endif %}

@@ -206,3 +206,24 @@ def test_hostile_evidence_is_escaped_on_case_page(client):
     assert "<img src=x onerror=alert(2)>" not in page
     # The only <svg> is the generated evidence graph.
     assert page.count("<svg") == 1
+
+
+def test_related_scan_only_case_is_not_a_dead_link(tmp_path, monkeypatch):
+    """Found in the final verification: IOCs recorded by a one-shot `scan`
+    (default ID CASE-000) appeared as a related case linking to a 404."""
+    from fastapi.testclient import TestClient
+
+    from bec_detector.forensics import IOCStore
+    from bec_detector.web.app import app
+
+    monkeypatch.setenv("FORENSIBEC_DATA_DIR", str(tmp_path))
+    store = IOCStore(tmp_path / "ioc_store.json")
+    store.record({"ipv4": ["203.0.113.88"]}, "CASE-000")
+    store.save()
+    client = TestClient(app)
+    sample = Path(__file__).resolve().parent.parent / "data" / "samples" / "bec_01_ceo_wire_urgent.eml"
+    client.post("/analyse", data={"case": "CASE-REL"},
+                files=[("files", ("a.eml", sample.read_bytes(), "message/rfc822"))])
+    page = client.get("/cases/CASE-REL").text
+    assert "CASE-000" in page and 'href="/cases/CASE-000"' not in page
+    assert "one-shot scan" in page

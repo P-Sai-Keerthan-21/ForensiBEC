@@ -220,7 +220,9 @@ def _cmd_case_show(args: argparse.Namespace) -> int:
     else:
         print("analysed  : not yet")
     related = store.related_cases(case.case_id)
-    print(f"related   : {', '.join(r['case_id'] for r in related) or 'none recorded'}")
+    print("related   : " + (", ".join(
+        r["case_id"] + ("" if r["stored"] else " (one-shot scan, no stored case)")
+        for r in related) or "none recorded"))
     return 0
 
 

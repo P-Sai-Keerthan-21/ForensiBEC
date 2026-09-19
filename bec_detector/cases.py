@@ -460,7 +460,10 @@ class CaseStore:
             for other in match.get("seen_in_cases", []):
                 if other != case_id:
                     related.setdefault(other, []).append(f"{match['kind']}={match['value']}")
-        return [{"case_id": k, "shared_indicators": sorted(set(v))}
+        # "stored": whether the other case exists in this case store. IOCs are
+        # also recorded by one-shot `scan` runs (default ID CASE-000), which
+        # have correlation history but no case to open.
+        return [{"case_id": k, "shared_indicators": sorted(set(v)), "stored": self.exists(k)}
                 for k, v in sorted(related.items())]
 
     def audit_entries(self, case_id: str) -> list[dict[str, Any]]:
