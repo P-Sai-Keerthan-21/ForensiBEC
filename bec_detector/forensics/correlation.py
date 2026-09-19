@@ -28,6 +28,7 @@ from ..config import (
     TRUSTED_DOMAINS,
     TRUSTED_RELAY_IPS,
     WEIGHTS,
+    data_dir,
 )
 from ..models import Category, Confidence, Indicator, Severity
 
@@ -77,8 +78,7 @@ class IOCStore:
 
     def __init__(self, path: str | Path | None = None) -> None:
         if path is None:
-            import os
-            path = Path(os.environ.get("FORENSIBEC_DATA_DIR", "output")) / "ioc_store.json"
+            path = data_dir() / "ioc_store.json"
         self.path = Path(path)
         # {kind: {value: {"cases": [...], "first_seen": ..., "last_seen": ...}}}
         self.data: dict[str, dict[str, dict[str, Any]]] = {}

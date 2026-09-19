@@ -17,10 +17,10 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-from ..config import WEIGHTS
+from ..config import LOCAL_INTEL_FILE, WEIGHTS
 from ..models import Category, Confidence, Indicator, Severity
 
-DEFAULT_INTEL_FILE = Path("data") / "local_intel.json"
+DEFAULT_INTEL_FILE = LOCAL_INTEL_FILE
 
 
 @dataclass

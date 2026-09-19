@@ -40,6 +40,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+from . import config
 from .acquisition import EvidenceParseError
 from .forensics import AuditLog
 
@@ -55,7 +56,7 @@ class CaseError(ValueError):
 
 def data_dir() -> Path:
     """Root for all persisted state. Overridable so tests never touch output/."""
-    return Path(os.environ.get("FORENSIBEC_DATA_DIR", "output"))
+    return config.data_dir()
 
 
 def validate_case_id(case_id: str) -> str:

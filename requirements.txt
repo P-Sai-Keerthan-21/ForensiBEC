@@ -7,6 +7,8 @@ nltk>=3.9.1
 
 # Web / API layer
 fastapi>=0.115
+# Imported directly (TrustedHostMiddleware); version is constrained by fastapi.
+starlette
 uvicorn>=0.30
 jinja2>=3.1
 python-multipart>=0.0.9

@@ -7,6 +7,25 @@ and the corporate context the detector is defending.
 
 from __future__ import annotations
 
+import os
+from pathlib import Path
+
+# ---------------------------------------------------------------------------
+# Locations
+# ---------------------------------------------------------------------------
+# Anchored to the project, not the current working directory, so the CLI and
+# the web server find the same cases, IOC store and intelligence list however
+# they are launched. FORENSIBEC_DATA_DIR overrides the data location.
+PROJECT_ROOT: Path = Path(__file__).resolve().parent.parent
+DEFAULT_DATA_DIR: Path = PROJECT_ROOT / "output"
+LOCAL_INTEL_FILE: Path = PROJECT_ROOT / "data" / "local_intel.json"
+
+
+def data_dir() -> Path:
+    """Root for all persisted state (cases, IOC store)."""
+    override = os.environ.get("FORENSIBEC_DATA_DIR")
+    return Path(override) if override else DEFAULT_DATA_DIR
+
 # ---------------------------------------------------------------------------
 # Organisational context
 # ---------------------------------------------------------------------------
